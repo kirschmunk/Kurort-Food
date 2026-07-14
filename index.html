@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Концепт новой страницы питания санатория «Белокуриха»">
+  <title>Питание в санатории «Белокуриха»</title>
+  <style>
+    @font-face{font-family:AcromRegular;src:url("assets/fonts/Acrom-Regular.woff") format("woff");font-display:swap}
+    @font-face{font-family:AcromBold;src:url("assets/fonts/Acrom-Bold.woff") format("woff");font-display:swap}
+    @font-face{font-family:AcromExtraBold;src:url("assets/fonts/Acrom-ExtraBold.woff") format("woff");font-display:swap}
+    :root{
+      --blue:#234393;
+      --blue-deep:#102048;
+      --sky:#009dd1;
+      --sky-soft:#589cce;
+      --gold:#c9b05e;
+      --text:#3d3940;
+      --muted:#666;
+      --gray:#efefef;
+      --gray-light:#f6f6f6;
+      --white:#fff;
+      --shadow:0 0 28px rgba(0,0,0,.18);
+      --wrapper:min(1200px,calc(100vw - 40px));
+    }
+    *{box-sizing:border-box}
+    [hidden]{display:none!important}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--text);background:var(--white);font:16px/1.55 AcromRegular,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}button,input,select{font:inherit}img{display:block;max-width:100%}
+    .wrapper{width:var(--wrapper);margin:0 auto}
+    .skip{position:fixed;left:15px;top:-100px;z-index:9999;padding:10px 16px;color:#fff;background:var(--blue)}.skip:focus{top:15px}
+    .section{padding:70px 0}.section-gray{background:var(--gray-light)}
+    .title{margin:0 0 42px;color:var(--text);font:28px/1.25 AcromBold,Arial,sans-serif;text-align:center;text-transform:uppercase}
+    .title:after{display:block;width:92px;height:3px;margin:20px auto 0;content:"";background:var(--text)}
+    .subtitle{max-width:880px;margin:-20px auto 42px;color:var(--muted);font-size:17px;text-align:center}
+    .btn{display:inline-flex;min-width:260px;min-height:46px;align-items:center;justify-content:center;padding:12px 30px;border:0;border-radius:5px;color:#fff;background:var(--sky);font-family:AcromBold;text-decoration:none;text-transform:uppercase;transition:.25s ease;cursor:pointer}
+    .btn:hover{background:#007393;transform:translateY(-2px)}.btn-blue{background:var(--blue)}.btn-blue:hover{background:var(--blue-deep)}.btn-gold{background:var(--gold)}.btn-gold:hover{background:#b49a45}
+
+    .hero-shell{position:relative;height:655px;overflow:hidden;background:#fff}
+    .hero-oval{position:absolute;top:0;left:-10%;width:120%;height:640px;overflow:hidden;border-radius:0 0 70% 70%;background:url("assets/hero-food.png") center 54%/cover no-repeat;box-shadow:0 -15px 74px -27px rgba(0,0,0,.75) inset}
+    .hero-oval:before{position:absolute;inset:0;content:"";background:rgba(26,26,26,.5)}
+    .site-header{position:relative;z-index:5;padding-top:26px;color:#fff}
+    .header-row{display:grid;grid-template-columns:400px 1fr auto;align-items:start;gap:24px}
+    .header-left{display:grid;grid-template-columns:62px 205px;align-items:start;column-gap:14px}
+    .menu-button{display:block;width:62px;padding:7px 0 0;border:0;color:#fff;background:transparent;text-align:left;cursor:pointer}
+    .hamb span{display:block;width:43px;height:6px;margin-bottom:5px;border-radius:5px;background:#fff}.menu-caption{display:block;margin-top:-2px;font-family:AcromBold;font-size:13px}
+    .header-logo{width:200px;height:60px;object-fit:contain;filter:brightness(0) invert(1)}
+    .official{grid-column:1/3;margin-top:3px;font-size:17px}
+    .header-nav{display:flex;align-items:center;justify-content:flex-end;gap:34px;padding-top:34px}
+    .header-nav a{font-family:AcromBold;font-size:14px;text-decoration:none;text-transform:uppercase;white-space:nowrap}.header-nav a:hover{color:#aaeaff}
+    .header-phone{padding-top:22px;text-align:right;white-space:nowrap}.header-phone a{font-family:AcromExtraBold;font-size:27px;text-decoration:none}.header-phone small{display:block;margin-top:-2px;font-family:AcromBold;font-size:11px;text-transform:uppercase}
+    .hero-content{position:relative;z-index:2;display:flex;height:505px;align-items:center;color:#fff}
+    .hero-main{max-width:735px;padding-top:32px;text-align:left}.hero-main h1{max-width:700px;margin:0 0 20px;font:42px/1.17 AcromExtraBold;text-transform:uppercase}.hero-main p{max-width:660px;margin:0;font-size:18px}
+    .socials{display:flex;gap:10px;margin-top:24px}.socials a{display:block;width:40px;height:40px;border-radius:50%;background:#fff}.socials img{width:100%;height:100%;object-fit:contain}
+
+    .booking-wrap{position:relative;z-index:10;margin-top:-18px}.booking{padding:20px;border-radius:5px;background:#fff;box-shadow:0 0 47px rgba(0,0,0,.28)}.booking h2{margin:0 0 12px;color:var(--blue);font:18px AcromBold;text-transform:uppercase}.booking-grid{display:grid;grid-template-columns:repeat(4,1fr) 1.35fr;gap:13px;align-items:end}.field label{display:block;margin-bottom:6px;color:#666;font-size:12px}.field input,.field select{width:100%;height:42px;padding:0 12px;border:1px solid var(--blue);border-radius:5px;color:var(--blue);background:#fff}.booking .btn{width:100%;min-width:0;height:42px;min-height:42px}
+
+    .intro{padding-top:82px}.story-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;overflow:hidden;border:1px solid #e1e6ee;border-radius:14px;background:#fff;box-shadow:0 18px 48px rgba(35,67,147,.1)}.story-copy{display:flex;padding:48px 46px 40px;flex-direction:column}.story-copy .title{margin-bottom:28px;text-align:left}.story-copy .title:after{width:72px;margin-left:0;background:var(--gold)}.story-copy p{margin:0 0 17px;color:#59565d;font-size:15px}.story-copy .story-emphasis{position:relative;margin:4px 0 20px;padding:18px 4px 18px 24px;color:var(--blue);font-family:AcromBold}.story-copy .story-emphasis:before{position:absolute;top:15px;bottom:15px;left:0;width:4px;border-radius:4px;content:"";background:var(--gold)}.restaurant-card{position:relative;min-height:570px;overflow:hidden;background:url("assets/site/restaurant-1.jpg") center/cover no-repeat}.restaurant-card:after{position:absolute;inset:0;content:"";background:linear-gradient(0deg,rgba(16,32,72,.88) 0,rgba(16,32,72,.54) 23%,transparent 58%)}.restaurant-award{position:absolute;z-index:2;right:32px;bottom:30px;left:32px;display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:18px;row-gap:4px;color:#fff}.restaurant-award .award-year{grid-row:1/3;align-self:stretch;padding-right:18px;border-right:1px solid rgba(255,255,255,.4);color:#e6d37f;font:25px/1 AcromExtraBold}.restaurant-award .award-year:before{display:block;margin-bottom:8px;color:rgba(255,255,255,.72);content:"ПОБЕДИТЕЛЬ";font:8px/1.2 AcromBold;letter-spacing:.12em}.restaurant-award strong{grid-column:2;margin:0;color:#fff;font:15px/1.35 AcromBold;text-transform:uppercase}.restaurant-award p{grid-column:2;margin:0;color:rgba(255,255,255,.76);font-size:10px;line-height:1.45}.restaurant-facts{display:grid;margin-top:auto;padding-top:24px;grid-template-columns:repeat(3,1fr);border-top:1px solid #e1e6ee}.restaurant-fact{min-width:0;padding:0 18px;text-align:left}.restaurant-fact:first-child{padding-left:0}.restaurant-fact+.restaurant-fact{border-left:1px solid #e1e6ee}.restaurant-fact strong{display:block;margin-bottom:3px;color:var(--blue);font:24px AcromExtraBold}.restaurant-fact span{display:block;color:#777;font-size:10px;line-height:1.35}
+
+    .production-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.production-card{position:relative;display:grid;min-height:178px;padding:27px 24px;grid-template-columns:58px 1fr;grid-template-rows:auto auto;align-content:center;column-gap:18px;row-gap:7px;overflow:hidden;border:1px solid #e2e7ef;border-top:4px solid var(--sky);border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(35,67,147,.07);text-align:left}.production-card:nth-child(2n){border-top-color:var(--gold);background:#fbfbf8}.production-card:after{position:absolute;right:-32px;bottom:-46px;width:110px;height:110px;border-radius:50%;content:"";background:rgba(0,157,209,.045)}.production-icon{position:relative;z-index:1;display:grid;width:54px;height:54px;grid-row:1/3;place-items:center;border-radius:50%;color:var(--sky);background:#eaf6fb}.production-card:nth-child(2n) .production-icon{color:#987f2c;background:#f4efd9}.production-icon svg{width:27px;height:27px}.production-card h3{position:relative;z-index:1;margin:0;color:var(--blue);font:15px/1.25 AcromBold;text-transform:uppercase}.production-card p{position:relative;z-index:1;margin:0;color:#666;font-size:12px}.manifesto{margin-top:30px;padding:23px 30px;border-left:7px solid var(--gold);border-radius:5px;color:#fff;background:var(--blue);font-size:18px;text-align:center}.manifesto strong{font-family:AcromBold}
+
+    .format-layout{display:grid;grid-template-columns:250px 1fr;gap:22px}.format-tabs{display:flex;flex-direction:column;gap:12px}.format-tab{display:grid;min-height:96px;padding:15px 14px;grid-template-columns:48px 1fr 14px;align-items:center;gap:11px;border:1px solid #d6ddea;border-radius:10px;color:var(--text);background:#fff;text-align:left;cursor:pointer;transition:.22s ease}.format-tab:hover{border-color:#9bb2d4;transform:translateX(3px)}.format-tab[aria-selected="true"]{color:#fff;border-color:var(--sky);background:var(--sky);box-shadow:0 12px 28px rgba(0,157,209,.2)}.tab-icon{display:grid;width:46px;height:46px;place-items:center;border-radius:50%;color:var(--blue);background:#eef2fa}.format-tab[aria-selected="true"] .tab-icon{color:var(--sky);background:#fff}.tab-icon svg{width:28px;height:28px;stroke-linecap:round;stroke-linejoin:round}.tab-arrow{font-size:19px}.format-tab strong{font:13px/1.25 AcromBold;text-transform:uppercase}.format-tab small{display:block;margin-top:5px;color:#777;font-size:10px}.format-tab[aria-selected="true"] small{color:rgba(255,255,255,.78)}
+    .format-panel{overflow:hidden;border:1px solid #e0e5ed;border-radius:12px;background:#fff;box-shadow:0 14px 36px rgba(35,67,147,.11)}.format-copy{padding:36px 34px}.format-label{display:inline-block;margin-bottom:15px;padding:7px 11px;border-radius:4px;color:#fff;background:var(--gold);font-size:10px;text-transform:uppercase}.format-copy h3{margin:0 0 14px;color:var(--blue);font:21px/1.25 AcromBold;text-transform:uppercase}.format-copy>p{margin:0 0 24px;color:#666;font-size:13px}.format-content{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);align-items:stretch;gap:18px}.check-list{display:grid;margin:0;padding:0;grid-template-columns:1fr;align-content:start;gap:7px;list-style:none}.check-list li{position:relative;display:flex;min-height:44px;margin:0;padding:10px 11px 10px 38px;align-items:center;border:1px solid #e1e6ef;border-radius:7px;background:#f8f9fb;font-size:13px;line-height:1.35}.check-list li:before{position:absolute;top:50%;left:11px;display:grid;width:18px;height:18px;place-items:center;border:1px solid var(--gold);border-radius:50%;color:#9e8429;content:"✓";font-size:10px;transform:translateY(-50%)}.format-mini-slider{position:relative;height:100%;min-height:260px;overflow:hidden;border-radius:9px;background:#e9edf3}.format-mini-track{display:flex;height:100%;transition:transform .4s ease}.format-mini-slide{min-width:100%;height:100%;margin:0}.format-mini-slide img{width:100%;height:100%;object-fit:cover}.format-mini-button{position:absolute;z-index:2;top:50%;display:grid;width:34px;height:34px;place-items:center;border:0;border-radius:50%;color:var(--blue);background:rgba(255,255,255,.92);font-size:22px;transform:translateY(-50%);cursor:pointer}.format-mini-prev{left:10px}.format-mini-next{right:10px}.format-mini-dots{position:absolute;z-index:2;right:0;bottom:12px;left:0;display:flex;justify-content:center;gap:6px}.format-mini-dot{width:7px;height:7px;padding:0;border:1px solid #fff;border-radius:50%;background:transparent}.format-mini-dot.active{background:#fff}.world{margin-top:22px;padding:19px 20px;border-left:4px solid var(--gold);border-radius:7px;background:#eef3fa;font-size:12px;line-height:1.5}.world strong{display:block;margin-bottom:7px;color:var(--blue);font:14px AcromBold;text-transform:uppercase}.world p{margin:0 0 7px;color:#5d6470}.world p:last-child{margin-bottom:0}
+
+    .gallery-slider{position:relative;max-width:1040px;margin:0 auto;overflow:hidden;border-radius:12px;background:#e9edf3;box-shadow:0 14px 36px rgba(35,67,147,.13)}.gallery-track{display:flex;transition:transform .45s ease}.gallery-slide{position:relative;min-width:100%;height:500px;margin:0}.gallery-slide img{width:100%;height:100%;object-fit:cover}.gallery-caption{position:absolute;right:0;bottom:0;left:0;padding:48px 30px 58px;color:#fff;background:linear-gradient(0deg,rgba(16,32,72,.82),transparent);font-family:AcromBold}.slider-button{position:absolute;z-index:3;top:50%;display:grid;width:48px;height:48px;place-items:center;border:0;border-radius:50%;color:var(--blue);background:rgba(255,255,255,.94);box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:28px;transform:translateY(-50%);cursor:pointer}.slider-button:hover{background:#fff}.slider-prev{left:20px}.slider-next{right:20px}.slider-dots{position:absolute;z-index:3;right:0;bottom:22px;left:0;display:flex;justify-content:center;gap:8px}.slider-dot{width:9px;height:9px;padding:0;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer}.slider-dot.active{background:#fff}.gallery-more{display:flex;justify-content:center;margin-top:28px}
+
+    .services-section{background:linear-gradient(180deg,#f6f7fa 0%,#eef3f8 100%)}.services-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.service{position:relative;display:grid;min-height:175px;padding:24px;grid-template-columns:54px 1fr;align-content:start;gap:17px;overflow:hidden;border:1px solid #dce3ee;border-radius:12px;background:#fff;box-shadow:0 10px 26px rgba(35,67,147,.07)}.service:nth-child(1),.service:nth-child(4){grid-column:span 7}.service:nth-child(2),.service:nth-child(3){grid-column:span 5}.service:after{position:absolute;right:-58px;bottom:-70px;width:150px;height:150px;border:22px solid rgba(0,157,209,.04);border-radius:50%;content:""}.service-icon{position:relative;z-index:1;display:grid;width:52px;height:52px;place-items:center;border-radius:50%;color:#fff;background:var(--sky)}.service-icon svg{width:26px;height:26px}.service div:last-child{position:relative;z-index:1}.service h3{margin:3px 0 8px;color:var(--blue);font:16px/1.3 AcromBold;text-transform:uppercase}.service p{margin:0;color:#666;font-size:14px;line-height:1.55}.service-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.service-tags span{padding:5px 9px;border-radius:20px;color:#715f1f;background:#f4efd9;font-size:9px;text-transform:uppercase}
+
+    .order-card{display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden;border:1px solid #e0e5ed;border-radius:12px;background:#fff;box-shadow:0 14px 36px rgba(35,67,147,.11)}.order-copy{padding:42px}.order-copy h2{margin:0 0 15px;color:var(--blue);font:24px AcromBold;text-transform:uppercase}.order-copy>p{margin:0 0 25px;color:#666}.steps{display:grid;gap:8px}.step{display:grid;padding:11px 0;grid-template-columns:34px 1fr;gap:12px;border-top:1px solid #e4e4e4}.step-num{display:grid;width:30px;height:30px;place-items:center;border-radius:50%;color:#fff;background:var(--sky);font-family:AcromBold}.step strong{display:block;font-family:AcromBold}.step span span{color:#666;font-size:12px}.order-info{display:grid;margin-top:20px;grid-template-columns:1fr 1fr;gap:10px}.order-info-item{padding:14px 16px;border-radius:7px;background:#eef3fa}.order-info-item strong{display:block;margin-bottom:4px;color:var(--blue);font:14px AcromBold;text-transform:uppercase}.order-info-item span{color:#666;font-size:11px}.order-photo{min-height:490px;background:url("assets/site/restaurant-5.jpg") center/cover no-repeat}
+
+    .cta{padding:55px 0;color:#fff;background:var(--sky-soft);text-align:center}.cta h2{max-width:850px;margin:0 auto 14px;font:28px/1.3 AcromBold;text-transform:uppercase}.cta p{max-width:700px;margin:0 auto 25px}.cta .btn{border:1px solid #fff;background:rgba(255,255,255,.15)}
+    .footer{padding:45px 0 32px;color:#fff;background:var(--blue-deep)}.footer-grid{display:grid;grid-template-columns:250px 1fr 1fr;gap:55px}.footer-logo{width:230px;filter:brightness(0) invert(1)}.footer h3{margin:0 0 14px;font:14px AcromBold;text-transform:uppercase}.footer p,.footer a{font-size:12px}.footer-links{display:grid;gap:8px}.footer-links a{text-decoration:none}.footer-links a:hover{color:#aaeaff}.legal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:10px;text-transform:uppercase}
+
+    @media(max-width:1000px){
+      .header-row{grid-template-columns:280px 1fr auto}.header-left{grid-template-columns:60px 170px}.header-logo{width:165px}.header-nav{gap:16px}.header-nav a{font-size:11px}.header-phone a{font-size:21px}.hero-main h1{font-size:35px}.story-copy{padding:38px 32px 34px}.restaurant-card{min-height:620px}.production-grid{grid-template-columns:repeat(2,1fr)}.format-panel{grid-template-columns:1fr}.format-photo{min-height:300px}.format-copy{order:0}.services-grid{grid-template-columns:1fr}.service:nth-child(n){grid-column:1}
+    }
+    @media(max-width:760px){
+      :root{--wrapper:min(100% - 24px,1200px)}.section{padding:52px 0}.title{font-size:22px}.subtitle{font-size:14px}.hero-shell{height:610px}.hero-oval{left:-20%;width:140%;height:590px;border-radius:0 0 55% 55%;background-position:60% center}.site-header{padding-top:12px}.header-row{grid-template-columns:1fr auto}.header-left{grid-template-columns:55px 145px}.header-logo{width:140px;height:48px}.official{font-size:12px}.header-nav{position:absolute;top:86px;right:12px;left:12px;display:none;padding:20px;align-items:flex-start;flex-direction:column;border-radius:5px;background:var(--blue)}.header-nav.open{display:flex}.header-phone{padding-top:8px}.header-phone a{font-size:17px}.header-phone small{font-size:8px}.hero-content{height:460px;align-content:center;text-align:center}.hero-main{padding-top:65px;text-align:center}.hero-main h1{margin-right:auto;margin-left:auto;font-size:28px}.hero-main p{margin-right:auto;margin-left:auto;font-size:14px}.socials{justify-content:center}.booking-wrap{margin-top:0}.booking-grid{grid-template-columns:1fr 1fr}.booking-grid .btn{grid-column:1/3}.booking h2{font-size:15px}.story-grid{grid-template-columns:1fr}.story-copy{padding:34px 28px 30px}.restaurant-card{min-height:430px}.restaurant-facts{margin-top:8px}.production-grid{grid-template-columns:1fr}.format-layout{grid-template-columns:1fr}.format-tabs{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));overflow-x:auto;padding-bottom:8px}.format-panel{min-height:0}.format-copy{padding:28px 22px}.gallery-strip{height:auto;grid-template-columns:1fr 1fr}.gallery-strip img{height:210px}.gallery-strip img:first-child{grid-column:1/3;border-radius:8px 8px 0 0}.gallery-strip img:last-child{border-radius:0 0 8px 0}.service{grid-template-columns:1fr}.order-card{grid-template-columns:1fr}.order-copy{padding:30px 22px}.order-photo{min-height:340px}.order-info{grid-template-columns:1fr}.cta h2{font-size:21px}.footer-grid{grid-template-columns:1fr;gap:28px}
+    }
+    @media(max-width:760px){.format-content{grid-template-columns:1fr}.format-mini-slider{height:270px;min-height:270px}.gallery-slide{height:360px}.gallery-caption{padding:42px 22px 50px;font-size:13px}.slider-button{width:40px;height:40px}.slider-prev{left:12px}.slider-next{right:12px}}
+    @media(max-width:480px){.header-logo{display:none}.header-left{grid-template-columns:55px}.official{grid-column:1}.header-phone a{font-size:15px}.hero-main h1{font-size:24px}.booking-grid{grid-template-columns:1fr}.booking-grid .btn{grid-column:1}.story-copy{padding:30px 20px 26px}.story-copy p{font-size:14px}.restaurant-facts{grid-template-columns:1fr;gap:13px}.restaurant-fact{padding:0}.restaurant-fact+.restaurant-fact{padding-top:13px;border-top:1px solid #e1e6ee;border-left:0}.restaurant-card{min-height:390px}.restaurant-award{right:20px;bottom:20px;left:20px;grid-template-columns:1fr}.restaurant-award .award-year{grid-row:auto;padding:0 0 9px;border-right:0;border-bottom:1px solid rgba(255,255,255,.4)}.restaurant-award strong,.restaurant-award p{grid-column:1}.format-tab{min-width:220px}.production-card{grid-template-columns:50px 1fr;padding:22px 18px}.gallery-slide{height:290px}.slider-dots{bottom:14px}.gallery-caption{padding-bottom:36px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+
+  <div class="hero-shell">
+    <div class="hero-oval">
+      <header class="site-header">
+        <div class="wrapper header-row">
+          <div class="header-left">
+            <button class="menu-button" type="button" aria-controls="main-nav" aria-expanded="false"><span class="hamb"><span></span><span></span><span></span></span><span class="menu-caption">меню</span></button>
+            <img class="header-logo" src="assets/site/logo-white.png" alt="Санаторий Белокуриха">
+            <span class="official">Официальный сайт санатория</span>
+          </div>
+          <nav class="header-nav" id="main-nav" aria-label="Основная навигация">
+            <a href="https://www.belokurikha-san.ru/treatment">Лечение</a>
+            <a href="https://www.belokurikha-san.ru/pricing">Путёвки и цены</a>
+            <a href="https://www.belokurikha-san.ru/promo">Спецпредложения</a>
+          </nav>
+          <div class="header-phone"><a href="tel:88007075183">8 800 707 5183</a><small>Звонок по России — бесплатный</small></div>
+        </div>
+      </header>
+      <div class="wrapper hero-content">
+        <div class="hero-main">
+          <h1>Еда, которая восстанавливает</h1>
+          <p>Питание в санатории «Белокуриха» — полноценная часть лечения, которая работает в связке с процедурами и усиливает их эффект.</p>
+          <div class="socials" aria-label="Социальные сети"><a href="https://vk.com/kurortbelokurikha"><img src="assets/site/vk.png" alt="ВКонтакте"></a><a href="https://t.me/kurortbelokuriha"><img src="assets/site/tg.png" alt="Telegram"></a><a href="https://ok.ru/kurortbelokurikha"><img src="assets/site/ok.png" alt="Одноклассники"></a><a href="#"><img src="assets/site/mail.png" alt="Поделиться по электронной почте"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper booking-wrap">
+    <form class="booking" action="https://www.belokurikha-san.ru/reservation/" method="get">
+      <h2>Онлайн бронирование</h2>
+      <div class="booking-grid">
+        <div class="field"><label for="arrival">Дата заезда</label><input id="arrival" type="date"></div>
+        <div class="field"><label for="departure">Дата выезда</label><input id="departure" type="date"></div>
+        <div class="field"><label for="adults">Взрослых</label><select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+        <div class="field"><label for="children">Детей</label><select id="children"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></div>
+        <button class="btn btn-blue" type="submit">Забронировать</button>
+      </div>
+    </form>
+  </div>
+
+  <main id="content">
+    <section class="section intro">
+      <div class="wrapper">
+        <div class="story-grid">
+          <div class="story-copy">
+            <h2 class="title">Питание как часть лечения</h2>
+            <p>В санатории «Белокуриха» питание — это не просто трёхразовый приём пищи. Это полноценная часть лечения, которая работает в связке с процедурами и усиливает их эффект.</p>
+            <p>Меню сбалансировано по белкам, жирам и углеводам и составлено с учётом реальных потребностей организма. За этим стоит ежедневная работа врача-диетолога — специалиста, который знает, как еда влияет на восстановление, и подбирает рацион индивидуально для каждого гостя.</p>
+            <p class="story-emphasis">Здесь вкусно. Здесь полезно. И каждый приём пищи — ещё один шаг к вашему здоровью.</p>
+            <p>Ресторан рассчитан на 840 посадочных мест и разделён на 4 уютных зала. Для гостей доступны 3 варианта питания — выбирайте тот, который подходит именно вам.</p>
+            <div class="restaurant-facts" aria-label="Ресторан в цифрах"><div class="restaurant-fact"><strong>840</strong><span>посадочных мест</span></div><div class="restaurant-fact"><strong>4</strong><span>уютных ресторанных зала</span></div><div class="restaurant-fact"><strong>3</strong><span>варианта питания на выбор</span></div></div>
+          </div>
+          <div class="restaurant-card" role="img" aria-label="Ресторан санатория «Белокуриха»">
+            <div class="restaurant-award"><span class="award-year">2025</span><strong>Лучший ресторан категории премиум-класса</strong><p>1-е место в конкурсе «Топ-5 здравниц по клиентоориентированности» в Москве. Мы этим гордимся — и продолжаем держать планку.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray" id="production">
+      <div class="wrapper">
+        <h2 class="title">Своё производство — гарантия качества</h2>
+        <p class="subtitle">АО «Курорт Белокуриха» самостоятельно выращивает и производит продукты, которые оказываются на столе наших гостей.</p>
+        <div class="production-grid">
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 10h14l-2 17H11L9 10Z"/><path d="M12 10c0-4 2-6 4-6s4 2 4 6"/></svg></div><h3>Молочная продукция</h3><p>Сыры, молоко и кисломолочные продукты, в том числе из козьего молока.</p></article>
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 20c5-8 12-11 20-9-1 8-6 14-14 15-4 1-7-2-6-6Z"/><path d="M10 23c4-4 8-7 13-9"/></svg></div><h3>Мясо и птица</h3><p>Говядина, индейка, перепела, конина, колбасные изделия и полуфабрикаты.</p></article>
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 27V13a8 8 0 0 1 16 0v14H8Z"/><path d="M12 11c1 2 3 3 4 5M20 10c-1 3-3 4-4 6"/></svg></div><h3>Пекарня и десерты</h3><p>Свежий хлеб, выпечка, авторские десерты и конфеты ручной работы.</p></article>
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17c5-7 12-9 19-5l5-4v16l-5-4c-7 4-14 2-19-5v2Z"/><circle cx="11" cy="15" r="1" fill="currentColor"/></svg></div><h3>Рыбная ферма</h3><p>Собственное рыбоводство и контроль качества на каждом этапе.</p></article>
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 27V13M16 18c-6 0-9-4-9-9 6 0 9 3 9 9ZM16 15c5 0 8-4 8-9-5 0-8 4-8 9Z"/></svg></div><h3>Овощи и зерно</h3><p>Растениеводство и тепличное хозяйство: свежий урожай круглый год.</p></article>
+          <article class="production-card"><div class="production-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 4h12v5l3 5v13H7V14l3-5V4Z"/><path d="M10 9h12M11 18c3-2 7-2 10 0"/></svg></div><h3>Напитки и вода</h3><p>Собственное производство и розлив воды, а также крафтовые напитки.</p></article>
+        </div>
+        <div class="manifesto"><strong>Мы не закупаем фермерскую продукцию — мы производим её сами.</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="formats">
+      <div class="wrapper">
+        <h2 class="title">Варианты питания</h2>
+        <p class="subtitle">Выберите формат, который соответствует вашим привычкам, целям оздоровления и ритму отдыха.</p>
+        <div class="format-layout">
+          <div class="format-tabs" role="tablist" aria-label="Варианты питания">
+            <button class="format-tab" id="tab-premium" role="tab" aria-selected="true" aria-controls="panel-premium" data-panel="premium"><span class="tab-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 11 5 5 6-10 6 10 5-5-2 14H7L5 11Z"/><path d="M8 27h16"/></svg></span><span><strong>Меню «Премиум»</strong><small>Персональный подход</small></span><span class="tab-arrow">›</span></button>
+            <button class="format-tab" id="tab-lux" role="tab" aria-selected="false" aria-controls="panel-lux" data-panel="lux" tabindex="-1"><span class="tab-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m16 4 3.5 7.5L28 13l-6 6 1.5 9L16 24l-7.5 4L10 19l-6-6 8.5-1.5L16 4Z"/></svg></span><span><strong>Шведский стол «Люкс»</strong><small>Гастрономическое удовольствие</small></span><span class="tab-arrow">›</span></button>
+            <button class="format-tab" id="tab-buffet" role="tab" aria-selected="false" aria-controls="panel-buffet" data-panel="buffet" tabindex="-1"><span class="tab-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5v8M6 5v6c0 2 1 3 3 3s3-1 3-3V5M9 14v13"/><ellipse cx="22" cy="9" rx="4" ry="5"/><path d="M22 14v13"/></svg></span><span><strong>Шведский стол</strong><small>Богатый выбор</small></span><span class="tab-arrow">›</span></button>
+          </div>
+          <article class="format-panel" id="panel-premium" role="tabpanel" aria-labelledby="tab-premium"><div class="format-copy"><span class="format-label">Обновлено в 2026 году</span><h3>Питание, созданное лично для вас — от поля до тарелки</h3><p>Новая шведская линия с индукционными печами и охлаждаемыми поверхностями сохраняет вкус и пользу блюд. Ужины готовятся индивидуально: вечером вы выбираете блюда, а на следующий день повара готовят именно ваш заказ.</p><div class="format-content"><ul class="check-list"><li>Отдельный уютный зал для гостей «Премиума»</li><li>Продукты исключительно собственного производства</li><li>Свежевыжатый сок на завтрак</li><li>Бесплатная дегустация напитков</li><li>ПП-питание и малолактозная продукция</li><li>Салат-бар, здоровый фастфуд и открытая кухня</li></ul><div class="format-mini-slider" aria-label="Фотографии питания Премиум"><div class="format-mini-track"><figure class="format-mini-slide"><img src="assets/site/restaurant-1.jpg" alt="Зал Премиум"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-2.jpg" alt="Подача блюд"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-5.jpg" alt="Шведская линия"></figure></div><button class="format-mini-button format-mini-prev" type="button" aria-label="Предыдущее фото">‹</button><button class="format-mini-button format-mini-next" type="button" aria-label="Следующее фото">›</button><div class="format-mini-dots"><button class="format-mini-dot active" type="button" aria-label="Фото 1"></button><button class="format-mini-dot" type="button" aria-label="Фото 2"></button><button class="format-mini-dot" type="button" aria-label="Фото 3"></button></div></div></div></div></article>
+          <article class="format-panel" id="panel-lux" role="tabpanel" aria-labelledby="tab-lux" hidden><div class="format-copy"><span class="format-label">Категория 4 звезды</span><h3>Шведский стол «Люкс»</h3><p>Оригинальные рецепты, отборные продукты, ценные породы рыб, ежедневные свежие фрукты и авторские десерты от кондитеров высшего класса.</p><div class="format-content"><ul class="check-list"><li>Высококачественные продукты алтайских производителей</li><li>Свежесваренный кофе к десерту</li><li>Свежие фрукты в каждый приём пищи</li><li>Спокойная и свободная обстановка</li></ul><div class="format-mini-slider" aria-label="Фотографии питания Люкс"><div class="format-mini-track"><figure class="format-mini-slide"><img src="assets/site/restaurant-4.jpg" alt="Блюдо меню Люкс"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-1.jpg" alt="Зал ресторана"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-2.jpg" alt="Свежие фрукты и напитки"></figure></div><button class="format-mini-button format-mini-prev" type="button" aria-label="Предыдущее фото">‹</button><button class="format-mini-button format-mini-next" type="button" aria-label="Следующее фото">›</button><div class="format-mini-dots"><button class="format-mini-dot active" type="button" aria-label="Фото 1"></button><button class="format-mini-dot" type="button" aria-label="Фото 2"></button><button class="format-mini-dot" type="button" aria-label="Фото 3"></button></div></div></div><div class="world"><strong>Кухня народов мира</strong><p>Специально для гостей «Люкс» — каждый день за нашим столом маленькое путешествие. На завтрак, обед и ужин вас ждут 3 блюда из разных уголков планеты, приготовленные по традиционным рецептам.</p><p>Сегодня — Грузия, завтра — Италия, послезавтра — Азия. Меню постоянно меняется, и каждый приём пищи приносит что-то новое.</p></div></div></article>
+          <article class="format-panel" id="panel-buffet" role="tabpanel" aria-labelledby="tab-buffet" hidden><div class="format-copy"><span class="format-label">Классический формат</span><h3>Шведский стол</h3><p>Рядом с каждым блюдом размещена карточка с составом, номером диеты, калорийностью и количеством белков, жиров и углеводов.</p><div class="format-content"><ul class="check-list"><li>Богатый выбор блюд на любой вкус</li><li>Диетические блюда по специальным технологиям</li><li>Овощные, мясные и рыбные блюда</li><li>Понятный самостоятельный выбор рациона</li></ul><div class="format-mini-slider" aria-label="Фотографии шведского стола"><div class="format-mini-track"><figure class="format-mini-slide"><img src="assets/site/restaurant-3.jpg" alt="Выбор блюд на шведской линии"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-5.jpg" alt="Овощи на шведской линии"></figure><figure class="format-mini-slide"><img src="assets/site/restaurant-4.jpg" alt="Готовое блюдо"></figure></div><button class="format-mini-button format-mini-prev" type="button" aria-label="Предыдущее фото">‹</button><button class="format-mini-button format-mini-next" type="button" aria-label="Следующее фото">›</button><div class="format-mini-dots"><button class="format-mini-dot active" type="button" aria-label="Фото 1"></button><button class="format-mini-dot" type="button" aria-label="Фото 2"></button><button class="format-mini-dot" type="button" aria-label="Фото 3"></button></div></div></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray">
+      <div class="wrapper">
+        <h2 class="title">Фото ресторана санатория</h2>
+        <div class="gallery-slider" aria-roledescription="carousel" aria-label="Фотографии ресторана">
+          <div class="gallery-track">
+            <figure class="gallery-slide"><img src="assets/site/restaurant-5.jpg" alt="Шведская линия ресторана"><figcaption class="gallery-caption">Шведская линия с богатым выбором блюд</figcaption></figure>
+            <figure class="gallery-slide"><img src="assets/site/restaurant-1.jpg" alt="Гости ресторана санатория"><figcaption class="gallery-caption">Уютная атмосфера ресторанного зала</figcaption></figure>
+            <figure class="gallery-slide"><img src="assets/site/restaurant-3.jpg" alt="Выбор блюд на шведской линии"><figcaption class="gallery-caption">Свежие блюда на каждый день</figcaption></figure>
+            <figure class="gallery-slide"><img src="assets/site/restaurant-4.jpg" alt="Блюдо ресторана"><figcaption class="gallery-caption">Блюда, приготовленные из натуральных продуктов</figcaption></figure>
+          </div>
+          <button class="slider-button slider-prev" type="button" aria-label="Предыдущая фотография">‹</button>
+          <button class="slider-button slider-next" type="button" aria-label="Следующая фотография">›</button>
+          <div class="slider-dots" aria-label="Выбор фотографии"><button class="slider-dot active" type="button" aria-label="Фотография 1"></button><button class="slider-dot" type="button" aria-label="Фотография 2"></button><button class="slider-dot" type="button" aria-label="Фотография 3"></button><button class="slider-dot" type="button" aria-label="Фотография 4"></button></div>
+        </div>
+        <div class="gallery-more"><a class="btn" href="https://www.belokurikha-san.ru/about/photoalbum/?album=40">Больше фото</a></div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="wrapper">
+        <h2 class="title">Дополнительные услуги</h2>
+        <div class="services-grid">
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 24h22M8 24c0-8 3-13 8-13s8 5 8 13M16 11V7M13 7h6"/></svg></div><div><h3>Банкеты и корпоративные мероприятия</h3><p>Организуем банкеты, кофе-паузы и фуршеты для конференций, деловых встреч и особых событий.</p><div class="service-tags"><span>Банкеты</span><span>Кофе-паузы</span><span>Фуршеты</span></div></div></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="16" cy="9" r="4"/><path d="M10 27v-6c0-4 2-7 6-7s6 3 6 7v6M10 19l-5 4M22 19l5 4"/></svg></div><div><h3>Питание для детей</h3><p>4-разовое питание с дополнительным полдником. Дети до 2 лет питаются бесплатно без отдельного посадочного места.</p></div></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 24h22M8 21c0-6 3-10 8-10s8 4 8 10H8ZM16 11V8M13 8h6"/></svg></div><div><h3>Банкетные блюда</h3><p>Выберите блюда из специального меню — мы приготовим их к вашему событию. Заказ принимается за 3 дня до желаемой даты.</p></div></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 24h22M8 24c0-7 3-11 8-11s8 4 8 11M16 13V9M12 9h8"/><circle cx="26" cy="7" r="4"/><path d="M26 5v2l1 1"/></svg></div><div><h3>Рум-сервис 24/7</h3><p>Еда прямо в номер в любое время суток. Меню, цены и контактный номер находятся в каждом номере.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray" id="order">
+      <div class="wrapper order-card">
+        <div class="order-copy"><h2>Стол заказов — алтайские продукты с собой</h2><p>Понравились наши блюда? Возьмите любимые продукты домой или в подарок.</p><div class="steps"><div class="step"><span class="step-num">1</span><span><strong>Выберите продукты</strong><span>Натуральные продукты собственного производства сети «Курорт Белокуриха».</span></span></div><div class="step"><span class="step-num">2</span><span><strong>Обратитесь к менеджеру зала ресторана</strong><span>Менеджер поможет оформить и подготовить заказ.</span></span></div><div class="step"><span class="step-num">3</span><span><strong>Получите готовый заказ</strong><span>Выдача производится в ресторане санатория.</span></span></div></div><div class="order-info"><div class="order-info-item"><strong>За 3 дня до нужной даты</strong><span>обратитесь к менеджеру зала ресторана</span></div><div class="order-info-item"><strong>Ежедневно после 14:00</strong><span>выдача подготовленных заказов</span></div></div></div>
+        <div class="order-photo" role="img" aria-label="Продукты собственного производства"></div>
+      </div>
+    </section>
+
+    <section class="cta"><div class="wrapper"><h2>Выберите отдых, который заботится о вас во всём</h2><p>Питание уже включено в путёвку. Найдите подходящую программу, даты и категорию проживания.</p><a class="btn" href="https://www.belokurikha-san.ru/pricing">Путёвки и цены</a></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrapper"><div class="footer-grid"><img class="footer-logo" src="assets/site/logo-colored.png" alt="Санаторий Белокуриха"><div><h3>Гостям</h3><div class="footer-links"><a href="https://www.belokurikha-san.ru/treatment">Лечение</a><a href="https://www.belokurikha-san.ru/pricing">Путёвки и цены</a><a href="https://www.belokurikha-san.ru/promo">Спецпредложения</a></div></div><div><h3>Контакты</h3><p>8 800 707 5183<br>659900, Алтайский край, г. Белокуриха, ул. Славского, 9</p></div></div><div class="legal">Имеются противопоказания. Необходима консультация специалиста. © 2013–2026 АО «Курорт Белокуриха»</div></div></footer>
+
+  <script>
+    const tabs=[...document.querySelectorAll('.format-tab')];
+    const panels=[...document.querySelectorAll('.format-panel')];
+    tabs.forEach((tab,index)=>{
+      tab.addEventListener('click',()=>{
+        tabs.forEach(item=>{const active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1});
+        panels.forEach(panel=>{panel.hidden=panel.id!==`panel-${tab.dataset.panel}`});
+      });
+      tab.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;event.preventDefault();const dir=['ArrowRight','ArrowDown'].includes(event.key)?1:-1;const next=tabs[(index+dir+tabs.length)%tabs.length];next.focus();next.click()});
+    });
+    const menuButton=document.querySelector('.menu-button');
+    const menu=document.querySelector('.header-nav');
+    menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});
+
+    document.querySelectorAll('.format-mini-slider').forEach(slider=>{
+      const miniTrack=slider.querySelector('.format-mini-track');
+      const miniSlides=[...slider.querySelectorAll('.format-mini-slide')];
+      const miniDots=[...slider.querySelectorAll('.format-mini-dot')];
+      let miniIndex=0;
+      const showMini=index=>{
+        miniIndex=(index+miniSlides.length)%miniSlides.length;
+        miniTrack.style.transform=`translateX(-${miniIndex*100}%)`;
+        miniDots.forEach((dot,i)=>dot.classList.toggle('active',i===miniIndex));
+      };
+      slider.querySelector('.format-mini-prev').addEventListener('click',()=>showMini(miniIndex-1));
+      slider.querySelector('.format-mini-next').addEventListener('click',()=>showMini(miniIndex+1));
+      miniDots.forEach((dot,i)=>dot.addEventListener('click',()=>showMini(i)));
+      showMini(0);
+    });
+
+    const gallery=document.querySelector('.gallery-slider');
+    const track=gallery.querySelector('.gallery-track');
+    const slides=[...gallery.querySelectorAll('.gallery-slide')];
+    const dots=[...gallery.querySelectorAll('.slider-dot')];
+    let slideIndex=0;
+    const showSlide=index=>{
+      slideIndex=(index+slides.length)%slides.length;
+      track.style.transform=`translateX(-${slideIndex*100}%)`;
+      slides.forEach((slide,i)=>slide.setAttribute('aria-hidden',String(i!==slideIndex)));
+      dots.forEach((dot,i)=>dot.classList.toggle('active',i===slideIndex));
+    };
+    gallery.querySelector('.slider-prev').addEventListener('click',()=>showSlide(slideIndex-1));
+    gallery.querySelector('.slider-next').addEventListener('click',()=>showSlide(slideIndex+1));
+    dots.forEach((dot,i)=>dot.addEventListener('click',()=>showSlide(i)));
+    gallery.addEventListener('keydown',event=>{if(event.key==='ArrowLeft')showSlide(slideIndex-1);if(event.key==='ArrowRight')showSlide(slideIndex+1)});
+    showSlide(0);
+  </script>
+</body>
+</html>
