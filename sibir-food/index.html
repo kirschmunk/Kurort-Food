@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#153b34">
+  <title>Питание в санатории «Сибирь»</title>
+  <meta name="description" content="Питание в санатории «Сибирь»: персональный рацион, продукты собственного производства и четыре формата питания.">
+  <style>
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-Regular.woff') format('woff');font-weight:400;font-display:swap}
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-Bold.woff') format('woff');font-weight:700;font-display:swap}
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-ExtraBold.woff') format('woff');font-weight:800;font-display:swap}
+    :root{--ink:#183630;--deep:#123a33;--forest:#205146;--mint:#dfece5;--pale:#f2f5f0;--cream:#f7f2e9;--white:#fff;--coral:#df795e;--coral-dark:#c96249;--gold:#b89a5c;--line:#d7e0db;--muted:#65746e;--radius:24px;--shadow:0 18px 50px rgba(26,57,49,.1)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Acrom,Arial,sans-serif;font-size:16px;line-height:1.6}
+    body.menu-open{overflow:hidden}
+    img{display:block;max-width:100%}
+    button,input,select{font:inherit}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer}
+    .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--coral-dark);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
+    h1,h2,h3,p{margin-top:0}
+    h1{max-width:720px;margin-bottom:22px;font-size:clamp(46px,6vw,82px);line-height:.98;letter-spacing:-.045em}
+    h2{margin-bottom:18px;font-size:clamp(34px,4.2vw,58px);line-height:1.05;letter-spacing:-.035em}
+    h3{font-size:24px;line-height:1.25}
+    .lead{font-size:19px;color:#546760}
+    .section{padding:108px 0}
+    .section-head{max-width:760px;margin-bottom:48px}
+    .section-head.center{margin-inline:auto;text-align:center}
+    .section-head.center .eyebrow{justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid transparent;border-radius:12px;background:var(--coral);color:#fff;font-weight:700;transition:.2s ease}
+    .btn:hover{background:var(--coral-dark);transform:translateY(-2px)}
+    .btn-light{border-color:rgba(255,255,255,.52);background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+    .btn-light:hover{background:#fff;color:var(--deep)}
+    .arrow{font-size:20px}
+
+    .hero{min-height:760px;position:relative;overflow:hidden;background:var(--deep)}
+    .hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(9,36,30,.94) 0%,rgba(9,36,30,.76) 43%,rgba(9,36,30,.16) 74%,rgba(9,36,30,.08) 100%),url('assets/buffet.jpg');background-position:center;background-size:cover;transform:scale(1.02)}
+    .hero:after{content:"";position:absolute;inset:auto -8% -120px;width:75%;height:230px;border-radius:50% 50% 0 0;background:#fff;transform:rotate(-3deg);transform-origin:right bottom}
+    .site-head{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;padding-top:26px;color:#fff}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%;font-size:20px}
+    .brand strong{display:block;font-size:20px;letter-spacing:.13em}
+    .brand small{display:block;margin-top:-3px;font-size:9px;letter-spacing:.18em;opacity:.74}
+    .desktop-nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+    .desktop-nav a:not(.head-book):after{content:"";display:block;width:0;height:2px;margin-top:4px;background:var(--coral);transition:.2s}
+    .desktop-nav a:hover:after{width:100%}
+    .phone{font-size:18px;white-space:nowrap}
+    .head-book{padding:12px 17px;border-radius:10px;background:var(--coral)}
+    .menu-toggle{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:transparent;color:#fff;font-size:22px}
+    .mobile-nav{display:none}
+    .hero-copy{position:relative;z-index:2;max-width:760px;padding:136px 0 180px;color:#fff}
+    .hero-copy .eyebrow{color:#efb7a7}
+    .hero-copy p{max-width:690px;margin-bottom:28px;font-size:19px;color:rgba(255,255,255,.83)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+    .hero-facts{display:flex;flex-wrap:wrap;gap:10px}
+    .hero-fact{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.07);font-size:13px;color:rgba(255,255,255,.85);backdrop-filter:blur(8px)}
+    .hero-fact b{color:#fff}
+
+    .booking{position:relative;z-index:5;margin-top:-78px}
+    .booking-card{padding:24px 26px;border-radius:18px;background:#fff;box-shadow:0 20px 55px rgba(18,58,51,.18)}
+    .booking-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .booking-top strong{font-size:18px}
+    .booking-top span{font-size:12px;color:var(--muted)}
+    .booking-form{display:grid;grid-template-columns:1.1fr 1.1fr .8fr .8fr 1.2fr;gap:12px}
+    .field{position:relative}
+    .field label{position:absolute;left:14px;top:8px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .field input,.field select{width:100%;height:58px;padding:23px 13px 7px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none}
+    .field input:focus,.field select:focus{border-color:var(--forest)}
+    .booking-form .btn{height:58px}
+
+    .treatment{padding-top:118px}
+    .treatment-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:72px}
+    .treatment-copy p{color:#586b64}
+    .quote{margin:30px 0;padding:22px 24px;border-left:4px solid var(--coral);border-radius:0 14px 14px 0;background:var(--cream);font-size:17px;font-weight:700;color:var(--deep)}
+    .treatment-visual{position:relative;padding:22px 0 30px 30px}
+    .treatment-visual:before{content:"";position:absolute;inset:0 60px 0 0;border-radius:40% 52% 35% 45%;background:var(--mint)}
+    .treatment-visual img{position:relative;width:100%;height:470px;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
+    .diet-note{position:absolute;right:-12px;bottom:0;width:260px;padding:20px;border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+    .diet-note b{display:block;margin-bottom:5px;color:var(--forest)}
+    .diet-note span{font-size:12px;color:var(--muted)}
+    .regime{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+    .regime-item{display:flex;align-items:center;gap:13px;padding:16px;border:1px solid var(--line);border-radius:14px}
+    .regime-number{display:grid;place-items:center;min-width:42px;height:42px;border-radius:50%;background:var(--mint);color:var(--deep);font-weight:800}
+    .regime-item small{display:block;color:var(--muted)}
+
+    .production{position:relative;overflow:hidden;background:var(--deep);color:#fff}
+    .production:before{content:"";position:absolute;right:-180px;top:-220px;width:550px;height:550px;border:1px solid rgba(255,255,255,.1);border-radius:50%}
+    .production .section-head p{color:rgba(255,255,255,.68)}
+    .production .eyebrow{color:#efb7a7}
+    .production-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px}
+    .production-photo{position:relative;min-height:540px;overflow:hidden;border-radius:24px}
+    .production-photo img{width:100%;height:100%;object-fit:cover}
+    .photo-caption{position:absolute;left:20px;right:20px;bottom:20px;padding:20px;border-radius:14px;background:rgba(12,48,40,.82);backdrop-filter:blur(12px)}
+    .photo-caption strong{display:block;font-size:20px}
+    .photo-caption span{font-size:13px;color:rgba(255,255,255,.72)}
+    .production-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .production-card{min-height:164px;padding:22px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.055);transition:.2s}
+    .production-card:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.08);transform:translateY(-2px)}
+    .production-card .num{margin-bottom:18px;color:#e9a08a;font-size:11px;font-weight:700;letter-spacing:.12em}
+    .production-card strong{display:block;margin-bottom:6px;font-size:17px}
+    .production-card p{margin:0;font-size:12px;color:rgba(255,255,255,.62)}
+    .manifesto{margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font-size:clamp(23px,3vw,38px);line-height:1.25}
+    .manifesto em{color:#efab96;font-style:normal}
+
+    .formats{background:var(--pale)}
+    .format-shell{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px}
+    .format-tabs{display:flex;flex-direction:column;gap:10px}
+    .format-tab{display:grid;grid-template-columns:38px 1fr 16px;align-items:center;gap:12px;min-height:84px;padding:15px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);text-align:left;transition:.2s}
+    .format-tab:hover{border-color:#a9c2b7}
+    .format-tab[aria-selected="true"]{border-color:#b9d2c7;background:var(--mint);box-shadow:0 12px 28px rgba(28,83,71,.09)}
+    .tab-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--pale);color:var(--forest);font-size:18px}
+    .format-tab[aria-selected="true"] .tab-icon{background:#fff}
+    .tab-label strong{display:block;font-size:13px;line-height:1.25}
+    .tab-label small{display:block;margin-top:3px;font-size:9px;color:var(--muted)}
+    .tab-arr{font-size:18px;color:var(--forest)}
+    .format-panel{display:none;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 14px 40px rgba(22,61,51,.06)}
+    .format-panel.active{display:block}
+    .format-intro{padding:34px 36px 18px}
+    .format-tag{display:inline-block;margin-bottom:13px;padding:7px 10px;border-radius:7px;background:var(--cream);color:#896f37;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    .format-intro h3{margin-bottom:10px;color:var(--forest);font-size:27px}
+    .format-intro p{margin-bottom:0;color:var(--muted);font-size:14px}
+    .format-main{display:grid;grid-template-columns:minmax(270px,.88fr) minmax(360px,1.12fr);gap:18px;padding:0 36px 36px}
+    .check-list{display:flex;flex-direction:column;gap:9px;margin:0;padding:0;list-style:none}
+    .check-list li{position:relative;display:flex;align-items:center;min-height:48px;padding:10px 12px 10px 42px;border:1px solid var(--line);border-radius:11px;background:#fbfcfb;font-size:13px;line-height:1.35}
+    .check-list li:before{content:"✓";position:absolute;left:13px;top:50%;display:grid;place-items:center;width:19px;height:19px;border:1px solid #b7a064;border-radius:50%;color:#9c813e;font-size:11px;transform:translateY(-50%)}
+    .panel-slider{position:relative;min-height:342px;overflow:hidden;border-radius:16px;background:var(--mint)}
+    .panel-slide{display:none;width:100%;height:342px;object-fit:cover}
+    .panel-slide.active{display:block}
+    .slide-btn{position:absolute;z-index:2;top:50%;display:grid;place-items:center;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--deep);box-shadow:0 5px 15px rgba(0,0,0,.12);transform:translateY(-50%)}
+    .slide-prev{left:14px}.slide-next{right:14px}
+    .slide-dots{position:absolute;z-index:2;left:50%;bottom:13px;display:flex;gap:6px;transform:translateX(-50%)}
+    .slide-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}
+    .slide-dot.active{width:18px;border-radius:6px;background:#fff}
+    .world{margin:0 36px 36px;padding:24px 26px;border-radius:15px;background:var(--deep);color:#fff}
+    .world strong{display:block;margin-bottom:8px;color:#f1b19f;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    .world p{margin:0;font-size:13px;color:rgba(255,255,255,.72)}
+
+    .gallery{background:#fff}
+    .gallery-stage{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .gallery-main,.gallery-side{overflow:hidden;border-radius:22px}
+    .gallery-main{height:540px}
+    .gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+    .gallery-side div{overflow:hidden;border-radius:22px}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:.5s}
+    .gallery-main:hover img,.gallery-side div:hover img{transform:scale(1.025)}
+    .gallery-controls{display:flex;align-items:center;justify-content:space-between;margin-top:24px}
+    .gallery-progress{color:var(--muted);font-size:13px}
+    .gallery-arrows{display:flex;gap:9px}
+    .gallery-arrow{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--deep)}
+    .gallery-arrow:hover{background:var(--mint)}
+
+    .order{background:var(--cream)}
+    .order-card{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border-radius:26px;background:#fff;box-shadow:var(--shadow)}
+    .order-copy{padding:54px}
+    .order-copy h2{font-size:42px}
+    .steps{margin-top:30px}
+    .step{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--line)}
+    .step-num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--forest);font-weight:800}
+    .step strong{display:block}
+    .step small{display:block;color:var(--muted)}
+    .order-photo{position:relative;min-height:610px}
+    .order-photo img{width:100%;height:100%;object-fit:cover}
+    .order-note{position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:14px;background:rgba(18,58,51,.88);color:#fff;backdrop-filter:blur(10px)}
+    .order-note strong{display:block;font-size:20px;color:#f1b19f}
+    .order-note span{font-size:13px;color:rgba(255,255,255,.75)}
+
+    .services-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .service-card{position:relative;overflow:hidden;min-height:280px;padding:36px;border:1px solid var(--line);border-radius:22px;background:var(--pale)}
+    .service-card:first-child{background:var(--mint)}
+    .service-card:after{content:"";position:absolute;right:-70px;bottom:-80px;width:210px;height:210px;border:30px solid rgba(255,255,255,.35);border-radius:50%}
+    .service-icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:28px;border-radius:50%;background:#fff;color:var(--forest);font-size:21px}
+    .service-card h3{margin-bottom:10px;color:var(--forest)}
+    .service-card p{max-width:570px;margin-bottom:20px;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:7px 10px;border-radius:999px;background:#fff;color:var(--forest);font-size:10px;font-weight:700}
+
+    .final{padding:100px 0;background:var(--deep);color:#fff;text-align:center}
+    .final h2{max-width:840px;margin-inline:auto}
+    .final p{max-width:640px;margin:0 auto 30px;color:rgba(255,255,255,.68);font-size:18px}
+    .final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+    .footer{padding:42px 0;background:#0d2d27;color:#fff}
+    .footer-row{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:32px;align-items:start}
+    .footer .brand{margin-bottom:15px}
+    .footer p,.footer a{font-size:12px;color:rgba(255,255,255,.62)}
+    .footer strong{display:block;margin-bottom:9px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .copyright{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:10px;color:rgba(255,255,255,.42)}
+
+    @media(max-width:1020px){
+      .desktop-nav{display:none}.menu-toggle{display:block}.phone{margin-left:auto;margin-right:16px}.hero{min-height:700px}.hero-copy{padding-top:118px}
+      .booking-form{grid-template-columns:repeat(2,1fr)}.booking-form .btn{grid-column:span 2}
+      .treatment-grid,.production-layout{grid-template-columns:1fr}.treatment-visual{max-width:700px}.format-shell{grid-template-columns:1fr}.format-tabs{display:grid;grid-template-columns:repeat(4,1fr)}.format-tab{grid-template-columns:35px 1fr}.tab-arr{display:none}.format-main{grid-template-columns:.85fr 1.15fr}.order-copy{padding:40px}.order-card{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .wrap{width:min(100% - 32px,1180px)}.section{padding:76px 0}.lead{font-size:16px}
+      .hero{min-height:720px}.hero-bg{background-image:linear-gradient(90deg,rgba(9,36,30,.94),rgba(9,36,30,.68)),url('assets/buffet.jpg');background-position:57% center}.site-head{padding-top:18px}.brand strong{font-size:16px}.brand small{font-size:8px}.phone{display:none}.hero-copy{padding:105px 0 140px}.hero-copy p{font-size:16px}.hero:after{height:160px;bottom:-100px}
+      .mobile-nav{position:fixed;z-index:20;inset:0;display:flex;flex-direction:column;justify-content:center;gap:24px;padding:50px;background:var(--deep);color:#fff;font-size:24px;transform:translateX(100%);transition:.25s}.mobile-nav.open{transform:none}.mobile-close{position:absolute;right:24px;top:24px;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:transparent;color:#fff;font-size:24px}
+      .booking{margin-top:-54px}.booking-card{padding:20px}.booking-top span{display:none}.booking-form{grid-template-columns:1fr}.booking-form .btn{grid-column:auto}
+      .treatment{padding-top:84px}.treatment-grid{gap:30px}.treatment-visual{padding:0 0 42px}.treatment-visual:before{inset:20px 30px 20px 20px}.treatment-visual img{height:360px}.diet-note{right:8px;width:245px}.regime{grid-template-columns:1fr}
+      .production-grid{grid-template-columns:1fr}.production-photo{min-height:420px}.production-card{min-height:0}.manifesto{font-size:24px}
+      .format-tabs{grid-template-columns:1fr 1fr}.format-tab{min-height:76px}.format-main{grid-template-columns:1fr;padding:0 18px 18px}.format-intro{padding:26px 18px 18px}.format-intro h3{font-size:23px}.world{margin:0 18px 18px}.panel-slider,.panel-slide{height:290px;min-height:290px}
+      .gallery-stage{grid-template-columns:1fr}.gallery-main{height:390px}.gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:none;height:190px}.gallery-side div{border-radius:16px}
+      .order-card{grid-template-columns:1fr}.order-copy{padding:32px 24px}.order-copy h2{font-size:34px}.order-photo{min-height:380px}
+      .services-grid{grid-template-columns:1fr}.service-card{min-height:260px;padding:28px}
+      .footer-row{grid-template-columns:1fr}.final{padding:76px 0}
+    }
+    @media(max-width:440px){
+      h1{font-size:45px}.hero-copy{padding-top:86px}.hero-actions .btn{width:100%}.hero-fact{font-size:11px}
+      .format-tabs{grid-template-columns:1fr}.format-tab{min-height:68px}.gallery-main{height:300px}.gallery-side{height:145px}.check-list li{font-size:12px}.service-card{min-height:0}
+    }
+  </style>
+</head>
+<body>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильное меню">
+    <button class="mobile-close" id="mobileClose" aria-label="Закрыть меню">×</button>
+    <a href="https://sibir-san.ru/putevki/">Путёвки</a><a href="https://sibir-san.ru/lechenie/">Лечение</a><a href="https://sibir-san.ru/otdyh/">Отдых</a><a href="https://sibir-san.ru/o-sanatorii/">О санатории</a><a href="tel:88007075184">8 800 707 51 84</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap site-head">
+      <a class="brand" href="https://sibir-san.ru/" aria-label="Санаторий Сибирь">
+        <span class="brand-mark">С</span><span><strong>СИБИРЬ</strong><small>САНАТОРИЙ · БЕЛОКУРИХА</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Основное меню">
+        <a href="https://sibir-san.ru/putevki/">Путёвки</a><a href="https://sibir-san.ru/lechenie/">Лечение</a><a href="https://sibir-san.ru/otdyh/">Отдых</a><a href="https://sibir-san.ru/o-sanatorii/">О санатории</a><a class="phone" href="tel:88007075184">8 800 707 51 84</a><a class="head-book" href="https://sibir-san.ru/ceny/">Забронировать</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+    </div>
+    <div class="wrap hero-copy">
+      <div class="eyebrow">Питание в санатории «Сибирь»</div>
+      <h1>Еда, которая лечит</h1>
+      <p>Персональный рацион, продукты собственного производства и четыре формата питания — для отдыха, который действительно восстанавливает.</p>
+      <div class="hero-actions"><a class="btn" href="#formats">Выбрать формат <span class="arrow">→</span></a><a class="btn btn-light" href="https://sibir-san.ru/ceny/">Путёвки и цены</a></div>
+      <div class="hero-facts"><span class="hero-fact"><b>3-разовое</b> для большинства гостей</span><span class="hero-fact"><b>4-разовое</b> для детей и по показаниям</span><span class="hero-fact"><b>Врач-диетолог</b> составляет меню</span></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="booking"><div class="wrap booking-card"><div class="booking-top"><strong>Подобрать путёвку</strong><span>Питание уже включено в программу отдыха</span></div><form class="booking-form" action="https://sibir-san.ru/ceny/" method="get"><div class="field"><label for="arrival">Дата заезда</label><input id="arrival" name="arrival" type="date" required></div><div class="field"><label for="departure">Дата выезда</label><input id="departure" name="departure" type="date" required></div><div class="field"><label for="adults">Взрослых</label><select id="adults" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div><div class="field"><label for="children">Детей</label><select id="children" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></div><button class="btn" type="submit">Найти путёвку <span class="arrow">→</span></button></form></div></div>
+
+    <section class="section treatment"><div class="wrap treatment-grid"><div class="treatment-copy"><div class="eyebrow">Часть лечебной программы</div><h2>Рацион подбирается для вас</h2><p>Правильное питание в санатории становится частью лечения и усиливает эффект процедур. Поэтому к нему относятся так же серьёзно, как к медицинским назначениям.</p><p>Врач-диетолог учитывает диагноз, состояние здоровья и цели. Если два заболевания требуют особого рациона, специалист разработает меню, которое подойдёт для обоих случаев.</p><div class="quote">Здесь еда работает на восстановление — и при этом остаётся вкусной, сытной и разнообразной.</div><div class="regime"><div class="regime-item"><span class="regime-number">3×</span><span><b>Для большинства гостей</b><small>завтрак, обед и ужин</small></span></div><div class="regime-item"><span class="regime-number">4×</span><span><b>Для детей и по показаниям</b><small>с дополнительным приёмом пищи</small></span></div></div></div><div class="treatment-visual"><img src="assets/restaurant-hall.jpg" alt="Светлый ресторанный зал санатория Сибирь"><div class="diet-note"><b>Персональное меню</b><span>Составляется врачом-диетологом с учётом медицинских показаний.</span></div></div></div></section>
+
+    <section class="section production"><div class="wrap"><div class="section-head"><div class="eyebrow">Собственное производство</div><h2>От поля до тарелки</h2><p class="lead">АО «Курорт Белокуриха» самостоятельно выращивает и производит продукты, которые оказываются на столе гостей.</p></div><div class="production-layout"><div class="production-photo"><img src="assets/bakery.jpg" alt="Свежая выпечка собственного производства"><div class="photo-caption"><strong>Свежесть без посредников</strong><span>Производственный процесс контролирует команда технологов.</span></div></div><div class="production-grid"><article class="production-card"><div class="num">01 · ФЕРМА</div><strong>Молочная продукция</strong><p>Сыры, молоко и кисломолочные продукты, в том числе из козьего молока.</p></article><article class="production-card"><div class="num">02 · ХОЗЯЙСТВО</div><strong>Мясо и рыба</strong><p>Говядина, индейка, перепела, конина и продукция собственной рыбной фермы.</p></article><article class="production-card"><div class="num">03 · ПЕКАРНЯ</div><strong>Хлеб и десерты</strong><p>Своя пекарня и кондитерская: хлеб, выпечка, торты и пирожные.</p></article><article class="production-card"><div class="num">04 · ТЕПЛИЦЫ</div><strong>Овощи и зерно</strong><p>Собственное растениеводство, зерновые культуры и тепличное хозяйство.</p></article><article class="production-card"><div class="num">05 · ПРОИЗВОДСТВО</div><strong>Вода и напитки</strong><p>Цех розлива воды и собственное производство крафтовых напитков.</p></article><article class="production-card"><div class="num">06 · КАЧЕСТВО</div><strong>Контроль технологов</strong><p>Все этапы производства соответствуют высоким стандартам качества.</p></article></div></div><div class="manifesto">Мы не закупаем фермерскую продукцию — <em>мы производим её сами.</em></div></div></section>
+
+    <section class="section formats" id="formats"><div class="wrap"><div class="section-head center"><div class="eyebrow">Четыре формата</div><h2>Выберите свой вариант питания</h2><p class="lead">От классического шведского стола до блюд, приготовленных персонально по вашему заказу.</p></div><div class="format-shell"><div class="format-tabs" role="tablist" aria-label="Варианты питания">
+      <button class="format-tab" role="tab" aria-selected="true" aria-controls="panel-premium" id="tab-premium"><span class="tab-icon">♕</span><span class="tab-label"><strong>Премиум-меню</strong><small>Персональный заказ</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-lux" id="tab-lux"><span class="tab-icon">✦</span><span class="tab-label"><strong>Шведский стол «Люкс»</strong><small>Особый комфорт</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-buffet" id="tab-buffet"><span class="tab-icon">♨</span><span class="tab-label"><strong>Шведский стол</strong><small>Богатый выбор</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-diet" id="tab-diet"><span class="tab-icon">♡</span><span class="tab-label"><strong>Лечебные диеты</strong><small>По показаниям</small></span><span class="tab-arr">›</span></button>
+    </div><div class="format-panels">
+      <article class="format-panel active" id="panel-premium" role="tabpanel" aria-labelledby="tab-premium"><div class="format-intro"><span class="format-tag">Индивидуальный формат</span><h3>Питание, созданное лично для вас</h3><p>Вечером вы выбираете блюда, а на следующий день повара готовят именно ваш заказ — из продуктов собственного производства.</p></div><div class="format-main"><ul class="check-list"><li>Отдельный уютный зал для гостей «Премиума»</li><li>Блюда готовятся индивидуально по заказу</li><li>Закуски, салаты, овощи, фрукты и десерты</li><li>Бесплатная дегустация собственных напитков</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/restaurant-hall.jpg" alt="Зал ресторана"><img class="panel-slide" src="assets/buffet-hall.jpg" alt="Линия шведского стола"><img class="panel-slide" src="assets/bakery.jpg" alt="Свежая выпечка"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+      <article class="format-panel" id="panel-lux" role="tabpanel" aria-labelledby="tab-lux" hidden><div class="format-intro"><span class="format-tag">Повышенный комфорт</span><h3>Шведский стол «Люкс»</h3><p>Отдельный зал, фирменные блюда из натуральных алтайских продуктов и внимательное обслуживание.</p></div><div class="format-main"><ul class="check-list"><li>Отдельный уютный зал и квалифицированный официант</li><li>Фирменные блюда из натуральных алтайских продуктов</li><li>Десертный стол и свежая выпечка кондитеров</li><li>Свежесваренный кофе и фрукты в каждый приём пищи</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet-hall.jpg" alt="Зал шведского стола Люкс"><img class="panel-slide" src="assets/bakery.jpg" alt="Десертный стол"><img class="panel-slide" src="assets/buffet.jpg" alt="Блюда шведского стола"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div><div class="world"><strong>Кухня народов мира</strong><p>На завтрак, обед и ужин гостей ждут три блюда из разных уголков планеты, приготовленные по традиционным рецептам. Меню постоянно меняется, превращая каждый приём пищи в маленькое гастрономическое путешествие.</p></div></article>
+      <article class="format-panel" id="panel-buffet" role="tabpanel" aria-labelledby="tab-buffet" hidden><div class="format-intro"><span class="format-tag">Классический формат</span><h3>Вкусно, разнообразно и полезно</h3><p>Меню сбалансировано по белкам, жирам и углеводам, но остаётся по-настоящему сытным и аппетитным.</p></div><div class="format-main"><ul class="check-list"><li>Богатый выбор блюд на любой вкус</li><li>Меню меняется каждый день</li><li>Диетические блюда готовятся на пару</li><li>Баланс пищевой ценности и медицинских стандартов</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet.jpg" alt="Овощи на линии шведского стола"><img class="panel-slide" src="assets/buffet-hall.jpg" alt="Просторный зал шведского стола"><img class="panel-slide" src="assets/bakery.jpg" alt="Выпечка на шведской линии"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+      <article class="format-panel" id="panel-diet" role="tabpanel" aria-labelledby="tab-diet" hidden><div class="format-intro"><span class="format-tag">Медицинские показания</span><h3>Лечебные диеты</h3><p>Рацион подбирается врачом-диетологом с учётом диагноза, состояния здоровья и лечебных целей.</p></div><div class="format-main"><ul class="check-list"><li>Персональное меню при сочетании заболеваний</li><li>Блюда с учётом медицинских показаний</li><li>Щадящие технологии приготовления</li><li>Контроль пищевой ценности рациона</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet.jpg" alt="Свежие овощные блюда"><img class="panel-slide" src="assets/restaurant-hall.jpg" alt="Ресторанный зал"><img class="panel-slide" src="assets/bakery.jpg" alt="Свежая выпечка"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+    </div></div></div></section>
+
+    <section class="section gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Атмосфера</div><h2>Ресторан санатория</h2><p class="lead">Светлые залы, понятная навигация по линии питания и спокойная обстановка для каждого приёма пищи.</p></div><div class="gallery-stage"><div class="gallery-main"><img id="galleryMain" src="assets/buffet-hall.jpg" alt="Просторный ресторан санатория Сибирь"></div><div class="gallery-side"><div><img id="gallerySide1" src="assets/restaurant-hall.jpg" alt="Светлый ресторанный зал"></div><div><img id="gallerySide2" src="assets/buffet.jpg" alt="Линия шведского стола"></div></div></div><div class="gallery-controls"><span class="gallery-progress"><b id="galleryIndex">01</b> / 04</span><div class="gallery-arrows"><button class="gallery-arrow" id="galleryPrev" aria-label="Предыдущее фото">←</button><button class="gallery-arrow" id="galleryNext" aria-label="Следующее фото">→</button></div></div></div></section>
+
+    <section class="section order"><div class="wrap order-card"><div class="order-copy"><div class="eyebrow">Продукты с собой</div><h2>Стол заказов</h2><p>Понравились наши блюда? Возьмите любимые продукты собственного производства домой или в подарок.</p><div class="steps"><div class="step"><span class="step-num">1</span><span><strong>Выберите продукты</strong><small>Уточните доступный ассортимент у менеджера зала.</small></span></div><div class="step"><span class="step-num">2</span><span><strong>Оформите заказ</strong><small>Обратитесь к менеджеру за 3 дня до нужной даты.</small></span></div><div class="step"><span class="step-num">3</span><span><strong>Заберите заказ</strong><small>Выдача готовых заказов — ежедневно после 14:00.</small></span></div></div></div><div class="order-photo"><img src="assets/bakery.jpg" alt="Продукты собственного производства"><div class="order-note"><strong>Заказ — за 3 дня</strong><span>Это срок, необходимый ресторану для подготовки выбранных продуктов к нужной дате.</span></div></div></div></section>
+
+    <section class="section services"><div class="wrap"><div class="section-head center"><div class="eyebrow">Дополнительные возможности</div><h2>Забота в каждой детали</h2></div><div class="services-grid"><article class="service-card"><span class="service-icon">⌂</span><h3>Банкеты и мероприятия</h3><p>Ресторан санатория организует события любого масштаба — от деловой кофе-паузы до большого корпоративного вечера.</p><div class="tags"><span class="tag">Банкеты</span><span class="tag">Кофе-паузы</span><span class="tag">Фуршеты</span></div></article><article class="service-card"><span class="service-icon">☺</span><h3>Питание для детей</h3><p>Для маленьких гостей предусмотрено 4-разовое питание с дополнительным полдником. Дети до 2 лет питаются бесплатно без отдельного посадочного места.</p></article></div></div></section>
+
+    <section class="final"><div class="wrap"><div class="eyebrow" style="justify-content:center;color:#efb7a7">Санаторий «Сибирь»</div><h2>Отдых, который превращается в здоровье</h2><p>Выберите программу, даты и категорию проживания — питание уже станет частью вашей путёвки.</p><div class="final-actions"><a class="btn" href="https://sibir-san.ru/ceny/">Посмотреть цены <span class="arrow">→</span></a><a class="btn btn-light" href="tel:88007075184">8 800 707 51 84</a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><div class="footer-row"><div><a class="brand" href="https://sibir-san.ru/"><span class="brand-mark">С</span><span><strong>СИБИРЬ</strong><small>САНАТОРИЙ · БЕЛОКУРИХА</small></span></a><p>Глубокое оздоровление тела и духа в окружении природы Алтая.</p></div><div><strong>Контакты</strong><a href="tel:88007075184">8 800 707 51 84</a><p>Алтайский край, Белокуриха,<br>ул. Славского, 67</p></div><div><strong>Разделы</strong><p><a href="https://sibir-san.ru/putevki/">Путёвки</a><br><a href="https://sibir-san.ru/lechenie/">Лечение</a><br><a href="https://sibir-san.ru/otdyh/">Отдых</a></p></div></div><div class="copyright">Дизайн-концепция страницы питания · АО «Курорт Белокуриха»</div></div></footer>
+
+  <script>
+    const menu=document.getElementById('mobileNav');
+    document.getElementById('menuToggle').addEventListener('click',()=>{menu.classList.add('open');document.body.classList.add('menu-open')});
+    document.getElementById('mobileClose').addEventListener('click',()=>{menu.classList.remove('open');document.body.classList.remove('menu-open')});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');document.body.classList.remove('menu-open')}));
+
+    const tabs=[...document.querySelectorAll('.format-tab')];
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+      document.querySelectorAll('.format-panel').forEach(p=>{p.classList.remove('active');p.hidden=true});
+      tab.setAttribute('aria-selected','true');
+      const panel=document.getElementById(tab.getAttribute('aria-controls'));
+      panel.hidden=false;panel.classList.add('active');
+    }));
+
+    document.querySelectorAll('[data-slider]').forEach(slider=>{
+      const slides=[...slider.querySelectorAll('.panel-slide')];let current=0;
+      const dots=slider.querySelector('.slide-dots');
+      slides.forEach((_,i)=>{const dot=document.createElement('span');dot.className='slide-dot'+(i===0?' active':'');dots.appendChild(dot)});
+      const render=()=>{slides.forEach((s,i)=>s.classList.toggle('active',i===current));[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===current))};
+      slider.querySelector('.slide-next').addEventListener('click',()=>{current=(current+1)%slides.length;render()});
+      slider.querySelector('.slide-prev').addEventListener('click',()=>{current=(current-1+slides.length)%slides.length;render()});
+    });
+
+    const gallery=[
+      ['assets/buffet-hall.jpg','Просторный ресторан санатория Сибирь'],
+      ['assets/restaurant-hall.jpg','Светлый ресторанный зал'],
+      ['assets/buffet.jpg','Линия шведского стола'],
+      ['assets/bakery.jpg','Выпечка собственного производства']
+    ];
+    let galleryPos=0;
+    const updateGallery=()=>{
+      const positions=[galleryPos,(galleryPos+1)%gallery.length,(galleryPos+2)%gallery.length];
+      [['galleryMain',positions[0]],['gallerySide1',positions[1]],['gallerySide2',positions[2]]].forEach(([id,pos])=>{const img=document.getElementById(id);img.src=gallery[pos][0];img.alt=gallery[pos][1]});
+      document.getElementById('galleryIndex').textContent=String(galleryPos+1).padStart(2,'0');
+    };
+    document.getElementById('galleryNext').addEventListener('click',()=>{galleryPos=(galleryPos+1)%gallery.length;updateGallery()});
+    document.getElementById('galleryPrev').addEventListener('click',()=>{galleryPos=(galleryPos-1+gallery.length)%gallery.length;updateGallery()});
+  </script>
+</body>
+</html>
