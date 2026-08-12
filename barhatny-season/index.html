@@ -3,23 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Концепция сезонного баннера для сайта АО «Курорт Белокуриха»">
-  <title>Бархатный сезон — концепция баннера</title>
+  <meta name="description" content="Баннер «Бархатный сезон в Белокурихе»">
+  <title>Бархатный сезон в Белокурихе</title>
   <style>
-    :root{--ink:#28272b;--muted:#747076;--paper:#f1f1f1;--gold:#d8bb59}
-    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}body{font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}
-    .review-page{width:min(1460px,calc(100% - 48px));margin:0 auto;padding:58px 0 44px}.review-header{margin-bottom:28px}.review-header h1{margin:0;font-size:clamp(30px,4vw,50px);font-weight:700;line-height:1.08;letter-spacing:-.02em}
-    .season-banner{position:relative;display:block;min-height:515px;overflow:hidden;border-radius:24px;color:#fff;background:#293326;text-decoration:none;isolation:isolate;box-shadow:0 22px 58px rgba(50,52,40,.18)}.season-photo{position:absolute;z-index:0;top:0;bottom:0;left:8%;width:120%;height:100%;object-fit:cover;object-position:left 48%;transition:transform 700ms ease}.season-content{position:absolute;z-index:2;top:28px;bottom:28px;left:28px;display:flex;width:min(42%,560px);padding:34px 42px 32px;align-items:flex-start;flex-direction:column;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(24,31,23,.76);box-shadow:0 16px 45px rgba(17,21,15,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-    .season-date{display:inline-flex;margin-bottom:20px;align-items:center;gap:11px;color:#efd476;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.season-leaf{width:24px;height:28px;flex:0 0 auto;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.season-title{font-size:clamp(48px,5.2vw,72px);font-weight:500;line-height:.91;letter-spacing:-.045em}.season-place{margin-top:10px;color:#ead177;font-size:clamp(20px,2vw,27px);letter-spacing:.02em}.season-copy{max-width:440px;margin-top:21px;color:rgba(255,255,255,.9);font-size:16px;line-height:1.48}.season-features{display:flex;margin-top:20px;flex-wrap:wrap;gap:10px 27px;color:rgba(255,255,255,.92);font-size:15px;font-weight:500}.season-features span{position:relative}.season-features span:not(:last-child):after{position:absolute;top:50%;right:-16px;width:5px;height:5px;border-radius:50%;background:#d7b852;content:"";transform:translateY(-50%)}.season-action{display:inline-flex;margin-top:auto;padding:14px 21px;align-items:center;gap:18px;border-radius:7px;color:#273123;background:var(--gold);font-size:16px;font-weight:700;transition:background 180ms ease,gap 180ms ease}.season-banner:hover .season-photo{transform:scale(1.02)}.season-banner:hover .season-action{gap:24px;background:#e4ca70}
-    @media(max-width:900px){.season-content{width:min(48%,520px);padding-right:30px;padding-left:30px}.season-title{font-size:54px}.season-features{font-size:14px}}
-    @media(max-width:720px){.review-page{width:min(100% - 24px,1460px);padding:28px 0}.review-header{margin-bottom:20px}.season-banner{min-height:660px;border-radius:18px}.season-photo{left:0;width:100%;object-position:58% center;transform:none}.season-banner:hover .season-photo{transform:scale(1.02)}.season-content{top:auto;right:18px;bottom:18px;left:18px;width:auto;min-height:430px;padding:27px 25px 25px;background:rgba(24,31,23,.82)}.season-date{margin-bottom:15px;font-size:12px}.season-title{font-size:50px}.season-copy{margin-top:17px}.season-features{margin-top:17px;font-size:14px}.season-action{margin-top:23px}}
+    :root{--gold:#d8bb59}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#ededed}
+    body{display:flex;padding:32px;font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    .season-banner{position:relative;display:block;width:min(1460px,100%);min-height:510px;margin:auto;overflow:hidden;border-radius:28px;color:#fff;background:#273025;text-decoration:none;isolation:isolate;box-shadow:0 20px 55px rgba(40,45,35,.16)}
+    .season-photo{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:56% 50%;transition:transform 700ms ease}
+    .season-gradient{position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(24,31,23,.92) 0%,rgba(27,34,25,.82) 28%,rgba(28,34,24,.48) 48%,rgba(28,34,24,.10) 64%,transparent 76%)}
+    .season-content{position:relative;z-index:2;display:flex;width:min(51%,680px);min-height:510px;padding:44px 72px 40px;align-items:flex-start;flex-direction:column}
+    .season-date{display:inline-flex;margin-bottom:21px;align-items:center;gap:13px;color:#e6ca69;font-size:15px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+    .season-leaf{width:25px;height:29px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .season-title{font-size:clamp(58px,5.6vw,78px);font-weight:400;line-height:.91;letter-spacing:-.045em}
+    .season-place{margin-top:13px;color:#e1c45d;font-size:29px;font-weight:400}
+    .season-copy{max-width:520px;margin-top:29px;color:rgba(255,255,255,.83);font-size:20px;line-height:1.48}
+    .season-features{display:flex;margin-top:23px;flex-wrap:wrap;gap:10px 28px;color:rgba(255,255,255,.78);font-size:16px}
+    .season-features span{position:relative}
+    .season-features span:not(:last-child):after{position:absolute;top:50%;right:-17px;width:5px;height:5px;border-radius:50%;background:#d8bb59;content:"";transform:translateY(-50%)}
+    .season-action{display:inline-flex;margin-top:auto;padding:15px 23px;align-items:center;gap:28px;border-radius:8px;color:#253022;background:var(--gold);font-size:17px;font-weight:500;transition:background 180ms ease,gap 180ms ease}
+    .season-banner:hover .season-photo{transform:scale(1.025)}
+    .season-banner:hover .season-action{gap:34px;background:#e3c867}
+    @media(max-width:900px){body{padding:20px}.season-content{width:60%;padding-right:35px;padding-left:42px}.season-title{font-size:60px}.season-copy{font-size:18px}.season-features{font-size:15px}}
+    @media(max-width:680px){body{padding:12px}.season-banner{min-height:670px;border-radius:20px}.season-photo{object-position:60% center}.season-gradient{background:linear-gradient(0deg,rgba(24,31,23,.95) 0%,rgba(27,34,25,.82) 52%,rgba(28,34,24,.08) 82%)}.season-content{width:100%;min-height:670px;padding:30px 27px 28px;justify-content:flex-end}.season-date{margin-top:auto;margin-bottom:16px;font-size:12px}.season-title{font-size:52px}.season-place{font-size:24px}.season-copy{margin-top:18px;font-size:17px}.season-features{margin-top:18px;font-size:14px}.season-action{margin-top:24px}}
     @media(prefers-reduced-motion:reduce){.season-photo,.season-action{transition:none}}
   </style>
 </head>
 <body>
-  <main class="review-page">
-    <header class="review-header"><h1>Баннер «Бархатный сезон»</h1></header>
-    <a class="season-banner" href="https://belokurikha.ru/sales/barhatnyj-sezon/" aria-label="Открыть страницу акции «Бархатный сезон в Белокурихе»"><img class="season-photo" src="IMG_9421.jpg" alt="Семья на осеннем отдыхе в санатории «Белокуриха»"><span class="season-content"><span class="season-date"><svg class="season-leaf" viewBox="0 0 24 28" aria-hidden="true"><path d="M20.5 2.5C13 5.8 5 9.2 4.2 17.1c-.5 4.9 3.2 8.5 7.8 8.4 7.3-.2 10.4-8.8 8.5-23Z"/><path d="M5.2 22.8c3.1-5.8 7.2-10 12.4-13.1"/></svg><span>1 сентября — 25 октября</span></span><span class="season-title">Бархатный<br>сезон</span><span class="season-place">в Белокурихе</span><span class="season-copy">Золотая осень Алтая — время для прогулок, SPA и восстановления без летней суеты.</span><span class="season-features" aria-label="Преимущества сезона"><span>Прогулки</span><span>Бассейны</span><span>SPA</span><span>События</span></span><span class="season-action">Открыть сезон <span aria-hidden="true">→</span></span></span></a>
-  </main>
+  <a class="season-banner" href="https://belokurikha.ru/sales/barhatnyj-sezon/" aria-label="Открыть страницу акции «Бархатный сезон в Белокурихе»">
+    <img class="season-photo" src="IMG_9421.jpg" alt="Семья на осеннем отдыхе в санатории «Белокуриха»">
+    <span class="season-gradient" aria-hidden="true"></span>
+    <span class="season-content">
+      <span class="season-date">
+        <svg class="season-leaf" viewBox="0 0 24 28" aria-hidden="true"><path d="M20.5 2.5C13 5.8 5 9.2 4.2 17.1c-.5 4.9 3.2 8.5 7.8 8.4 7.3-.2 10.4-8.8 8.5-23Z"/><path d="M5.2 22.8c3.1-5.8 7.2-10 12.4-13.1"/></svg>
+        <span>1 сентября — 25 октября</span>
+      </span>
+      <span class="season-title">Бархатный<br>сезон</span>
+      <span class="season-place">в Белокурихе</span>
+      <span class="season-copy">Золотая осень Алтая — время для прогулок, SPA и восстановления без летней суеты.</span>
+      <span class="season-features" aria-label="Преимущества сезона"><span>Прогулки</span><span>Бассейны</span><span>SPA</span><span>События</span></span>
+      <span class="season-action">Открыть сезон <span aria-hidden="true">→</span></span>
+    </span>
+  </a>
 </body>
 </html>
