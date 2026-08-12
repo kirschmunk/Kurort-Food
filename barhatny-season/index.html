@@ -11,18 +11,18 @@
     html,body{margin:0;min-height:100%;background:#ededed}
     body{display:flex;padding:32px;font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
     .season-banner{position:relative;display:block;width:min(1460px,100%);min-height:510px;margin:auto;overflow:hidden;border-radius:28px;color:#fff;background:#273025;text-decoration:none;isolation:isolate;box-shadow:0 20px 55px rgba(40,45,35,.16)}
-    .season-photo{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:56% 50%;transition:transform 700ms ease}
+    .season-photo{position:absolute;z-index:0;top:0;bottom:0;left:0;width:114%;height:100%;object-fit:cover;object-position:left 50%;transition:transform 700ms ease}
     .season-gradient{position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(24,31,23,.92) 0%,rgba(27,34,25,.82) 28%,rgba(28,34,24,.48) 48%,rgba(28,34,24,.10) 64%,transparent 76%)}
-    .season-content{position:relative;z-index:2;display:flex;width:min(51%,680px);min-height:510px;padding:44px 72px 40px;align-items:flex-start;flex-direction:column}
+    .season-content{position:relative;z-index:2;display:flex;width:min(51%,680px);min-height:510px;padding:38px 72px 32px;align-items:flex-start;flex-direction:column}
     .season-date{display:inline-flex;margin-bottom:21px;align-items:center;gap:13px;color:#e6ca69;font-size:15px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
     .season-leaf{width:25px;height:29px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .season-title{font-size:clamp(58px,5.6vw,78px);font-weight:400;line-height:.91;letter-spacing:-.045em}
     .season-place{margin-top:13px;color:#e1c45d;font-size:29px;font-weight:400}
-    .season-copy{max-width:520px;margin-top:29px;color:rgba(255,255,255,.83);font-size:20px;line-height:1.48}
-    .season-features{display:flex;margin-top:23px;flex-wrap:wrap;gap:10px 28px;color:rgba(255,255,255,.78);font-size:16px}
+    .season-copy{max-width:520px;margin-top:25px;color:rgba(255,255,255,.83);font-size:20px;line-height:1.48}
+    .season-features{display:flex;margin-top:18px;flex-wrap:wrap;gap:10px 28px;color:rgba(255,255,255,.78);font-size:16px}
     .season-features span{position:relative}
     .season-features span:not(:last-child):after{position:absolute;top:50%;right:-17px;width:5px;height:5px;border-radius:50%;background:#d8bb59;content:"";transform:translateY(-50%)}
-    .season-action{display:inline-flex;margin-top:auto;padding:15px 23px;align-items:center;gap:28px;border-radius:8px;color:#253022;background:var(--gold);font-size:17px;font-weight:500;transition:background 180ms ease,gap 180ms ease}
+    .season-action{display:inline-flex;margin-top:30px;padding:15px 23px;align-items:center;gap:28px;border-radius:8px;color:#253022;background:var(--gold);font-size:17px;font-weight:500;transition:background 180ms ease,gap 180ms ease}
     .season-banner:hover .season-photo{transform:scale(1.025)}
     .season-banner:hover .season-action{gap:34px;background:#e3c867}
     @media(max-width:900px){body{padding:20px}.season-content{width:60%;padding-right:35px;padding-left:42px}.season-title{font-size:60px}.season-copy{font-size:18px}.season-features{font-size:15px}}
@@ -32,7 +32,7 @@
 </head>
 <body>
   <a class="season-banner" href="https://belokurikha.ru/sales/barhatnyj-sezon/" aria-label="Открыть страницу акции «Бархатный сезон в Белокурихе»">
-    <img class="season-photo" src="IMG_9421.jpg" alt="Семья на осеннем отдыхе в санатории «Белокуриха»">
+    <img class="season-photo" src="osen-ter.jpg" alt="Пара отдыхает у горной реки в Белокурихе">
     <span class="season-gradient" aria-hidden="true"></span>
     <span class="season-content">
       <span class="season-date">
