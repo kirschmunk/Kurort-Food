@@ -1,0 +1,210 @@
+:root {
+  --season-gold: #d8bb59;
+}
+
+.season-banner,
+.season-banner * {
+  box-sizing: border-box;
+}
+
+.season-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 510px;
+  overflow: hidden;
+  border-radius: 28px;
+  color: #fff;
+  background: #273025;
+  box-shadow: 0 20px 55px rgba(40, 45, 35, 0.16);
+  isolation: isolate;
+  text-decoration: none;
+}
+
+.season-photo {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 108%;
+  height: 100%;
+  background: url("assets/barhatny-season-hero.jpg") center 48% / cover no-repeat;
+  transition: transform 700ms ease;
+}
+
+.season-gradient {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 31, 23, 0.94) 0%,
+    rgba(27, 34, 25, 0.88) 29%,
+    rgba(28, 34, 24, 0.62) 42%,
+    rgba(28, 34, 24, 0.16) 53%,
+    transparent 64%
+  );
+}
+
+.season-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(51%, 680px);
+  min-height: 510px;
+  padding: 38px 72px 32px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.season-date {
+  display: inline-flex;
+  margin-bottom: 21px;
+  align-items: center;
+  gap: 13px;
+  color: #e6ca69;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.season-leaf {
+  width: 25px;
+  height: 29px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.season-title {
+  font-size: clamp(58px, 5.6vw, 78px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.91;
+}
+
+.season-place {
+  margin-top: 13px;
+  color: #e1c45d;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.season-copy {
+  max-width: 520px;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 20px;
+  line-height: 1.48;
+}
+
+.season-features {
+  display: flex;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+}
+
+.season-features span {
+  position: relative;
+}
+
+.season-features span:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--season-gold);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.season-action {
+  display: inline-flex;
+  margin-top: 30px;
+  padding: 15px 23px;
+  align-items: center;
+  gap: 28px;
+  border-radius: 8px;
+  color: #253022;
+  background: var(--season-gold);
+  font-size: 17px;
+  font-weight: 500;
+  transition: background 180ms ease, gap 180ms ease;
+}
+
+.season-banner:hover .season-photo {
+  transform: scale(1.025);
+}
+
+.season-banner:hover .season-action {
+  gap: 34px;
+  background: #e3c867;
+}
+
+@media (max-width: 900px) {
+  .season-content {
+    width: 60%;
+    padding-right: 35px;
+    padding-left: 42px;
+  }
+
+  .season-title { font-size: 60px; }
+  .season-copy { font-size: 18px; }
+  .season-features { font-size: 15px; }
+}
+
+@media (max-width: 680px) {
+  .season-banner {
+    min-height: 670px;
+    border-radius: 20px;
+  }
+
+  .season-photo {
+    width: 100%;
+    background-position: 64% center;
+  }
+
+  .season-gradient {
+    background: linear-gradient(
+      0deg,
+      rgba(24, 31, 23, 0.95) 0%,
+      rgba(27, 34, 25, 0.82) 52%,
+      rgba(28, 34, 24, 0.08) 82%
+    );
+  }
+
+  .season-content {
+    width: 100%;
+    min-height: 670px;
+    padding: 30px 27px 28px;
+    justify-content: flex-end;
+  }
+
+  .season-date {
+    margin-top: auto;
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .season-title { font-size: 52px; }
+  .season-place { font-size: 24px; }
+  .season-copy { margin-top: 18px; font-size: 17px; }
+  .season-features { margin-top: 18px; font-size: 14px; }
+  .season-action { margin-top: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-photo,
+  .season-action {
+    transition: none;
+  }
+}
