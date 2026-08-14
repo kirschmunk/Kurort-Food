@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чем заняться в Белокурихе — дизайн-концепция</title>
+  <style>
+    :root {
+      --ink: #28282c;
+      --muted: #6b6b70;
+      --green: #193a2b;
+      --gold: #d6ba58;
+      --canvas: #f1f1f0;
+      --white: #fff;
+      --radius: 30px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: "Trebuchet MS", "Avenir Next", Avenir, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(1480px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: clamp(62px, 8vw, 116px) 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: #9b7c17;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(42px, 5vw, 74px);
+      font-weight: 700;
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+
+    .lead {
+      max-width: 540px;
+      margin: 0 0 3px auto;
+      color: var(--muted);
+      font-size: clamp(16px, 1.5vw, 20px);
+      line-height: 1.55;
+    }
+
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: repeat(2, 286px) 350px;
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      overflow: hidden;
+      isolation: isolate;
+      border-radius: var(--radius);
+      color: var(--white);
+      text-decoration: none;
+      background: #23362b;
+      box-shadow: 0 14px 38px rgba(26, 35, 30, .08);
+      outline: 0 solid rgba(214, 186, 88, 0);
+      transition: transform .35s ease, box-shadow .35s ease, outline-color .35s ease;
+    }
+
+    .card--mental { grid-column: span 7; grid-row: span 2; }
+    .card--excursions,
+    .card--children { grid-column: span 5; }
+    .card--evening,
+    .card--spa,
+    .card--nature { grid-column: span 4; }
+
+    .card__photo {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2,.75,.25,1);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(8, 23, 15, .02) 16%, rgba(8, 24, 16, .84) 100%),
+        linear-gradient(90deg, rgba(8, 23, 15, .38), transparent 65%);
+      transition: opacity .35s ease;
+    }
+
+    .card--mental::before {
+      background:
+        linear-gradient(90deg, rgba(8, 25, 16, .86) 0%, rgba(8, 25, 16, .38) 62%, rgba(8, 25, 16, .06) 100%),
+        linear-gradient(180deg, transparent 40%, rgba(8, 23, 15, .75) 100%);
+    }
+
+    .card__body {
+      display: flex;
+      width: 100%;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: clamp(24px, 3vw, 40px);
+    }
+
+    .card--mental .card__body {
+      justify-content: center;
+      max-width: 77%;
+      padding: clamp(36px, 4.5vw, 68px);
+    }
+
+    .card__topline {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card__icon,
+    .card__arrow {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid rgba(255,255,255,.46);
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.13);
+    }
+
+    .card__icon { width: 52px; height: 52px; color: #f0d36d; }
+    .card__icon svg { width: 25px; height: 25px; }
+    .card__arrow { width: 44px; height: 44px; }
+    .card__arrow svg { width: 18px; height: 18px; }
+
+    .card h2 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(26px, 2.6vw, 39px);
+      font-weight: 700;
+      line-height: 1.04;
+      letter-spacing: -.027em;
+    }
+
+    .card--mental h2 { font-size: clamp(39px, 4vw, 62px); }
+
+    .card p {
+      max-width: 550px;
+      margin: 14px 0 0;
+      color: rgba(255,255,255,.86);
+      font-size: 16px;
+      line-height: 1.42;
+    }
+
+    .card--mental p {
+      margin-top: 20px;
+      font-size: clamp(17px, 1.6vw, 21px);
+      line-height: 1.5;
+    }
+
+    .card__hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      color: #f0d36d;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .card__hint::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      z-index: 2;
+      transform: translateY(-5px);
+      box-shadow: 0 24px 52px rgba(20, 32, 25, .18);
+      outline: 2px solid rgba(214, 186, 88, .55);
+    }
+
+    .card:hover .card__photo,
+    .card:focus-visible .card__photo { transform: scale(1.045); }
+
+    .card:hover .card__arrow,
+    .card:focus-visible .card__arrow { background: var(--gold); color: #1d2e23; border-color: var(--gold); }
+
+    .concept-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 22px;
+      color: #858589;
+      font-size: 13px;
+    }
+
+    .concept-note span:last-child { text-align: right; }
+
+    @media (max-width: 1050px) {
+      .section-head { grid-template-columns: 1fr; gap: 22px; }
+      .lead { margin-left: 0; }
+      .bento { grid-template-rows: 520px 255px 255px 320px 320px; }
+      .card--mental { grid-column: span 12; grid-row: span 1; }
+      .card--excursions,
+      .card--children { grid-column: span 6; }
+      .card--evening,
+      .card--spa { grid-column: span 6; }
+      .card--nature { grid-column: span 12; }
+      .card--mental .card__body { max-width: 70%; }
+    }
+
+    @media (max-width: 680px) {
+      .page { width: min(100% - 28px, 560px); padding: 54px 0; }
+      .section-head { margin-bottom: 26px; }
+      h1 { font-size: clamp(40px, 13vw, 57px); }
+      .bento { display: flex; flex-direction: column; gap: 12px; }
+      .card { min-height: 320px; border-radius: 24px; }
+      .card--mental { min-height: 460px; }
+      .card--mental .card__body { max-width: none; justify-content: flex-end; padding: 30px 25px; }
+      .card--mental::before {
+        background: linear-gradient(180deg, rgba(8,25,16,.03) 15%, rgba(8,25,16,.92) 100%);
+      }
+      .card__body { padding: 26px 22px; }
+      .card__topline { top: 18px; right: 18px; }
+      .card__icon { width: 46px; height: 46px; }
+      .card__arrow { width: 40px; height: 40px; }
+      .card p { font-size: 15px; }
+      .concept-note { align-items: flex-start; flex-direction: column; }
+      .concept-note span:last-child { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="section-head">
+      <div>
+        <div class="eyebrow">Отдых в Белокурихе</div>
+        <h1>Чем заняться у нас на отдыхе?</h1>
+      </div>
+      <p class="lead">Выбирайте настроение дня: спокойные практики, путешествия по Алтаю, отдых у воды или насыщенная вечерняя программа.</p>
+    </header>
+
+    <section class="bento" aria-label="Варианты отдыха в Белокурихе">
+      <a class="card card--mental" href="https://belokurikha.ru/" aria-label="Подробнее о ментальных практиках">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/1-mentalnye-praktiki-fit-2.jpg" alt="Занятие йогой на природе">
+        <span class="card__topline" aria-hidden="true">
+          <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21c-4.8-2.4-7-6-6.2-10.8 3.7.3 5.5 2.2 6.2 5.3.7-3.1 2.5-5 6.2-5.3C19 15 16.8 18.6 12 21Z"/><path d="M12 15.5C8.9 13.2 8.3 9.9 12 4c3.7 5.9 3.1 9.2 0 11.5Z"/></svg></span>
+          <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span>
+        </span>
+        <span class="card__body">
+          <h2>Ментальные практики</h2>
+          <p>Медитации, йога и телесные практики помогают замедлиться, восстановить внутренний баланс и по-настоящему переключиться.</p>
+          <span class="card__hint">Восстановить баланс</span>
+        </span>
+      </a>
+
+      <a class="card card--excursions" href="https://belokurikha.ru/ekskursii/" aria-label="Подробнее об экскурсиях">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/2-ekskursii-fit-2.jpg" alt="Горный пейзаж Алтая">
+        <span class="card__topline" aria-hidden="true">
+          <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/></svg></span>
+          <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span>
+        </span>
+        <span class="card__body"><h2>Экскурсии</h2><p>Красивые места Белокурихи и Горного Алтая — рядом.</p></span>
+      </a>
+
+      <a class="card card--children" href="https://belokurikha.ru/detskij-otdyh/" aria-label="Подробнее о детской анимации">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/3-detskaya-animacziya-fit-1.jpg" alt="Детская игровая комната">
+        <span class="card__topline" aria-hidden="true">
+          <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M8.7 10.3h.1m6.4 0h.1M8.5 14.1c1.8 2 5.2 2 7 0" stroke-linecap="round"/></svg></span>
+          <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span>
+        </span>
+        <span class="card__body"><h2>Детская анимация</h2><p>Игры, творчество и новые впечатления каждый день.</p></span>
+      </a>
+
+      <a class="card card--evening" href="https://belokurikha.ru/category/afisha/" aria-label="Подробнее о вечернем досуге">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/4-vechernij-dosug-fit-1.jpg" alt="Вечернее мероприятие в санатории">
+        <span class="card__topline" aria-hidden="true"><span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M19 15.2A7.7 7.7 0 0 1 8.8 5 8 8 0 1 0 19 15.2Z"/><path d="m17.5 5 .5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5Z"/></svg></span><span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span></span>
+        <span class="card__body"><h2>Вечерний досуг</h2><p>Концерты, кино, караоке и встречи для гостей любого возраста.</p></span>
+      </a>
+
+      <a class="card card--spa" href="https://belokurikha.ru/spa-centr-belokurikha/" aria-label="Подробнее о СПА и бассейнах">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/5-spa-i-bassejny-fit-1.jpg" alt="СПА-процедура">
+        <span class="card__topline" aria-hidden="true"><span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 10c2.3-2 4.7-2 7 0s4.7 2 7 0 3.5-2 4-2M3 15c2.3-2 4.7-2 7 0s4.7 2 7 0 3.5-2 4-2"/></svg></span><span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span></span>
+        <span class="card__body"><h2>СПА и бассейны</h2><p>Тёплая вода, уход и спокойный отдых после насыщенного дня.</p></span>
+      </a>
+
+      <a class="card card--nature" href="https://belokurikha.ru/obekty/belokuriha-gornaya/" aria-label="Подробнее о природе Белокурихи">
+        <img class="card__photo" src="https://belokurikha.ru/wp-content/uploads/2026/07/6-priroda-fit-2.jpg" alt="Семья любуется горным пейзажем">
+        <span class="card__topline" aria-hidden="true"><span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19 11 8l3.2 5.1L16 10l3 9H5Z"/><path d="M9 19c2-3 4.4-4.7 7.2-5.2"/></svg></span><span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18 18 6M9 6h9v9"/></svg></span></span>
+        <span class="card__body"><h2>Природа</h2><p>Терренкуры, горные пейзажи и чистый алтайский воздух.</p></span>
+      </a>
+    </section>
+
+    <div class="concept-note"><span>Интерактивная дизайн-концепция · наведите курсор на карточку</span><span>Исходные фотографии и направления сохранены</span></div>
+  </main>
+</body>
+</html>
