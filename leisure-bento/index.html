@@ -116,6 +116,26 @@
       transition: transform .8s cubic-bezier(.2,.75,.25,1);
     }
 
+    /* Старые исходники содержат светлые плашки в верхней части кадра.
+       Кадрирование использует только чистую фотографическую область. */
+    .card--mental .card__photo,
+    .card--nature .card__photo {
+      object-position: center bottom;
+      transform: scale(1.8);
+      transform-origin: center bottom;
+    }
+
+    .card--excursions .card__photo,
+    .card--children .card__photo,
+    .card--evening .card__photo,
+    .card--spa .card__photo { object-position: center bottom; }
+
+    .card--evening .card__photo,
+    .card--spa .card__photo {
+      transform: scale(1.15);
+      transform-origin: center bottom;
+    }
+
     .card::before {
       content: "";
       position: absolute;
@@ -228,6 +248,16 @@
 
     .card:hover .card__photo,
     .card:focus-visible .card__photo { transform: scale(1.045); }
+
+    .card--mental:hover .card__photo,
+    .card--mental:focus-visible .card__photo,
+    .card--nature:hover .card__photo,
+    .card--nature:focus-visible .card__photo { transform: scale(1.86); }
+
+    .card--evening:hover .card__photo,
+    .card--evening:focus-visible .card__photo,
+    .card--spa:hover .card__photo,
+    .card--spa:focus-visible .card__photo { transform: scale(1.2); }
 
     .card:hover .card__arrow,
     .card:focus-visible .card__arrow { background: var(--gold); color: #1d2e23; border-color: var(--gold); }
