@@ -213,6 +213,148 @@
       h1{font-size:45px}.hero-copy{padding-top:86px}.hero-actions .btn{width:100%}.hero-fact{font-size:11px}
       .format-tabs{grid-template-columns:1fr}.format-tab{min-height:68px}.gallery-main{height:300px}.gallery-side{height:145px}.check-list li{font-size:12px}.service-card{min-height:0}
     }
+
+    /* Адаптация утверждённой композиции страницы санатория «Белокуриха» */
+    :root{
+      --deep:#5f2630;
+      --forest:#5f2630;
+      --coral:#c94755;
+      --coral-dark:#a83342;
+      --mint:#fbeaec;
+      --cream:#fff7f7;
+      --pale:#f6f6f7;
+      --line:#e6dfe1;
+      --radius:12px;
+      --shadow:0 14px 36px rgba(95,38,48,.11)
+    }
+    body{font-family:Acrom,Arial,sans-serif;font-size:15px;color:#3f3d42}
+    .wrap{width:min(1200px,calc(100% - 48px))}
+    .section{padding:72px 0}
+    h1{font-size:42px;line-height:1.17;letter-spacing:0;text-transform:uppercase}
+    h2{font-size:28px;line-height:1.3;letter-spacing:0;text-transform:uppercase}
+    h3{font-size:19px}
+    .lead{font-size:15px;color:#666}
+    .eyebrow{color:var(--coral-dark);font-size:11px}
+    .btn{min-height:44px;padding:0 24px;border-radius:6px;font-size:13px;text-transform:uppercase}
+
+    .hero{min-height:610px;background:#3d1b23}
+    .hero-bg{background-image:linear-gradient(90deg,rgba(45,20,26,.94) 0%,rgba(45,20,26,.77) 43%,rgba(45,20,26,.18) 76%,rgba(45,20,26,.08) 100%),url('assets/buffet.jpg');background-position:center 45%}
+    .site-head{margin-top:0;padding:24px 0;border-radius:0;background:transparent;color:#fff;box-shadow:none;backdrop-filter:none}
+    .brand-mark{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff}
+    .desktop-nav{gap:24px;text-transform:uppercase}
+    .desktop-nav a:not(.head-book):after{background:#fff}
+    .head-book{border:1px solid rgba(255,255,255,.7);background:transparent}
+    .head-book:hover{background:#fff;color:var(--deep)}
+    .hero-copy{max-width:735px;padding:105px 0 128px}
+    .hero-copy .eyebrow{color:#ffb9c0}
+    .hero-copy h1{max-width:700px;margin-bottom:20px}
+    .hero-copy h1 span{color:#fff}
+    .hero-copy p{max-width:660px;margin-bottom:0;font-size:18px}
+    .hero-actions,.hero-facts{display:none}
+
+    .booking{margin-top:-28px}
+    .booking-card{padding:20px;border-radius:6px;box-shadow:0 0 42px rgba(51,20,28,.22)}
+    .booking-top{margin-bottom:12px}
+    .booking-top strong{color:var(--coral-dark);font-size:18px;text-transform:uppercase}
+    .booking-form{grid-template-columns:repeat(4,1fr) 1.35fr;gap:13px}
+    .field label{top:6px;font-size:9px}
+    .field input,.field select{height:44px;padding:18px 11px 4px;border-color:var(--coral-dark);border-radius:5px;color:var(--coral-dark)}
+    .booking-form .btn{height:44px;min-height:44px}
+
+    .treatment{padding-top:82px}
+    .treatment-grid{grid-template-columns:1.08fr .92fr;gap:0;align-items:stretch;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}
+    .treatment-copy{display:flex;flex-direction:column;padding:46px 44px 38px}
+    .treatment-copy h2{margin-bottom:24px;color:#302d32}
+    .treatment-copy p{font-size:15px}
+    .quote{margin:4px 0 20px;padding:18px 4px 18px 24px;border-left:4px solid var(--coral);border-radius:0;background:#fff7f7;color:var(--coral-dark);font-size:15px}
+    .regime{margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+    .regime-item{padding:12px;border:0;border-radius:7px;background:#faf7f8}
+    .regime-number{background:var(--mint);color:var(--coral-dark)}
+    .treatment-visual{min-height:570px;padding:0}
+    .treatment-visual:before{display:none}
+    .treatment-visual img{width:100%;height:100%;border-radius:0;box-shadow:none}
+    .treatment-visual:after{position:absolute;inset:0;content:"";background:linear-gradient(0deg,rgba(75,25,35,.78),transparent 58%)}
+    .diet-note{z-index:2;right:28px;bottom:26px;left:28px;width:auto;border-radius:8px;background:rgba(255,255,255,.94)}
+
+    .production{background:linear-gradient(180deg,#f7f7f8 0%,#f2eef0 100%);color:#3f3d42}
+    .production:before{display:none}
+    .production .section-head{max-width:820px;margin:0 auto 38px;text-align:center}
+    .production .section-head .eyebrow{justify-content:center;color:var(--coral-dark)}
+    .production .section-head p{color:#666}
+    .production-layout{display:block}
+    .production-photo{display:none}
+    .production-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+    .production-card{min-height:178px;padding:26px 24px;border:1px solid #eadfe2;border-top:4px solid var(--coral);border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(95,38,48,.07)}
+    .production-card:nth-child(2n){border-top-color:#893947;background:#fcf9fa}
+    .production-card:hover{border-color:#dcbfc5;background:#fff}
+    .production-card .num{margin-bottom:16px;color:var(--coral-dark)}
+    .production-card strong{color:var(--deep);font-size:15px;text-transform:uppercase}
+    .production-card p{color:#666;font-size:12px}
+    .manifesto{margin-top:30px;padding:23px 30px;border:0;border-left:7px solid #8c3543;border-radius:5px;background:var(--coral);color:#fff;font-size:18px;text-align:center}
+    .manifesto em{color:#fff;font-weight:800}
+
+    .formats{background:#fff}
+    .formats .section-head{margin-bottom:34px}
+    .format-shell{grid-template-columns:250px 1fr;gap:22px}
+    .format-tabs{gap:12px}
+    .format-tab{min-height:96px;padding:15px 14px;grid-template-columns:48px 1fr 14px;border-radius:10px;background:#fff}
+    .format-tab[aria-selected="true"]{border-color:var(--coral);background:var(--coral);color:#fff;box-shadow:0 12px 28px rgba(201,71,85,.2)}
+    .tab-icon{width:46px;height:46px;background:#f8edef;color:var(--coral-dark)}
+    .format-tab[aria-selected="true"] .tab-icon{background:#fff;color:var(--coral)}
+    .format-tab[aria-selected="true"] .tab-label small,.format-tab[aria-selected="true"] .tab-arr{color:rgba(255,255,255,.82)}
+    .format-panel{border-radius:12px;box-shadow:var(--shadow)}
+    .format-intro{padding:34px 34px 18px}
+    .format-tag{border-radius:4px;background:var(--coral);color:#fff}
+    .format-intro h3{color:var(--deep);font-size:21px;text-transform:uppercase}
+    .format-main{grid-template-columns:minmax(235px,.82fr) minmax(0,1.18fr);padding:0 34px 34px}
+    .check-list li{min-height:44px;border-radius:7px;background:#faf8f9;font-size:13px}
+    .check-list li:before{border-color:var(--coral);background:#fff;color:var(--coral-dark)}
+    .panel-slider,.panel-slide{height:300px;min-height:300px;border-radius:9px}
+    .world{margin:0 34px 34px;padding:19px 20px;border-left:4px solid var(--coral);border-radius:7px;background:#f8edef;color:#555}
+    .world strong{color:var(--coral-dark)}
+    .world p{color:#666}
+
+    .gallery{background:#f6f6f7}
+    .gallery .section-head{margin-right:auto;margin-left:auto;text-align:center}
+    .gallery .section-head .eyebrow{justify-content:center}
+    .gallery-stage{display:block;max-width:1040px;margin:0 auto;overflow:hidden;border-radius:12px;box-shadow:var(--shadow)}
+    .gallery-main{height:500px;border-radius:0}
+    .gallery-side{display:none}
+    .gallery-controls{max-width:1040px;margin:20px auto 0}
+    .gallery-arrow{border-color:#decfd2;color:var(--deep)}
+    .gallery-arrow:hover{background:var(--mint)}
+
+    .order{background:#fff}
+    .order-card{grid-template-columns:1.08fr .92fr;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+    .order-copy{padding:42px}
+    .order-copy h2{color:var(--deep);font-size:24px}
+    .step-num{background:var(--coral);color:#fff}
+    .order-photo{min-height:490px}
+    .order-note{border-radius:7px;background:rgba(75,25,35,.9)}
+    .order-note strong{color:#ffc2c8}
+
+    .services{background:linear-gradient(180deg,#f7f7f8 0%,#f1edef 100%)}
+    .services-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+    .service-card,.service-card:first-child{min-height:200px;padding:28px;border-radius:12px;background:#fff;box-shadow:0 10px 26px rgba(95,38,48,.07)}
+    .service-icon{margin-bottom:18px;background:var(--coral);color:#fff}
+    .service-card h3{color:var(--deep);text-transform:uppercase}
+    .tag{background:var(--mint);color:var(--coral-dark)}
+    .final{padding:64px 0;background:var(--coral)}
+    .final .eyebrow{color:#ffd1d5!important}
+    .footer{background:#4a2028}
+
+    @media(max-width:1020px){
+      .site-head{padding:20px 0}.format-shell{grid-template-columns:1fr}.format-tabs{grid-template-columns:repeat(4,1fr)}
+      .production-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .hero{min-height:610px}.hero-copy{padding:96px 0 122px}.site-head{margin-top:0;background:transparent}.brand{color:#fff}.menu-toggle{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff}
+      .booking-form{grid-template-columns:1fr}.treatment-grid{grid-template-columns:1fr}.treatment-copy{padding:34px 28px 30px}.treatment-visual{min-height:430px}.regime{grid-template-columns:1fr}
+      .production-grid{grid-template-columns:1fr}.format-tabs{grid-template-columns:1fr 1fr}.format-main{grid-template-columns:1fr}.gallery-main{height:360px}.services-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:440px){
+      h1{font-size:32px}.format-tabs{grid-template-columns:1fr}.gallery-main{height:290px}
+    }
   </style>
 </head>
 <body>
@@ -234,8 +376,8 @@
     </div>
     <div class="wrap hero-copy">
       <div class="eyebrow">Питание в санатории «Сибирь»</div>
-      <h1>Еда, которая <span>лечит</span></h1>
-      <p>Персональный рацион, продукты собственного производства и четыре формата питания — для отдыха, который действительно восстанавливает.</p>
+      <h1>Еда, которая <span>восстанавливает</span></h1>
+      <p>Питание в санатории «Сибирь» — полноценная часть лечебной программы: персональный рацион помогает восстановлению и усиливает эффект процедур.</p>
       <div class="hero-actions"><a class="btn" href="#formats">Выбрать формат <span class="arrow">→</span></a><a class="btn btn-light" href="https://sibir-san.ru/ceny/">Путёвки и цены</a></div>
       <div class="hero-facts"><span class="hero-fact"><b>3-разовое</b> для большинства гостей</span><span class="hero-fact"><b>4-разовое</b> для детей и по показаниям</span><span class="hero-fact"><b>Врач-диетолог</b> составляет меню</span></div>
     </div>
