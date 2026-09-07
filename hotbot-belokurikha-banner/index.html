@@ -3,225 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Баннер онлайн-витрины — санаторий «Белокуриха»</title>
+  <title>Баннер Hotbot — санаторий «Белокуриха»</title>
+  <link rel="stylesheet" href="banner.css">
   <style>
-    :root {
-      color-scheme: light;
-      --bb-blue: #0799cf;
-      --bb-blue-dark: #11446f;
-      --bb-blue-soft: #dff4fb;
-      --bb-ink: #173247;
-      --bb-muted: #526b7d;
-      --bb-white: #ffffff;
-      --bb-line: rgba(7, 153, 207, 0.18);
-    }
-
-    .hotbot-banner,
-    .hotbot-banner * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 48px 24px;
-      background: #f5f7f8;
-      font-family: Montserrat, Arial, sans-serif;
-      color: var(--bb-ink);
-    }
-
-    .hotbot-banner {
-      position: relative;
-      isolation: isolate;
-      width: 100%;
-      max-width: 1196px;
-      min-height: 360px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(390px, .88fr);
-      overflow: hidden;
-      border: 1px solid rgba(7, 153, 207, .12);
-      border-radius: 32px;
-      background: linear-gradient(110deg, #fff 0%, #fff 55%, #eaf8fd 100%);
-      box-shadow: 0 18px 48px rgba(16, 83, 120, .12);
-    }
-
-    .hotbot-banner::before,
-    .hotbot-banner::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      border: 1px solid var(--bb-line);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .hotbot-banner::before {
-      width: 340px;
-      height: 340px;
-      right: -110px;
-      top: -180px;
-    }
-
-    .hotbot-banner::after {
-      width: 510px;
-      height: 510px;
-      right: -180px;
-      top: -250px;
-    }
-
-    .hotbot-copy {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 48px 36px 48px 58px;
-    }
-
-    .hotbot-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 18px;
-      color: var(--bb-blue);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .hotbot-eyebrow::before {
-      content: "";
-      width: 34px;
-      height: 2px;
-      border-radius: 2px;
-      background: var(--bb-blue);
-    }
-
-    .hotbot-title {
-      max-width: 570px;
-      margin: 0;
-      color: var(--bb-blue-dark);
-      font-size: clamp(30px, 3.2vw, 43px);
-      line-height: 1.06;
-      font-weight: 800;
-      letter-spacing: -.045em;
-      text-transform: uppercase;
-    }
-
-    .hotbot-title-line {
-      display: block;
-      white-space: nowrap;
-    }
-
-    .hotbot-text {
-      max-width: 590px;
-      margin: 22px 0 28px;
-      color: var(--bb-muted);
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-    .hotbot-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      min-height: 56px;
-      padding: 0 28px;
-      border: 2px solid var(--bb-blue);
-      border-radius: 999px;
-      background: var(--bb-blue);
-      color: var(--bb-white);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      box-shadow: 0 10px 24px rgba(7, 153, 207, .22);
-      transition: transform .2s ease, background .2s ease, color .2s ease;
-    }
-
-    .hotbot-button:hover {
-      transform: translateY(-2px);
-      background: var(--bb-white);
-      color: var(--bb-blue);
-    }
-
-    .hotbot-button svg { width: 20px; height: 20px; }
-
-    .hotbot-visual {
-      position: relative;
-      min-height: 360px;
-      overflow: hidden;
-      background: #dff4fb;
-    }
-
-    .hotbot-photo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: 56% center;
-    }
-
-    @media (max-width: 900px) {
-      .hotbot-banner {
-        grid-template-columns: 1fr minmax(300px, .72fr);
-      }
-
-      .hotbot-copy { padding-left: 42px; }
-      .hotbot-title { font-size: 35px; }
-      .hotbot-text { font-size: 16px; }
-    }
-
-    @media (max-width: 700px) {
-      body { padding: 20px 14px; }
-
-      .hotbot-banner {
-        grid-template-columns: 1fr;
-        border-radius: 25px;
-        background: linear-gradient(160deg, #fff 0%, #f1fbfe 58%, #d8f1fa 100%);
-      }
-
-      .hotbot-copy { padding: 34px 26px 24px; }
-      .hotbot-title { font-size: clamp(29px, 8.5vw, 36px); }
-      .hotbot-text { margin: 19px 0 24px; font-size: 16px; }
-      .hotbot-button { width: 100%; }
-      .hotbot-visual { min-height: 280px; }
-      .hotbot-photo { object-position: 55% center; }
-      .hotbot-title-line { white-space: normal; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .hotbot-button { transition: none; }
-    }
+    html, body { min-height: 100%; }
+    body { margin: 0; padding: 60px 24px; display: grid; place-items: center; background: #f4f8fa; }
+    @media (max-width: 700px) { body { padding: 20px 12px; } }
   </style>
 </head>
 <body>
   <section class="hotbot-banner" aria-labelledby="hotbot-banner-title">
-    <div class="hotbot-copy">
-      <p class="hotbot-eyebrow">Онлайн-витрина санатория</p>
-      <h1 class="hotbot-title" id="hotbot-banner-title">
-        <span class="hotbot-title-line">Всё для отдыха —</span>
-        <span class="hotbot-title-line">В одном месте</span>
+    <div class="hotbot-banner__copy">
+      <p class="hotbot-banner__eyebrow">Онлайн-витрина санатория</p>
+      <h1 class="hotbot-banner__title" id="hotbot-banner-title">
+        <span class="hotbot-banner__title-line">Всё для отдыха —</span>
+        <span class="hotbot-banner__title-line">В одном месте</span>
       </h1>
-      <p class="hotbot-text">Процедуры и СПА, еда в номер, экскурсии, трансфер и другие услуги санатория «Белокуриха» — выбирайте и заказывайте онлайн.</p>
-      <a class="hotbot-button" href="https://shop.hotbot.ai/belokurikhasan" target="_blank" rel="noopener">
-        Перейти к услугам
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <p class="hotbot-banner__text">
+        Процедуры и СПА, еда в номер, экскурсии, трансфер и другие услуги
+        санатория «Белокуриха» — выбирайте и заказывайте онлайн.
+      </p>
+      <a class="hotbot-banner__button" href="https://shop.hotbot.ai/belokurikhasan" target="_blank" rel="noopener noreferrer">
+        <span>Перейти к услугам</span>
+        <svg class="hotbot-banner__button-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h14M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
     </div>
-
-    <div class="hotbot-visual" aria-hidden="true">
-      <img class="hotbot-photo" src="assets/hotbot-spa.jpg" alt="">
+    <div class="hotbot-banner__visual" aria-hidden="true">
+      <img class="hotbot-banner__photo" src="assets/hotbot-spa.jpg" alt="">
     </div>
   </section>
 </body>
