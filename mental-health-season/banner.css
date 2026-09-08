@@ -1,0 +1,228 @@
+.mental-season-banner,
+.mental-season-banner * {
+  box-sizing: border-box;
+}
+
+.mental-season-banner {
+  --mental-accent: #3ab5e9;
+  --mental-accent-light: #b8e6f8;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 510px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #0d3550;
+  box-shadow: 0 20px 55px rgba(13, 53, 80, 0.18);
+  color: #ffffff;
+  isolation: isolate;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.mental-season-banner__photo {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/mental-health-hero.jpg") left 55% / 112% auto no-repeat;
+  filter: brightness(1.08) saturate(1.04);
+  transition: transform 700ms ease;
+}
+
+.mental-season-banner__gradient {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 33, 52, 0.97) 0%, rgba(9, 42, 64, 0.9) 28%, rgba(10, 48, 72, 0.52) 42%, rgba(10, 48, 72, 0.12) 52%, transparent 61%);
+}
+
+.mental-season-banner__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(54%, 720px);
+  min-height: 510px;
+  padding: 38px 72px 32px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.mental-season-banner__date {
+  display: inline-flex;
+  margin-bottom: 18px;
+  align-items: center;
+  gap: 13px;
+  color: var(--mental-accent-light);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mental-season-banner__icon {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.mental-season-banner__title {
+  font-size: clamp(54px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+}
+
+.mental-season-banner__subtitle {
+  margin-top: 13px;
+  color: var(--mental-accent-light);
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.mental-season-banner__copy {
+  max-width: 560px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.mental-season-banner__features {
+  display: flex;
+  margin-top: 17px;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+}
+
+.mental-season-banner__features > span {
+  position: relative;
+}
+
+.mental-season-banner__features > span:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--mental-accent);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.mental-season-banner__action {
+  display: inline-flex;
+  margin-top: 27px;
+  padding: 15px 23px;
+  align-items: center;
+  gap: 28px;
+  border-radius: 8px;
+  background: var(--mental-accent);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background-color 180ms ease, gap 180ms ease;
+}
+
+.mental-season-banner:hover .mental-season-banner__photo {
+  transform: scale(1.025);
+}
+
+.mental-season-banner:hover .mental-season-banner__action {
+  gap: 34px;
+  background: #65c7ef;
+}
+
+.mental-season-banner:focus-visible {
+  outline: 3px solid var(--mental-accent);
+  outline-offset: 5px;
+}
+
+@media (max-width: 900px) {
+  .mental-season-banner__content {
+    width: 62%;
+    padding-right: 32px;
+    padding-left: 42px;
+  }
+
+  .mental-season-banner__title {
+    font-size: 56px;
+  }
+
+  .mental-season-banner__copy {
+    font-size: 17px;
+  }
+
+  .mental-season-banner__features {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 680px) {
+  .mental-season-banner {
+    min-height: 690px;
+    border-radius: 20px;
+  }
+
+  .mental-season-banner__photo {
+    background-size: cover;
+    background-position: 58% center;
+    filter: brightness(1.05) saturate(1.02);
+  }
+
+  .mental-season-banner__gradient {
+    background: linear-gradient(0deg, rgba(7, 33, 52, 0.97) 0%, rgba(9, 42, 64, 0.88) 53%, rgba(9, 42, 64, 0.08) 82%);
+  }
+
+  .mental-season-banner__content {
+    width: 100%;
+    min-height: 690px;
+    padding: 30px 27px 28px;
+    justify-content: flex-end;
+  }
+
+  .mental-season-banner__date {
+    margin-top: auto;
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .mental-season-banner__title {
+    font-size: clamp(43px, 13vw, 54px);
+  }
+
+  .mental-season-banner__subtitle {
+    font-size: 22px;
+  }
+
+  .mental-season-banner__copy {
+    margin-top: 17px;
+    font-size: 16px;
+  }
+
+  .mental-season-banner__features {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+
+  .mental-season-banner__action {
+    margin-top: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mental-season-banner__photo,
+  .mental-season-banner__action {
+    transition: none;
+  }
+}
