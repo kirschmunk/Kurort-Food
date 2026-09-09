@@ -12,8 +12,8 @@
   min-height: 510px;
   overflow: hidden;
   border-radius: 28px;
-  background: #171d21;
-  box-shadow: 0 20px 55px rgba(23, 29, 33, 0.18);
+  background: #30383c;
+  box-shadow: 0 20px 55px rgba(48, 56, 60, 0.18);
   color: #ffffff;
   isolation: isolate;
   font-family: inherit;
@@ -36,7 +36,7 @@
   z-index: 1;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(16, 21, 25, 0.97) 0%, rgba(20, 27, 31, 0.91) 28%, rgba(25, 33, 37, 0.55) 42%, rgba(29, 38, 42, 0.13) 52%, transparent 61%);
+    linear-gradient(90deg, rgba(41, 49, 53, 0.95) 0%, rgba(48, 57, 61, 0.88) 28%, rgba(56, 66, 70, 0.52) 42%, rgba(63, 73, 77, 0.12) 52%, transparent 61%);
 }
 
 .mental-season-banner__content {
@@ -181,7 +181,7 @@
   }
 
   .mental-season-banner__gradient {
-    background: linear-gradient(0deg, rgba(16, 21, 25, 0.97) 0%, rgba(20, 27, 31, 0.9) 53%, rgba(25, 33, 37, 0.08) 82%);
+    background: linear-gradient(0deg, rgba(41, 49, 53, 0.96) 0%, rgba(48, 57, 61, 0.88) 53%, rgba(56, 66, 70, 0.08) 82%);
   }
 
   .mental-season-banner__content {
