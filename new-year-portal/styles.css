@@ -181,11 +181,11 @@ body>.new-year-page .wrap{width:min(1196px,calc(100% - 30px))}
 /* Портал ограничивает HTML-блок своей колонкой: широкие секции оформлены как карточки внутри неё. */
 .new-year-page>.booking-strip,.new-year-page>.stories,.new-year-page>.final-cta{width:100%;max-width:1196px;margin-inline:auto;border-radius:24px;overflow:hidden}
 body>.new-year-page>.booking-strip,body>.new-year-page>.stories,body>.new-year-page>.final-cta{width:min(1196px,calc(100% - 30px))}
-.new-year-page>.booking-strip{box-shadow:0 14px 36px rgba(37,100,136,.12)}
+.new-year-page>.booking-strip{box-shadow:none}
 .new-year-page>.booking-strip .booking-inner{width:100%;max-width:none}
 .new-year-page>.stories>.wrap{width:100%;max-width:none;padding-inline:48px}
 .new-year-page>.stories .section-heading{margin-bottom:34px}
-.new-year-page>.final-cta{margin-bottom:44px;box-shadow:0 18px 44px rgba(13,31,43,.18)}
+.new-year-page>.final-cta{margin-bottom:44px;box-shadow:none}
 .new-year-page>.final-cta .final-inner{width:100%;max-width:900px;padding-inline:36px}
 
 /* Тени отзывов остаются внутри безопасной области портального контейнера. */

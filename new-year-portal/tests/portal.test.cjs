@@ -27,6 +27,8 @@ assert.match(
   'formerly full-width sections are rounded cards inside the portal column',
 );
 assert.match(css, /\.new-year-page>\.stories>\.wrap\{[^}]*padding-inline:48px\}/, 'stories keep readable inner spacing');
+assert.match(css, /\.new-year-page>\.booking-strip\{box-shadow:none\}/, 'booking strip has no outer shadow');
+assert.match(css, /\.new-year-page>\.final-cta\{margin-bottom:44px;box-shadow:none\}/, 'final booking block has no outer shadow');
 assert.match(css, /\.new-year-page \.review-grid\{padding:0 18px 26px\}/, 'reviews reserve room for their shadows');
 assert.match(css, /\.new-year-page \.carousel-controls\{justify-content:center\}/, 'slider navigation is centered below the slide');
 assert.match(
