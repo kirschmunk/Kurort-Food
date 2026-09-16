@@ -1,5 +1,7 @@
 # Новогодние каникулы — контентная часть портала
 
+Для передачи разработчику используйте полный архив `downloads/new-year-portal-full-source.zip`. Установка выполняется полной заменой прежних HTML, CSS и JavaScript страницы; подробности находятся в `INSTALL-FULL-SOURCE.md`.
+
 Исходный макет: https://www.figma.com/design/IFJe10TVrIYsDPIN5NhyxV/Untitled--Copy-?node-id=0-1
 
 Демо: `index.html`. Страница начинается с периода проведения; шаблонные шапка и первый экран портала намеренно не включены.
