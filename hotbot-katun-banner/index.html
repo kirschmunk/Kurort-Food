@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Баннер HotBot — санаторий «Катунь»</title>
+  <link rel="stylesheet" href="banner.css">
+  <style>
+    html, body { min-height: 100%; }
+    body { margin: 0; padding: 60px 24px; display: grid; place-items: center; background: #f3f6f4; }
+    @media (max-width: 700px) { body { padding: 20px 12px; } }
+  </style>
+</head>
+<body>
+  <section class="hotbot-banner" aria-labelledby="hotbot-banner-title">
+    <div class="hotbot-banner__copy">
+      <p class="hotbot-banner__eyebrow">Онлайн-витрина санатория</p>
+      <h1 class="hotbot-banner__title" id="hotbot-banner-title">
+        <span class="hotbot-banner__title-line">Всё для отдыха —</span>
+        <span class="hotbot-banner__title-line">В одном месте</span>
+      </h1>
+      <p class="hotbot-banner__text">
+        Процедуры и СПА, еда в номер, экскурсии, трансфер и другие услуги
+        санатория «Катунь» — выбирайте и заказывайте онлайн.
+      </p>
+      <a class="hotbot-banner__button" href="https://shop.hotbot.ai/katunsan" target="_blank" rel="noopener noreferrer">
+        <span>Перейти к услугам</span>
+        <svg class="hotbot-banner__button-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h14M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="hotbot-banner__visual" aria-hidden="true">
+      <img class="hotbot-banner__photo" src="assets/hotbot-spa.jpg" alt="">
+    </div>
+  </section>
+</body>
+</html>
