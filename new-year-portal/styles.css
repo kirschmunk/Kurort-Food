@@ -204,3 +204,36 @@ body>.new-year-page>.booking-strip,body>.new-year-page>.stories,body>.new-year-p
   .new-year-page .reviews .section-heading{padding-inline:10px}
   .new-year-page .review-grid{padding:0 10px 20px}
 }
+
+/* Кликабельные ссылки меню, афиш и бронирования. */
+.new-year-page .card-actions a{
+  position:relative;
+  z-index:5;
+  display:inline-flex;
+  align-items:center;
+  color:#238fc4;
+  font:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  pointer-events:auto;
+  touch-action:manipulation;
+  transition:color .2s ease
+}
+.new-year-page .card-actions a:hover,
+.new-year-page .card-actions a:focus-visible{color:#126ea2;text-decoration:underline;outline:none}
+.new-year-page a.button-primary{
+  position:relative;
+  z-index:5;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:fit-content;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+  pointer-events:auto;
+  touch-action:manipulation
+}
+.new-year-page a.button-primary:hover,
+.new-year-page a.button-primary:focus-visible{color:#fff;text-decoration:none}
+@media(max-width:600px){.new-year-page a.banquet-booking{width:100%}}

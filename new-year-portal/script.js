@@ -264,19 +264,35 @@ for(const carousel of document.querySelectorAll('[data-legacy-carousel]')){
     },5000);
   }
 }
-const bookingNotice=document.createElement('p');
-bookingNotice.className='booking-notice';
-bookingNotice.setAttribute('role','status');
-bookingNotice.hidden=true;
-document.body.append(bookingNotice);
-for(const button of document.querySelectorAll('[data-booking]')){
-  button.addEventListener('click',()=>{
-    const request=new CustomEvent('newyear:booking-request',{bubbles:true,cancelable:true,detail:{source:button.closest('section')?.className}});
-    if(button.dispatchEvent(request)){
-      bookingNotice.textContent='Форма заявки будет подключена при размещении страницы на портале.';
-      bookingNotice.hidden=false;
-    }
+/*
+ * Все внешние адреса страницы собраны здесь.
+ * После публикации PDF достаточно заменить menu и poster на прямые ссылки.
+ */
+const newYearLinks={
+  menu:'https://belokurikha.ru/vechernie-restorany-i-banketnoe-menyu-v-sanatoriyah-seti-kurort-belokuriha-otkryli-zakazy-na-izyskannye-blyuda/',
+  poster:'https://belokurikha.ru/category/afisha/',
+  booking:'https://sales.belokurikha.ru/online/online-rules/index.php',
+};
+
+for(const actions of document.querySelectorAll('.card-actions')){
+  const labels=[...actions.querySelectorAll('span')];
+  const targets=[newYearLinks.menu,newYearLinks.poster];
+  labels.forEach((label,index)=>{
+    const link=document.createElement('a');
+    link.href=targets[index]||newYearLinks.poster;
+    link.target='_blank';
+    link.rel='noopener noreferrer';
+    link.textContent=label.textContent;
+    label.replaceWith(link);
   });
+}
+
+for(const button of document.querySelectorAll('[data-booking]')){
+  const link=document.createElement('a');
+  link.href=button.dataset.bookingHref||newYearLinks.booking;
+  link.className=button.className;
+  link.textContent=button.textContent;
+  button.replaceWith(link);
 }
 
 const highlights=document.querySelector?.('.highlights');
