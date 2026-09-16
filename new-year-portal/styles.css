@@ -163,3 +163,44 @@
 .new-year-page{width:100%;max-width:100%;overflow-x:clip}
 .new-year-page .wrap{width:100%;max-width:1196px;margin-inline:auto}
 body>.new-year-page .wrap{width:min(1196px,calc(100% - 30px))}
+
+/* Карточки первого экрана: запас под тень и спокойная интерактивная анимация. */
+.new-year-page .highlights{grid-template-columns:repeat(4,minmax(0,1fr));padding:18px;margin-top:40px;overflow:visible;isolation:isolate}
+.new-year-page .highlight{min-width:0;transform:translateZ(0);transition:transform .36s cubic-bezier(.2,.7,.2,1),box-shadow .36s ease,border-color .36s ease;box-shadow:0 14px 32px rgba(27,89,121,.14)}
+.new-year-page .highlight-media{transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .45s ease;will-change:transform}
+.new-year-page .highlight span{overflow-wrap:anywhere}
+.new-year-page .highlight:hover{transform:translateY(-5px);border-color:#b9ddeb;box-shadow:0 22px 44px rgba(27,89,121,.2)}
+.new-year-page .highlight:hover .highlight-media{transform:scale(1.035);filter:saturate(1.04)}
+.new-year-page .highlights.has-motion .highlight{opacity:0;transform:translateY(16px)}
+.new-year-page .highlights.has-motion .highlight.is-revealed{opacity:1;transform:translateY(0)}
+.new-year-page .highlights.has-motion .highlight.is-revealed:hover{transform:translateY(-5px)}
+@media(max-width:900px){.new-year-page .highlights{grid-template-columns:repeat(2,minmax(0,1fr));padding:15px}}
+@media(max-width:600px){.new-year-page .highlights{padding:10px;margin-top:24px}}
+@media(prefers-reduced-motion:reduce){.new-year-page .highlight,.new-year-page .highlight-media{transition:none!important}.new-year-page .highlights.has-motion .highlight{opacity:1;transform:none}}
+
+/* Портал ограничивает HTML-блок своей колонкой: широкие секции оформлены как карточки внутри неё. */
+.new-year-page>.booking-strip,.new-year-page>.stories,.new-year-page>.final-cta{width:100%;max-width:1196px;margin-inline:auto;border-radius:24px;overflow:hidden}
+body>.new-year-page>.booking-strip,body>.new-year-page>.stories,body>.new-year-page>.final-cta{width:min(1196px,calc(100% - 30px))}
+.new-year-page>.booking-strip{box-shadow:0 14px 36px rgba(37,100,136,.12)}
+.new-year-page>.booking-strip .booking-inner{width:100%;max-width:none}
+.new-year-page>.stories>.wrap{width:100%;max-width:none;padding-inline:48px}
+.new-year-page>.stories .section-heading{margin-bottom:34px}
+.new-year-page>.final-cta{margin-bottom:44px;box-shadow:0 18px 44px rgba(13,31,43,.18)}
+.new-year-page>.final-cta .final-inner{width:100%;max-width:900px;padding-inline:36px}
+
+/* Тени отзывов остаются внутри безопасной области портального контейнера. */
+.new-year-page .reviews{padding-inline:18px}
+.new-year-page .reviews .section-heading{padding-inline:18px}
+.new-year-page .review-grid{padding:0 18px 26px}
+
+/* Навигация относится ко всему слайду, поэтому располагается по центру. */
+.new-year-page .carousel-controls{justify-content:center}
+
+@media(max-width:600px){
+  .new-year-page>.booking-strip,.new-year-page>.stories,.new-year-page>.final-cta{border-radius:18px}
+  .new-year-page>.stories>.wrap{padding-inline:20px}
+  .new-year-page>.final-cta .final-inner{padding-inline:20px}
+  .new-year-page .reviews{padding-inline:6px}
+  .new-year-page .reviews .section-heading{padding-inline:10px}
+  .new-year-page .review-grid{padding:0 10px 20px}
+}

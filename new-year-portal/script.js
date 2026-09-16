@@ -278,3 +278,18 @@ for(const button of document.querySelectorAll('[data-booking]')){
     }
   });
 }
+
+const highlights=document.querySelector?.('.highlights');
+if(highlights&&'IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const cards=[...highlights.querySelectorAll('.highlight')];
+  highlights.classList.add('has-motion');
+  cards.forEach((card,index)=>card.style.transitionDelay=`${index*70}ms`);
+  const observer=new IntersectionObserver(entries=>{
+    for(const entry of entries){
+      if(!entry.isIntersecting)continue;
+      entry.target.classList.add('is-revealed');
+      observer.unobserve(entry.target);
+    }
+  },{threshold:.18});
+  cards.forEach(card=>observer.observe(card));
+}
