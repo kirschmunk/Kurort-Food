@@ -11,7 +11,7 @@ assert.match(css, /\.carousel\{overflow:visible\}/, 'carousel shadows are not cl
 assert.match(css, /\.carousel\[data-carousel\] \.carousel-track\{padding:8px 0 26px\}/, 'track reserves room for card shadows');
 assert.match(css, /\.carousel\[data-carousel\] \.banquet-media\{[^}]*height:430px[^}]*object-fit:cover/, 'banquet images share one cropped size');
 assert.match(css, /\.carousel-track\{[^}]*user-select:none[^}]*touch-action:pan-y[^}]*cursor:grab/, 'dragging a slide cannot select its text');
-assert.match(css, /\.carousel-track a,\.carousel-track button\{cursor:pointer\}/, 'interactive elements keep their clickable cursor');
+assert.match(css, /\.new-year-page \.carousel-track a,\.new-year-page \.carousel-track button\{cursor:pointer\}/, 'interactive elements keep their clickable cursor');
 
 const handlers = new WeakMap();
 function on(element, type, callback) {
