@@ -1,0 +1,169 @@
+@font-face{font-family:Acrom;src:url('./assets/fonts/Acrom-Regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Acrom;src:url('./assets/fonts/Acrom-Bold.woff') format('woff');font-weight:700;font-display:swap}
+.new-year-page{--blue:#3ab5e9;--blue-dark:#126ea2;--ink:#263746;--muted:#667680;--line:#dcebf2;--ice:#eff9fd;--mint:#e3f8f3;--radius:24px}
+.new-year-page,.new-year-page *{box-sizing:border-box}.new-year-page{scroll-behavior:smooth}.new-year-page{margin:0;color:var(--ink);background:#fff;font-family:Acrom,Arial,sans-serif;font-size:16px;line-height:1.55}.new-year-page button{font:inherit}.new-year-page h2,.new-year-page h3,.new-year-page h4,.new-year-page p{margin-top:0}.new-year-page h2{font-size:clamp(30px,3vw,46px);line-height:1.14;letter-spacing:-.035em;margin-bottom:0}.new-year-page h3{font-size:clamp(23px,2.2vw,32px);line-height:1.2}.new-year-page h4{font-size:22px;line-height:1.25}.new-year-page .wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}.new-year-page .section{padding-block:88px}.new-year-page .period{display:inline-block;padding:13px 22px;border:1px solid #c9e7f6;border-radius:12px;background:#eaf6ff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}.new-year-page .intro{padding-block:70px 86px}.new-year-page .intro-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:72px;align-items:center;margin-top:26px}.new-year-page .intro-copy{max-width:700px;font-size:18px}.new-year-page .intro-copy p{margin-bottom:18px}.new-year-page .video-pending{aspect-ratio:16/10;background:linear-gradient(140deg,#254759,#0a1a29);border-radius:var(--radius);color:#fff;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;box-shadow:0 18px 45px rgba(12,58,83,.13)}.new-year-page .play-icon{display:grid;place-items:center;width:74px;height:74px;border-radius:50%;background:#fff;color:var(--blue-dark);padding-left:4px}.new-year-page .highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:58px}.new-year-page .highlight{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(22,90,127,.06)}.new-year-page .highlight-media{aspect-ratio:1.5;display:grid;place-items:center}.new-year-page .highlight span{display:block;padding:17px 15px;font-weight:700;text-align:center;font-size:14px;line-height:1.25}.new-year-page .pending-media{background:linear-gradient(140deg,#d7eef8,#eef9ff);color:#578499;font-size:14px;text-align:center;padding:20px}.new-year-page .section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}.new-year-page .eyebrow{color:var(--blue-dark);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}.new-year-page .section-lead{color:var(--muted);margin-bottom:5px}.new-year-page .carousel-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;outline:none;padding-bottom:12px}.new-year-page .carousel-track::-webkit-scrollbar{display:none}.new-year-page .carousel-track:focus-visible{outline:3px solid var(--blue);outline-offset:2px}.new-year-page .carousel-track>*{scroll-snap-align:start;flex:none}.new-year-page .carousel-controls{display:flex;justify-content:flex-end;gap:10px;margin-top:13px}.new-year-page .carousel-button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--blue-dark);font-size:22px;cursor:pointer}.new-year-page .carousel-button:hover,.new-year-page .carousel-button:focus-visible{background:var(--blue);color:#fff;outline:none}.new-year-page .dinner-card{width:min(520px,86vw);min-height:330px;padding:32px;border:1px solid #c7eee7;border-radius:var(--radius);background:linear-gradient(145deg,#f0fffc,#e3f8f3 70%)}.new-year-page .dinner-card h3{margin-bottom:12px}.new-year-page .dinner-card h4{font-size:16px;margin:20px 0 7px;text-transform:uppercase;letter-spacing:.08em}.new-year-page .dinner-card ul{padding-left:22px;margin:0 0 18px}.new-year-page .dinner-card li{padding-left:3px}.new-year-page .dinner-card li::marker{color:#20a881}.new-year-page .resort{font-size:14px;color:var(--blue-dark);font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin-bottom:10px}.new-year-page .card-note{font-weight:700;margin:25px 0 0}.new-year-page .booking-strip{background:var(--ice);padding:52px 0}.new-year-page .booking-inner{display:grid;grid-template-columns:1fr 260px auto;align-items:center;gap:36px}.new-year-page .booking-inner h2{font-size:32px;margin-bottom:10px}.new-year-page .booking-inner p:last-child{margin-bottom:0}.new-year-page .booking-image{display:grid;place-items:center;min-height:170px;border-radius:18px}.new-year-page .button-primary{border:0;background:var(--blue);color:#fff;border-radius:12px;padding:15px 23px;min-height:52px;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 10px 24px rgba(58,181,233,.22)}.new-year-page .button-primary span{margin-left:18px}.new-year-page .button-primary:hover,.new-year-page .button-primary:focus-visible{background:var(--blue-dark);outline:2px solid #073e63;outline-offset:3px}.new-year-page .banquet-group+.banquet-group{margin-top:65px}.new-year-page .group-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.new-year-page .group-heading h3{margin-bottom:0}.new-year-page .group-heading span{color:var(--muted);font-size:14px}.new-year-page .banquet-card{width:min(590px,87vw);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fafdff;box-shadow:0 15px 35px rgba(34,87,110,.07)}.new-year-page .banquet-media{height:260px;display:grid;place-items:center}.new-year-page .banquet-content{padding:30px}.new-year-page .banquet-content h4{margin-bottom:10px}.new-year-page .price{font-weight:700;color:var(--blue-dark);font-size:14px}.new-year-page .banquet-content>p:not(.price):not(.resort){color:var(--muted)}.new-year-page .card-actions{display:flex;gap:25px;color:var(--blue-dark);font-weight:700;font-size:14px;margin-top:20px}.new-year-page .stories{background:var(--ice)}.new-year-page .story-intro{max-width:830px;font-size:18px;color:var(--muted);margin-bottom:28px}.new-year-page .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.new-year-page .story-card{background:#fff;border:1px solid #dceaf2;border-radius:var(--radius);padding:30px;min-height:230px;box-shadow:0 10px 30px rgba(35,108,143,.06)}.new-year-page .story-card>p:first-child{color:var(--blue-dark);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.1em}.new-year-page .story-card h3{margin-bottom:15px}.new-year-page .story-card p:last-child{color:var(--muted);margin-bottom:0}.new-year-page .story-outro{margin:28px 0 0;color:var(--muted)}.new-year-page .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.new-year-page .review{margin:0;padding:30px;border:1px solid var(--line);border-top:4px solid #d2aa39;border-radius:20px;background:#fff;box-shadow:0 16px 38px rgba(23,72,93,.07)}.new-year-page .review-quote{font-family:Georgia,serif;color:#d2aa39;font-size:70px;line-height:.65;height:40px}.new-year-page .review p{font-size:17px;min-height:190px;margin-bottom:25px}.new-year-page .review footer{font-weight:700;border-top:1px solid var(--line);padding-top:18px}.new-year-page .final-cta{background:linear-gradient(120deg,#1b3444,#10212d);color:#fff;padding:84px 0}.new-year-page .final-inner{max-width:900px;text-align:center}.new-year-page .final-inner .eyebrow{color:#b8eafc}.new-year-page .final-inner h2{margin-bottom:20px}.new-year-page .final-inner>p:not(.eyebrow){font-size:18px;color:#d5e6ed;margin-bottom:30px}
+@media(max-width:900px){.new-year-page .intro-grid{grid-template-columns:1fr;gap:28px}.new-year-page .highlights{grid-template-columns:repeat(2,1fr)}.new-year-page .booking-inner{grid-template-columns:1fr auto}.new-year-page .booking-image{display:none}.new-year-page .story-grid,.new-year-page .review-grid{grid-template-columns:1fr 1fr}.new-year-page .review p{min-height:0}}
+@media(max-width:600px){.new-year-page .wrap{width:min(100% - 32px,1200px)}.new-year-page .section{padding-block:58px}.new-year-page .intro{padding-block:42px 55px}.new-year-page .intro-copy{font-size:16px}.new-year-page .period{font-size:12px;padding:10px 13px}.new-year-page .highlights{gap:12px;margin-top:34px}.new-year-page .highlight span{font-size:12px;padding:13px 8px}.new-year-page .highlight-media{font-size:11px;padding:9px}.new-year-page .section-heading{display:block}.new-year-page .section-lead{margin-top:13px}.new-year-page .dinner-card,.new-year-page .banquet-card{width:calc(100vw - 47px)}.new-year-page .dinner-card{padding:22px}.new-year-page .banquet-media{height:200px}.new-year-page .banquet-content{padding:22px}.new-year-page .booking-inner{display:block}.new-year-page .booking-inner h2{font-size:28px}.new-year-page .booking-inner .button-primary{margin-top:20px}.new-year-page .group-heading{align-items:start}.new-year-page .group-heading span{display:none}.new-year-page .story-grid,.new-year-page .review-grid{grid-template-columns:1fr}.new-year-page .review{padding:25px}.new-year-page .card-actions{gap:15px;flex-wrap:wrap}.new-year-page .final-cta{padding-block:60px}}
+.new-year-page .highlight-media{width:100%;height:190px;aspect-ratio:auto;object-fit:cover;display:block;padding:0}
+.new-year-page .play-icon{display:block;width:67px;height:67px;background:none;border-radius:0;padding:0}
+.new-year-page .banquet-card{width:min(1020px,86vw);display:grid;grid-template-columns:42% 58%;min-height:520px;background:linear-gradient(130deg,rgba(222,237,255,.72),rgba(255,255,255,.94)),url('./assets/demo/card-pattern.png') center/cover}
+.new-year-page .banquet-media{width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center;display:block;padding:0}
+.new-year-page .banquet-content{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.new-year-page .banquet-content>p:not(.price):not(.resort){color:var(--ink)}
+.new-year-page .banquet-content h4{font-size:clamp(25px,2.5vw,38px)}
+.new-year-page .dinner-card{width:min(920px,86vw);min-height:400px;padding:42px 52px}
+.new-year-page .booking-image{display:block;width:260px;height:170px;object-fit:cover;object-position:center;border-radius:18px;padding:0}
+.new-year-page .dinner-card{background:linear-gradient(145deg,rgba(46,170,105,.11),rgba(46,170,105,.13)),url('./assets/demo/card-pattern.png') center/cover}
+.new-year-page .story-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 44px;box-shadow:0 12px 32px rgba(35,108,143,.06)}
+.new-year-page .story-intro{max-width:1000px;color:var(--ink)}
+.new-year-page .story-lines{list-style:none;margin:0;padding:0;font-size:19px}
+.new-year-page .story-lines li+li{margin-top:8px}
+.new-year-page .story-lines span{color:var(--blue-dark);font-weight:700}
+.new-year-page .story-outro{color:var(--ink)}
+.new-year-page .final-cta{background:linear-gradient(120deg,rgba(13,31,43,.72),rgba(13,31,43,.77)),url('./assets/brief/background-final.png') center/cover}
+.new-year-page .final-phone{margin:22px 0 0!important}.new-year-page .final-phone a{color:#fff;font-size:clamp(25px,3vw,39px);font-weight:700;text-decoration:none}.new-year-page .final-phone a:hover{text-decoration:underline}
+.new-year-page .booking-notice{position:fixed;left:50%;bottom:20px;z-index:50;transform:translateX(-50%);max-width:min(520px,calc(100% - 32px));margin:0;padding:14px 20px;border-radius:12px;background:#173b53;color:#fff;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.new-year-page .booking-notice[hidden]{display:none}
+@media(max-width:900px){.new-year-page .banquet-card{width:min(720px,86vw);grid-template-columns:1fr;min-height:0}.new-year-page .banquet-media{height:280px;min-height:0}.new-year-page .banquet-content{padding:28px}.new-year-page .dinner-card{padding:30px}}
+@media(max-width:600px){.new-year-page .highlight-media{height:130px}.new-year-page .banquet-card{width:calc(100vw - 47px)}.new-year-page .banquet-media{height:200px}.new-year-page .dinner-card{width:calc(100vw - 47px);padding:22px}.new-year-page .story-panel{padding:24px}.new-year-page .story-lines{font-size:16px}}
+
+/* Корректировка по исходному макету и переданным фотографиям. */
+.new-year-page{--ink:#111820;--blue:#3ab5e9;--blue-dark:#238fc4;--line:#c9e5f1}
+.new-year-page .period{background:linear-gradient(rgba(222,237,255,.34),rgba(222,237,255,.34)),url('./assets/brief/background-intro.png') center/cover;border:0;color:#111820;font-weight:400}
+.new-year-page .intro-copy{color:#332932}
+.new-year-page .highlight{border:1px solid #d5e9f4;border-radius:20px;box-shadow:0 5px 18px rgba(27,89,121,.12)}
+.new-year-page .highlight-media{height:190px;object-position:center}
+.new-year-page .highlight span{font-weight:400;text-transform:uppercase;color:#111820}
+.new-year-page .dinner-time{font-size:clamp(20px,2.2vw,30px);margin:14px 0 0;color:#111820}
+.new-year-page .carousel{position:relative;width:100%;overflow:hidden}
+.new-year-page .carousel-track{display:flex;width:100%;gap:0;overflow:visible;scroll-snap-type:none;padding:0;touch-action:pan-y;cursor:grab;transition:transform .5s ease;will-change:transform}
+.new-year-page .carousel-track.is-dragging{cursor:grabbing;transition:none;user-select:none}
+.new-year-page .carousel-track>*{flex:0 0 100%;width:100%;scroll-snap-align:none}
+.new-year-page .carousel-controls{padding:4px 4px 0}
+.new-year-page .dinner-card{width:100%;min-height:390px;padding:42px 52px;border:0;border-radius:20px;background:linear-gradient(rgba(238,249,255,.76),rgba(238,249,255,.76)),url('./assets/brief/background-dinner.png') center/cover;color:#101820}
+.new-year-page .dinner-card h3{font-size:clamp(23px,2.2vw,35px);font-weight:400;text-transform:uppercase;margin:0 0 20px}
+.new-year-page .dinner-card h4{font-size:21px;font-weight:400;text-transform:none;letter-spacing:0;margin:24px 0 8px}
+.new-year-page .dinner-card ul{font-size:18px;margin-bottom:0}
+.new-year-page .dinner-card li::marker{color:#3ab5e9}
+.new-year-page .dinner-card .card-note{font-weight:400;margin-top:24px;font-size:18px}
+.new-year-page .booking-strip{background:url('./assets/brief/background-booking.png') center/cover;padding:0}
+.new-year-page .booking-inner{display:grid;grid-template-columns:61% 39%;align-items:stretch;gap:0;min-height:380px}
+.new-year-page .booking-copy{padding:54px 36px 52px 20px;display:flex;flex-direction:column;align-items:flex-start}
+.new-year-page .booking-copy h2{font-weight:400;font-size:clamp(29px,3.2vw,44px);line-height:1.05;letter-spacing:-.025em;text-transform:uppercase;margin:0 0 23px}
+.new-year-page .booking-copy p{font-size:18px;text-transform:uppercase;line-height:1.3;margin:0 0 29px}
+.new-year-page .booking-copy .button-primary{width:min(450px,100%);border-radius:20px;text-transform:uppercase;font-weight:400}
+.new-year-page .booking-image{display:block;width:100%;height:100%;min-height:380px;border-radius:0;object-fit:cover;object-position:center;margin:0;padding:0}
+.new-year-page .banquet-group+.banquet-group{margin-top:86px}
+.new-year-page .group-heading{margin-bottom:29px}
+.new-year-page .group-heading h2{font-weight:400;text-transform:uppercase;font-size:clamp(29px,2.7vw,40px)}
+.new-year-page .banquet-card{display:block;width:100%;min-height:0;padding:38px 48px 42px;border:0;border-radius:20px;box-shadow:none;color:#080d12;background:linear-gradient(rgba(255,255,255,.79),rgba(255,255,255,.79)),url('./assets/brief/background-banquets.png') center/cover}
+.new-year-page .banquet-card h3{font-size:clamp(28px,3vw,46px);font-weight:400;text-transform:uppercase;text-align:center;margin:0 0 25px}
+.new-year-page .banquet-head{font-size:21px;line-height:1.35;margin-bottom:23px}
+.new-year-page .banquet-head>p{margin:0 0 10px}
+.new-year-page .price-list{font-size:19px}
+.new-year-page .banquet-main{display:grid;grid-template-columns:42% 1fr;align-items:start;gap:48px}
+.new-year-page .banquet-media{display:block;width:100%;height:min(660px,55vw);min-height:0;border-radius:20px;object-fit:cover;object-position:center;padding:0}
+.new-year-page .banquet-details{display:flex;flex-direction:column;align-items:flex-start;min-height:min(660px,55vw);font-size:18px;line-height:1.35}
+.new-year-page .banquet-details h4{font-size:25px;font-weight:400;text-transform:uppercase;margin:0 0 18px}
+.new-year-page .banquet-details ul{margin:0 0 16px;padding-left:26px}
+.new-year-page .banquet-details li+li{margin-top:8px}
+.new-year-page .banquet-details li::marker{color:#3ab5e9;font-size:1.15em}
+.new-year-page .banquet-details>p:not(.book-urgent){margin:0 0 14px}
+.new-year-page .card-actions{margin:14px 0 0;font-size:18px;font-weight:400;color:#238fc4;gap:34px}
+.new-year-page .book-urgent{font-size:22px;text-transform:uppercase;margin:25px 0 8px;display:flex;align-items:center;gap:12px}
+.new-year-page .book-urgent img{width:30px;height:15px;transform:rotate(90deg);object-fit:contain}
+.new-year-page .banquet-phone{font-size:27px;color:#238fc4;text-decoration:none;margin:0 0 20px}
+.new-year-page .banquet-phone:hover{text-decoration:underline}
+.new-year-page .banquet-booking{align-self:flex-end;min-width:230px;border-radius:20px;text-transform:uppercase;font-weight:400}
+.new-year-page .final-cta{background:linear-gradient(rgba(0,0,0,.26),rgba(0,0,0,.26)),url('./assets/brief/background-final.png') center/cover}
+.new-year-page .final-inner .eyebrow{display:none}
+.new-year-page .final-inner h2{font-weight:400;text-transform:uppercase}
+.new-year-page .final-inner .button-primary{min-width:300px;border-radius:20px;text-transform:uppercase;font-weight:400;margin-top:25px}
+.new-year-page .final-inner .final-phone{margin:30px 0 3px!important}
+.new-year-page .final-inner .final-phone-note{font-size:14px;color:#fff;text-transform:uppercase;letter-spacing:.04em;margin:0}
+/* Компактные банкетные слайды и фон блока новогодних историй. */
+.new-year-page .banquet-group+.banquet-group{margin-top:60px}
+.new-year-page .group-heading h2{font-size:clamp(25px,2.4vw,32px)}
+.new-year-page .banquet-card{max-width:940px;margin-inline:auto;padding:26px 34px 30px}
+.new-year-page .banquet-card h3{font-size:clamp(25px,2.7vw,32px);margin-bottom:16px}
+.new-year-page .banquet-head{font-size:16px;line-height:1.3;margin-bottom:15px}
+.new-year-page .banquet-head>p{margin-bottom:6px}
+.new-year-page .price-list{font-size:15px}
+.new-year-page .banquet-main{grid-template-columns:38% 1fr;gap:28px}
+.new-year-page .banquet-media{height:470px}
+.new-year-page .banquet-details{min-height:0;font-size:15px;line-height:1.3}
+.new-year-page .banquet-details h4{font-size:18px;margin-bottom:12px}
+.new-year-page .banquet-details li+li{margin-top:5px}
+.new-year-page .banquet-details ul{margin-bottom:10px}
+.new-year-page .card-actions{font-size:15px;margin-top:10px}
+.new-year-page .book-urgent{font-size:17px;margin-top:15px}
+.new-year-page .banquet-phone{font-size:21px;margin-bottom:12px}
+.new-year-page .banquet-booking{min-width:190px;min-height:45px;padding:10px 18px;font-size:15px}
+.new-year-page .stories{background:url('./assets/brief/background-stories.png') center/cover}
+.new-year-page .story-panel{background:transparent;border:0;box-shadow:none}
+@media(max-width:900px){.new-year-page .banquet-card{max-width:100%}.new-year-page .banquet-media{height:430px}.new-year-page .banquet-details{min-height:0;font-size:14px}}
+@media(max-width:600px){.new-year-page .banquet-card{padding:22px 19px}.new-year-page .banquet-card h3{font-size:23px}.new-year-page .banquet-head,.new-year-page .price-list{font-size:14px}.new-year-page .banquet-media{height:320px}.new-year-page .banquet-details{font-size:14px}.new-year-page .banquet-details h4{font-size:17px}.new-year-page .book-urgent{font-size:15px}.new-year-page .banquet-phone{font-size:19px}.new-year-page .group-heading h2{font-size:24px}.new-year-page .story-panel{padding:20px 6px}}
+/* Скрываем промежуточную сборку карусели до установки стартовой позиции. */
+.new-year-page .carousel[data-carousel]:not(.is-ready){visibility:hidden}
+.new-year-page .carousel-slide{flex:0 0 100%;width:100%;min-width:100%;display:flex;justify-content:center;align-items:stretch}
+.new-year-page .carousel-slide>.dinner-card{width:100%;max-width:none}
+.new-year-page .carousel-slide>.banquet-card{width:min(940px,100%);flex:none}
+.new-year-page .banquet-card{border:1px solid #a8d5e8;box-shadow:0 12px 30px rgba(37,100,136,.1);overflow:hidden}
+.new-year-page .book-urgent img{width:26px;height:13px;transform:none;opacity:.7}
+.new-year-page .stories{background:#e5f2f8}
+.new-year-page .story-panel{background:url('./assets/brief/background-stories.png') center/100% 100% no-repeat;border-radius:20px;overflow:hidden}
+@media(max-width:900px){.new-year-page .booking-inner{grid-template-columns:1fr 42%}.new-year-page .booking-copy{padding:35px 25px}.new-year-page .booking-image{display:block;min-height:340px}.new-year-page .banquet-main{gap:26px}.new-year-page .banquet-card{padding:30px}.new-year-page .banquet-media{height:560px}.new-year-page .banquet-details{min-height:560px;font-size:16px}.new-year-page .card-actions{font-size:15px;gap:16px}.new-year-page .book-urgent{font-size:17px}.new-year-page .banquet-phone{font-size:22px}}
+@media(max-width:600px){.new-year-page .highlight-media{height:130px}.new-year-page .dinner-card{padding:24px;min-height:420px}.new-year-page .dinner-card ul,.new-year-page .dinner-card .card-note{font-size:16px}.new-year-page .booking-inner{display:flex;flex-direction:column}.new-year-page .booking-copy{padding:32px 22px}.new-year-page .booking-image{display:block;width:100%;height:260px;min-height:0}.new-year-page .banquet-card{padding:23px 20px}.new-year-page .banquet-head{font-size:17px}.new-year-page .price-list{font-size:16px}.new-year-page .banquet-main{display:block}.new-year-page .banquet-media{height:330px;margin-bottom:25px}.new-year-page .banquet-details{min-height:0;font-size:16px}.new-year-page .banquet-details h4{font-size:19px}.new-year-page .banquet-phone{font-size:20px}.new-year-page .banquet-booking{align-self:flex-start;width:100%}}
+/* Финальные правила адаптивности для слайдов. */
+.new-year-page .dinner-card{overflow:hidden}
+.new-year-page .dinner-card li,.new-year-page .banquet-details li{overflow-wrap:anywhere}
+@media(max-width:900px){.new-year-page .banquet-card{padding:26px 28px}.new-year-page .banquet-media{height:420px}.new-year-page .banquet-details{min-height:0;font-size:14px}.new-year-page .banquet-phone{font-size:20px}}
+@media(max-width:600px){.new-year-page .banquet-card{padding:22px 19px}.new-year-page .banquet-head,.new-year-page .price-list{font-size:14px}.new-year-page .banquet-media{height:310px}.new-year-page .banquet-details{min-height:0;font-size:14px}.new-year-page .banquet-details h4{font-size:17px}.new-year-page .book-urgent{font-size:15px}.new-year-page .banquet-phone{font-size:19px}}
+/* Ужин: одна карточка с первой отрисовки, без клонированных соседей. */
+.new-year-page .dinner-carousel .carousel-track{display:block;position:relative;min-height:390px;transform:none!important;transition:none!important;overflow:hidden}
+.new-year-page .dinner-carousel .dinner-card{position:absolute;top:0;left:0;display:none;width:100%;max-width:none}
+.new-year-page .dinner-carousel .dinner-card.is-active{display:block}
+/* Один общий зимний фон без второго вложенного прямоугольника. */
+.new-year-page .stories{background:url('./assets/brief/background-stories.png') center/100% 100% no-repeat}
+.new-year-page .story-panel{background:transparent;border:0;box-shadow:none;border-radius:0}
+/* Спокойные состояния кнопок без контурных обводок. */
+.new-year-page .button-primary{transition:background-color .2s ease,box-shadow .2s ease,transform .2s ease;outline:none}
+.new-year-page .button-primary:hover{background:#2da9dd;outline:none;transform:translateY(-1px);box-shadow:0 12px 25px rgba(35,143,196,.25)}
+.new-year-page .button-primary:focus-visible{background:#2da9dd;outline:none;transform:translateY(-1px);box-shadow:0 0 0 4px rgba(58,181,233,.2),0 12px 25px rgba(35,143,196,.22)}
+.new-year-page .button-primary:active{background:#238fc4;outline:none;transform:translateY(0);box-shadow:0 6px 14px rgba(35,143,196,.2)}
+.new-year-page .carousel-button{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease;outline:none}
+.new-year-page .carousel-button:hover{background:#eef9fd;color:#238fc4;outline:none;transform:translateY(-1px);box-shadow:0 6px 14px rgba(35,143,196,.13)}
+.new-year-page .carousel-button:focus-visible{background:#eef9fd;color:#238fc4;outline:none;box-shadow:0 0 0 4px rgba(58,181,233,.18)}
+.new-year-page .carousel-button:active{background:#dff3fb;outline:none;transform:translateY(0);box-shadow:none}
+/* Банкетные CTA: без декоративной стрелки, кнопка собрана с номером. */
+.new-year-page .book-urgent{gap:0}
+.new-year-page .book-urgent img{display:none}
+.new-year-page .banquet-phone{margin-bottom:8px}
+.new-year-page .banquet-booking{align-self:flex-start;margin-top:0}
+/* Банкетные карусели: одна реальная карточка, без клонов и зависания между слайдами. */
+.new-year-page .carousel[data-carousel] .carousel-track{display:block;position:relative;transform:none!important;transition:none!important;overflow:hidden}
+.new-year-page .carousel[data-carousel] .banquet-card{position:absolute;top:0;left:0;right:0;display:none;width:min(940px,100%);margin-inline:auto}
+.new-year-page .carousel[data-carousel] .banquet-card.is-active{display:block}
+/* Одинаковая геометрия слайдов, постоянное место навигации и запас под мягкие тени. */
+.new-year-page .carousel{overflow:visible}
+.new-year-page .carousel[data-carousel] .carousel-track{padding:8px 0 26px}
+.new-year-page .carousel[data-carousel] .banquet-card{top:8px}
+.new-year-page .carousel-controls{margin-top:6px;padding:2px 6px 12px}
+.new-year-page .carousel[data-carousel] .banquet-media{width:100%;height:430px;min-height:0;object-fit:cover;object-position:center;border-radius:20px}
+.new-year-page .story-intro{max-width:none}
+@media(max-width:900px){.new-year-page .carousel[data-carousel] .banquet-media{height:390px}}
+@media(max-width:600px){.new-year-page .carousel[data-carousel] .banquet-media{height:300px}}
+/* Жест листания принадлежит карусели: текст и изображения не выделяются и не перетаскиваются. */
+.new-year-page .carousel-track{user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:grab}
+.new-year-page .carousel-track.is-dragging{cursor:grabbing}
+.new-year-page .carousel-track img{-webkit-user-drag:none;user-drag:none}
+.new-year-page .carousel-track a,.new-year-page .carousel-track button{cursor:pointer}
+
+/* Статичный ужин санатория «Белокуриха»: одна карточка без карусели. */
+.new-year-page .dinner-static{width:100%}
+.new-year-page .dinner-static .dinner-card{position:relative;display:block;width:100%;max-width:none;min-height:0;overflow:hidden}
+
+/* Совместимость со стандартным контейнером belokurikha-san.ru: 1200px. */
+.new-year-page{width:100%;max-width:100%;overflow-x:clip}
+.new-year-page .wrap{width:100%;max-width:1200px;margin-inline:auto}
+body>.new-year-page .wrap{width:min(1200px,calc(100% - 20px))}
