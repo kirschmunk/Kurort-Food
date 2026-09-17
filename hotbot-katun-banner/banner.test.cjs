@@ -13,6 +13,7 @@ assert.match(demo, /https:\/\/shop\.hotbot\.ai\/katunsan/, 'demo uses the workin
 assert.match(css, /--hotbot-green: #4f806d/, 'banner uses the calm sage accent');
 assert.match(css, /max-width: 1196px/, 'banner fits the site content column');
 assert.match(css, /@media \(max-width: 700px\)/, 'banner has a mobile layout');
+assert.match(css, /a\.hotbot-banner__button:visited[\s\S]*?color: var\(--hotbot-white\) !important/, 'button text stays white after the link is visited');
 assert.ok(fs.existsSync(path.join(root, 'assets', 'hotbot-spa.jpg')), 'banner image exists');
 
 console.log('PASS: Katun HotBot banner copy, storefront, palette, width and assets are valid');

@@ -95,7 +95,7 @@
   border-radius: 999px;
   background: var(--hotbot-green);
   box-shadow: 0 10px 24px rgba(40, 77, 66, 0.2);
-  color: var(--hotbot-white);
+  color: var(--hotbot-white) !important;
   font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
@@ -104,10 +104,19 @@
   transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
-.hotbot-banner__button:hover {
+.hotbot-banner a.hotbot-banner__button:link,
+.hotbot-banner a.hotbot-banner__button:visited,
+.hotbot-banner a.hotbot-banner__button:hover,
+.hotbot-banner a.hotbot-banner__button:focus,
+.hotbot-banner a.hotbot-banner__button:active {
+  color: var(--hotbot-white) !important;
+  text-decoration: none;
+}
+
+.hotbot-banner__button:hover,
+.hotbot-banner__button:active {
   background: var(--hotbot-green-hover);
   box-shadow: 0 12px 28px rgba(40, 77, 66, 0.28);
-  color: var(--hotbot-white);
   transform: translateY(-1px);
 }
 
