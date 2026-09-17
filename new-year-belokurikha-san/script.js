@@ -96,7 +96,7 @@ for(const carousel of document.querySelectorAll('[data-dinner-carousel],[data-ca
     }
   });
   track.addEventListener('pointerdown',event=>{
-    if(busy||event.button!==0||event.target.closest('a,button'))return;
+    if(event.pointerType==='mouse'||busy||event.button!==0||event.target.closest('a,button'))return;
     event.preventDefault();
     pointerId=event.pointerId;
     startX=event.clientX;
@@ -216,7 +216,7 @@ for(const carousel of document.querySelectorAll('[data-legacy-carousel]')){
     }
   });
   track.addEventListener('pointerdown',event=>{
-    if(isAnimating||event.button!==0||event.target.closest('a,button'))return;
+    if(event.pointerType==='mouse'||isAnimating||event.button!==0||event.target.closest('a,button'))return;
     pointerId=event.pointerId;
     startX=pointerX=event.clientX;
     isDragging=false;

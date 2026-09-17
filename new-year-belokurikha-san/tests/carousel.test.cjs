@@ -10,7 +10,7 @@ assert.match(css, /\.carousel\[data-carousel\] \.banquet-card\.is-active\{displa
 assert.match(css, /\.carousel\{overflow:visible\}/, 'carousel shadows are not clipped by the outer wrapper');
 assert.match(css, /\.carousel\[data-carousel\] \.carousel-track\{padding:8px 0 26px\}/, 'track reserves room for card shadows');
 assert.match(css, /\.carousel\[data-carousel\] \.banquet-media\{[^}]*height:430px[^}]*object-fit:cover/, 'banquet images share one cropped size');
-assert.match(css, /\.carousel-track\{[^}]*user-select:none[^}]*touch-action:pan-y[^}]*cursor:grab/, 'dragging a slide cannot select its text');
+assert.match(css, /\.carousel-track\{[^}]*user-select:none[^}]*touch-action:pan-y[^}]*cursor:default/, 'the slider does not advertise mouse dragging');
 assert.match(css, /\.new-year-page \.carousel-track a,\.new-year-page \.carousel-track button\{cursor:pointer\}/, 'interactive elements keep their clickable cursor');
 
 const handlers = new WeakMap();
@@ -90,14 +90,20 @@ for (const item of cases) {
   assert.deepEqual(active(item), [item.cards.at(-1)], 'reverse loop returns to last card');
   emit(item.next, 'click'); finish();
 
-  emit(item.track, 'pointerdown', { pointerId: 1, clientX: 500, target: { closest: () => null } });
+  const beforeMouseDrag = active(item)[0];
+  emit(item.track, 'pointerdown', { pointerId: 1, pointerType: 'mouse', clientX: 500, target: { closest: () => null } });
   emit(item.track, 'pointermove', { pointerId: 1, clientX: 330 });
   emit(item.track, 'pointerup', { pointerId: 1, clientX: 330 });
+  assert.deepEqual(active(item), [beforeMouseDrag], 'mouse drag does not change the active card');
+
+  emit(item.track, 'pointerdown', { pointerId: 2, pointerType: 'touch', clientX: 500, target: { closest: () => null } });
+  emit(item.track, 'pointermove', { pointerId: 2, pointerType: 'touch', clientX: 330 });
+  emit(item.track, 'pointerup', { pointerId: 2, pointerType: 'touch', clientX: 330 });
   finish();
-  assert.deepEqual(active(item), [item.cards[1]], 'mouse drag changes card without leaving a clone');
+  assert.deepEqual(active(item), [item.cards[1]], 'touch swipe still changes the active card');
 }
 
 assert.equal(intervals.length, 1, 'autoplay is installed for the Belokurikha banquet carousel');
 now += 6000; intervals[0](); finish();
 assert.deepEqual(active(cases[0]), [cases[0].cards[2]], 'autoplay advances a banquet');
-console.log('PASS: the Belokurikha banquet carousel shows one real card and loops, drags and autoplays without clones');
+console.log('PASS: the Belokurikha banquet carousel ignores mouse drag, keeps touch swipe, buttons and autoplay');

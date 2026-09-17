@@ -154,8 +154,8 @@
 @media(max-width:900px){.new-year-page .carousel[data-carousel] .banquet-media{height:390px}}
 @media(max-width:600px){.new-year-page .carousel[data-carousel] .banquet-media{height:300px}}
 /* Жест листания принадлежит карусели: текст и изображения не выделяются и не перетаскиваются. */
-.new-year-page .carousel-track{user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:grab}
-.new-year-page .carousel-track.is-dragging{cursor:grabbing}
+.new-year-page .carousel-track{user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:default}
+.new-year-page .carousel-track.is-dragging{cursor:default}
 .new-year-page .carousel-track img{-webkit-user-drag:none;user-drag:none}
 .new-year-page .carousel-track a,.new-year-page .carousel-track button{cursor:pointer}
 
@@ -163,7 +163,26 @@
 .new-year-page .dinner-static{width:100%}
 .new-year-page .dinner-static .dinner-card{position:relative;display:block;width:100%;max-width:none;min-height:0;overflow:hidden}
 
-/* Совместимость со стандартным контейнером belokurikha-san.ru: 1200px. */
+/* Контентная колонка акций belokurikha-san.ru: 1260px с отступами по 30px, то есть 1200px внутри. */
 .new-year-page{width:100%;max-width:100%;overflow-x:clip}
 .new-year-page .wrap{width:100%;max-width:1200px;margin-inline:auto}
 body>.new-year-page .wrap{width:min(1200px,calc(100% - 20px))}
+
+/* Широкие декоративные секции также остаются внутри 1200px колонки сайта. */
+.new-year-page>.booking-strip,
+.new-year-page>.stories,
+.new-year-page>.final-cta{
+  width:100%;
+  max-width:1200px;
+  margin-inline:auto;
+  overflow:hidden;
+  border-radius:24px
+}
+body>.new-year-page>.booking-strip,
+body>.new-year-page>.stories,
+body>.new-year-page>.final-cta{width:min(1200px,calc(100% - 20px))}
+@media(max-width:600px){
+  .new-year-page>.booking-strip,
+  .new-year-page>.stories,
+  .new-year-page>.final-cta{border-radius:18px}
+}

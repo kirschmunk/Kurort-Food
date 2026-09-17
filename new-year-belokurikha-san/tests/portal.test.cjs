@@ -17,6 +17,11 @@ assert.match(
 );
 assert.match(
   css,
+  /\.new-year-page>\.booking-strip,\s*\.new-year-page>\.stories,\s*\.new-year-page>\.final-cta\{\s*width:100%;\s*max-width:1200px;\s*margin-inline:auto;/,
+  'decorative full-background sections stay inside the 1200px action-page content column',
+);
+assert.match(
+  css,
   /\.new-year-page,\.new-year-page \*\{box-sizing:border-box\}/,
   'box sizing is isolated to the New Year page',
 );
