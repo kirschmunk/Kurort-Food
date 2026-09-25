@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#4f806d">
+  <title>Питание в санатории «Катунь»</title>
+  <meta name="description" content="Питание в санатории «Катунь»: персональный рацион, продукты собственного производства и четыре формата питания.">
+  <style>
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-Regular.woff') format('woff');font-weight:400;font-display:swap}
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-Bold.woff') format('woff');font-weight:700;font-display:swap}
+    @font-face{font-family:Acrom;src:url('assets/fonts/Acrom-ExtraBold.woff') format('woff');font-weight:800;font-display:swap}
+    :root{--ink:#171717;--deep:#2c3550;--forest:#2c3550;--mint:#ffe9ec;--pale:#f7f7f8;--cream:#fff5f6;--white:#fff;--coral:#f55361;--coral-dark:#dc3f4f;--line:#e2e3e7;--muted:#707078;--radius:22px;--shadow:0 18px 50px rgba(44,53,80,.11)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Onest,Acrom,Arial,sans-serif;font-size:16px;line-height:1.6}
+    body.menu-open{overflow:hidden}
+    img{display:block;max-width:100%}
+    button,input,select{font:inherit}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer}
+    .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:var(--coral-dark);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
+    h1,h2,h3,p{margin-top:0}
+    h1{max-width:720px;margin-bottom:22px;font-size:clamp(46px,6vw,82px);font-weight:700;line-height:.98;letter-spacing:-.045em}
+    h2{margin-bottom:18px;font-size:clamp(34px,4.2vw,58px);font-weight:600;line-height:1.05;letter-spacing:-.035em}
+    h3{font-size:24px;line-height:1.25}
+    .lead{font-size:19px;color:#666871}
+    .section{padding:108px 0}
+    .section-head{max-width:760px;margin-bottom:48px}
+    .section-head.center{margin-inline:auto;text-align:center}
+    .section-head.center .eyebrow{justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid transparent;border-radius:10px;background:var(--coral);color:#fff;font-size:14px;font-weight:800;transition:.2s ease}
+    .btn:hover{background:var(--coral-dark);transform:translateY(-2px)}
+    .btn-light{border-color:rgba(255,255,255,.52);background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+    .btn-light:hover{background:#fff;color:var(--deep)}
+    .arrow{font-size:20px}
+
+    .hero{min-height:760px;position:relative;overflow:hidden;background:var(--deep)}
+    .hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(32,40,63,.96) 0%,rgba(32,40,63,.8) 42%,rgba(32,40,63,.2) 75%,rgba(32,40,63,.08) 100%),url('assets/buffet.jpg');background-position:center;background-size:cover;transform:scale(1.02)}
+    .hero:after{display:none}
+    .site-head{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;margin-top:22px;padding:14px 16px 14px 18px;border-radius:18px;background:rgba(255,255,255,.97);color:var(--ink);box-shadow:0 16px 40px rgba(24,28,45,.16);backdrop-filter:blur(14px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(245,83,97,.34);border-radius:50%;background:var(--mint);color:var(--coral);font-size:20px;font-weight:800}
+    .brand strong{display:block;font-size:20px;letter-spacing:.13em}
+    .brand small{display:block;margin-top:-3px;font-size:9px;letter-spacing:.18em;opacity:.74}
+    .desktop-nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+    .desktop-nav a:not(.head-book):after{content:"";display:block;width:0;height:2px;margin-top:4px;background:var(--coral);transition:.2s}
+    .desktop-nav a:hover:after{width:100%}
+    .phone{font-size:18px;white-space:nowrap}
+    .head-book{padding:12px 17px;border-radius:10px;background:var(--coral);color:#fff}
+    .menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--pale);color:var(--ink);font-size:22px}
+    .mobile-nav{display:none}
+    .hero-copy{position:relative;z-index:2;max-width:760px;padding:116px 0 145px;color:#fff}
+    .hero-copy .eyebrow{color:#ffb9c0}
+    .hero-copy h1 span{color:#ff7b87}
+    .hero-copy p{max-width:690px;margin-bottom:28px;font-size:19px;color:rgba(255,255,255,.83)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+    .hero-facts{display:flex;flex-wrap:wrap;gap:10px}
+    .hero-fact{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.07);font-size:13px;color:rgba(255,255,255,.85);backdrop-filter:blur(8px)}
+    .hero-fact b{color:#fff}
+
+    .booking{position:relative;z-index:5;margin-top:-46px}
+    .booking-card{padding:24px 26px;border-radius:18px;background:#fff;box-shadow:0 20px 55px rgba(44,53,80,.16)}
+    .booking-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .booking-top strong{font-size:18px}
+    .booking-top span{font-size:12px;color:var(--muted)}
+    .booking-form{display:grid;grid-template-columns:1.1fr 1.1fr .8fr .8fr 1.2fr;gap:12px}
+    .field{position:relative}
+    .field label{position:absolute;left:14px;top:8px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .field input,.field select{width:100%;height:58px;padding:23px 13px 7px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none}
+    .field input:focus,.field select:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(245,83,97,.1)}
+    .booking-form .btn{height:58px}
+
+    .treatment{padding-top:118px}
+    .treatment-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:72px}
+    .treatment-copy p{color:#656771}
+    .quote{margin:30px 0;padding:22px 24px;border-left:4px solid var(--coral);border-radius:0 14px 14px 0;background:var(--cream);font-size:17px;font-weight:700;color:var(--deep)}
+    .treatment-visual{position:relative;padding:22px 0 30px 30px}
+    .treatment-visual:before{content:"";position:absolute;inset:0 60px 0 0;border-radius:40% 52% 35% 45%;background:var(--mint)}
+    .treatment-visual img{position:relative;width:100%;height:470px;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
+    .diet-note{position:absolute;right:-12px;bottom:0;width:260px;padding:20px;border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+    .diet-note b{display:block;margin-bottom:5px;color:var(--coral-dark)}
+    .diet-note span{font-size:12px;color:var(--muted)}
+    .regime{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+    .regime-item{display:flex;align-items:center;gap:13px;padding:16px;border:1px solid var(--line);border-radius:14px}
+    .regime-number{display:grid;place-items:center;min-width:42px;height:42px;border-radius:50%;background:var(--mint);color:var(--coral-dark);font-weight:800}
+    .regime-item small{display:block;color:var(--muted)}
+
+    .production{position:relative;overflow:hidden;background:var(--deep);color:#fff}
+    .production:before{content:"";position:absolute;right:-180px;top:-220px;width:550px;height:550px;border:1px solid rgba(255,255,255,.1);border-radius:50%}
+    .production .section-head p{color:rgba(255,255,255,.68)}
+    .production .eyebrow{color:#ff9ba5}
+    .production-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px}
+    .production-photo{position:relative;min-height:540px;overflow:hidden;border-radius:24px}
+    .production-photo img{width:100%;height:100%;object-fit:cover}
+    .photo-caption{position:absolute;left:20px;right:20px;bottom:20px;padding:20px;border-radius:14px;background:rgba(38,45,68,.88);backdrop-filter:blur(12px)}
+    .photo-caption strong{display:block;font-size:20px}
+    .photo-caption span{font-size:13px;color:rgba(255,255,255,.72)}
+    .production-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .production-card{min-height:164px;padding:22px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.055);transition:.2s}
+    .production-card:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.08);transform:translateY(-2px)}
+    .production-card .num{margin-bottom:18px;color:#ff9ba5;font-size:11px;font-weight:700;letter-spacing:.12em}
+    .production-card strong{display:block;margin-bottom:6px;font-size:17px}
+    .production-card p{margin:0;font-size:12px;color:rgba(255,255,255,.62)}
+    .manifesto{margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);font-size:clamp(23px,3vw,38px);line-height:1.25}
+    .manifesto em{color:#ff9ba5;font-style:normal}
+
+    .formats{background:var(--pale)}
+    .format-shell{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px}
+    .format-tabs{display:flex;flex-direction:column;gap:10px}
+    .format-tab{display:grid;grid-template-columns:38px 1fr 16px;align-items:center;gap:12px;min-height:84px;padding:15px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);text-align:left;transition:.2s}
+    .format-tab:hover{border-color:rgba(245,83,97,.5)}
+    .format-tab[aria-selected="true"]{border-color:rgba(245,83,97,.48);background:var(--mint);box-shadow:0 12px 28px rgba(245,83,97,.1)}
+    .tab-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--pale);color:var(--coral);font-size:18px}
+    .format-tab[aria-selected="true"] .tab-icon{background:#fff}
+    .tab-label strong{display:block;font-size:13px;line-height:1.25}
+    .tab-label small{display:block;margin-top:3px;font-size:9px;color:var(--muted)}
+    .tab-arr{font-size:18px;color:var(--coral)}
+    .format-panel{display:none;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 14px 40px rgba(44,53,80,.07)}
+    .format-panel.active{display:block}
+    .format-intro{padding:34px 36px 18px}
+    .format-tag{display:inline-block;margin-bottom:13px;padding:7px 10px;border-radius:7px;background:var(--mint);color:var(--coral-dark);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    .format-intro h3{margin-bottom:10px;color:var(--forest);font-size:27px}
+    .format-intro p{margin-bottom:0;color:var(--muted);font-size:14px}
+    .format-main{display:grid;grid-template-columns:minmax(270px,.88fr) minmax(360px,1.12fr);gap:18px;padding:0 36px 36px}
+    .check-list{display:flex;flex-direction:column;gap:9px;margin:0;padding:0;list-style:none}
+    .check-list li{position:relative;display:flex;align-items:center;min-height:48px;padding:10px 12px 10px 42px;border:1px solid var(--line);border-radius:11px;background:#fafafd;font-size:13px;line-height:1.35}
+    .check-list li:before{content:"✓";position:absolute;left:13px;top:50%;display:grid;place-items:center;width:19px;height:19px;border:1px solid rgba(245,83,97,.55);border-radius:50%;background:var(--mint);color:var(--coral-dark);font-size:11px;transform:translateY(-50%)}
+    .panel-slider{position:relative;min-height:342px;overflow:hidden;border-radius:16px;background:var(--mint)}
+    .panel-slide{display:none;width:100%;height:342px;object-fit:cover}
+    .panel-slide.active{display:block}
+    .slide-btn{position:absolute;z-index:2;top:50%;display:grid;place-items:center;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--deep);box-shadow:0 5px 15px rgba(0,0,0,.12);transform:translateY(-50%)}
+    .slide-prev{left:14px}.slide-next{right:14px}
+    .slide-dots{position:absolute;z-index:2;left:50%;bottom:13px;display:flex;gap:6px;transform:translateX(-50%)}
+    .slide-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}
+    .slide-dot.active{width:18px;border-radius:6px;background:#fff}
+    .world{margin:0 36px 36px;padding:24px 26px;border-radius:15px;background:var(--deep);color:#fff}
+    .world strong{display:block;margin-bottom:8px;color:#ff9ba5;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    .world p{margin:0;font-size:13px;color:rgba(255,255,255,.72)}
+
+    .gallery{background:#fff}
+    .gallery-stage{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .gallery-main,.gallery-side{overflow:hidden;border-radius:22px}
+    .gallery-main{height:540px}
+    .gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+    .gallery-side div{overflow:hidden;border-radius:22px}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:.5s}
+    .gallery-main:hover img,.gallery-side div:hover img{transform:scale(1.025)}
+    .gallery-controls{display:flex;align-items:center;justify-content:space-between;margin-top:24px}
+    .gallery-progress{color:var(--muted);font-size:13px}
+    .gallery-arrows{display:flex;gap:9px}
+    .gallery-arrow{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--deep)}
+    .gallery-arrow:hover{background:var(--mint)}
+
+    .order{background:var(--cream)}
+    .order-card{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border-radius:26px;background:#fff;box-shadow:var(--shadow)}
+    .order-copy{padding:54px}
+    .order-copy h2{font-size:42px}
+    .steps{margin-top:30px}
+    .step{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--line)}
+    .step-num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--forest);font-weight:800}
+    .step strong{display:block}
+    .step small{display:block;color:var(--muted)}
+    .order-photo{position:relative;min-height:610px}
+    .order-photo img{width:100%;height:100%;object-fit:cover}
+    .order-note{position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;border-radius:14px;background:rgba(38,45,68,.9);color:#fff;backdrop-filter:blur(10px)}
+    .order-note strong{display:block;font-size:20px;color:#ff9ba5}
+    .order-note span{font-size:13px;color:rgba(255,255,255,.75)}
+
+    .services-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .service-card{position:relative;overflow:hidden;min-height:280px;padding:36px;border:1px solid var(--line);border-radius:22px;background:var(--pale)}
+    .service-card:first-child{background:var(--mint)}
+    .service-card:after{content:"";position:absolute;right:-70px;bottom:-80px;width:210px;height:210px;border:30px solid rgba(255,255,255,.35);border-radius:50%}
+    .service-icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:28px;border-radius:50%;background:#fff;color:var(--coral);font-size:21px}
+    .service-card h3{margin-bottom:10px;color:var(--forest)}
+    .service-card p{max-width:570px;margin-bottom:20px;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:7px 10px;border-radius:999px;background:#fff;color:var(--coral-dark);font-size:10px;font-weight:700}
+
+    .final{padding:100px 0;background:var(--deep);color:#fff;text-align:center}
+    .final h2{max-width:840px;margin-inline:auto}
+    .final p{max-width:640px;margin:0 auto 30px;color:rgba(255,255,255,.68);font-size:18px}
+    .final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+    .footer{padding:42px 0;background:#20283f;color:#fff}
+    .footer-row{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:32px;align-items:start}
+    .footer .brand{margin-bottom:15px}
+    .footer p,.footer a{font-size:12px;color:rgba(255,255,255,.62)}
+    .footer strong{display:block;margin-bottom:9px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .copyright{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:10px;color:rgba(255,255,255,.42)}
+
+    @media(max-width:1020px){
+      .desktop-nav{display:none}.menu-toggle{display:block}.phone{margin-left:auto;margin-right:16px}.hero{min-height:700px}.hero-copy{padding-top:118px}
+      .booking-form{grid-template-columns:repeat(2,1fr)}.booking-form .btn{grid-column:span 2}
+      .treatment-grid,.production-layout{grid-template-columns:1fr}.treatment-visual{max-width:700px}.format-shell{grid-template-columns:1fr}.format-tabs{display:grid;grid-template-columns:repeat(4,1fr)}.format-tab{grid-template-columns:35px 1fr}.tab-arr{display:none}.format-main{grid-template-columns:.85fr 1.15fr}.order-copy{padding:40px}.order-card{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .wrap{width:min(100% - 32px,1180px)}.section{padding:76px 0}.lead{font-size:16px}
+      .hero{min-height:720px}.hero-bg{background-image:linear-gradient(90deg,rgba(32,40,63,.96),rgba(32,40,63,.72)),url('assets/buffet.jpg');background-position:57% center}.site-head{margin-top:14px;padding:12px 14px}.brand strong{font-size:16px}.brand small{font-size:8px}.phone{display:none}.hero-copy{padding:96px 0 130px}.hero-copy p{font-size:16px}
+      .mobile-nav{position:fixed;z-index:20;inset:0;display:flex;flex-direction:column;justify-content:center;gap:24px;padding:50px;background:var(--deep);color:#fff;font-size:24px;transform:translateX(100%);transition:.25s}.mobile-nav.open{transform:none}.mobile-close{position:absolute;right:24px;top:24px;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:transparent;color:#fff;font-size:24px}
+      .booking{margin-top:-54px}.booking-card{padding:20px}.booking-top span{display:none}.booking-form{grid-template-columns:1fr}.booking-form .btn{grid-column:auto}
+      .treatment{padding-top:84px}.treatment-grid{gap:30px}.treatment-visual{padding:0 0 42px}.treatment-visual:before{inset:20px 30px 20px 20px}.treatment-visual img{height:360px}.diet-note{right:8px;width:245px}.regime{grid-template-columns:1fr}
+      .production-grid{grid-template-columns:1fr}.production-photo{min-height:420px}.production-card{min-height:0}.manifesto{font-size:24px}
+      .format-tabs{grid-template-columns:1fr 1fr}.format-tab{min-height:76px}.format-main{grid-template-columns:1fr;padding:0 18px 18px}.format-intro{padding:26px 18px 18px}.format-intro h3{font-size:23px}.world{margin:0 18px 18px}.panel-slider,.panel-slide{height:290px;min-height:290px}
+      .gallery-stage{grid-template-columns:1fr}.gallery-main{height:390px}.gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:none;height:190px}.gallery-side div{border-radius:16px}
+      .order-card{grid-template-columns:1fr}.order-copy{padding:32px 24px}.order-copy h2{font-size:34px}.order-photo{min-height:380px}
+      .services-grid{grid-template-columns:1fr}.service-card{min-height:260px;padding:28px}
+      .footer-row{grid-template-columns:1fr}.final{padding:76px 0}
+    }
+    @media(max-width:440px){
+      h1{font-size:45px}.hero-copy{padding-top:86px}.hero-actions .btn{width:100%}.hero-fact{font-size:11px}
+      .format-tabs{grid-template-columns:1fr}.format-tab{min-height:68px}.gallery-main{height:300px}.gallery-side{height:145px}.check-list li{font-size:12px}.service-card{min-height:0}
+    }
+
+    /* Адаптация утверждённой композиции страницы санатория «Белокуриха» */
+    :root{
+      --deep:#2c3550;
+      --forest:#2c3550;
+      --coral:#f55361;
+      --coral-dark:#d94250;
+      --mint:#fff1f3;
+      --cream:#fff8f8;
+      --pale:#f7f7f8;
+      --line:#e7e3e5;
+      --radius:12px;
+      --shadow:0 14px 36px rgba(44,53,80,.1)
+    }
+    body{font-family:Acrom,Arial,sans-serif;font-size:15px;color:#3f3d42}
+    .wrap{width:min(1200px,calc(100% - 48px))}
+    .section{padding:72px 0}
+    h1{font-size:42px;line-height:1.17;letter-spacing:0;text-transform:uppercase}
+    h2{font-size:28px;line-height:1.3;letter-spacing:0;text-transform:uppercase}
+    h3{font-size:19px}
+    .lead{font-size:15px;color:#666}
+    .eyebrow{color:var(--coral-dark);font-size:11px}
+    .btn{min-height:44px;padding:0 24px;border-radius:6px;font-size:13px;text-transform:uppercase}
+
+    .hero{min-height:520px;background:#2c3550}
+    .hero-bg{background-image:linear-gradient(90deg,rgba(25,30,45,.94) 0%,rgba(25,30,45,.74) 43%,rgba(25,30,45,.17) 76%,rgba(25,30,45,.06) 100%),url('assets/buffet.jpg');background-position:center 45%}
+    .brand-mark{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff}
+    .desktop-nav{gap:24px;text-transform:uppercase}
+    .desktop-nav a:not(.head-book):after{background:#fff}
+    .head-book{border:1px solid rgba(255,255,255,.7);background:transparent}
+    .head-book:hover{background:#fff;color:var(--deep)}
+    .hero-copy{max-width:735px;padding:112px 0 118px}
+    .hero-copy .eyebrow{color:#ffb9c0}
+    .hero-copy h1{max-width:700px;margin-bottom:20px}
+    .hero-copy h1 span{color:#fff}
+    .hero-copy p{max-width:660px;margin-bottom:0;font-size:18px}
+    .hero-actions,.hero-facts{display:none}
+
+    .treatment{padding-top:72px}
+    .treatment-grid{grid-template-columns:1.08fr .92fr;gap:0;align-items:stretch;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}
+    .treatment-copy{display:flex;flex-direction:column;padding:46px 44px 38px}
+    .treatment-copy h2{margin-bottom:24px;color:#302d32}
+    .treatment-copy p{font-size:15px}
+    .quote{margin:4px 0 20px;padding:18px 4px 18px 24px;border-left:4px solid var(--coral);border-radius:0;background:var(--cream);color:var(--coral-dark);font-size:15px}
+    .regime{margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+    .regime-item{padding:12px;border:0;border-radius:7px;background:#faf7f8}
+    .regime-number{background:var(--mint);color:var(--coral-dark)}
+    .treatment-visual{min-height:570px;padding:0}
+    .treatment-visual:before{display:none}
+    .treatment-visual img{width:100%;height:100%;border-radius:0;box-shadow:none}
+    .treatment-visual:after{position:absolute;inset:0;content:"";background:linear-gradient(0deg,rgba(33,40,60,.78),transparent 58%)}
+    .diet-note{z-index:2;right:28px;bottom:26px;left:28px;width:auto;border-radius:8px;background:rgba(255,255,255,.94)}
+
+    .production{background:transparent;color:#3f3d42}
+    .production:before{display:none}
+    .production .section-head{max-width:820px;margin:0 auto 38px;text-align:center}
+    .production .section-head .eyebrow{justify-content:center;color:var(--coral-dark)}
+    .production .section-head p{color:#666}
+    .production-layout{display:block}
+    .production-photo{display:none}
+    .production-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+    .production-card{position:relative;display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;min-height:178px;padding:26px 24px;border:1px solid #eee5e7;border-top:4px solid var(--coral);border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(44,53,80,.07);overflow:hidden}
+    .production-card:nth-child(2n){border-top-color:#ff9da6;background:#fffafa}
+    .production-card:hover{border-color:#dcbfc5;background:#fff}
+    .production-card:after{position:absolute;right:-38px;bottom:-54px;width:120px;height:120px;border-radius:50%;background:rgba(245,83,97,.055);content:""}
+    .production-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--mint);color:var(--coral)}
+    .production-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .production-card>div:last-child{min-width:0}
+    .production-card strong{color:var(--deep);font-size:15px;text-transform:uppercase}
+    .production-card p{margin:8px 0 0;color:#666;font-size:12px}
+    .manifesto{margin-top:30px;padding:23px 30px;border:0;border-left:7px solid var(--coral-dark);border-radius:5px;background:var(--coral);color:#fff;font-size:18px;font-weight:600;text-align:center}
+
+    .formats{background:transparent}
+    .formats .section-head{margin-bottom:34px}
+    .format-shell{grid-template-columns:250px 1fr;gap:22px}
+    .format-tabs{gap:12px}
+    .format-tab{min-height:96px;padding:15px 14px;grid-template-columns:48px 1fr 14px;border-radius:10px;background:#fff}
+    .format-tab[aria-selected="true"]{border-color:var(--coral);background:var(--coral);color:#fff;box-shadow:0 12px 28px rgba(245,83,97,.2)}
+    .tab-icon{width:46px;height:46px;background:#f8edef;color:var(--coral-dark)}
+    .tab-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .format-tab[aria-selected="true"] .tab-icon{background:#fff;color:var(--coral)}
+    .format-tab[aria-selected="true"] .tab-label small,.format-tab[aria-selected="true"] .tab-arr{color:rgba(255,255,255,.82)}
+    .format-panel{border-radius:12px;box-shadow:var(--shadow)}
+    .format-intro{padding:34px 34px 18px}
+    .format-tag{border-radius:4px;background:var(--coral);color:#fff}
+    .format-intro h3{color:var(--deep);font-size:21px;text-transform:uppercase}
+    .format-main{grid-template-columns:minmax(235px,.82fr) minmax(0,1.18fr);padding:0 34px 34px}
+    .check-list li{min-height:44px;border-radius:7px;background:#faf8f9;font-size:13px}
+    .check-list li:before{border-color:var(--coral);background:#fff;color:var(--coral-dark)}
+    .panel-slider,.panel-slide{height:300px;min-height:300px;border-radius:9px}
+    .world{margin:0 34px 34px;padding:19px 20px;border-left:4px solid var(--coral);border-radius:7px;background:#f8edef;color:#555}
+    .world strong{color:var(--coral-dark)}
+    .world p{color:#666}
+
+    .gallery{background:transparent}
+    .gallery .section-head{margin-right:auto;margin-left:auto;text-align:center}
+    .gallery .section-head .eyebrow{justify-content:center}
+    .gallery-stage{display:block;max-width:1040px;margin:0 auto;overflow:hidden;border-radius:12px;box-shadow:var(--shadow)}
+    .gallery-main{height:500px;border-radius:0}
+    .gallery-side{display:none}
+    .gallery-controls{max-width:1040px;margin:20px auto 0}
+    .gallery-arrow{border-color:#decfd2;color:var(--deep)}
+    .gallery-arrow:hover{background:var(--mint)}
+
+    .order{background:transparent}
+    .order-card{grid-template-columns:1.08fr .92fr;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+    .order-copy{padding:42px}
+    .order-copy h2{color:var(--deep);font-size:24px}
+    .step-num{background:var(--coral);color:#fff}
+    .order-photo{min-height:490px}
+    .order-note{border-radius:7px;background:rgba(44,53,80,.9)}
+    .order-note strong{color:#fff}
+    .order-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+    .order-fact{padding:16px 18px;border-radius:8px;background:var(--mint)}
+    .order-fact strong{display:block;color:var(--deep);font-size:13px;text-transform:uppercase}
+    .order-fact span{display:block;margin-top:4px;color:#707078;font-size:11px}
+
+    .services{background:transparent}
+    .services-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+    .service-card,.service-card:first-child{min-height:200px;padding:28px;border-radius:12px;background:#fff;box-shadow:0 10px 26px rgba(44,53,80,.07)}
+    .service-icon{margin-bottom:18px;background:var(--coral);color:#fff}
+    .service-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .service-card h3{color:var(--deep);text-transform:uppercase}
+    .tag{background:var(--mint);color:var(--coral-dark)}
+    .final{padding:64px 0;background:var(--coral)}
+    .final .eyebrow{color:#ffd1d5!important}
+    .final p{color:#fff}
+    .final .btn-outline{border-color:rgba(255,255,255,.75);background:transparent;color:#fff}
+    .final .btn-outline:hover{background:#fff;color:var(--coral-dark)}
+
+    @media(max-width:1020px){
+      .format-shell{grid-template-columns:1fr}.format-tabs{grid-template-columns:repeat(4,1fr)}
+      .production-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .hero{min-height:560px}.hero-copy{padding:96px 0 108px}.treatment-grid{grid-template-columns:1fr}.treatment-copy{padding:34px 28px 30px}.treatment-visual{min-height:430px}.regime{grid-template-columns:1fr}
+      .production-grid{grid-template-columns:1fr}.format-tabs{grid-template-columns:1fr 1fr}.format-main{grid-template-columns:1fr}.gallery-main{height:360px}.services-grid{grid-template-columns:1fr}
+      .order-facts{grid-template-columns:1fr}
+    }
+    @media(max-width:440px){
+      h1{font-size:32px}.format-tabs{grid-template-columns:1fr}.gallery-main{height:290px}
+    }
+
+    /* Встраивание в контейнер сайта: единая поверхность без фоновых полос */
+    .katun-food-page{
+      width:100%;
+      margin:0;
+      padding:0;
+      background:transparent;
+    }
+    .katun-food-page>section.section{
+      margin:0;
+      background:transparent;
+    }
+    .katun-food-page>.treatment{
+      padding-top:32px;
+    }
+    .katun-food-page>.services{
+      padding-bottom:44px;
+    }
+    @media(max-width:760px){
+      .katun-food-page>.treatment{padding-top:24px}
+      .katun-food-page>.services{padding-bottom:36px}
+    }
+    /* Спокойная фирменная зелёная палитра «Катуни» */
+    :root{--deep:#284d42;--forest:#284d42;--coral:#4f806d;--coral-dark:#3f6f5d;--mint:#edf4f0;--cream:#f5f8f6;--pale:#f7f9f8;--line:#e1e9e4;--shadow:0 14px 36px rgba(40,77,66,.1)}
+    .production-card{border-color:#e1e9e4;border-top-color:var(--coral)}
+    .production-card:nth-child(2n){border-top-color:#87a998;background:#f8fbf9}
+    .production-card:hover{border-color:#a8c1b4;background:#fff}
+    .production-card:after{background:rgba(79,128,109,.06)}
+    .manifesto{border-left-color:var(--coral-dark);background:var(--coral)}
+    .final{background:var(--deep)}
+    .final .eyebrow{color:#d8e8df!important}
+  </style>
+</head>
+<body>
+
+  <main class="katun-food-page">
+    <section class="section treatment"><div class="wrap treatment-grid"><div class="treatment-copy"><div class="eyebrow">Часть лечебной программы</div><h2>Еда, которая лечит</h2><p>Правильное питание — это не просто приятное дополнение к отдыху. В санатории оно становится частью лечения и многократно усиливает эффект от всех процедур. Именно поэтому в «Катуни» к организации питания подходят так же серьёзно, как к медицинским назначениям.</p><p>Наш врач-диетолог составит для вас персональное меню с учётом диагноза, состояния здоровья и целей. Если у вас два заболевания, требующих особого рациона, специалист разработает меню, которое подойдёт для обоих случаев.</p><div class="quote">Питание в «Катуни» — часть заботы о здоровье и полноценного отдыха.</div><div class="regime"><div class="regime-item"><span class="regime-number">3×</span><span><b>Для большинства гостей</b><small>3-разовое питание</small></span></div><div class="regime-item"><span class="regime-number">4×</span><span><b>Для детей и по показаниям</b><small>4-разовое питание</small></span></div></div></div><div class="treatment-visual"><img src="assets/restaurant-hall.jpg" alt="Интерьер ресторанного зала"><div class="diet-note"><b>Персональный рацион</b><span>Врач-диетолог подберёт меню с учётом диагноза, состояния здоровья и целей.</span></div></div></div></section>
+
+    <section class="section production"><div class="wrap"><div class="section-head"><div class="eyebrow">Своё производство</div><h2>Гарантия качества</h2><p class="lead">АО «Курорт Белокуриха» самостоятельно выращивает и производит всё, что оказывается на вашей тарелке. Весь процесс контролирует команда технологов.</p></div><div class="production-layout"><div class="production-grid"><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l1 4v13H7V7l1-4Z"/><path d="M9 7h6M10 3v4"/></svg></span><div><strong>Молочная продукция</strong><p>Сыры, молоко и кисломолочные продукты, в том числе из козьего молока.</p></div></article><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5 12 5l7 3.5v7L12 19l-7-3.5v-7Z"/><path d="m5.3 8.7 6.7 3.4 6.7-3.4M12 12.2V19M8.5 6.8l7 3.5"/></svg></span><div><strong>Мясо и птица</strong><p>Говядина, индейка, перепела и конина; колбасные изделия и полуфабрикаты ручной и машинной лепки.</p></div></article><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9c0-3 2.7-5 6-5s6 2 6 5v11H6V9Z"/><path d="M9 8c.8 1 1.8 1.5 3 1.5S14.2 9 15 8M9 14h6"/></svg></span><div><strong>Пекарня и кондитерская</strong><p>Хлебобулочные и кондитерские изделия собственного производства.</p></div></article><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12c3.5-4 7.2-5.5 11-3l4-2v10l-4-2c-3.8 2.5-7.5 1-11-3Z"/><circle cx="9" cy="11" r=".7"/></svg></span><div><strong>Рыбная ферма</strong><p>Собственное рыбоводство.</p></div></article><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V10M12 14c-4 0-7-2.6-7-6 4 0 7 2.6 7 6ZM12 11c0-3.8 2.7-6.5 7-7 0 4-2.7 6.7-7 7Z"/></svg></span><div><strong>Овощи и зелень</strong><p>Овощи и зелень из тепличного хозяйства.</p></div></article><article class="production-card"><span class="production-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v3l2 2v12H7V8l2-2V3Z"/><path d="M9 6h6M9 13c2-1.4 4-1.4 6 0"/></svg></span><div><strong>Напитки и вода</strong><p>Своё производство и розлив воды, а также крафтовые напитки.</p></div></article></div></div><div class="manifesto">Мы не ищем хорошие продукты — мы их создаём.</div></div></section>
+
+    <section class="section formats" id="formats"><div class="wrap"><div class="section-head center"><div class="eyebrow">Четыре формата</div><h2>Выберите свой вариант питания</h2><p class="lead">От классического шведского стола до блюд, приготовленных персонально по вашему заказу.</p></div><div class="format-shell"><div class="format-tabs" role="tablist" aria-label="Варианты питания">
+      <button class="format-tab" role="tab" aria-selected="true" aria-controls="panel-premium" id="tab-premium"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18.5h17l-1.2-11-4.3 4-3-6-3 6-4.3-4-1.2 11Z"/><path d="M5 21h14"/></svg></span><span class="tab-label"><strong>Премиум-меню</strong><small>Персональный заказ</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-lux" id="tab-lux"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></span><span class="tab-label"><strong>Шведский стол «Люкс»</strong><small>Особый комфорт</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-buffet" id="tab-buffet"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v5.5a2 2 0 0 0 4 0V3M7 3v18M16 3c2 0 3 2 3 4.5S18 12 16 12V3ZM16 12v9"/></svg></span><span class="tab-label"><strong>Шведский стол</strong><small>Богатый выбор</small></span><span class="tab-arr">›</span></button>
+      <button class="format-tab" role="tab" aria-selected="false" aria-controls="panel-diet" id="tab-diet"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20S5 15.6 5 10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/><path d="M12 7.5v8M9 11.5h6"/></svg></span><span class="tab-label"><strong>Лечебные диеты</strong><small>По показаниям</small></span><span class="tab-arr">›</span></button>
+    </div><div class="format-panels">
+      <article class="format-panel active" id="panel-premium" role="tabpanel" aria-labelledby="tab-premium"><div class="format-intro"><span class="format-tag">Индивидуальный формат</span><h3>Питание, созданное лично для вас</h3><p>Премиум-меню — особый формат, в котором каждое блюдо готовится индивидуально. Вечером вы выбираете блюда, а на следующий день повара готовят ваш заказ из продуктов собственного производства: овощей из теплиц, мяса и молока с фермы.</p></div><div class="format-main"><ul class="check-list"><li>Отдельный уютный зал для гостей «Премиума»</li><li>Блюда готовятся индивидуально по заказу</li><li>Закуски, салаты, овощи, фрукты и десерты</li><li>Бесплатная дегустация напитков собственного производства</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/restaurant-hall.jpg" alt="Зал ресторана"><img class="panel-slide" src="assets/buffet-hall.jpg" alt="Линия шведского стола"><img class="panel-slide" src="assets/bakery.jpg" alt="Свежая выпечка"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+      <article class="format-panel" id="panel-lux" role="tabpanel" aria-labelledby="tab-lux" hidden><div class="format-intro"><span class="format-tag">Повышенный комфорт</span><h3>Шведский стол «Люкс»</h3><p>Отдельный зал, фирменные блюда из натуральных алтайских продуктов и внимательное обслуживание.</p></div><div class="format-main"><ul class="check-list"><li>Обслуживание в отдельном уютном зале квалифицированным официантом</li><li>Широкий выбор фирменных блюд из натуральных алтайских продуктов</li><li>Десертный стол и свежая выпечка кондитеров</li><li>Натуральный свежесваренный кофе и фрукты при каждом приёме пищи</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet-hall.jpg" alt="Зал шведского стола Люкс"><img class="panel-slide" src="assets/bakery.jpg" alt="Десертный стол"><img class="panel-slide" src="assets/buffet.jpg" alt="Блюда шведского стола"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div><div class="world"><strong>Кухня народов мира</strong><p>В рамках концепции «Кухня народов мира» в меню входят блюда разных национальных кухонь, приготовленные по традиционным рецептам. Меню постоянно меняется, поэтому каждый приём пищи приносит что-то новое и интересное.</p></div></article>
+      <article class="format-panel" id="panel-buffet" role="tabpanel" aria-labelledby="tab-buffet" hidden><div class="format-intro"><span class="format-tag">Классический формат</span><h3>Вкусно, разнообразно и полезно — каждый день</h3><p>Меню сбалансировано по белкам, жирам и углеводам в соответствии с медицинскими стандартами и пищевой ценностью каждого блюда.</p></div><div class="format-main"><ul class="check-list"><li>Разнообразные блюда по физиологическим нормам питания</li><li>Меню меняется каждый день</li><li>При необходимости меню подбирается с учётом медицинских показаний</li><li>Меню учитывает медицинские стандарты и пищевую ценность блюд</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet.jpg" alt="Овощи на линии шведского стола"><img class="panel-slide" src="assets/buffet-hall.jpg" alt="Просторный зал шведского стола"><img class="panel-slide" src="assets/bakery.jpg" alt="Выпечка на шведской линии"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+      <article class="format-panel" id="panel-diet" role="tabpanel" aria-labelledby="tab-diet" hidden><div class="format-intro"><span class="format-tag">Медицинские показания</span><h3>Лечебные диеты</h3><p>Рацион подбирается врачом-диетологом с учётом диагноза, состояния здоровья и лечебных целей.</p></div><div class="format-main"><ul class="check-list"><li>Меню при сочетании двух заболеваний, требующих особого рациона</li><li>Рацион с учётом диагноза и состояния здоровья</li><li>Диетические блюда на шведской линии</li><li>Меню по рекомендациям врача-диетолога</li></ul><div class="panel-slider" data-slider><img class="panel-slide active" src="assets/buffet.jpg" alt="Свежие овощные блюда"><img class="panel-slide" src="assets/restaurant-hall.jpg" alt="Ресторанный зал"><img class="panel-slide" src="assets/bakery.jpg" alt="Свежая выпечка"><button class="slide-btn slide-prev" aria-label="Предыдущее фото">‹</button><button class="slide-btn slide-next" aria-label="Следующее фото">›</button><div class="slide-dots"></div></div></div></article>
+    </div></div></div></section>
+
+    <section class="section gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Атмосфера</div><h2>Ресторан и блюда</h2><p class="lead">Залы ресторана, шведская линия и продукты собственного производства.</p></div><div class="gallery-stage"><div class="gallery-main"><img id="galleryMain" src="assets/buffet-hall.jpg" alt="Интерьер зала ресторана"></div><div class="gallery-side"><div><img id="gallerySide1" src="assets/restaurant-hall.jpg" alt="Светлый ресторанный зал"></div><div><img id="gallerySide2" src="assets/buffet.jpg" alt="Линия шведского стола"></div></div></div><div class="gallery-controls"><span class="gallery-progress"><b id="galleryIndex">01</b> / 04</span><div class="gallery-arrows"><button class="gallery-arrow" id="galleryPrev" aria-label="Предыдущее фото">←</button><button class="gallery-arrow" id="galleryNext" aria-label="Следующее фото">→</button></div></div></div></section>
+
+    <section class="section order"><div class="wrap order-card"><div class="order-copy"><h2>Стол заказов — алтайские продукты с собой</h2><p>Понравились наши блюда? Возьмите любимые продукты домой или в подарок.</p><div class="steps"><div class="step"><span class="step-num">1</span><span><strong>Выберите продукты</strong><small>Продукты собственного производства сети «Курорт Белокуриха».</small></span></div><div class="step"><span class="step-num">2</span><span><strong>Обратитесь к менеджеру зала ресторана</strong><small>Оформите заказ у менеджера зала ресторана за 3 дня до нужной даты.</small></span></div><div class="step"><span class="step-num">3</span><span><strong>Получите готовый заказ</strong><small>Получите заказ ежедневно после 14:00.</small></span></div></div></div><div class="order-photo"><img src="assets/bakery.jpg" alt="Продукты собственного производства"></div></div></section>
+
+    <section class="section services"><div class="wrap"><div class="section-head center"><div class="eyebrow">Дополнительные возможности</div><h2>Забота в каждой детали</h2></div><div class="services-grid"><article class="service-card"><span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17h16M6 17a6 6 0 0 1 12 0M12 8V6M10 6h4M3 20h18"/></svg></span><h3>Банкеты и мероприятия</h3><p>Ресторан санатория имеет опыт проведения мероприятий разного масштаба: банкеты, кофе-паузы и фуршеты.</p><div class="tags"><span class="tag">Банкеты</span><span class="tag">Кофе-паузы</span><span class="tag">Фуршеты</span></div></article><article class="service-card"><span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2.5"/><path d="M8 20v-5l-3 2M16 20v-5l3 2M8 11c1-1.2 2.3-2 4-2s3 .8 4 2v5H8v-5Z"/></svg></span><h3>Питание для детей</h3><p>Для маленьких гостей предусмотрено 4-разовое питание с дополнительным полдником. Дети до 2 лет питаются бесплатно; отдельное посадочное место не предоставляется.</p></article></div></div></section>
+
+    <section class="final"><div class="wrap"><div class="eyebrow" style="justify-content:center;color:#fff">Санаторий «Катунь»</div><h2>Выберите свой формат отдыха</h2><p>Питание в «Катуни» дополняет отдых и программу оздоровления. Узнайте подробнее о путёвках и вариантах размещения.</p><div class="final-actions"><a class="btn btn-outline" href="https://www.katun-san.ru/price/">Путёвки и цены <span class="arrow">→</span></a><a class="btn btn-light" href="tel:88007075186">8 800 707 51 86</a></div></div></section>
+  </main>
+
+  <script>
+
+    const tabs=[...document.querySelectorAll('.format-tab')];
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+      document.querySelectorAll('.format-panel').forEach(p=>{p.classList.remove('active');p.hidden=true});
+      tab.setAttribute('aria-selected','true');
+      const panel=document.getElementById(tab.getAttribute('aria-controls'));
+      panel.hidden=false;panel.classList.add('active');
+    }));
+
+    document.querySelectorAll('[data-slider]').forEach(slider=>{
+      const slides=[...slider.querySelectorAll('.panel-slide')];let current=0;
+      const dots=slider.querySelector('.slide-dots');
+      slides.forEach((_,i)=>{const dot=document.createElement('span');dot.className='slide-dot'+(i===0?' active':'');dots.appendChild(dot)});
+      const render=()=>{slides.forEach((s,i)=>s.classList.toggle('active',i===current));[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===current))};
+      slider.querySelector('.slide-next').addEventListener('click',()=>{current=(current+1)%slides.length;render()});
+      slider.querySelector('.slide-prev').addEventListener('click',()=>{current=(current-1+slides.length)%slides.length;render()});
+    });
+
+    const gallery=[
+      ['assets/buffet-hall.jpg','Интерьер зала ресторана'],
+      ['assets/restaurant-hall.jpg','Светлый ресторанный зал'],
+      ['assets/buffet.jpg','Линия шведского стола'],
+      ['assets/bakery.jpg','Выпечка собственного производства']
+    ];
+    let galleryPos=0;
+    const updateGallery=()=>{
+      const positions=[galleryPos,(galleryPos+1)%gallery.length,(galleryPos+2)%gallery.length];
+      [['galleryMain',positions[0]],['gallerySide1',positions[1]],['gallerySide2',positions[2]]].forEach(([id,pos])=>{const img=document.getElementById(id);img.src=gallery[pos][0];img.alt=gallery[pos][1]});
+      document.getElementById('galleryIndex').textContent=String(galleryPos+1).padStart(2,'0');
+    };
+    document.getElementById('galleryNext').addEventListener('click',()=>{galleryPos=(galleryPos+1)%gallery.length;updateGallery()});
+    document.getElementById('galleryPrev').addEventListener('click',()=>{galleryPos=(galleryPos-1+gallery.length)%gallery.length;updateGallery()});
+  </script>
+</body>
+</html>
