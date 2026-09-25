@@ -27,6 +27,11 @@ const iconCount = (html.match(/<svg\b/g) || []).length;
 assert.ok(iconCount >= 10, 'food formats, production and services include inline SVG icons');
 assert.match(html, /\.production-icon svg\{width:/);
 assert.match(html, /\.tab-icon svg\{width:/);
+assert.match(html, /\.regime-item\{background:#f7f9f8\}/, 'regime cards use a neutral background');
+assert.match(html, /\.tab-icon\{background:#f0f4f1;color:var\(--coral-dark\)\}/, 'tab icons use a neutral background');
+assert.match(html, /\.check-list li\{border-color:#e1e9e4;background:#f7f9f8\}/, 'feature list cards use a neutral background');
+assert.match(html, /\.gallery-arrow\{border-color:#dfe7e2;background:#fff\}/, 'gallery arrows use a neutral border');
+assert.match(html, /box-shadow:0 10px 24px rgba\(40,77,66,\.16\)/, 'active tab shadow uses the Katun green palette');
 
 for (const match of html.matchAll(/(?:src|url)\(['"]?(assets\/[^)'"\s]+)['"]?\)?/g)) {
   assert.ok(fs.existsSync(path.join(root, match[1])), `local asset ${match[1]} exists`);
