@@ -2,9 +2,16 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = __dirname;
-const types = { '.css': 'text/css', '.html': 'text/html; charset=utf-8', '.jpg': 'image/jpeg', '.woff': 'font/woff' };
+const types = { '.css': 'text/css', '.html': 'text/html; charset=utf-8', '.jpg': 'image/jpeg', '.png':'image/png', '.woff': 'font/woff' };
 http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
+  if (url.pathname === '/gallery-test') {
+    const {renderGallery} = require('./gallery.cjs');
+    const count = Math.max(1,Math.min(20,Number(url.searchParams.get('count')) || 7));
+    res.setHeader('Content-Type','text/html; charset=utf-8');
+    res.end('<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/styles.css"><div class="kfn-page"><div class="kfn-wrap">'+renderGallery('test',{label:'Проверка 7 фото',large:true,photos:Array.from({length:count},(_,i)=>({src:'assets/'+['restaurant-hall.jpg','buffet-hall.jpg','bakery.jpg','buffet.jpg'][i%4],alt:'Тестовое фото '+(i+1)}))})+'</div></div>');
+    return;
+  }
   if (url.pathname === '/isolation') {
     const width = Math.max(280, Math.min(1400, Number(url.searchParams.get('width')) || 1200));
     const embed = fs.readFileSync(path.join(root, 'embed.html'), 'utf8');

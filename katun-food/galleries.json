@@ -1,0 +1,96 @@
+{
+  "premium": {
+    "label": "Фотографии формата питания",
+    "large": false,
+    "photos": [
+      {
+        "src": "assets/restaurant-hall.jpg",
+        "alt": "Зал ресторана"
+      },
+      {
+        "src": "assets/buffet-hall.jpg",
+        "alt": "Линия шведского стола"
+      },
+      {
+        "src": "assets/bakery.jpg",
+        "alt": "Свежая выпечка"
+      }
+    ]
+  },
+  "lux": {
+    "label": "Фотографии формата питания",
+    "large": false,
+    "photos": [
+      {
+        "src": "assets/buffet-hall.jpg",
+        "alt": "Зал шведского стола Люкс"
+      },
+      {
+        "src": "assets/bakery.jpg",
+        "alt": "Десертный стол"
+      },
+      {
+        "src": "assets/buffet.jpg",
+        "alt": "Блюда шведского стола"
+      }
+    ]
+  },
+  "buffet": {
+    "label": "Фотографии формата питания",
+    "large": false,
+    "photos": [
+      {
+        "src": "assets/buffet.jpg",
+        "alt": "Овощи на линии шведского стола"
+      },
+      {
+        "src": "assets/buffet-hall.jpg",
+        "alt": "Просторный зал шведского стола"
+      },
+      {
+        "src": "assets/bakery.jpg",
+        "alt": "Выпечка на шведской линии"
+      }
+    ]
+  },
+  "diet": {
+    "label": "Фотографии формата питания",
+    "large": false,
+    "photos": [
+      {
+        "src": "assets/buffet.jpg",
+        "alt": "Свежие овощные блюда"
+      },
+      {
+        "src": "assets/restaurant-hall.jpg",
+        "alt": "Ресторанный зал"
+      },
+      {
+        "src": "assets/bakery.jpg",
+        "alt": "Свежая выпечка"
+      }
+    ]
+  },
+  "gallery": {
+    "label": "Ресторан и блюда",
+    "large": true,
+    "photos": [
+      {
+        "src": "assets/buffet-hall.jpg",
+        "alt": "Интерьер зала ресторана"
+      },
+      {
+        "src": "assets/restaurant-hall.jpg",
+        "alt": "Светлый ресторанный зал"
+      },
+      {
+        "src": "assets/buffet.jpg",
+        "alt": "Линия шведского стола"
+      },
+      {
+        "src": "assets/bakery.jpg",
+        "alt": "Выпечка собственного производства"
+      }
+    ]
+  }
+}

@@ -67,8 +67,19 @@ for (const match of stripped.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
 }
 assert.ok(ruleCount > 100);
 assert.doesNotMatch(css, /--(?!kfn-)[a-z]+:/, 'custom properties are namespaced');
-const iconCount = (html.match(/<svg\b/g) || []).length;
+assert.doesNotMatch(html, /<\/?(?:svg|path)\b/i, 'CMS must not need inline SVG');
+const iconCount = (html.match(/class="kfn-icon-image"/g) || []).length;
 assert.equal(iconCount, 12, 'all food, production and service icons retained');
+assert.match(css, /\.kfn-photo-state:checked \+ \.kfn-photo-slide/);
+assert.doesNotMatch(css, /kfn-photo-state-\d/, 'no hardcoded photo count');
+const {renderGallery} = require('./gallery.cjs');
+for (const count of [1, 3, 4, 7, 15]) {
+  const result = renderGallery('test', {label:'Test',photos:Array.from({length:count}, (_, i)=>({src:'assets/bakery.jpg',alt:'Фото '+i}))});
+  assert.equal((result.match(/class="kfn-photo-slide"/g)||[]).length,count);
+  assert.equal((result.match(/ checked>/g)||[]).length,1);
+  assert.ok(result.includes(`id="kfn-test-photo-${count}"`));
+  if (count > 1) assert.equal((result.match(/title="Следующее фото"/g)||[]).length,count);
+}
 for (const m of (html + css).matchAll(/(?:src=|url\()["']?(assets\/[^)"'\s]+)["']?/g)) {
   assert.ok(fs.existsSync(path.join(root, m[1])), 'asset exists: ' + m[1]);
 }
