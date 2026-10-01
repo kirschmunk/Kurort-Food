@@ -82,14 +82,11 @@
 .kfn-page .kfn-photo{position:absolute;inset:0}
 .kfn-page .kfn-photo img{width:100%;height:100%;object-fit:cover}
 .kfn-page .kfn-photo-controls{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:12px;padding-top:16px}
-.kfn-page .kfn-photo-dots{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;max-width:100%}
-.kfn-page .kfn-photo-dot{display:grid;place-items:center;min-width:26px;height:26px;padding:0 6px;border:1px solid var(--kfn-line);border-radius:50%;background:#fff;color:var(--kfn-accent-dark);font-size:11px}
 .kfn-page .kfn-photo-pair{display:flex;flex:none;align-items:center;gap:8px}
 .kfn-page .kfn-photo-count{min-width:52px;text-align:center;color:var(--kfn-muted);font-size:11px;font-variant-numeric:tabular-nums}
 .kfn-page .kfn-photo-arrow{display:grid;place-items:center;width:36px;height:36px;border:1px solid #dfe7e2;border-radius:50%;background:#fff;color:var(--kfn-deep);font-size:20px;line-height:1;user-select:none}
 .kfn-page .kfn-photos-large .kfn-photo-arrow{width:46px;height:46px}
 .kfn-page .kfn-photo-state:focus-visible + .kfn-photo-slide .kfn-photo-stage{outline:2px solid #4f806d;outline-offset:4px}
-.kfn-page .kfn-photo-dot.kfn-dot-active{border-color:var(--kfn-accent);background:var(--kfn-accent);color:#fff}
 
 .kfn-page .kfn-order-card{display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden;border:1px solid var(--kfn-line);border-radius:12px;background:#fff;box-shadow:var(--kfn-shadow)}
 .kfn-page .kfn-order-copy{padding:42px}
@@ -147,7 +144,7 @@
 @media(hover:hover){
 .kfn-page .kfn-production-card:hover{border-color:#a8c1b4;transform:translateY(-2px)}
 .kfn-page .kfn-format-tab:hover{border-color:#a8c1b4}
-.kfn-page :is(.kfn-photo-arrow,.kfn-photo-dot):hover{background:var(--kfn-mint)}
+.kfn-page .kfn-photo-arrow:hover{background:var(--kfn-mint)}
 }
 /* Адаптация к ширине колонки CMS, а не только окна браузера. */
 @container(max-width:1020px){

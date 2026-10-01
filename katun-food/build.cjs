@@ -14,7 +14,7 @@ const publicAssets = '/upload/katun-food/assets/';
 const cmsHtml = html.replaceAll('src="assets/', 'src="' + publicAssets);
 const cmsCss = css.replaceAll('url("assets/', 'url("' + publicAssets);
 const head = '<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<meta name="robots" content="noindex,nofollow">\n<meta name="theme-color" content="#4f806d">\n<title>Питание в санатории «Катунь»</title>\n<meta name="description" content="Питание в санатории «Катунь»: персональный рацион, продукты собственного производства и четыре формата питания.">\n<link rel="stylesheet" href="styles.css?v=cms-20260928">\n</head>\n<body>\n';
-fs.writeFileSync(path.join(root, 'index.html'), head.replace('cms-20260928', 'galleries-20261001') + html + '\n</body>\n</html>\n');
+fs.writeFileSync(path.join(root, 'index.html'), head.replace('cms-20260928', 'arrows-only-20261001') + html + '\n</body>\n</html>\n');
 fs.mkdirSync(path.join(root, 'cms'), { recursive: true });
 fs.writeFileSync(path.join(root, 'cms', 'katun-food.html'), cmsHtml);
 fs.writeFileSync(path.join(root, 'cms', 'katun-food.css'), cmsCss);

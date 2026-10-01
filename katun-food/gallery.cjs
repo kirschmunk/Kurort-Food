@@ -13,7 +13,6 @@ function renderGallery(key, gallery) {
 <div class="kfn-photo-slide">
 <div class="kfn-photo-stage"><figure class="kfn-photo"><img src="${escape(photo.src)}" alt="${escape(photo.alt)}" loading="lazy" decoding="async"></figure></div>
 ${count > 1 ? `<div class="kfn-photo-controls">
-<div class="kfn-photo-dots" aria-hidden="true">${gallery.photos.map((_, n) => `<label class="kfn-photo-dot${n === index ? ' kfn-dot-active' : ''}" for="${id(n)}">${n + 1}</label>`).join('')}</div>
 <div class="kfn-photo-pair" aria-hidden="true"><label class="kfn-photo-arrow" for="${id(prev)}" title="Предыдущее фото">←</label><span class="kfn-photo-count">${index + 1} / ${count}</span><label class="kfn-photo-arrow" for="${id(next)}" title="Следующее фото">→</label></div>
 </div>` : ''}
 </div>`;

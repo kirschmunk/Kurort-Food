@@ -85,7 +85,8 @@ for (const [key, count] of Object.entries(expectedCounts)) {
     assert.match(slide, new RegExp(`for="kfn-${key}-photo-${(i + count - 1) % count + 1}" title="Предыдущее фото"`));
     assert.match(slide, new RegExp(`for="kfn-${key}-photo-${(i + 1) % count + 1}" title="Следующее фото"`));
     assert.ok(slide.includes(`${i + 1} / ${count}`));
-    assert.equal((slide.match(/class="kfn-photo-dot(?: kfn-dot-active)?"/g)||[]).length, count);
+    assert.doesNotMatch(slide, /kfn-photo-dot|kfn-dot-active/, 'no numbered photo navigation');
+    assert.equal((slide.match(/class="kfn-photo-arrow"/g)||[]).length, 2, 'only previous and next controls');
   });
   assert.equal(new Set(config.photos.map(photo => photo.src)).size, count, 'each slot has its own replaceable file');
 }
