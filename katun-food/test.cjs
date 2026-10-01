@@ -73,6 +73,22 @@ assert.equal(iconCount, 12, 'all food, production and service icons retained');
 assert.match(css, /\.kfn-photo-state:checked \+ \.kfn-photo-slide/);
 assert.doesNotMatch(css, /kfn-photo-state-\d/, 'no hardcoded photo count');
 const {renderGallery} = require('./gallery.cjs');
+const configuredGalleries = JSON.parse(fs.readFileSync(path.join(root, 'galleries.json'), 'utf8'));
+const expectedCounts = {premium:9,lux:12,buffet:9,diet:5,gallery:7};
+for (const [key, count] of Object.entries(expectedCounts)) {
+  const config = configuredGalleries[key];
+  assert.equal(config.photos.length, count, 'requested photo slots: ' + key);
+  assert.equal(groups.get(`kfn-${key}-photo`).length, count, 'generated photo slots: ' + key);
+  const markup = renderGallery(key, config);
+  const slides = markup.split('<div class="kfn-photo-slide">').slice(1);
+  slides.forEach((slide, i) => {
+    assert.match(slide, new RegExp(`for="kfn-${key}-photo-${(i + count - 1) % count + 1}" title="Предыдущее фото"`));
+    assert.match(slide, new RegExp(`for="kfn-${key}-photo-${(i + 1) % count + 1}" title="Следующее фото"`));
+    assert.ok(slide.includes(`${i + 1} / ${count}`));
+    assert.equal((slide.match(/class="kfn-photo-dot(?: kfn-dot-active)?"/g)||[]).length, count);
+  });
+  assert.equal(new Set(config.photos.map(photo => photo.src)).size, count, 'each slot has its own replaceable file');
+}
 for (const count of [1, 3, 4, 7, 15]) {
   const result = renderGallery('test', {label:'Test',photos:Array.from({length:count}, (_, i)=>({src:'assets/bakery.jpg',alt:'Фото '+i}))});
   assert.equal((result.match(/class="kfn-photo-slide"/g)||[]).length,count);

@@ -8,7 +8,8 @@ function renderGallery(key, gallery) {
     if (!/^(?:assets\/|\/(?!\/)|https:\/\/)/.test(photo.src)) throw new Error('Unsupported photo URL');
     const prev = (index + count - 1) % count;
     const next = (index + 1) % count;
-    return `<input class="kfn-state kfn-photo-state" type="radio" name="kfn-${key}-photo" id="${id(index)}" aria-label="Фото ${index + 1} из ${count}: ${escape(photo.alt)}"${index === 0 ? ' checked' : ''}>
+    return `<!-- Фото ${index + 1} из ${count}, ${key}: замените только src и alt у img ниже; переключатели уже настроены. -->
+<input class="kfn-state kfn-photo-state" type="radio" name="kfn-${key}-photo" id="${id(index)}" aria-label="Фото ${index + 1} из ${count}"${index === 0 ? ' checked' : ''}>
 <div class="kfn-photo-slide">
 <div class="kfn-photo-stage"><figure class="kfn-photo"><img src="${escape(photo.src)}" alt="${escape(photo.alt)}" loading="lazy" decoding="async"></figure></div>
 ${count > 1 ? `<div class="kfn-photo-controls">
