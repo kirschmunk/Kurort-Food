@@ -7,8 +7,9 @@ const html = fs.readFileSync(path.join(root, 'embed.html'), 'utf8');
 const cms = fs.readFileSync(path.join(root, 'cms/katun-procedures.html'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'cms/katun-procedures.css'), 'utf8');
 assert.equal(data.categories.length, 12);
-assert.equal((html.match(/<details /g) || []).length, 12);
-assert.equal((html.match(/<summary /g) || []).length, 12);
+assert.equal((html.match(/<details class="ktp-category"/g) || []).length, 12);
+assert.equal((html.match(/<details class="ktp-procedure"/g) || []).length, 74);
+assert.equal((html.match(/<summary /g) || []).length, 86);
 assert.equal((html.match(/<h1 /g) || []).length, 1);
 assert(!/<script|<svg|<path|on(?:click|load|error)=|javascript:|<iframe/i.test(html));
 assert(!/class="(?:wrap|container|button|card|title)"/.test(html));
@@ -33,5 +34,13 @@ for (const c of data.categories) {
 }
 const used = new Set(data.categories.flatMap(c => c.items || c.groups.flatMap(g => g.items)));
 assert.equal(used.size, Object.keys(data.procedures).length, 'Unlisted procedure');
+assert.equal(data.categories.flatMap(c => c.items || c.groups.flatMap(g => g.items)).length, used.size, 'Procedure listed in multiple categories');
+assert(!/ktp-demo-header|ktp-hero-caption|ktp-contact|ktp-footer|ktp-intro|ktp-section-description|Выбрать направление|БЕЛОКУРИХА|↗/.test(html));
+assert(html.includes('С заботой о вашем здоровье'));
+assert(html.includes('Выбрать процедуру'));
+assert.deepEqual([...html.matchAll(/class="ktp-stat-number">(\d+)/g)].map(m => +m[1]), [5, 4, 12]);
+assert.equal((html.match(/name="ktp-categories"/g)||[]).length, 12);
+assert(!/<details[^>]*\sopen(?:\s|>)/.test(html), 'Catalog must start compact');
+assert(!fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('<header'));
 assert.equal(cms, html.replaceAll('src="assets/', 'src="/upload/katun-procedures/assets/'));
-console.log(`PASS: ${used.size} procedures, 12 native accordions; IDs, anchors, assets, fonts, CMS paths and no client JavaScript verified.`);
+console.log(`PASS: ${used.size} procedures, each listed once; 12 category + 74 procedure disclosures; requested removals, statistics, IDs, anchors, assets, fonts, CMS paths and no client JavaScript verified.`);
