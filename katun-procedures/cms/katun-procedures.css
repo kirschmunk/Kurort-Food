@@ -65,6 +65,7 @@
 .ktp-page .ktp-detail-copy{min-width:0}
 .ktp-page .ktp-detail-media{min-width:0;overflow:hidden;border-radius:10px;background:var(--ktp-soft)}
 .ktp-page .ktp-detail-photo{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.ktp-page .ktp-photo-caption{padding:10px 13px;font-size:11px;line-height:1.6;color:var(--ktp-muted)}
 .ktp-page .ktp-photo-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;aspect-ratio:4/3;min-height:170px;border:1px dashed #b8cabb;border-radius:10px;color:#607465;background:linear-gradient(140deg,#f5f7f1,#eaf0e7);font-size:14px}
 .ktp-page .ktp-photo-placeholder small{font-size:11px;color:#758476}
 .ktp-page .ktp-photo-symbol{width:39px;height:31px;border:1px solid #9db19f;border-radius:5px;position:relative;margin-bottom:5px;overflow:hidden}

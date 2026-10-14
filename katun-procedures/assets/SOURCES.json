@@ -49,5 +49,164 @@
     "source": "https://drive.google.com/file/d/16YHvgelHj5S8MdnN3S6IUbpzXyxj3vtr/view",
     "original": "DSCF2949.jpg",
     "note": "Shared Belokurikha folder referenced by the supplied Katun materials; venue-use confirmation requested."
+  },
+  {
+    "file": "assets/photos/lfk.jpg",
+    "source": "https://drive.google.com/file/d/10_6vz6zhMxIMWhSVRuXu-PEmntwX3Diy/view?usp=drivesdk",
+    "original": "IMG_8240.JPG",
+    "folder": "Фотографии/ЛФК, тренажерный",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/phyto-tea.jpg",
+    "source": "https://drive.google.com/file/d/1ogVVfBffHqUIdS9BQN5nIwvwPVlT1Zjr/view?usp=drivesdk",
+    "original": "DSCF6966.JPG",
+    "folder": "Фотографии/фито-бар",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/spa-capsule.jpg",
+    "source": "https://drive.google.com/file/d/1uLp9Sgo7TIZQDL8aaoE_jTxNePtBvvm-/view?usp=drivesdk",
+    "original": "Спа-капсула.jpg",
+    "folder": "Фотографии/спа-центр",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/climate.jpg",
+    "source": "https://drive.google.com/file/d/1LGn6Ukv8_ChG6Z1YjXRhi2nIUWMtF61D/view?usp=drivesdk",
+    "original": "DSCF1252.png",
+    "folder": "Фотографии/территория",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/salt-room.jpg",
+    "source": "https://drive.google.com/file/d/1dwM-Ifrq2XX5xAhx0iF_ymAOQZ_a8kgV/view?usp=drivesdk",
+    "original": "IMG_8434.jpg",
+    "folder": "Фотографии/лечение/Физиотерапевтические процедуры",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/aroma.jpg",
+    "source": "https://drive.google.com/file/d/17bnMxaNLvjzyz2aSL0krT_uUgYd6yNc-/view?usp=drivesdk",
+    "original": "5Y3A0895.jpg",
+    "folder": "Фотографии/лечение/Психотерапия",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/spine-massage.jpg",
+    "source": "https://drive.google.com/file/d/1WMaNWiJAUwXf4_2Fihd1d0XWyUZS9hYV/view?usp=drivesdk",
+    "original": "DSC_7627.jpg",
+    "folder": "Фотографии/лечение/Массажи и мануальные техники",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/ozone.jpg",
+    "source": "https://drive.google.com/file/d/1XvWv2n168Uv1-tD7WQ9bWzo_qcioCMuk/view?usp=drivesdk",
+    "original": "5Y3A1906.jpg",
+    "folder": "Фотографии/лечение/Озонотерапия",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/iv.jpg",
+    "source": "https://drive.google.com/file/d/1YVtJWnvsWSgSMCzCXYAv-jyPwOgYr8Dt/view?usp=drivesdk",
+    "original": "5Y3A1932.jpg",
+    "folder": "Фотографии/лечение/Озонотерапия",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/cryo.jpg",
+    "source": "https://drive.google.com/file/d/1s6U1VC6AZyEi83ThfPBUHOVsZqVB038v/view?usp=drivesdk",
+    "original": "5Y3A9932.jpg",
+    "folder": "Фотографии/лечение/криотерапия",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/gynecologist.jpg",
+    "source": "https://drive.google.com/file/d/1HT3bSdkubV7H495mcAYyNcVr5G3kX4Py/view?usp=drivesdk",
+    "original": "Абрашитова, гинеколог.PNG",
+    "folder": "Фотографии/лечение/Консультация врачей/акушер-гинеколог",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/pulmonologist.jpg",
+    "source": "https://drive.google.com/file/d/1F_fUwrJhWfeXx59vDNYQpVS2Hzx2eOoB/view?usp=drivesdk",
+    "original": "5Y3A7451.jpg",
+    "folder": "Фотографии/лечение/Консультация врачей/пульмонолог",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/cardiologist.jpg",
+    "source": "https://drive.google.com/file/d/1gPvf3_sa3HHkhGREVbHLlnf6m-Bd9p3r/view?usp=drivesdk",
+    "original": "Игнатовская, кардиолог.PNG",
+    "folder": "Фотографии/лечение/Консультация врачей/врач-кардиолог",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/neurologist.jpg",
+    "source": "https://drive.google.com/file/d/1XyLN2Eh2YA05BnZSZSue0_ZqfKoE1yCZ/view?usp=drivesdk",
+    "original": "5Y3A3943.jpg",
+    "folder": "Фотографии/лечение/Консультация врачей/врач-невролог",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/barrel.jpg",
+    "source": "https://drive.google.com/file/d/1Xs_RcLfvB8_dJjCmo89XO4NSXBuYPn4X/view?usp=drivesdk",
+    "original": "DSCF7551.JPG",
+    "folder": "Фотографии/лечение/Косметология и СПА/Для тела",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/face-mask.jpg",
+    "source": "https://drive.google.com/file/d/1lB1D4T6V1Te4cTr_HWxEn_MRctvs6MaB/view?usp=drivesdk",
+    "original": "Дерматолог.jpg",
+    "folder": "Фотографии/лечение/Косметология и СПА/Эстетическая косметология",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/biogenie-treatment.jpg",
+    "source": "https://drive.google.com/file/d/1S97dHLulxB14ZMcZmKwbYsIgPHsQxJHy/view?usp=drivesdk",
+    "original": "DSCF7220.JPG",
+    "folder": "Фотографии/лечение/Косметология и СПА/Аппаратная косметология",
+    "reviewed": "2026-10-14"
+  },
+  {
+    "file": "assets/photos/shower.jpg",
+    "source": "https://drive.google.com/file/d/1vG0zEV_Aibibr6Xw_kUQ3CdpFrdtZA9O/view?usp=drivesdk",
+    "original": "DSCF4695.JPG",
+    "folder": "Общая подборка бальнеологии (ссылка из материалов)/Душ лечебный",
+    "reviewed": "2026-10-14",
+    "note": "Shared resort photo library linked from Katun materials; presented as an illustration, not a photograph of a Katun treatment room."
+  },
+  {
+    "file": "assets/photos/conifer.jpg",
+    "source": "https://drive.google.com/file/d/16YHvgelHj5S8MdnN3S6IUbpzXyxj3vtr/view?usp=drivesdk",
+    "original": "DSCF2949.jpg",
+    "folder": "Общая подборка бальнеологии (ссылка из материалов)/Ванна ароматическая лечебная (хвойная)",
+    "reviewed": "2026-10-14",
+    "note": "Shared resort photo library linked from Katun materials; presented as an illustration, not a photograph of a Katun treatment room."
+  },
+  {
+    "file": "assets/photos/iodine-bromine.jpg",
+    "source": "https://drive.google.com/file/d/1xeR3GOhOB4lo6v-Vgm7vCDYAmBg0r3bg/view?usp=drivesdk",
+    "original": "4f17826e-4f22-4e39-944d-3fb77644147a.jfif",
+    "folder": "Общая подборка бальнеологии (ссылка из материалов)/Йодобромная ванна",
+    "reviewed": "2026-10-14",
+    "note": "Shared resort photo library linked from Katun materials; presented as an illustration, not a photograph of a Katun treatment room."
+  },
+  {
+    "file": "assets/photos/bischofite.jpg",
+    "source": "https://drive.google.com/file/d/18g51TeEq1W-AMcLisbYBWgsyf48QEAvS/view?usp=drivesdk",
+    "original": "5Y3A1271.jpg",
+    "folder": "Общая подборка бальнеологии (ссылка из материалов)/Ванна минеральная лечебная (бишофитная)",
+    "reviewed": "2026-10-14",
+    "note": "Shared resort photo library linked from Katun materials; presented as an illustration, not a photograph of a Katun treatment room."
+  },
+  {
+    "file": "assets/photos/dry-co2.jpg",
+    "source": "https://drive.google.com/file/d/18e6BqWyYtgBmp-WlDZoei1-vo0JuzbdZ/view?usp=drivesdk",
+    "original": "DSCF3985.JPG",
+    "folder": "Общая подборка бальнеологии (ссылка из материалов)/Ванны суховоздушные (углекислая суховоздушная)",
+    "reviewed": "2026-10-14",
+    "note": "Shared resort photo library linked from Katun materials; presented as an illustration, not a photograph of a Katun treatment room."
   }
 ]
