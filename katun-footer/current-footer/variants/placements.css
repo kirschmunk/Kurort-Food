@@ -1,0 +1,20 @@
+/* Вариант 1: внутри левой колонки, сразу после социальных иконок. */
+#footer .ktfr-ratings--social {
+  margin-top: 24px;
+  padding: 0;
+}
+/* Вариант 2: внутри правой колонки, после формы подписки. */
+#footer .ktfr-ratings--subscribe {
+  margin-top: 16px;
+  padding: 0;
+}
+/* Вариант 3: самостоятельная нижняя строка, выравнивание по логотипу. */
+#footer .ktfr-ratings--logo {
+  justify-content: flex-start;
+  margin-top: -24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 685px) {
+  #footer .ktfr-ratings--logo { justify-content: center; }
+}
