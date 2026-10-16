@@ -20,4 +20,28 @@ for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
 }
 for (const match of css.matchAll(/url\('([^']+)'\)/g)) assert(existsSync(join(root, match[1])));
 writeFileSync(join(root, 'index.html'), html);
-console.log('PASS: generated demo, assets, local fonts, two Katun rating links, unique IDs and non-sending form.');
+// Вторая палитра использует ту же разметку и базовые стили: различаются только цвета.
+const themedFooter = footer.replace('class="kf2"', 'class="kf2 kf2--site-colors"').replaceAll('src="assets/', 'src="../assets/');
+const themedHtml = read('demo-template.html')
+  .replace('%%FOOTER%%', themedFooter.trim())
+  .replace('href="footer.css"', 'href="../footer.css"')
+  .replace('href="demo.css"', 'href="../demo.css"')
+  .replace('src="demo.js"', 'src="../demo.js"')
+  .replace('</head>', '  <link rel="stylesheet" href="colors.css">\n</head>')
+  .replace('<title>Катунь — новый футер с рейтингами</title>', '<title>Катунь — футер в цветах сайта</title>');
+const theme = read('site-colors/colors.css').replace(/\/\*[\s\S]*?\*\//g, '');
+const allowed = new Set(['color', 'background-color', 'border-top-color', 'border-left-color', 'text-decoration-color']);
+for (const block of theme.matchAll(/\{([^}]+)\}/g)) {
+  for (const declaration of block[1].split(';').filter(x => x.trim())) {
+    const property = declaration.split(':')[0].trim();
+    assert(property.startsWith('--kf2-') || allowed.has(property), 'Only palette changes allowed: ' + property);
+  }
+}
+for (const match of themedHtml.matchAll(/(?:src|href)="([^"#]+)"/g)) {
+  if (!/^(https?:|tel:)/.test(match[1])) assert(existsSync(join(root, 'site-colors', match[1])), 'Missing themed asset: ' + match[1]);
+}
+assert.equal(themedFooter.replace('class="kf2 kf2--site-colors"','class="kf2"').replaceAll('src="../assets/','src="assets/'), footer);
+assert(!/demo-header|demo-intro|demo-note|<header|<main|<aside/.test(themedHtml));
+writeFileSync(join(root, 'site-colors/footer.html'), themedFooter);
+writeFileSync(join(root, 'site-colors/index.html'), themedHtml);
+console.log('PASS: both demos, identical footer markup, color-only theme, local assets, Katun rating links and non-sending form.');

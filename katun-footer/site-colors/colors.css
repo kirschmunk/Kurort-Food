@@ -1,0 +1,23 @@
+/* Вариант 2: палитра сайта katun-san.ru, проверена 16.10.2026.
+   Подключить ПОСЛЕ footer.css; на <footer> добавить класс kf2--site-colors.
+   Меняются только цвета. Геометрия, шрифты, контент и адаптивность общие. */
+.kf2.kf2--site-colors {
+  --kf2-ink: #3b3b3b;
+  --kf2-muted: #686868;
+  --kf2-green: #00a067;
+  --kf2-line: #dedede;
+  background-color: #f7f7f7;
+  border-top-color: #e7e7e7;
+}
+.kf2--site-colors .kf2__messenger-label { color: #007296; }
+.kf2--site-colors .kf2__socials a:hover,
+.kf2--site-colors .kf2__subscribe-button:hover { background-color: #008450; }
+.kf2--site-colors .kf2__widget-slot + .kf2__widget-slot { border-left-color: #e6e6e6; }
+.kf2--site-colors .kf2__rating:hover { background-color: #fafafa; }
+.kf2--site-colors .kf2__score b { color: #3b3b3b; }
+.kf2--site-colors .kf2__email-row input::placeholder { color: #777; }
+.kf2--site-colors .kf2__consent a,
+.kf2--site-colors .kf2__policy a { color: #007296; text-decoration-color: #82b1c0; }
+.kf2--site-colors .kf2__consent a:hover,
+.kf2--site-colors .kf2__policy a:hover { color: #005c79; text-decoration-color: #005c79; }
+.kf2--site-colors .kf2__medical { color: #777; }
