@@ -1,0 +1,62 @@
+/* Только для демо. Воспроизведение существующих стилей katun-san.ru (16.10.2026).
+   НЕ подключать этот файл на основном сайте. Для вставки нужен ratings.css. */
+@font-face { font-family: AcromRegular; src: url('../assets/Acrom-Regular.woff') format('woff'); font-weight: 400; font-display: swap; }
+* { box-sizing: border-box; }
+html, body, div, span, p, h2, a, img { margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; }
+html { font-size: 16px; }
+body { color: #404040; font: 16px/1 AcromRegular, sans-serif; margin: 0; }
+a { color: #007296; }
+h2 { color: #3b3b3b; font-size: 26px; font-weight: 600; margin-bottom: 26px; }
+p { color: #3b3b3b; font-size: 17px; font-weight: 400; line-height: 30px; margin-bottom: 15px; }
+input { vertical-align: middle; font-family: AcromRegular, sans-serif; font-size: 14px; }
+input[type="text"] { width: 100%; }
+.text-center { text-align: center; }
+#footer { background: #ccc; }
+#footer .container { max-width: 1400px; margin: 0 auto; }
+#footer .container.subsr { padding: 40px 0 0; max-width: 1200px; }
+.flex-row { display: flex; flex-flow: row wrap; justify-content: flex-start; align-items: stretch; }
+.page-footer__left { flex: 1 1 65%; margin: 0 32px 0 0; padding: 21px; }
+.page-footer__right { flex: 1 1 30%; margin: 0; }
+.page-footer__social-links { flex: 1 1 20%; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; margin: 0; }
+.social-link { flex: 0 0 60px; cursor: pointer; text-align: center; margin: 5px 0 0; }
+.social-link__icon { display: inline-block; border-radius: 50%; width: 50px; height: 50px; background-color: #00a067; background-size: 22px auto; background-repeat: no-repeat; background-position: 50% 50%; transition: .3s; }
+.subscribe { width: 100%; position: relative; background: #efefef; flex: 1 1 40%; padding: 21px; margin: 0 32px 0 0; height: 149px; }
+.subscribe__heading { text-align: center; font-weight: 600; margin: 0 0 5px; }
+#footercontainer { display: flex; flex-flow: row; background: #ccc; padding: 30px 0 50px; }
+.footer-info-col { display: flex; flex-flow: row; align-items: center; justify-content: space-between; flex: 1 1 40%; }
+#footer .logo { flex: 1 1 29%; margin-left: 20px; }
+#footer img { width: 85%; max-width: 290px; }
+#footer span { display: block; color: white; font-size: 13px; }
+.bookingbutton { flex: 1 1 25%; }
+#footer .bookingbutton { padding: 15px 0 15px 40px; margin-right: 10px; background: url('assets/icon-whatsapp.png') 0 50% no-repeat; }
+#footer .bookingbutton a, #footer .phonebutton a { text-decoration: none; color: #3b3b3b; font-size: 19px; display: block; }
+#footer .bookingbutton span, #footer .phonebutton span { color: #3b3b3b; font-size: 13px; }
+#footer .phonebutton { padding: 0 20px 0 40px; background: url('assets/icon-phone.png') 0 8px no-repeat; flex: 1 1 25%; }
+.disclaimer { flex: 1 1 25%; margin-right: 30px; }
+#footer .disclaimer span { display: block; color: #3b3b3b; font-size: 12px; }
+.policycontainer { line-height: 16px; text-align: center; color: #3b3b3b; font-size: 14px; margin-bottom: 0; padding: 0 10px; }
+#footer .policycontainer a { color: #1d1d1d; }
+.made-by { color: #3b3b3b; font-size: 12px; opacity: .9; margin: 20px 0 0; padding: 0 0 35px; text-align: center; }
+.e1media-link { position: relative; color: #3b3b3b; text-transform: uppercase; padding: 32px 0 0; text-decoration: none; }
+#demo-subscribe-result { font-size: 12px; line-height: 1.4; margin: 10px 0 0; }
+@media screen and (max-width: 960px) {
+  .page-footer__left { flex: 1 1 100%; margin: 0 0 32px; }
+  .page-footer__right { flex: 1 1 100%; }
+  .page-footer__right .subscribe { margin: 0 auto; max-width: 450px; }
+}
+@media screen and (min-width: 686px) and (max-width: 999px) {
+  #footer .logo { margin: 0 20px 30px 0; }
+  #footer .phonebutton { margin: 0 0 30px; }
+  .footer-info-col { flex-flow: column; align-items: flex-start; padding: 20px; }
+}
+@media screen and (max-width: 685px) {
+  #footercontainer { flex-flow: column wrap; }
+  .footer-info-col { flex-flow: column; align-items: center; text-align: center; padding: 10px; }
+  #footer .footer-info-col .logo { margin: 0 0 20px; text-align: center; }
+  .footer-info-col .logo img { width: 98% !important; }
+  .disclaimer { margin-right: 0; }
+  .footer-info-col .bookingbutton { flex: 1 1 100%; }
+  #footer .phonebutton { margin: 0 0 30px; padding: 14px 20px 20px 40px; background-position: 0 50%; text-align: left; }
+}
+@media screen and (max-width: 567px) { .social-link { flex: 0 0 60px; margin: 0; } }
+@media screen and (max-width: 460px) { .social-link { flex: 0 0 35px; } .social-link__icon { height: 35px; width: 35px; background-size: 16px auto; } }

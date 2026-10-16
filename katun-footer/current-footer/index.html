@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Катунь — действующий футер с рейтингами</title>
+  <link rel="stylesheet" href="site-reference.css">
+  <link rel="stylesheet" href="ratings.css">
+  <script defer src="demo.js"></script>
+</head>
+<body>
+<!-- Копия действующего футера нужна только для просмотра размещения.
+     НЕ заменять ею рабочий шаблон: интеграция подписки остаётся на сайте. -->
+<div id="footer">
+  <div class="container subsr">
+    <div class="flex-row" style="width:100%">
+      <div class="page-footer__left">
+        <h2 class="text-center" style="margin-bottom:2rem">Мы в социальных сетях</h2>
+        <div class="page-footer__social-links">
+          <a href="https://www.ok.ru/kurortbelokurikha" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Одноклассники"><span class="social-link__icon" style="background-image:url(../assets/i-ok_w.png)"></span></a>
+          <a href="https://vk.com/kurortbelokurikha" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><span class="social-link__icon" style="background-image:url(../assets/i-vk_w.png)"></span></a>
+          <a href="tg://resolve?domain=kurortbelokuriha" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="social-link__icon" style="background-image:url(../assets/i-tg.png);background-repeat:no-repeat;background-position:45% 50%;background-size:1.4rem"></span></a>
+          <a href="https://dzen.ru/lecheniebelokuriha" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Дзен"><span class="social-link__icon" style="background-image:url(../assets/i-dz_w.png)"></span></a>
+          <a href="https://www.youtube.com/user/kurortbelokurikha/videos" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span class="social-link__icon" style="background-image:url(../assets/i-yt_w.png)"></span></a>
+        </div>
+      </div>
+      <div class="page-footer__right">
+        <div class="subscribe" style="height:auto">
+          <p class="subscribe__heading">БУДЬТЕ В КУРСЕ НОВОСТЕЙ!</p>
+          <div class="demo-subscription" style="height:auto;display:flex;flex-wrap:wrap;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:stretch;margin-bottom:0">
+              <input type="text" id="subemail" placeholder="ivanov@mail.ru" aria-label="Ваш e-mail" style="flex:1;padding:10px 15px;border:1px solid #ccc;border-right:none;border-radius:4px 0 0 4px;height:42px;font-size:14px;box-sizing:border-box;background:#fff;color:#333">
+              <input type="button" value=">" aria-label="Подписаться" style="background-color:#00a067;color:#fff;border:none;border-radius:0 4px 4px 0;padding:0 18px;font-size:18px;font-weight:bold;cursor:pointer;height:42px;box-sizing:border-box;transition:background-color .2s">
+            </div>
+            <div style="display:flex;align-items:flex-start;margin-top:4px">
+              <input class="checkbox js-checkBox" id="demo-policy" style="margin-right:8px;margin-top:2px" type="checkbox" aria-label="Согласие с политикой обработки персональных данных">
+              <div style="font-size:13px;line-height:1.4">Подтверждаю свое согласие с <a href="https://www.katun-san.ru/about/privacy/privacy-policy.html" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a>.</div>
+            </div>
+          </div>
+          <p id="demo-subscribe-result" role="status" hidden></p>
+        </div>
+      </div>
+      <div class="container">
+        <div id="footercontainer">
+          <div class="footer-info-col">
+            <a class="logo" href="https://www.belokurikha.ru/" target="_blank" rel="noopener noreferrer"><img src="../assets/logo-belokuriha-colored.png" alt="Курорт Белокуриха"></a>
+            <div class="bookingbutton"><a href="https://max.ru/u/f9LHodD0cOKeXgJSqbRWQHIqV7N3CPsPtmK_BAEq0-3QZqVr0c7jZ1hu85I">+7-905-082-20-07<br><span>Max</span></a></div>
+          </div>
+          <div class="footer-info-col">
+            <div class="phonebutton"><a href="tel:88007075186">8 800 707 5186</a><span>Звонок по России<br> бесплатный</span></div>
+            <div class="disclaimer"><span>© 2011-2026, АО «Курорт Белокуриха»<br>659900, Алтайский край, г. Белокуриха, ул. Славского, 44<br>Имеются противопоказания, необходима консультация специалиста.<br><br></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Единственная вставка в действующий футер: после контейнера #footercontainer,
+     перед контейнером с .policycontainer. Остальную разметку не менять.
+     В двух слотах ниже — визуальные макеты. Перед выпуском заменить их
+     содержимое официальными виджетами Катуни; оценки 5,0 условные. -->
+<div class="ktfr-ratings" aria-label="Отзывы о санатории «Катунь»">
+  <div class="ktfr-ratings__slot" data-provider="yandex">
+    <a class="ktfr-rating" href="https://yandex.ru/maps/org/katun/1102639152/reviews/" target="_blank" rel="noopener noreferrer" aria-label="Отзывы о Катуни в Яндекс Картах. Демонстрационный виджет, оценка условная">
+      <span class="ktfr-rating__line">
+        <svg class="ktfr-rating__pin" width="16" height="18" viewBox="0 0 20 24" aria-hidden="true"><path fill="#fc493b" d="M10 0a10 10 0 0 0-10 10c0 7 10 14 10 14s10-7 10-14A10 10 0 0 0 10 0Z"/><circle cx="10" cy="10" r="3.5" fill="white"/></svg>
+        <span class="ktfr-rating__score">5,0</span>
+        <span class="ktfr-rating__stars" aria-hidden="true">★★★★★</span>
+      </span>
+      <span class="ktfr-rating__caption">Рейтинг организации в Яндексе</span>
+    </a>
+  </div>
+  <div class="ktfr-ratings__slot" data-provider="2gis">
+    <a class="ktfr-rating" href="https://2gis.ru/belokuriha/firm/2815278048144278/tab/reviews/" target="_blank" rel="noopener noreferrer" aria-label="Отзывы о Катуни в 2ГИС. Демонстрационный виджет, оценка условная">
+      <span class="ktfr-rating__header"><span>Оценка в 2ГИС</span><span class="ktfr-rating__review">Оставить отзыв</span></span>
+      <span class="ktfr-rating__line">
+        <span class="ktfr-rating__gis" aria-hidden="true">2</span>
+        <span class="ktfr-rating__score">5,0</span>
+        <span class="ktfr-rating__stars" aria-hidden="true">★★★★★</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+      <div class="container">
+        <p class="policycontainer">Оставляя сведения на этом сайте, вы подтверждаете согласие на обработку ваших персональных данных. <br><a href="https://www.katun-san.ru/about/privacy/privacy-policy.html" target="_blank" rel="noopener noreferrer">Ознакомиться c политикой в отношении обработки персональных данных.</a><br><br></p>
+        <div class="made-by">Разработка сайта - <a class="e1media-link" href="http://e1media.ru/">e1media</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

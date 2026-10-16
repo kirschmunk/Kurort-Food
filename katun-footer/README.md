@@ -1,5 +1,7 @@
 # Катунь — футер с рейтингами
 
+**Актуальное задание: сохранить действующий футер и добавить только рейтинги.** [Новое демо](https://kirschmunk.github.io/Kurort-Food/katun-footer/current-footer/) · [Точечная вставка для разработчика](current-footer/). Варианты ниже сохранены как предыдущие предложения, заменять ими действующий футер не нужно.
+
 [Вариант 1 — исходная мягкая палитра](https://kirschmunk.github.io/Kurort-Food/katun-footer/) · [Вариант 2 — цвета действующего сайта](https://kirschmunk.github.io/Kurort-Food/katun-footer/site-colors/)
 
 ![Прототип футера](preview.png)

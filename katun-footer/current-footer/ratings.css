@@ -1,0 +1,54 @@
+/* Только новый блок. Ни один селектор не меняет существующие элементы футера. */
+#footer .ktfr-ratings {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0 12px 28px;
+}
+#footer .ktfr-ratings__slot {
+  box-sizing: border-box;
+  flex: 0 0 150px;
+  width: 150px;
+  min-height: 50px;
+  line-height: 0;
+}
+#footer .ktfr-ratings__slot > iframe {
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: 0;
+}
+/* Далее — оформление демонстрационных плашек.
+   При установке официальных iframe эти правила можно не переносить. */
+#footer .ktfr-rating {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 150px;
+  height: 50px;
+  padding: 7px 9px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
+  color: #242424;
+  font: 10px/1.2 Arial, sans-serif;
+  text-decoration: none;
+}
+#footer .ktfr-rating:focus-visible { outline: 2px solid #007296; outline-offset: 3px; }
+#footer .ktfr-rating:hover { border-color: #a0a0a0; }
+#footer .ktfr-rating :where(span) { color: inherit; font: inherit; }
+#footer .ktfr-rating__line { display: flex; align-items: center; gap: 6px; }
+#footer .ktfr-rating__pin { flex: 0 0 14px; width: 14px; height: 17px; }
+#footer .ktfr-rating__score { font-size: 15px; font-weight: 700; }
+#footer .ktfr-rating__stars { color: #e5a000; font-size: 15px; letter-spacing: -1px; white-space: nowrap; }
+#footer .ktfr-rating__caption { font-size: 7px; color: #777; }
+#footer .ktfr-rating__header { display: flex; justify-content: space-between; font-size: 7px; color: #777; }
+#footer .ktfr-rating__review { color: #429b32; font-size: 6px; }
+#footer .ktfr-rating__gis { display: block; width: 15px; height: 16px; border-radius: 4px; background: #67b619; color: white; text-align: center; font: 700 13px/16px Arial, sans-serif; }
