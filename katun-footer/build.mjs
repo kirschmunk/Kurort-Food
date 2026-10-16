@@ -13,7 +13,8 @@ assert.equal((footer.match(/class="kf2__widget-slot"/g) || []).length, 2);
 assert(footer.includes('2815278048144278') && footer.includes('1102639152'));
 assert(!footer.includes('92012401542'), 'No competitor IDs');
 assert(!/<form|method="post"|<script|<iframe/i.test(footer), 'No data submission or embedded scripts in prototype');
-assert(html.includes('условные'), 'Demo ratings must be disclosed');
+assert(read('README.md').includes('Оценки 5,0 в прототипе условные'), 'Keep widget integration notes in developer documentation');
+assert(!/demo-header|demo-intro|demo-note|<header|<main|<aside/.test(html), 'Demo should contain only the footer');
 for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   if (!/^(https?:|tel:)/.test(match[1])) assert(existsSync(join(root, match[1])), 'Missing asset: ' + match[1]);
 }

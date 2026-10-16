@@ -1,24 +1,2 @@
 * { box-sizing: border-box; }
 body { margin: 0; color: #263e35; background: #fff; font: 400 14px/1.5 KatunFooterAcrom, Arial, sans-serif; }
-.demo-header { border-bottom: 1px solid #ebeeea; }
-.demo-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1264px; margin: auto; padding: 22px 32px; }
-.demo-name { font-size: 13px; font-weight: 700; text-decoration: none; color: #335a46; }
-.demo-source { color: #66776c; font-size: 11px; text-decoration: none; }
-.demo-source span { margin-left: 8px; }
-.demo-source:hover { color: #008f60; }
-.demo-header a:focus-visible { outline: 2px solid #008f60; outline-offset: 4px; }
-.demo-intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; max-width: 1264px; margin: auto; padding: 42px 32px 43px; }
-.demo-intro p { color: #87928b; margin: 0 0 9px; font-size: 9px; letter-spacing: 1.5px; }
-.demo-intro h1 { font-size: 27px; letter-spacing: -.6px; font-weight: 400; margin: 0; }
-.demo-intro > span { color: #859087; font-size: 12px; line-height: 1.8; }
-.demo-note { max-width: 1264px; margin: auto; padding: 23px 32px 28px; display: flex; align-items: flex-start; gap: 30px; color: #859087; font-size: 10px; line-height: 1.7; }
-.demo-note > span { flex: 0 0 auto; color: #667a6c; font-weight: 700; }
-.demo-note p { margin: 0; max-width: 840px; }
-@media(max-width:640px) {
-  .demo-header__inner { padding: 18px 24px; flex-wrap: wrap; gap: 7px; }
-  .demo-intro { padding: 28px 24px; }
-  .demo-intro h1 { font-size: 23px; }
-  .demo-intro > span { display: none; }
-  .demo-note { padding: 20px 24px; display: block; }
-  .demo-note p { margin-top: 7px; }
-}
