@@ -1,0 +1,13 @@
+#footer .ktfc--inline .ktfc__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+#footer .ktfc--inline .page-footer__social-links { margin: 0; }
+#footer .ktfc--inline .ktfr-ratings { border-left: 1px solid #b5b5b5; padding-left: 24px; }
+@media (max-width: 1100px) {
+  #footer .ktfc--inline .ktfc__row { flex-direction: column; }
+  #footer .ktfc--inline .ktfr-ratings { border-left: 0; padding-left: 0; }
+}

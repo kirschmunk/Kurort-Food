@@ -1,0 +1,38 @@
+/* Меняется только левая колонка с добавленным классом ktfc. */
+#footer .ktfc .page-footer__social-links {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#footer .ktfc .social-link {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50px;
+  min-height: 50px;
+  margin: 0;
+}
+#footer .ktfc .social-link:focus-visible { outline: 2px solid #007296; outline-offset: 3px; border-radius: 50%; }
+#footer .ktfc .ktfr-ratings {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#footer .ktfc .ktfc__group { min-width: 0; }
+#footer .ktfc .ktfc__reviews-heading {
+  font: 600 20px/26px AcromRegular, sans-serif;
+  color: #3b3b3b;
+  text-align: center;
+  margin: 0 0 32px;
+}
+@media (max-width: 460px) {
+  #footer .ktfc .social-link { flex-basis: 44px; min-height: 44px; }
+  #footer .ktfc .page-footer__social-links { gap: 8px; }
+}

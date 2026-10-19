@@ -1,0 +1,14 @@
+#footer .ktfc--stacked .ktfc__split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#footer .ktfc--stacked .ktfc__group { flex: 0 1 370px; }
+#footer .ktfc--stacked .ktfr-ratings { flex: 0 0 150px; width: 150px; max-width: 150px; flex-direction: column; }
+#footer .ktfc--stacked .ktfr-ratings__slot { flex: 0 0 auto; height: 50px; }
+@media (max-width: 650px) {
+  #footer .ktfc--stacked .ktfc__split { flex-direction: column; gap: 24px; }
+  #footer .ktfc--stacked .ktfc__group { flex: 0 1 auto; width: 100%; }
+  #footer .ktfc--stacked .ktfr-ratings { flex: 0 1 auto; width: auto; max-width: 100%; flex-direction: row; }
+}
