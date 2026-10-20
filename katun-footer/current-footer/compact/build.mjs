@@ -11,7 +11,7 @@ assert(start >= 0 && end > start);
 const originalLeft = base.slice(start, end).trim();
 const heading = originalLeft.match(/<h2[^]*?<\/h2>/)[0];
 const socials = originalLeft.match(/<div class="page-footer__social-links">[^]*?<\/div>/)[0];
-const badges = read('../ratings.html').replace(/^<!--[^]*?-->\s*/, '').trim();
+const badges = read('official-ratings.html').trim();
 const commonCss = read('../ratings.css') + '\n' + read('common.css');
 const options = [
   { key: 'inline', title: 'В одну линию', description: 'Соцсети собраны компактно слева, два рейтинга расположены рядом справа на одной линии. Группы разделены тонкой вертикальной линией.', content: `${heading}\n<div class="ktfc__row">${socials}\n${badges}</div>` },
@@ -19,6 +19,7 @@ const options = [
   { key: 'stacked', title: 'Рейтинги вертикально справа', description: 'Соцсети собраны в компактный ряд, справа от них — две плашки одна над другой. На телефоне плашки переходят под соцсети.', content: `<div class="ktfc__split"><div class="ktfc__group">${heading}\n${socials}</div>${badges}</div>` }
 ];
 for (const option of options) {
+  if (option.key === 'stacked') continue; // Variant 3 remains the previously approved mockup.
   const dir = join(root, option.key);
   const snippet = `<div class="page-footer__left ktfc ktfc--${option.key}">\n${option.content}\n</div>`;
   // Проверка: изменена только разрешённая пользователем левая колонка.
@@ -48,7 +49,7 @@ for (const option of options) {
   // Исходник для разработчика использует пути действующего сайта.
   const handoff = snippet.replaceAll('../assets/', 'https://www.katun-san.ru/img/icons/')
     .replace('https://www.katun-san.ru/img/icons/i-tg.png', 'https://www.belokurikha.ru/img/icons/i-tg.png');
-  writeFileSync(join(dir, 'social-block.html'), '<!-- Меняется только .page-footer__left. Сохранить актуальные ссылки и скрытые элементы соцсетей из шаблона сайта. Оценки 5,0 условные. -->\n' + handoff + '\n');
+  writeFileSync(join(dir, 'social-block.html'), '<!-- Меняется только .page-footer__left. Сохранить актуальные ссылки и скрытые элементы соцсетей из шаблона сайта. Официальные виджеты, оценки загружаются сервисами. -->\n' + handoff + '\n');
   for (const match of html.matchAll(/(?:src|href)="([^"#]+)"|url\(([^)]+)\)/g)) {
     const path = match[1] || match[2];
     if (!/^(https?:|tel:|tg:)/.test(path)) assert(existsSync(join(dir, path.split('?')[0])), 'Missing file: ' + path);
@@ -61,12 +62,14 @@ ${option.description}
 
 ![Макет футера](preview.png)
 
+На снимке проверки 2ГИС может отсутствовать: встроенный браузер блокирует его внешний адрес (ERR_BLOCKED_BY_CLIENT). В HTML подключён настоящий виджет, не заглушка. Проверьте его в обычном браузере без блокировщика.
+
 ## Разработчику
-${option.key !== 'stacked' ? '\n**Для внедрения используйте [готовый точечный комплект](../handoff/' + option.key + '/): сверенная разметка, CSS, сравнение и инструкция. Файлы ниже относятся к демонстрационному макету с условными оценками.**\n' : ''}
+${option.key !== 'stacked' ? '\n**Для внедрения используйте [готовый точечный комплект](../handoff/' + option.key + '/): сверенная разметка, CSS, сравнение и инструкция. Настоящие виджеты уже подключены.**\n' : ''}
 1. Подключить [compact.css](compact.css) после существующих стилей. Все изменения ограничены новой левой колонкой с классом ktfc и плашками ktfr.
 2. [social-block.html](social-block.html) — образец разметки **только** блока .page-footer__left. Добавить соответствующие обёртки и классы вокруг существующих заголовка и .page-footer__social-links, сохранив актуальные ссылки, иконки, скрытые соцсети и служебные атрибуты из шаблона. Не заменять весь футер.
 3. Не менять .page-footer__right, форму Unisender, #footercontainer, контакты, логотип, юридический текст, чаты и рекламную полосу. Не подключать стили нескольких вариантов одновременно.
-4. Заменить содержимое двух .ktfr-ratings__slot официальными виджетами Катуни 150 × 50 px. Оценки 5,0 условные — это визуальные макеты, не подтверждённые текущие рейтинги. Если размеры официальных виджетов отличаются, адаптировать сетку без масштабирования текста.
+4. Официальные виджеты Катуни 150 × 50 px уже подключены. Оценки не записаны в коде: их загружают Яндекс и 2ГИС. Для работы нужен доступ к внешним сервисам.
 
 В демо ссылки и иконки взяты из проверенного макета существующего футера. Подписка не отправляет данные. site-reference.css и demo.js нужны только для демонстрации: не переносить их на основной сайт. Для просмотра локально скачать каталог katun-footer целиком.
 

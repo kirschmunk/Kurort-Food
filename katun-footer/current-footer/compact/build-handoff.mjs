@@ -23,18 +23,7 @@ assert.equal(anchors(social).length, 7, 'Review changed social markup before pac
 assert.equal((social.match(/style="display:none;"/g) || []).length, 2);
 const ascii = s => [...s].map(c => c.codePointAt(0) > 127 ? `&#${c.codePointAt(0)};` : c).join('');
 const clean = s => s.replace(/[\t ]+$/gm, '').trim() + '\n';
-const badges = `<div class="ktfr-ratings" role="group" aria-label="Отзывы о санатории «Катунь»">
-  <div class="ktfr-ratings__slot" data-provider="yandex">
-    <!-- YANDEX: replace the link BELOW with the official Katun widget. Keep this outer div. -->
-    <a class="ktfr-install-link" href="https://yandex.ru/maps/org/katun/1102639152/reviews/" target="_blank" rel="noopener noreferrer">Отзывы в Яндекс Картах</a>
-    <!-- END YANDEX -->
-  </div>
-  <div class="ktfr-ratings__slot" data-provider="2gis">
-    <!-- 2GIS: replace the link BELOW with the official Katun widget. Keep this outer div. -->
-    <a class="ktfr-install-link" href="https://2gis.ru/belokuriha/firm/2815278048144278/tab/reviews/" target="_blank" rel="noopener noreferrer">Отзывы в 2ГИС</a>
-    <!-- END 2GIS -->
-  </div>
-</div>`;
+const badges = readFileSync(join(root, 'official-ratings.html'), 'utf8').trim();
 const slotCss = `/* Install ONE variant only. Widget layout; no hardcoded ratings. */
 #footer .ktfc .ktfr-ratings {
   box-sizing: border-box;
@@ -151,24 +140,16 @@ for (const option of options) {
 
 Все новые правила ограничены #footer .ktfc. Они не меняют фон, логотип, телефоны, правую колонку подписки, юридический текст, рекламную полосу и чат.
 
-### 3. Вставить настоящие виджеты
+### 3. Проверить загрузку настоящих виджетов
 
-В новом HTML есть два места, отмеченные комментариями **YANDEX** и **2GIS**:
+Оба официальных виджета уже встроены в HTML. Дополнительно получать или вставлять код не нужно.
 
-\`\`\`html
-<div class="ktfr-ratings__slot" data-provider="yandex">
-  <!-- Код виджета Яндекс Карт для Катуни -->
-</div>
-<div class="ktfr-ratings__slot" data-provider="2gis">
-  <!-- Код виджета 2ГИС для Катуни -->
-</div>
-\`\`\`
+- Яндекс Карты: организация 1102639152.
+- 2ГИС: филиал 2815278048144278.
 
-В каждом из этих div замените временную ссылку целиком кодом соответствующего официального виджета. Сами div с классом ktfr-ratings__slot оставьте.
+Размер каждого iframe — **150 × 50 px**. Оценки загружаются сервисами и не зафиксированы в нашей разметке. Сохраните внешние адреса iframe и обёртки ktfr-ratings__slot. Если сайт использует Content Security Policy, разрешите эти источники в frame-src: https://yandex.ru и https://widget.2gis.ru. Не отключайте CSP целиком.
 
-Для согласованных макетов предусмотрены горизонтальные виджеты **150 × 50 px**. Если официальный код имеет другой размер, подстройте ширину .ktfr-ratings__slot, flex-basis и размеры iframe; не сжимайте виджет через transform: scale(). Если поставщик требует отдельный script, подключите его по его инструкции один раз и убедитесь, что оба виджета отрисовались.
-
-Коды виджетов заказчик пока не передал. Поэтому в установочном файле стоят рабочие ссылки «Отзывы в Яндекс Картах» и «Отзывы в 2ГИС», без выдуманных оценок и звёзд. Это временный вид до вставки настоящих виджетов. На desktop-preview.png показан согласованный макет с условными рейтингами, а не подтверждённые текущие оценки.
+Для загрузки нужны интернет и доступ к обоим сервисам. Блокировщики внешних ресурсов могут скрыть виджеты. В браузере проверки 2ГИС заблокирован на стороне клиента (ERR_BLOCKED_BY_CLIENT), хотя его публичный адрес возвращает корректный HTML с рейтингом. Поэтому на desktop-preview.png виден Яндекс, а место 2ГИС пустое. Это снимок проверки, не подмена настоящего виджета. Перед внедрением проверьте 2ГИС в обычном браузере без блокировщика. Оценка на снимке может со временем устареть.
 
 ## Кодировка — важно
 
@@ -184,7 +165,7 @@ for (const option of options) {
 - Форма Unisender, её action, поля, согласие и обработчики не изменены. При проверке не отправляйте тестовую подписку реального посетителя без согласования.
 - Нет ошибок загрузки CSS, иконок, iframe/script; учтены ограничения CSP и внешних ресурсов сайта.
 
-Компоновка с временными ссылками проверяется отдельно от официальных виджетов. Окончательная проверка виджетов возможна после получения их кодов и установки в рабочий шаблон.
+После установки проверьте виджеты в рабочем шаблоне сайта: его CSP и настройки внешних ресурсов могут отличаться от демо.
 
 ## Откат
 
