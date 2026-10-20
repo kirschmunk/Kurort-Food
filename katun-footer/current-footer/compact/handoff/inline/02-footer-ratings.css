@@ -1,0 +1,95 @@
+/* Install ONE variant only. Widget layout; no hardcoded ratings. */
+#footer .ktfc .ktfr-ratings {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+#footer .ktfc .ktfr-ratings__slot {
+  box-sizing: border-box;
+  flex: 0 0 150px;
+  width: 150px;
+  min-height: 50px;
+}
+#footer .ktfc .ktfr-ratings__slot > iframe {
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: 0;
+}
+/* Working review links until the real widgets are supplied. */
+#footer .ktfc .ktfr-install-link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  min-height: 50px;
+  padding: 7px 9px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
+  color: #242424;
+  font: 12px/1.35 Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+#footer .ktfc .ktfr-install-link:focus-visible {
+  outline: 2px solid #007296;
+  outline-offset: 3px;
+}
+
+
+#footer .ktfc .page-footer__social-links {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#footer .ktfc .social-link {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50px;
+  min-height: 50px;
+  margin: 0;
+}
+#footer .ktfc .social-link:focus-visible { outline: 2px solid #007296; outline-offset: 3px; border-radius: 50%; }
+#footer .ktfc .ktfr-ratings {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#footer .ktfc .ktfc__group { min-width: 0; }
+#footer .ktfc .ktfc__reviews-heading {
+  font: 600 20px/26px AcromRegular, sans-serif;
+  color: #3b3b3b;
+  text-align: center;
+  margin: 0 0 32px;
+}
+@media (max-width: 460px) {
+  #footer .ktfc .social-link { flex-basis: 44px; min-height: 44px; }
+  #footer .ktfc .page-footer__social-links { gap: 8px; }
+}
+
+#footer .ktfc--inline .ktfc__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+#footer .ktfc--inline .page-footer__social-links { margin: 0; }
+#footer .ktfc--inline .ktfr-ratings { border-left: 1px solid #b5b5b5; padding-left: 24px; }
+@media (max-width: 1100px) {
+  #footer .ktfc--inline .ktfc__row { flex-direction: column; }
+  #footer .ktfc--inline .ktfr-ratings { border-left: 0; padding-left: 0; }
+}
