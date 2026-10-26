@@ -1,16 +1,16 @@
 @font-face{font-family:Acrom;src:url("../assets/fonts/Acrom-Regular.woff") format("woff");font-weight:400;font-display:swap}
 @font-face{font-family:Acrom;src:url("../assets/fonts/Acrom-Bold.woff") format("woff");font-weight:600 900;font-display:swap}
 .katun-season,.katun-season *{box-sizing:border-box}
-.katun-season{--accent:#009e6a;--soft:#b8e6f8;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;width:100%;font-family:Acrom,Arial,sans-serif;color:#fff}
-.katun-season__card{position:relative;isolation:isolate;overflow:hidden;min-height:510px;border-radius:28px;background:#0d3550;display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(48,56,60,.1)}
-.katun-season__card:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,33,52,.25),rgba(7,33,52,.02) 26%,rgba(7,33,52,.63) 54%,rgba(7,33,52,.97) 100%);pointer-events:none}
-.katun-season__card--newyear:after{background:linear-gradient(180deg,rgba(12,40,37,.25),rgba(12,40,37,.02) 26%,rgba(12,40,37,.64) 54%,rgba(12,40,37,.97) 100%)}
+.katun-season{--accent:#009e6a;--soft:#d1efdd;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;width:100%;font-family:Acrom,Arial,sans-serif;color:#fff}
+.katun-season__card{position:relative;isolation:isolate;overflow:hidden;min-height:510px;border-radius:28px;background:#102e22;display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(16,46,34,.1)}
+.katun-season__card:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,38,27,.25),rgba(12,38,27,.02) 26%,rgba(12,38,27,.63) 54%,rgba(12,38,27,.97) 100%);pointer-events:none}
+.katun-season__card--newyear:after{background:linear-gradient(180deg,rgba(12,38,27,.25),rgba(12,38,27,.02) 26%,rgba(12,38,27,.64) 54%,rgba(12,38,27,.97) 100%)}
 .katun-season__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transition:transform .65s ease;filter:brightness(1.06)}
 .katun-season__photo--mental{object-position:64% center}.katun-season__photo--newyear{object-position:52% center}
 .katun-season__card:hover .katun-season__photo{transform:scale(1.025)}
 /* Foreground stays above photo and shade during pointer transitions. */
 .katun-season__date,.katun-season__content{position:relative;z-index:2}
-.katun-season__date{align-self:flex-start;display:flex;align-items:center;gap:10px;margin:28px 32px 24px;padding:11px 14px;border:1px solid #b8e6f83d;border-radius:8px;background:rgba(7,33,52,.55);backdrop-filter:blur(10px);color:var(--soft);font-size:13px;line-height:1.4;font-weight:700;letter-spacing:.25px}
+.katun-season__date{align-self:flex-start;display:flex;align-items:center;gap:10px;margin:28px 32px 24px;padding:11px 14px;border:1px solid #d1efdd3d;border-radius:8px;background:rgba(12,38,27,.55);backdrop-filter:blur(10px);color:var(--soft);font-size:13px;line-height:1.4;font-weight:700;letter-spacing:.25px}
 .katun-season__date svg{width:17px;height:17px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
 .katun-season__content{margin-top:auto;padding:0 36px 34px}.katun-season h2{font-family:inherit;color:#fff;font-size:clamp(38px,3.4vw,50px);line-height:1.02;letter-spacing:-1.7px;font-weight:400;margin:0 0 18px}.katun-season p{font-size:17px;line-height:1.5;color:#ffffffe0;margin:0 0 25px;min-height:51px}
 .katun-season__button{display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:15px 23px;min-height:52px;background:var(--accent);color:#fff;border-radius:8px;font-size:17px;font-weight:600;line-height:1.3;text-decoration:none;transition:background .18s ease}
