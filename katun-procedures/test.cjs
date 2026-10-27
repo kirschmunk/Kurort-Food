@@ -13,6 +13,15 @@ assert.equal((html.match(/<details class="ktp-category"/g) || []).length, 11);
 assert.equal((html.match(/<details class="ktp-procedure"/g) || []).length, all.length);
 assert.equal((html.match(/<summary /g) || []).length, 11 + all.length);
 assert.equal((html.match(/class="ktp-detail-media"/g) || []).length, all.length, 'Each procedure needs media');
+const illustratedPlacements = all.filter(id => descriptions[id].photo && !descriptions[id].photoPlaceholder);
+assert.equal((html.match(/class="ktp-detail-photo"/g) || []).length, illustratedPlacements.length, 'Keep every existing procedure photo');
+for (const filename of ['index.html', 'embed.html', 'cms/katun-procedures.html']) {
+  const output = fs.readFileSync(path.join(root, filename), 'utf8');
+  assert(!output.includes('ktp-photo-caption'), 'Internal photo captions must not be published: ' + filename);
+  for (const d of Object.values(descriptions)) {
+    if (d.photoCaption) assert(!output.includes(d.photoCaption), 'Internal photo note leaked: ' + filename);
+  }
+}
 assert.equal(Object.keys(descriptions).length, 74);
 for (const [id,d] of Object.entries(descriptions)) {
   assert(data.procedures[id]);

@@ -14,7 +14,7 @@ function items(ids, category) {
   return `<div class="ktp-procedures">${ids.map(id => {
     const [title] = data.procedures[id];
     const d = descriptions[id];
-    const media = d.photo && !d.photoPlaceholder ? image(d.photo, d.photoAlt || title, 'ktp-detail-photo') + (d.photoCaption ? `<p class="ktp-photo-caption">${esc(d.photoCaption)}</p>` : '') : `<div class="ktp-photo-placeholder" role="img" aria-label="Место для фотографии: ${esc(title)}"><span class="ktp-photo-symbol" aria-hidden="true"></span><span>Фото процедуры</span><small>Добавим снимок</small></div>`;
+    const media = d.photo && !d.photoPlaceholder ? image(d.photo, d.photoAlt || title, 'ktp-detail-photo') : `<div class="ktp-photo-placeholder" role="img" aria-label="Место для фотографии: ${esc(title)}"><span class="ktp-photo-symbol" aria-hidden="true"></span><span>Фото процедуры</span><small>Добавим снимок</small></div>`;
     const copy = d.paragraphs.map(p => `<p class="ktp-procedure-text">${esc(p)}</p>`).join('') + (d.points ? `<h4 class="ktp-detail-heading">${esc(d.listTitle)}</h4><ul class="ktp-detail-list">${d.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : '') + (d.note ? `<p class="ktp-procedure-text">${esc(d.note)}</p>` : '');
     return `<details class="ktp-procedure" id="ktp-${category}-${id}" data-procedure="${id}" name="ktp-procedures-${category}"><summary class="ktp-procedure-toggle"><span class="ktp-procedure-title">${esc(title)}</span>${plus}</summary><div class="ktp-procedure-detail"><div class="ktp-detail-copy">${copy}</div><div class="ktp-detail-media">${media}</div></div></details>`;
   }).join('\n')}</div>`;
