@@ -1,0 +1,47 @@
+{
+  "site": "Портал Белокуриха.ру",
+  "demo": "https://kirschmunk.github.io/Kurort-Food/seasonal-banners/",
+  "installPrefix": "/upload/seasonal-banners-portal/",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5335,
+      "sha256": "671772e7e155cdf53a252c5b790a0e466e3d6b8b04b0cfd064c67665a84d1b8b"
+    },
+    {
+      "path": "block.html",
+      "bytes": 2080,
+      "sha256": "878e415dff6f8e4bd5dca5dec83e1ac95403e5f5b1318c26fce1515e5a9c9615"
+    },
+    {
+      "path": "preview.html",
+      "bytes": 2534,
+      "sha256": "f5097c9b7d23276310ff6cad51fc936c3b0c29ad3b3cc4f91952dfc1d4752d39"
+    },
+    {
+      "path": "upload/seasonal-banners-portal/assets/fonts/Acrom-Bold.woff",
+      "bytes": 27168,
+      "sha256": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b"
+    },
+    {
+      "path": "upload/seasonal-banners-portal/assets/fonts/Acrom-Regular.woff",
+      "bytes": 27392,
+      "sha256": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574"
+    },
+    {
+      "path": "upload/seasonal-banners-portal/assets/images/mental-health.jpg",
+      "bytes": 134815,
+      "sha256": "143aeda9aefa18768404e2be5e7e4660c27b2bf068219a6c7740c0546e22ecc3"
+    },
+    {
+      "path": "upload/seasonal-banners-portal/assets/images/new-year.png",
+      "bytes": 826725,
+      "sha256": "2284392de07827c053029e4184adedd4a3146e58c2410547d3606ca0781f69fe"
+    },
+    {
+      "path": "upload/seasonal-banners-portal/banners.css",
+      "bytes": 4438,
+      "sha256": "b7aa89f670a5a6083d3ed05406cbf03f15e6b1697f64f290accc78327496d761"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "site": "Белокуриха",
+  "demo": "https://kirschmunk.github.io/Kurort-Food/seasonal-banners-belokurikha/",
+  "installPrefix": "/upload/seasonal-banners-belokurikha/",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5372,
+      "sha256": "3340872f97c817b3a2dd72f834c6cfc5cbecb6066c4eaa5aabe8fafd421aecdb"
+    },
+    {
+      "path": "block.html",
+      "bytes": 2186,
+      "sha256": "25cc0bc481680cce9cc2c9ad436adbb581ffb08c772c8bbc9f549c9239986a88"
+    },
+    {
+      "path": "preview.html",
+      "bytes": 2622,
+      "sha256": "1aebe581a073168eb08dd8f83dfca7e67a450e9aaddd77f616ce2aac7d796a41"
+    },
+    {
+      "path": "upload/seasonal-banners-belokurikha/assets/fonts/Acrom-Bold.woff",
+      "bytes": 27168,
+      "sha256": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b"
+    },
+    {
+      "path": "upload/seasonal-banners-belokurikha/assets/fonts/Acrom-Regular.woff",
+      "bytes": 27392,
+      "sha256": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574"
+    },
+    {
+      "path": "upload/seasonal-banners-belokurikha/assets/images/mental-health.jpg",
+      "bytes": 134815,
+      "sha256": "143aeda9aefa18768404e2be5e7e4660c27b2bf068219a6c7740c0546e22ecc3"
+    },
+    {
+      "path": "upload/seasonal-banners-belokurikha/assets/images/new-year.png",
+      "bytes": 826725,
+      "sha256": "2284392de07827c053029e4184adedd4a3146e58c2410547d3606ca0781f69fe"
+    },
+    {
+      "path": "upload/seasonal-banners-belokurikha/banners.css",
+      "bytes": 4367,
+      "sha256": "4ef7c4d808ec3c819c5aa542ab61a3d268bd70a3ada1d22da4494b5caa4e6a5a"
+    }
+  ]
+}

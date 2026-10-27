@@ -1,0 +1,37 @@
+{
+  "site": "Сибирь",
+  "demo": "https://kirschmunk.github.io/Kurort-Food/seasonal-banners-sibir/",
+  "installPrefix": "/upload/seasonal-banners-sibir/",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5249,
+      "sha256": "255e06b788c177ca25135675fb8de62dcf7bec9b18e7f17c10db12bb8d18612d"
+    },
+    {
+      "path": "block.html",
+      "bytes": 2042,
+      "sha256": "a6f7d08bb11b431a8bec24173f4b89e8330fb5a743cadc25793f674c18d18b3b"
+    },
+    {
+      "path": "preview.html",
+      "bytes": 2470,
+      "sha256": "8e14e5f8ce8e676b9a4b4a7feb9f7baae0506c9c55a028de418c899c98235a13"
+    },
+    {
+      "path": "upload/seasonal-banners-sibir/assets/images/mental-health.jpg",
+      "bytes": 134815,
+      "sha256": "143aeda9aefa18768404e2be5e7e4660c27b2bf068219a6c7740c0546e22ecc3"
+    },
+    {
+      "path": "upload/seasonal-banners-sibir/assets/images/new-year.png",
+      "bytes": 826725,
+      "sha256": "2284392de07827c053029e4184adedd4a3146e58c2410547d3606ca0781f69fe"
+    },
+    {
+      "path": "upload/seasonal-banners-sibir/banners.css",
+      "bytes": 3790,
+      "sha256": "e18023afcf44fb19fb0dc5668ea2c8e027bba8b3358b7b7ee2d17e55f1aedc08"
+    }
+  ]
+}
