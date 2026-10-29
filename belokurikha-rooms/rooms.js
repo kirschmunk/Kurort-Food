@@ -16,6 +16,7 @@
     const dialog = section.querySelector('dialog');
     let opener;
     let frame;
+    let changePhoto = () => {};
     const measure = () => {
       const step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : cards[0].getBoundingClientRect().width;
       const count = Math.min(cards.length, Math.max(1, Math.round((track.clientWidth + parseFloat(getComputedStyle(track).gap)) / step)));
@@ -46,24 +47,48 @@
     section.querySelector('.br-rooms__close').addEventListener('click',close);
     dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)close();}});
     dialog.addEventListener('close',()=>opener?.focus({preventScroll:true}));
+    dialog.querySelector('.br-rooms__photo-prev').addEventListener('click',()=>changePhoto(-1));
+    dialog.querySelector('.br-rooms__photo-next').addEventListener('click',()=>changePhoto(1));
+    dialog.querySelector('.br-rooms__gallery').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();e.stopPropagation();changePhoto(e.key==='ArrowRight'?1:-1);}});
+    const paragraphs = (selector,values) => {
+      const nodes=values.map(text=>{const p=document.createElement('p');p.textContent=text;return p;});
+      dialog.querySelector(selector).replaceChildren(...nodes);
+    };
     section.querySelectorAll('[data-open-room]').forEach(button=>button.addEventListener('click',()=>{
       const room=rooms.find(r=>r.id===button.dataset.openRoom);
       if(!room)return;
       opener=button;
       const image=dialog.querySelector('.br-rooms__large');
       const thumbs=dialog.querySelector('.br-rooms__thumbs');
-      dialog.querySelector('#br-rooms-modal-title').textContent=room.title;
+      const heading=dialog.querySelector('#br-rooms-modal-title');
+      heading.replaceChildren(...Array.from(section.querySelector(`[data-room="${room.id}"] h3`).childNodes,n=>n.cloneNode(true)));
       dialog.querySelector('.br-rooms__modal-subtitle').textContent=room.subtitle;
       dialog.querySelector('.br-rooms__modal-facts').replaceChildren(section.querySelector(`[data-room="${room.id}"] .br-rooms__facts`).cloneNode(true));
+      paragraphs('.br-rooms__description',room.description);
+      paragraphs('.br-rooms__notes',room.notes);
+      const parameters=dialog.querySelector('.br-rooms__parameters');
+      parameters.replaceChildren(...room.specs.map(spec=>{const group=document.createElement('div');const dt=document.createElement('dt');const dd=document.createElement('dd');dt.textContent=spec.label;dd.textContent=spec.value;group.append(dt,dd);return group;}));
+      parameters.hidden=room.specs.length===0;
+      dialog.querySelector('.br-rooms__amenities').replaceChildren(...room.amenities.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
       thumbs.replaceChildren();
+      let activePhoto=0;
+      const showPhoto=index=>{
+        activePhoto=(index+room.images.length)%room.images.length;
+        image.src=new URL(room.images[activePhoto],base).href;
+        image.alt=`${room.title} — фотография ${activePhoto+1}`;
+        dialog.querySelector('.br-rooms__photo-count').textContent=`${activePhoto+1} / ${room.images.length}`;
+        thumbs.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===activePhoto)));
+      };
+      changePhoto=direction=>showPhoto(activePhoto+direction);
       room.images.forEach((src,i)=>{
         const thumb=document.createElement('button');thumb.type='button';thumb.setAttribute('aria-label',`Фотография ${i+1}`);thumb.setAttribute('aria-pressed',String(i===0));
         const photo=document.createElement('img');photo.src=new URL(src,base).href;photo.alt='';thumb.append(photo);
-        thumb.addEventListener('click',()=>{image.src=photo.src;image.alt=`${room.title} — фотография ${i+1}`;thumbs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===thumb)));});
+        thumb.addEventListener('click',()=>showPhoto(i));
         thumbs.append(thumb);
       });
-      image.src=new URL(room.images[0],base).href;image.alt=`${room.title} — фотография 1`;
+      showPhoto(0);
       dialog.showModal();
+      dialog.scrollTop=0;
     }));
   });
 })();

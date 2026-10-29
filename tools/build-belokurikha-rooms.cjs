@@ -3,39 +3,14 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'belokurikha-rooms');
-const version = '20261029-rooms15';
-const selected = [
-  ['11978', 'Комфорт', 'Двухместный · Твин / Дабл · 4*'],
-  ['16577', 'Престиж', 'Двухкомнатный · Дабл · 4*'],
-  ['16580', 'Джуниор сюит', 'Однокомнатный · 1 класс · 4*'],
-  ['16602', 'Люкс', 'Двухкомнатный · 1 класс · 4*'],
-  ['8321', 'Стандарт', 'Двухместный · Твин / Дабл · 4*'],
-  ['12004', 'Стандарт', 'Одноместный · 4*'],
-  ['11980', 'Комфорт', 'Одноместный · 4*'],
-  ['8324', 'Престиж', 'Твин / Дабл · 4*'],
-  ['16579', 'Джуниор сюит', 'Однокомнатный · 2 класс · 4*'],
-  ['16603', 'Люкс', 'Двухкомнатный · 2 класс · 4*'],
-  ['16628', 'Апартаменты 409', '1 класс · 4*'],
-  ['16629', 'Апартаменты 344', '1 класс · 4*'],
-  ['17785', 'Апартаменты 402', '1 класс · 4*'],
-  ['16630', 'Апартаменты', '2 класс · 4*'],
-  ['11828', 'Сюит', 'Двухместный · 4*'],
-];
-const inputIndex = process.argv.indexOf('--catalog');
-const source = inputIndex >= 0 ? JSON.parse(fs.readFileSync(process.argv[inputIndex + 1], 'utf8')) : JSON.parse(fs.readFileSync(path.join(out,'rooms-data.json'),'utf8')).map(r=>({...r,name:r.originalName,table:`Площадь: ${r.area} Основных мест: ${r.main} Доп. мест: ${r.extra ?? ''}`}));
-const rooms = selected.map(([id, title, subtitle]) => {
-  const r = source.find(r => r.id === id);
-  if (!r) throw new Error(`Room ${id} is absent from the verified catalog snapshot`);
-  const extra = r.table.match(/Доп. мест: (\d+)/);
-  return {id, title, subtitle, originalName:r.name,
-    area:r.table.match(/Площадь: ([\d,]+)/)[1], main:+r.table.match(/Основных мест: (\d+)/)[1], extra:extra ? +extra[1] : null,
-    source:'https://belokurikha.ru/nomera-belokuriha/#room_'+id,
-    photos:r.photos.slice(0,2), images:r.photos.slice(0,2).map((_,i)=>`assets/images/${id}-${i+1}.jpg`)};
-});
+const version = '20261029-full-details';
+const source = JSON.parse(fs.readFileSync(path.join(out,'catalog-snapshot.json'),'utf8'));
+const rooms = source.rooms.map(r=>({...r,originalName:r.title,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
 fs.mkdirSync(path.join(out,'assets/images'), {recursive:true});
 fs.mkdirSync(path.join(out,'assets/fonts'), {recursive:true});
 for (const weight of ['Regular','Bold']) fs.copyFileSync(path.join(root,`assets/fonts/Acrom-${weight}.woff`),path.join(out,`assets/fonts/Acrom-${weight}.woff`));
 const esc = s => String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
+const titleHTML = title => esc(title).replace(/(\d класса \d|\S+ \d)\*$/, '<span class="br-rooms__rating">$1<sup>*</sup></span>');
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
 const icons = {
   area:'<path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5M9 15l6-6M10 9h5v5"/>',
@@ -43,7 +18,7 @@ const icons = {
   bed:'<path d="M3 20V8M21 20v-8H3M3 17h18M6 12V6h6v6M12 12V6h6v6"/>'
 };
 const metric=(icon,label,value)=>`<div class="br-rooms__fact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">${icons[icon]}</svg><dt>${label}</dt><dd>${value}</dd></div>`;
-const facts=r=>`<dl class="br-rooms__facts">${metric('area','Площадь',r.area+' м²')}${metric('people','Основных мест',r.main)}${r.extra == null ? '' : metric('bed','Дополнительных мест',r.extra)}</dl>`;
+const facts=r=>`<dl class="br-rooms__facts">${metric('area','Площадь',r.area+' м²')}${metric('people','Основных мест',r.main)}${r.extra == null ? '' : metric('bed','Доп. мест',r.extra)}</dl>`;
 const section=`<section class="br-rooms" data-br-rooms aria-labelledby="br-rooms-heading">
   <div class="br-rooms__heading">
     <div><h2 id="br-rooms-heading">Номера для вашего отдыха</h2><p>Вдвоём, с семьёй или только для себя — найдите свой вариант.</p></div>
@@ -52,11 +27,24 @@ const section=`<section class="br-rooms" data-br-rooms aria-labelledby="br-rooms
   <div class="br-rooms__track" id="br-rooms-track" tabindex="0" aria-label="Номера санатория. Используйте стрелки влево и вправо." aria-roledescription="карусель">
 ${rooms.map((r,i)=>`    <article class="br-rooms__card" data-room="${r.id}" aria-label="${i+1} из ${rooms.length}: ${esc(r.originalName)}">
       <button class="br-rooms__photo" type="button" data-open-room="${r.id}" aria-label="Фотографии: ${esc(r.originalName)}"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"><span class="br-rooms__view">Смотреть номер ${arrow}</span></button>
-      <div class="br-rooms__body"><h3>${r.title}</h3><p class="br-rooms__subtitle">${r.subtitle}</p>${facts(r)}<button class="br-rooms__details" type="button" data-open-room="${r.id}">Подробнее о номере ${arrow}</button></div>
+      <div class="br-rooms__body"><h3>${titleHTML(r.title)}</h3><p class="br-rooms__subtitle">${esc(r.subtitle)}</p>${facts(r)}<button class="br-rooms__details" type="button" data-open-room="${r.id}">Подробнее о номере ${arrow}</button></div>
     </article>`).join('\n')}
   </div>
   <div class="br-rooms__navigation" hidden><div class="br-rooms__progress" aria-hidden="true"><span></span></div><span class="br-rooms__counter" aria-live="polite" aria-atomic="true">1–4 из ${rooms.length}</span></div>
-  <dialog class="br-rooms__dialog" aria-labelledby="br-rooms-modal-title"><div class="br-rooms__modal"><button class="br-rooms__close" type="button" aria-label="Закрыть фотографии">×</button><div class="br-rooms__gallery"><img class="br-rooms__large" src="${rooms[0].images[0]}" alt="" width="1024" height="683"><div class="br-rooms__thumbs"></div></div><div class="br-rooms__info"><p class="br-rooms__eyebrow">Санаторий «Белокуриха»</p><h3 id="br-rooms-modal-title"></h3><p class="br-rooms__modal-subtitle"></p><div class="br-rooms__modal-facts"></div><a class="br-rooms__all" href="https://www.belokurikha-san.ru/room/" target="_blank" rel="noopener">Перейти к каталогу ${arrow}</a></div></div></dialog>
+  <dialog class="br-rooms__dialog" aria-labelledby="br-rooms-modal-title">
+    <div class="br-rooms__modal-bar"><span>Санаторий «Белокуриха»</span><button class="br-rooms__close" type="button" aria-label="Закрыть описание номера">×</button></div>
+    <div class="br-rooms__modal">
+      <div class="br-rooms__gallery" tabindex="0" aria-label="Фотографии номера. Используйте стрелки влево и вправо.">
+        <div class="br-rooms__stage"><img class="br-rooms__large" src="${rooms[0].images[0]}" alt="" width="1024" height="683"><button class="br-rooms__photo-prev" type="button" aria-label="Предыдущая фотография">${arrow}</button><button class="br-rooms__photo-next" type="button" aria-label="Следующая фотография">${arrow}</button><span class="br-rooms__photo-count" aria-live="polite" aria-atomic="true"></span></div>
+        <div class="br-rooms__thumbs"></div>
+      </div>
+      <div class="br-rooms__info"><h3 id="br-rooms-modal-title"></h3><p class="br-rooms__modal-subtitle"></p><div class="br-rooms__modal-facts"></div>
+        <h4>Описание номера</h4><div class="br-rooms__description"></div><dl class="br-rooms__parameters"></dl>
+        <h4>Оснащение номера</h4><ul class="br-rooms__amenities"></ul><div class="br-rooms__notes"></div>
+        <a class="br-rooms__all" href="https://www.belokurikha-san.ru/room/" target="_blank" rel="noopener">Перейти к каталогу ${arrow}</a>
+      </div>
+    </div>
+  </dialog>
 </section>`;
 const data = rooms.map(({photos,source,originalName,...r})=>r);
 fs.writeFileSync(path.join(out,'rooms-data.json'),JSON.stringify(rooms,null,2)+'\n');

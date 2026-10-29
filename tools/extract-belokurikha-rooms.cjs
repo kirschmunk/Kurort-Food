@@ -1,0 +1,28 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const html = fs.readFileSync(process.argv[2], 'utf8');
+const selected = JSON.parse(fs.readFileSync(path.join(root,'belokurikha-rooms/rooms-data.json'),'utf8')).map(r=>r.id);
+const entities = {nbsp:' ',amp:'&',quot:'"',apos:"'",laquo:'«',raquo:'»',ndash:'–',mdash:'—',hellip:'…',rsquo:'’',lsquo:'‘'};
+const text = value => value.replace(/<[^>]*>/g,' ').replace(/&#(x[\da-f]+|\d+);/gi,(_,n)=>String.fromCodePoint(n[0].toLowerCase()==='x'?parseInt(n.slice(1),16):+n)).replace(/&([a-z]+);/gi,(all,name)=>entities[name]??all).replace(/\s+/g,' ').trim();
+const blocks = html.split('<div id="room_').slice(1);
+const rooms = selected.map(id=>{
+  const block=blocks.find(b=>b.startsWith(id+'"'));
+  if(!block)throw Error('Missing official room '+id);
+  const get=(re,label)=>{const m=block.match(re);if(!m)throw Error(`Missing ${label} in room ${id}`);return m[1];};
+  const title=text(get(/class="rooms_card__title"[^>]*>\s*<div>([\s\S]*?)<\/div>/,'title'));
+  const subtitle=text(get(/class="rooms_card__title_dop">([\s\S]*?)<\/p>/,'type'));
+  const table=text(get(/class="rooms_card_table"[^>]*>([\s\S]*?)<\/table>/,'table'));
+  const extra=table.match(/Доп\. мест: (\d+)/);
+  const descriptionHTML=get(/class="popup_room__text">([\s\S]*?)<\/div>/,'description');
+  const paragraphs=[...descriptionHTML.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)].map(m=>text(m[1])).filter(Boolean);
+  const specs=[...block.matchAll(/class="popup_room__card_text">\s*<strong>([\s\S]*?)<\/strong>([\s\S]*?)<\/div>/g)].map(m=>({label:text(m[1]),value:text(m[2])}));
+  const amenities=[...get(/class="popup_room__tags">([\s\S]*?)<\/ul>/,'amenities').matchAll(/<li>([\s\S]*?)<\/li>/g)].map(m=>text(m[1]));
+  const notes=get(/class="popup_room_text_bot">([\s\S]*?)<\/div>/,'notes').split(/<br\s*\/?\s*>/).map(text).filter(Boolean);
+  const photos=[...new Set([...block.matchAll(/data-fancybox="rooms\d+" href="([^"]+)"/g)].map(m=>new URL(m[1]).href))];
+  if(!paragraphs.length||!amenities.length||!photos.length)throw Error('Incomplete room '+id);
+  return {id,title,subtitle,area:table.match(/Площадь: ([\d,]+)/)[1],main:+table.match(/Основных мест: (\d+)/)[1],extra:extra?+extra[1]:null,description:paragraphs,specs,amenities,notes,photos,source:'https://belokurikha.ru/nomera-belokuriha/#room_'+id};
+});
+const snapshot={checkedAt:'2026-10-29',page:'https://www.belokurikha-san.ru/room/',catalog:'https://belokurikha.ru/nomera-belokuriha/',selection:'15 records verified visible in the live catalogue',rooms};
+fs.writeFileSync(path.join(root,'belokurikha-rooms/catalog-snapshot.json'),JSON.stringify(snapshot,null,2)+'\n');
+console.log(rooms.map(r=>({id:r.id,title:r.title,photos:r.photos.length,description:r.description.join('\n'),specs:r.specs,amenities:r.amenities.length})));
