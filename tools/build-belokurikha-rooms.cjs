@@ -3,7 +3,7 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'belokurikha-rooms');
-const version = '20261029-compact-details';
+const version = '20261029-no-amenities';
 const source = JSON.parse(fs.readFileSync(path.join(out,'catalog-snapshot.json'),'utf8'));
 const rooms = source.rooms.map(r=>({...r,originalName:r.title,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
 fs.mkdirSync(path.join(out,'assets/images'), {recursive:true});
@@ -40,7 +40,7 @@ ${rooms.map((r,i)=>`    <article class="br-rooms__card" data-room="${r.id}" aria
       </div>
       <div class="br-rooms__info"><h3 id="br-rooms-modal-title"></h3><p class="br-rooms__modal-subtitle"></p>
         <div class="br-rooms__description"></div><h4>Характеристики</h4><dl class="br-rooms__parameters"></dl>
-        <h4>Оснащение номера</h4><ul class="br-rooms__amenities"></ul><div class="br-rooms__notes"></div>
+        <div class="br-rooms__notes"></div>
         <a class="br-rooms__all" href="https://www.belokurikha-san.ru/room/" target="_blank" rel="noopener">Перейти к каталогу ${arrow}</a>
       </div>
     </div>

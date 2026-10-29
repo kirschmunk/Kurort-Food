@@ -76,7 +76,6 @@
         const dt=document.createElement('dt');const dd=document.createElement('dd');
         dt.textContent=spec.label;dd.textContent=spec.value;group.append(dt,dd);return group;
       }));
-      dialog.querySelector('.br-rooms__amenities').replaceChildren(...room.amenities.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
       thumbs.replaceChildren();
       let activePhoto=0;
       const showPhoto=index=>{
