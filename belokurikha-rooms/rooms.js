@@ -63,12 +63,19 @@
       const heading=dialog.querySelector('#br-rooms-modal-title');
       heading.replaceChildren(...Array.from(section.querySelector(`[data-room="${room.id}"] h3`).childNodes,n=>n.cloneNode(true)));
       dialog.querySelector('.br-rooms__modal-subtitle').textContent=room.subtitle;
-      dialog.querySelector('.br-rooms__modal-facts').replaceChildren(section.querySelector(`[data-room="${room.id}"] .br-rooms__facts`).cloneNode(true));
       paragraphs('.br-rooms__description',room.description);
       paragraphs('.br-rooms__notes',room.notes);
       const parameters=dialog.querySelector('.br-rooms__parameters');
-      parameters.replaceChildren(...room.specs.map(spec=>{const group=document.createElement('div');const dt=document.createElement('dt');const dd=document.createElement('dd');dt.textContent=spec.label;dd.textContent=spec.value;group.append(dt,dd);return group;}));
-      parameters.hidden=room.specs.length===0;
+      const basicParameters=[{label:'Площадь:',value:room.area+' м²'},{label:'Основных мест:',value:String(room.main)}];
+      if(room.extra!==null)basicParameters.push({label:'Доп. мест:',value:String(room.extra)});
+      const capacity=room.specs.filter(spec=>spec.label==='Вместимость:');
+      const otherParameters=room.specs.filter(spec=>spec.label!=='Вместимость:');
+      parameters.replaceChildren(...[...basicParameters,...capacity,...otherParameters].map(spec=>{
+        const group=document.createElement('div');
+        if(spec.label.length>32)group.className='br-rooms__parameter-wide';
+        const dt=document.createElement('dt');const dd=document.createElement('dd');
+        dt.textContent=spec.label;dd.textContent=spec.value;group.append(dt,dd);return group;
+      }));
       dialog.querySelector('.br-rooms__amenities').replaceChildren(...room.amenities.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
       thumbs.replaceChildren();
       let activePhoto=0;

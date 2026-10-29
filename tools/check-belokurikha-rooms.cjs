@@ -24,6 +24,9 @@ for(const file of ['index.html','block.html']){
   assert.equal((html.match(/class="br-rooms__card"/g)||[]).length,15);
   assert.equal((html.match(/class="br-rooms__photo-prev"/g)||[]).length,1);
   assert.equal((html.match(/class="br-rooms__photo-next"/g)||[]).length,1);
+  assert.equal((html.match(/class="br-rooms__parameters"/g)||[]).length,1,`${file}: single characteristics block`);
+  assert(!html.includes('br-rooms__modal-facts'),`${file}: no separate stretched metrics`);
+  assert(html.indexOf('class="br-rooms__description"')<html.indexOf('class="br-rooms__parameters"'),`${file}: description comes first`);
   const titles=[...html.matchAll(/<h3>([\s\S]*?)<\/h3>/g)].map(m=>m[1].replace(/<[^>]*>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"'));
   assert.deepEqual(titles,data.map(r=>r.title),`${file}: exact full titles`);
   assert(!/₽|руб\.|Цена \(/i.test(html),`${file}: no price block`);

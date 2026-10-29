@@ -1,9 +1,9 @@
 {
-  "version": "20261029-full-details",
+  "version": "20261029-compact-details",
   "roomCount": 15,
   "imageCount": 74,
   "files": {
-    "README.md": "d9a8d23f24ac02b5f563c598eed095f62647d3367fab6152f4bc41aa93553be3",
+    "README.md": "b85c2125f36830e12eb9813c3d13fc1d2b1c61da9f622fdf987ebd5744f0c34d",
     "assets/fonts/Acrom-Bold.woff": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b",
     "assets/fonts/Acrom-Regular.woff": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574",
     "assets/images/11828-1.jpg": "c7f77d22547ce563f32dbbf20c9e5cfb4580b833678e06774bf9281a3331242c",
@@ -80,12 +80,12 @@
     "assets/images/8324-3.jpg": "41bafd1dcf167fc509918d18438f82d76bb7deb365bea36e56952bf254583410",
     "assets/images/8324-4.jpg": "22fea8c73d638cf517a9e52e4429f67e7fc851560f0ffc5c8bf7e04230056920",
     "assets/images/8324-5.jpg": "67e16d910e3fbb4f26e9f39460e50026feaeac916078208cbe0d0510fa50ae3b",
-    "block.html": "a0d167841a851cecff1bd582ee30cd2eeaecbf1e14aa7777c6c1c7c6b49d5246",
+    "block.html": "6530fec8cce57e57a5c8207354ff5b3300f798b508bfdef507dc6d6170d764bc",
     "catalog-snapshot.json": "fa10aeccfa37b259abaa2c9b7b3925c3cebdbad618c35ef35c47003315226e8a",
-    "index.html": "5f52e6e9fec2fc98000039933790825f1546fedd160ba15e8d868786b1c9d15c",
+    "index.html": "a70c4b4353b04498253aaceb45c8f543b9a1d64e01c1dd2681cc2c7b140d7fca",
     "rooms-data.js": "6ecdd12b7ff8ee3b89d8429b1eaa2f2e3d17fb68db2ab35921ddd3fe0a288089",
     "rooms-data.json": "8b0c43b03aab794095ac4a7de00868549161ba699e5713ffaa59f78377f34660",
-    "rooms.css": "94472819d6c2f842443dbac00610bcec95342fc68a79929c42e00abd16d1b36b",
-    "rooms.js": "970c99b8593f276983318584c8dce22579ab6e5bed9afd54df0fce42933220de"
+    "rooms.css": "0a8559db90ec4b72a597da19c844f5ed03701f933294b2faeb04574dd14bc4f1",
+    "rooms.js": "4ef3e77e8d4ca972b934d87bcaa62fb37a1a48a14d72eb0e49a2c992f47de5dd"
   }
 }
