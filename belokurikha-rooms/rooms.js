@@ -17,8 +17,8 @@
     let opener;
     let frame;
     const measure = () => {
-      const step = cards[1].offsetLeft - cards[0].offsetLeft;
-      const count = Math.max(1, Math.round((track.clientWidth + parseFloat(getComputedStyle(track).gap)) / step));
+      const step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : cards[0].getBoundingClientRect().width;
+      const count = Math.min(cards.length, Math.max(1, Math.round((track.clientWidth + parseFloat(getComputedStyle(track).gap)) / step)));
       const first = Math.min(cards.length - count, Math.max(0, Math.round(track.scrollLeft / step)));
       return {step, count, first};
     };
@@ -35,6 +35,7 @@
       track.scrollTo({left:Math.max(0,Math.min(cards.length-count,first+direction*count))*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     };
     nav.hidden = false;
+    section.querySelector('[data-br-controls]').hidden = false;
     prev.addEventListener('click',()=>move(-1));
     next.addEventListener('click',()=>move(1));
     track.addEventListener('scroll',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(update);},{passive:true});

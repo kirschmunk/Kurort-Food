@@ -72,21 +72,39 @@
     ]
   },
   {
-    "id": "2299",
-    "title": "Семейный",
-    "subtitle": "Двухкомнатный · 4*",
-    "originalName": "Семейный двухкомнатный 4*",
-    "area": "37",
+    "id": "8321",
+    "title": "Стандарт",
+    "subtitle": "Двухместный · Твин / Дабл · 4*",
+    "originalName": "Стандарт двухместный (Твин/Дабл) 4*",
+    "area": "15",
     "main": 2,
-    "extra": 2,
-    "source": "https://belokurikha.ru/nomera-belokuriha/#room_2299",
+    "extra": null,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_8321",
     "photos": [
-      "https://belokurikha.ru/wp-content/uploads/2023/02/4-6-1024x683.jpg",
-      "https://belokurikha.ru/wp-content/uploads/2023/02/3-9-1024x683.jpg"
+      "https://belokurikha.ru/wp-content/uploads/2024/10/1td2-fit-1024x683.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2024/10/2td2-fit-1024x683.jpg"
     ],
     "images": [
-      "assets/images/2299-1.jpg",
-      "assets/images/2299-2.jpg"
+      "assets/images/8321-1.jpg",
+      "assets/images/8321-2.jpg"
+    ]
+  },
+  {
+    "id": "12004",
+    "title": "Стандарт",
+    "subtitle": "Одноместный · 4*",
+    "originalName": "Стандарт одноместный 4*",
+    "area": "15",
+    "main": 1,
+    "extra": 1,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_12004",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2024/10/1-1-fit-1024x683.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2024/10/2-1-fit-1024x683.jpg"
+    ],
+    "images": [
+      "assets/images/12004-1.jpg",
+      "assets/images/12004-2.jpg"
     ]
   },
   {
@@ -108,6 +126,60 @@
     ]
   },
   {
+    "id": "8324",
+    "title": "Престиж",
+    "subtitle": "Твин / Дабл · 4*",
+    "originalName": "Престиж (Твин/Дабл) 4*",
+    "area": "27",
+    "main": 2,
+    "extra": 2,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_8324",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2024/08/1-8-fit-1024x683.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2024/08/2-7-fit-1024x682.jpg"
+    ],
+    "images": [
+      "assets/images/8324-1.jpg",
+      "assets/images/8324-2.jpg"
+    ]
+  },
+  {
+    "id": "16579",
+    "title": "Джуниор сюит",
+    "subtitle": "Однокомнатный · 2 класс · 4*",
+    "originalName": "Джуниор сюит однокомнатный 2 класса 4*",
+    "area": "30",
+    "main": 1,
+    "extra": 3,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_16579",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-47-56-1024x682.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_5_2025-10-10_13-47-56-1024x677.jpg"
+    ],
+    "images": [
+      "assets/images/16579-1.jpg",
+      "assets/images/16579-2.jpg"
+    ]
+  },
+  {
+    "id": "16603",
+    "title": "Люкс",
+    "subtitle": "Двухкомнатный · 2 класс · 4*",
+    "originalName": "Люкс 2 класса 4*",
+    "area": "37",
+    "main": 1,
+    "extra": 3,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_16603",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_13-54-42-1024x682.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_13-54-42-1024x682.jpg"
+    ],
+    "images": [
+      "assets/images/16603-1.jpg",
+      "assets/images/16603-2.jpg"
+    ]
+  },
+  {
     "id": "16628",
     "title": "Апартаменты 409",
     "subtitle": "1 класс · 4*",
@@ -123,6 +195,60 @@
     "images": [
       "assets/images/16628-1.jpg",
       "assets/images/16628-2.jpg"
+    ]
+  },
+  {
+    "id": "16629",
+    "title": "Апартаменты 344",
+    "subtitle": "1 класс · 4*",
+    "originalName": "Апартаменты 344 1 класса 4*",
+    "area": "50,1",
+    "main": 1,
+    "extra": 3,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_16629",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3549-fit-1024x683.jpg"
+    ],
+    "images": [
+      "assets/images/16629-1.jpg",
+      "assets/images/16629-2.jpg"
+    ]
+  },
+  {
+    "id": "17785",
+    "title": "Апартаменты 402",
+    "subtitle": "1 класс · 4*",
+    "originalName": "Апартаменты 402 1 класса 4*",
+    "area": "51",
+    "main": 1,
+    "extra": 2,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_17785",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2026/01/1-4-fit-1024x683.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2026/01/2-4-fit-1024x683.jpg"
+    ],
+    "images": [
+      "assets/images/17785-1.jpg",
+      "assets/images/17785-2.jpg"
+    ]
+  },
+  {
+    "id": "16630",
+    "title": "Апартаменты",
+    "subtitle": "2 класс · 4*",
+    "originalName": "Апартаменты 2 класса 4*",
+    "area": "54",
+    "main": 1,
+    "extra": 4,
+    "source": "https://belokurikha.ru/nomera-belokuriha/#room_16630",
+    "photos": [
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_14-00-35-1024x682.jpg",
+      "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_14-00-35-1024x682.jpg"
+    ],
+    "images": [
+      "assets/images/16630-1.jpg",
+      "assets/images/16630-2.jpg"
     ]
   },
   {
