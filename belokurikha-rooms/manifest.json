@@ -1,0 +1,130 @@
+{
+  "version": "2026-10-29",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7285,
+      "sha256": "47867ce9b26883ae22a057105fe77fda2bd40ef8dec821c7d9b2a15dc6fe3b1e"
+    },
+    {
+      "path": "assets/fonts/Acrom-Bold.woff",
+      "bytes": 27168,
+      "sha256": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b"
+    },
+    {
+      "path": "assets/fonts/Acrom-Regular.woff",
+      "bytes": 27392,
+      "sha256": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574"
+    },
+    {
+      "path": "assets/images/11828-1.jpg",
+      "bytes": 62430,
+      "sha256": "9ef2e29c15889d0bc28a1d627b753c913e400f3dd1841e808c9505565700e917"
+    },
+    {
+      "path": "assets/images/11828-2.jpg",
+      "bytes": 70175,
+      "sha256": "ea746dbc90ca43d694e0dbdbe7c09a9df55b6b9e0c78277b9ac4f651a743eb71"
+    },
+    {
+      "path": "assets/images/11978-1.jpg",
+      "bytes": 101712,
+      "sha256": "a5e1b1099a5f50c4d938275bc57c408089f4ea423aedc276baa7d33e9525187e"
+    },
+    {
+      "path": "assets/images/11978-2.jpg",
+      "bytes": 90152,
+      "sha256": "64e25ba31eff8b8355a1ce4679d8edc3755d7c1e9e325426df8056cb88cb444e"
+    },
+    {
+      "path": "assets/images/11980-1.jpg",
+      "bytes": 105315,
+      "sha256": "34a5ab3086e50134c9dbc1ed35a434e8533bf08c9fa4a7bc62bc86bc14f9f605"
+    },
+    {
+      "path": "assets/images/11980-2.jpg",
+      "bytes": 117585,
+      "sha256": "55f384fb785ff1c7a2e061d06aa8dbcfcce113fe25c26c5e9c8a54390d181ebf"
+    },
+    {
+      "path": "assets/images/16577-1.jpg",
+      "bytes": 83496,
+      "sha256": "63e913f43ed4f5a7963910404f34f75b4dfe95b7dfe6e513417d6acc7ae28300"
+    },
+    {
+      "path": "assets/images/16577-2.jpg",
+      "bytes": 85912,
+      "sha256": "637f67a5a32c754fb0754a8edcaf4a08839c395ec4e9edb0d17389a8442ad50d"
+    },
+    {
+      "path": "assets/images/16580-1.jpg",
+      "bytes": 84423,
+      "sha256": "75b8454f7bf961956080474da12e40a0ee8e53d31e8c3c327f72612211c882b5"
+    },
+    {
+      "path": "assets/images/16580-2.jpg",
+      "bytes": 71887,
+      "sha256": "b8abd7bac2beee09e6a0f4447eaa3c8349dd70891ccd268df4d6ca36e5954243"
+    },
+    {
+      "path": "assets/images/16602-1.jpg",
+      "bytes": 96346,
+      "sha256": "603bc023a0241356a730a3492baf626a88dc48a35e7dd9d38d3e5f8d53f2f542"
+    },
+    {
+      "path": "assets/images/16602-2.jpg",
+      "bytes": 79169,
+      "sha256": "249fedc936ea335a3ce0bf7d2ba97d5b16fc4b9d002cc32cb1ee88cb69572fa6"
+    },
+    {
+      "path": "assets/images/16628-1.jpg",
+      "bytes": 97276,
+      "sha256": "02bc1cf1c2d5ad70c2187f99fea7f10f61eee39d58d81cc030fa5712ab851d85"
+    },
+    {
+      "path": "assets/images/16628-2.jpg",
+      "bytes": 77895,
+      "sha256": "d3a13657a9005f8a443559fbec7d603c03491dcdaa683dd3e358eee63818ef2f"
+    },
+    {
+      "path": "assets/images/2299-1.jpg",
+      "bytes": 81339,
+      "sha256": "5ebf5c20f7b87f1a898d7cdae3a339fd2e41c5be58578aac2a45bf9b3142f483"
+    },
+    {
+      "path": "assets/images/2299-2.jpg",
+      "bytes": 76048,
+      "sha256": "9ef4fbf1c031868cc543b87d0ffa4658d0e494085a6ce563f659dbe6d778fe0b"
+    },
+    {
+      "path": "block.html",
+      "bytes": 16435,
+      "sha256": "21f65d2bb6bd0f1402ed3937df1377d5142a0f6b6ba6418dbfd3b3ee009a4cb7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 16471,
+      "sha256": "abcdda14a80bddaff35e7db66b79e0ac47e6cfcdf8e6266cfa71fb9f74ce54e3"
+    },
+    {
+      "path": "rooms-data.js",
+      "bytes": 2092,
+      "sha256": "e640855c2f6a677fc405f25a36da8a8d9d9ab7f37a85a64c0c3f0332970bf26f"
+    },
+    {
+      "path": "rooms-data.json",
+      "bytes": 4747,
+      "sha256": "e53200fbdd9e2a3dfe39b3206bce9dce7817394872b42242906a1c7a46d05f23"
+    },
+    {
+      "path": "rooms.css",
+      "bytes": 9016,
+      "sha256": "787a91008ed59c5ab071283fb5e4ecef66f88a5dc664b3f4183ddb2659f755a9"
+    },
+    {
+      "path": "rooms.js",
+      "bytes": 4315,
+      "sha256": "e92740dd5230d70fce08cd9f5fe4d56c28b0ea1c4e7de75e201880ce27ac3386"
+    }
+  ]
+}
