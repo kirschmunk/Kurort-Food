@@ -3,7 +3,7 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'belokurikha-rooms');
-const version = '20261029-no-amenities';
+const version = '20261029-responsive';
 const source = JSON.parse(fs.readFileSync(path.join(out,'catalog-snapshot.json'),'utf8'));
 const rooms = source.rooms.map(r=>({...r,originalName:r.title,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
 fs.mkdirSync(path.join(out,'assets/images'), {recursive:true});

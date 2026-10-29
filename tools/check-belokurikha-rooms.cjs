@@ -34,4 +34,9 @@ for(const file of ['index.html','block.html']){
 }
 assert(!fs.readFileSync(path.join(dir,'rooms.js'),'utf8').includes('br-rooms__amenities'),'no amenities rendering');
 assert(!fs.readFileSync(path.join(dir,'rooms.css'),'utf8').includes('br-rooms__amenities'),'no unused amenities styles');
+const css=fs.readFileSync(path.join(dir,'rooms.css'),'utf8');
+assert(css.includes('max-width:1200px'),'matches the official 1200px column');
+assert(css.includes('.wrapper .br-rooms{max-width:100%;padding-left:0;padding-right:0}'),'no double gutters inside the site wrapper');
+assert(/\.br-rooms \.br-rooms__dialog\{[^}]*margin:auto;/.test(css),'dialog survives the host margin reset');
+assert(/\.br-rooms \.br-rooms__info h3\{[^}]*BelokRooms/.test(css),'modal heading keeps the component font');
 console.log(`PASS: ${data.length} full room descriptions, ${data.reduce((n,r)=>n+r.images.length,0)} original photos, literal titles, no prices or amenities section`);

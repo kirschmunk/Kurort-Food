@@ -73,6 +73,7 @@
       parameters.replaceChildren(...[...basicParameters,...capacity,...otherParameters].map(spec=>{
         const group=document.createElement('div');
         if(spec.label.length>32)group.className='br-rooms__parameter-wide';
+        if(spec.value.length>22)group.classList.add('br-rooms__parameter-text');
         const dt=document.createElement('dt');const dd=document.createElement('dd');
         dt.textContent=spec.label;dd.textContent=spec.value;group.append(dt,dd);return group;
       }));
