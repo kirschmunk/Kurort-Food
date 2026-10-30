@@ -35,6 +35,7 @@
     track.addEventListener('keydown',e=>{if(e.target!==track)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1);}});
     new ResizeObserver(update).observe(track);
     update();
+    if (!dialog) return;
     function close(){dialog.close();opener?.focus({preventScroll:true});}
     section.querySelector('.br-rooms__close').addEventListener('click',close);
     dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)close();}});

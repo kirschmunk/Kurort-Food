@@ -1,10 +1,10 @@
 {
-  "version": "20261030-neutral-overlay",
+  "version": "20261030-display-only",
   "designCount": 2,
   "roomCount": 15,
   "imageCount": 74,
   "files": {
-    "README.md": "5a1b1a8551028c37dc9a81a00f998b002ab741f44f1210e6b839ca273e17d239",
+    "README.md": "9e2aa42353fe74a330208b65da33cac55311e994ed588344de631cdf744c8b96",
     "assets/fonts/Acrom-Bold.woff": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b",
     "assets/fonts/Acrom-Regular.woff": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574",
     "assets/images/11828-1.jpg": "c7f77d22547ce563f32dbbf20c9e5cfb4580b833678e06774bf9281a3331242c",
@@ -81,15 +81,15 @@
     "assets/images/8324-3.jpg": "41bafd1dcf167fc509918d18438f82d76bb7deb365bea36e56952bf254583410",
     "assets/images/8324-4.jpg": "22fea8c73d638cf517a9e52e4429f67e7fc851560f0ffc5c8bf7e04230056920",
     "assets/images/8324-5.jpg": "67e16d910e3fbb4f26e9f39460e50026feaeac916078208cbe0d0510fa50ae3b",
-    "block.html": "c7232bbf8629b7bfca6e77438c8d97a77362690ef408b396d2bf6c503b2fe8a5",
+    "block.html": "f01c6fd380e138163f3b7321a16b25e87d68d4462c8a4659874c1ff703462aa6",
     "catalog-snapshot.json": "fa10aeccfa37b259abaa2c9b7b3925c3cebdbad618c35ef35c47003315226e8a",
-    "index.html": "c76f6783efc988de332c6808137f3c2e871f18627a0deaafaa88537a30c58001",
+    "index.html": "5b9d1808b5f02446a7421ceae671632335708a9331dafd6c8576265cb6216a71",
     "rooms-data.js": "6ecdd12b7ff8ee3b89d8429b1eaa2f2e3d17fb68db2ab35921ddd3fe0a288089",
     "rooms-data.json": "8b0c43b03aab794095ac4a7de00868549161ba699e5713ffaa59f78377f34660",
     "rooms.css": "0c0141c5310dd38c23c892d85597c3de6233e20436c9ffadb78d30dee17d0977",
-    "rooms.js": "819a9cb1c684db98b769e30ffa2cc6730709a601d923b94fff1dde41cd7dd392",
-    "variant-2/block.html": "16cfea0f64eb1396562abf72898cca80be8c5d047d168aee08de7477e51ba092",
-    "variant-2/index.html": "c19b2cfa907aa5a6e83e8c95c92371a29750ad589a476da256444f0326d68086",
-    "variant-2/variant.css": "02da035f08c43033658d8e840b530f180463b8aa69b5802ddbb639f522aa53a4"
+    "rooms.js": "f12d281ae30cb41cbeadbd63c6eabc7ba66923636616b53752884bb786940b66",
+    "variant-2/block.html": "d21895159265ec3747d2425dcfa47c8fb1ecddbcea52c7837d2e5dd025fe04af",
+    "variant-2/index.html": "5f2b107025adb9d12914c83235a02c7cb1eac8175ebf487acb4afcf3975dfee5",
+    "variant-2/variant.css": "790401a8021a0e71af03c195075c76a9b5249d41089071392615af16ac9163d3"
   }
 }

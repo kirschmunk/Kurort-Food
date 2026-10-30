@@ -3,7 +3,7 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'belokurikha-rooms');
-const version = '20261030-neutral-overlay';
+const version = '20261030-display-only';
 const source = JSON.parse(fs.readFileSync(path.join(out,'catalog-snapshot.json'),'utf8'));
 const rooms = source.rooms.map(r=>({...r,originalName:r.title,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
 fs.mkdirSync(path.join(out,'assets/images'), {recursive:true});
@@ -26,13 +26,13 @@ const section=(variant='classic')=>`<section class="br-rooms${variant==='photo'?
   </div>
   <div class="br-rooms__track" id="br-rooms-track" tabindex="0" aria-label="Номера санатория. Используйте стрелки влево и вправо." aria-roledescription="карусель">
 ${rooms.map((r,i)=>`    <article class="br-rooms__card" data-room="${r.id}" aria-label="${i+1} из ${rooms.length}: ${esc(r.originalName)}">
-${variant==='photo'?`      <div class="br-rooms__visual"><button class="br-rooms__photo" type="button" data-open-room="${r.id}" aria-label="Фотографии: ${esc(r.originalName)}"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"></button><div class="br-rooms__caption"><p class="br-rooms__subtitle">${esc(r.subtitle)}</p><h3>${titleHTML(r.title)}</h3></div></div>
-      <div class="br-rooms__body">${facts(r)}<button class="br-rooms__details" type="button" data-open-room="${r.id}">Подробнее о номере ${arrow}</button></div>`:`
+${variant==='photo'?`      <div class="br-rooms__visual"><div class="br-rooms__photo"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"></div><div class="br-rooms__caption"><p class="br-rooms__subtitle">${esc(r.subtitle)}</p><h3>${titleHTML(r.title)}</h3></div></div>
+      <div class="br-rooms__body">${facts(r)}</div>`:`
       <button class="br-rooms__photo" type="button" data-open-room="${r.id}" aria-label="Фотографии: ${esc(r.originalName)}"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"><span class="br-rooms__view">Смотреть номер ${arrow}</span></button>
       <div class="br-rooms__body"><h3>${titleHTML(r.title)}</h3><p class="br-rooms__subtitle">${esc(r.subtitle)}</p>${facts(r)}<button class="br-rooms__details" type="button" data-open-room="${r.id}">Подробнее о номере ${arrow}</button></div>`}
     </article>`).join('\n')}
   </div>
-  <dialog class="br-rooms__dialog" aria-labelledby="br-rooms-modal-title">
+${variant==='classic'?`  <dialog class="br-rooms__dialog" aria-labelledby="br-rooms-modal-title">
     <div class="br-rooms__modal-bar"><span>Санаторий «Белокуриха»</span><button class="br-rooms__close" type="button" aria-label="Закрыть описание номера">×</button></div>
     <div class="br-rooms__modal">
       <div class="br-rooms__gallery" tabindex="0" aria-label="Фотографии номера. Используйте стрелки влево и вправо.">
@@ -45,7 +45,7 @@ ${variant==='photo'?`      <div class="br-rooms__visual"><button class="br-rooms
         <a class="br-rooms__all" href="https://www.belokurikha-san.ru/room/" target="_blank" rel="noopener">Перейти к каталогу ${arrow}</a>
       </div>
     </div>
-  </dialog>
+  </dialog>`:''}
 </section>`;
 const data = rooms.map(({photos,source,originalName,...r})=>r);
 fs.writeFileSync(path.join(out,'rooms-data.json'),JSON.stringify(rooms,null,2)+'\n');
@@ -57,8 +57,8 @@ for(const variant of ['classic','photo']){
   const html=section(variant);
   const extraCSS=isPhoto?`<link rel="stylesheet" href="variant.css?v=${version}">`:'';
   fs.mkdirSync(dest,{recursive:true});
-  fs.writeFileSync(path.join(dest,'block.html'),`<link rel="stylesheet" href="/upload/belokurikha-rooms/rooms.css?v=${version}">\n${isPhoto?`<link rel="stylesheet" href="/upload/belokurikha-rooms/variant-2/variant.css?v=${version}">\n`:''}${html.replaceAll('src="assets/','src="/upload/belokurikha-rooms/assets/')}\n<script src="/upload/belokurikha-rooms/rooms-data.js?v=${version}" defer></script>\n<script src="/upload/belokurikha-rooms/rooms.js?v=${version}" defer data-rooms-base="/upload/belokurikha-rooms/"></script>\n`);
-  fs.writeFileSync(path.join(dest,'index.html'),`<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Белокуриха — номера для вашего отдыха${isPhoto?' · вариант 2':''}</title><link rel="stylesheet" href="${prefix}rooms.css?v=${version}">${extraCSS}<style>body{margin:0;background:#fff;padding:64px 0 40px} @media(max-width:680px){body{padding:28px 0}}</style><script src="${prefix}rooms-data.js?v=${version}" defer></script><script src="${prefix}rooms.js?v=${version}" defer></script></head><body>${html.replaceAll('src="assets/',`src="${prefix}assets/`)}</body></html>\n`);
+  fs.writeFileSync(path.join(dest,'block.html'),`<link rel="stylesheet" href="/upload/belokurikha-rooms/rooms.css?v=${version}">\n${isPhoto?`<link rel="stylesheet" href="/upload/belokurikha-rooms/variant-2/variant.css?v=${version}">\n`:''}${html.replaceAll('src="assets/','src="/upload/belokurikha-rooms/assets/')}\n${isPhoto?'':`<script src="/upload/belokurikha-rooms/rooms-data.js?v=${version}" defer></script>\n`}<script src="/upload/belokurikha-rooms/rooms.js?v=${version}" defer data-rooms-base="/upload/belokurikha-rooms/"></script>\n`);
+  fs.writeFileSync(path.join(dest,'index.html'),`<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Белокуриха — номера для вашего отдыха${isPhoto?' · вариант 2':''}</title><link rel="stylesheet" href="${prefix}rooms.css?v=${version}">${extraCSS}<style>body{margin:0;background:#fff;padding:64px 0 40px} @media(max-width:680px){body{padding:28px 0}}</style>${isPhoto?'':`<script src="${prefix}rooms-data.js?v=${version}" defer></script>`}<script src="${prefix}rooms.js?v=${version}" defer></script></head><body>${html.replaceAll('src="assets/',`src="${prefix}assets/`)}</body></html>\n`);
 }
 if(process.argv.includes('--download')) {
   for(const r of rooms) for(const [i,url] of r.photos.entries()) {

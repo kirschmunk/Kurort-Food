@@ -21,15 +21,24 @@ for(const r of data){
 }
 for(const file of ['index.html','block.html','variant-2/index.html','variant-2/block.html']){
   const html=fs.readFileSync(path.join(dir,file),'utf8');
+  const displayOnly=file.startsWith('variant-2/');
   assert.equal((html.match(/class="br-rooms__card"/g)||[]).length,15);
-  assert.equal((html.match(/class="br-rooms__photo-prev"/g)||[]).length,1);
-  assert.equal((html.match(/class="br-rooms__photo-next"/g)||[]).length,1);
-  assert.equal((html.match(/class="br-rooms__parameters"/g)||[]).length,1,`${file}: single characteristics block`);
+  const cards=[...html.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)].map(m=>m[1]);
+  if(displayOnly){
+    assert(cards.every(card=>!/<(?:button|a)\b|data-open-room|role=["'](?:button|link)["']|tabindex=["']?[0-9]/i.test(card)),`${file}: cards are display-only, with no interactive controls`);
+    assert(!/<dialog\b|rooms-data\.js/.test(html),`${file}: no room dialog or detail data loaded`);
+    assert.equal(cards.reduce((n,c)=>n+(c.match(/<img\b/g)||[]).length,0),15,`${file}: one cover per card`);
+  }
+  assert.equal((html.match(/class="br-rooms__prev"/g)||[]).length,1,`${file}: carousel back control retained`);
+  assert.equal((html.match(/class="br-rooms__next"/g)||[]).length,1,`${file}: carousel next control retained`);
+  assert.equal((html.match(/class="br-rooms__photo-prev"/g)||[]).length,displayOnly?0:1);
+  assert.equal((html.match(/class="br-rooms__photo-next"/g)||[]).length,displayOnly?0:1);
+  assert.equal((html.match(/class="br-rooms__parameters"/g)||[]).length,displayOnly?0:1,`${file}: modal characteristics only in classic design`);
   assert(!html.includes('br-rooms__modal-facts'),`${file}: no separate stretched metrics`);
   assert(!/br-rooms__amenities|Оснащение номера/.test(html),`${file}: no room amenities section`);
   assert(!/br-rooms__(navigation|progress|counter)/.test(html),`${file}: no bottom carousel indicators`);
   if(file.startsWith('variant-2/'))assert(html.includes('br-rooms--photo')&&html.includes('variant.css'),`${file}: photo design is enabled`);
-  assert(html.indexOf('class="br-rooms__description"')<html.indexOf('class="br-rooms__parameters"'),`${file}: description comes first`);
+  if(!displayOnly)assert(html.indexOf('class="br-rooms__description"')<html.indexOf('class="br-rooms__parameters"'),`${file}: description comes first`);
   const titles=[...html.matchAll(/<h3>([\s\S]*?)<\/h3>/g)].map(m=>m[1].replace(/<[^>]*>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"'));
   assert.deepEqual(titles,data.map(r=>r.title),`${file}: exact full titles`);
   assert(!/₽|руб\.|Цена \(/i.test(html),`${file}: no price block`);

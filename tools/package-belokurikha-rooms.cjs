@@ -16,7 +16,7 @@ const collect = (folder, prefix = '') => fs.readdirSync(folder, {withFileTypes:t
 for (const file of expectedImages) if (!fs.existsSync(path.join(dir,file))) throw new Error('Missing '+file);
 const files = collect(dir).sort();
 const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-const manifest = {version:'20261030-neutral-overlay', designCount:2, roomCount:rooms.length, imageCount:expectedImages.size, files:Object.fromEntries(files.map(f=>[f,hash(path.join(dir,f))]))};
+const manifest = {version:'20261030-display-only', designCount:2, roomCount:rooms.length, imageCount:expectedImages.size, files:Object.fromEntries(files.map(f=>[f,hash(path.join(dir,f))]))};
 fs.writeFileSync(path.join(dir,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
 const temp = fs.mkdtempSync(path.join(os.tmpdir(),'belok-rooms-package-'));
 const packageDir = path.join(temp,'belokurikha-rooms');
