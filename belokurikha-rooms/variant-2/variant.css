@@ -1,10 +1,10 @@
 .br-rooms--photo .br-rooms__track{padding-top:8px;padding-bottom:20px}
 .br-rooms--photo .br-rooms__card{background:#fff;border-color:#e2eaf0;border-radius:14px;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s}
-.br-rooms--photo .br-rooms__visual{position:relative;isolation:isolate;aspect-ratio:.9;background:#193341;overflow:hidden}
+.br-rooms--photo .br-rooms__visual{position:relative;isolation:isolate;aspect-ratio:.9;background:#242424;overflow:hidden}
 .br-rooms--photo .br-rooms__photo{position:absolute;inset:0;height:100%;aspect-ratio:auto}
-.br-rooms--photo .br-rooms__visual::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 28%,rgba(10,34,49,.12) 43%,rgba(10,34,49,.92) 100%);pointer-events:none}
+.br-rooms--photo .br-rooms__visual::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 28%,rgba(10,10,10,.12) 43%,rgba(10,10,10,.92) 100%);pointer-events:none}
 .br-rooms--photo .br-rooms__caption{position:absolute;z-index:2;left:20px;right:20px;bottom:22px;pointer-events:none}
-.br-rooms--photo .br-rooms__caption h3{margin:0;font:700 19px/1.35 BelokRooms,Arial,sans-serif;color:#fff;text-transform:none;overflow-wrap:break-word;text-shadow:0 1px 8px #0a223130}
+.br-rooms--photo .br-rooms__caption h3{margin:0;font:700 19px/1.35 BelokRooms,Arial,sans-serif;color:#fff;text-transform:none;overflow-wrap:break-word;text-shadow:0 1px 8px #00000030}
 .br-rooms--photo .br-rooms__caption .br-rooms__subtitle{margin:0 0 8px;min-height:0;font:400 12px/1.4 BelokRooms,Arial,sans-serif;color:#d4ecf8}
 .br-rooms--photo .br-rooms__caption .br-rooms__subtitle:empty{display:none}
 .br-rooms--photo .br-rooms__body{padding:20px 18px 0;background:#f7fafc;transition:background .25s}

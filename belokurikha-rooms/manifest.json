@@ -1,10 +1,10 @@
 {
-  "version": "20261030-two-designs",
+  "version": "20261030-neutral-overlay",
   "designCount": 2,
   "roomCount": 15,
   "imageCount": 74,
   "files": {
-    "README.md": "8f9ac29425ef7f0c345272b8be8678f9b7054988f71d3bf4c16d7957ab1eb035",
+    "README.md": "5a1b1a8551028c37dc9a81a00f998b002ab741f44f1210e6b839ca273e17d239",
     "assets/fonts/Acrom-Bold.woff": "f371c791ef265d509a5aeab919df6500840ce39cf5d2d2d79937d6697713618b",
     "assets/fonts/Acrom-Regular.woff": "80545d8d59a723f330e209371f28a99b5687f31c494803c4c948d4d2e990b574",
     "assets/images/11828-1.jpg": "c7f77d22547ce563f32dbbf20c9e5cfb4580b833678e06774bf9281a3331242c",
@@ -81,15 +81,15 @@
     "assets/images/8324-3.jpg": "41bafd1dcf167fc509918d18438f82d76bb7deb365bea36e56952bf254583410",
     "assets/images/8324-4.jpg": "22fea8c73d638cf517a9e52e4429f67e7fc851560f0ffc5c8bf7e04230056920",
     "assets/images/8324-5.jpg": "67e16d910e3fbb4f26e9f39460e50026feaeac916078208cbe0d0510fa50ae3b",
-    "block.html": "af95b92b3b7a47baa49aa2889b8b3e192efdb5dc885c12ed995009b8d6a51ab3",
+    "block.html": "c7232bbf8629b7bfca6e77438c8d97a77362690ef408b396d2bf6c503b2fe8a5",
     "catalog-snapshot.json": "fa10aeccfa37b259abaa2c9b7b3925c3cebdbad618c35ef35c47003315226e8a",
-    "index.html": "8043db8ac363db1fc2e7d99ef809be10f1fe3866754971a7be771aa15a384af2",
+    "index.html": "c76f6783efc988de332c6808137f3c2e871f18627a0deaafaa88537a30c58001",
     "rooms-data.js": "6ecdd12b7ff8ee3b89d8429b1eaa2f2e3d17fb68db2ab35921ddd3fe0a288089",
     "rooms-data.json": "8b0c43b03aab794095ac4a7de00868549161ba699e5713ffaa59f78377f34660",
     "rooms.css": "0c0141c5310dd38c23c892d85597c3de6233e20436c9ffadb78d30dee17d0977",
     "rooms.js": "819a9cb1c684db98b769e30ffa2cc6730709a601d923b94fff1dde41cd7dd392",
-    "variant-2/block.html": "33102433aafb85fee8bb8c6d43fa8164cf03ac1fa7e0bfd09f8bc6f4abc2d36e",
-    "variant-2/index.html": "3d476d9ee3dd8aa2eb40840b60fb6a8d583cd9eb32bddb6eb2d08014fb90eb17",
-    "variant-2/variant.css": "45970b9804a07c9b8205f80f61852786179c9b00d8c9e12156675959c4e64c38"
+    "variant-2/block.html": "16cfea0f64eb1396562abf72898cca80be8c5d047d168aee08de7477e51ba092",
+    "variant-2/index.html": "c19b2cfa907aa5a6e83e8c95c92371a29750ad589a476da256444f0326d68086",
+    "variant-2/variant.css": "02da035f08c43033658d8e840b530f180463b8aa69b5802ddbb639f522aa53a4"
   }
 }
