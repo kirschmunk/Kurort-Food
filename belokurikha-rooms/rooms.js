@@ -10,9 +10,6 @@
     const cards = Array.from(track.children);
     const prev = section.querySelector('.br-rooms__prev');
     const next = section.querySelector('.br-rooms__next');
-    const counter = section.querySelector('.br-rooms__counter');
-    const progress = section.querySelector('.br-rooms__progress span');
-    const nav = section.querySelector('.br-rooms__navigation');
     const dialog = section.querySelector('dialog');
     let opener;
     let frame;
@@ -24,18 +21,13 @@
       return {step, count, first};
     };
     const update = () => {
-      const {count, first} = measure();
       prev.disabled = track.scrollLeft <= 2;
       next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 3;
-      counter.textContent = count === 1 ? `${first + 1} из ${cards.length}` : `${first + 1}–${Math.min(first+count,cards.length)} из ${cards.length}`;
-      progress.style.width = `${count/cards.length*100}%`;
-      progress.style.transform = `translateX(${first/count*100}%)`;
     };
     const move = direction => {
       const {step, count, first} = measure();
       track.scrollTo({left:Math.max(0,Math.min(cards.length-count,first+direction*count))*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     };
-    nav.hidden = false;
     section.querySelector('[data-br-controls]').hidden = false;
     prev.addEventListener('click',()=>move(-1));
     next.addEventListener('click',()=>move(1));

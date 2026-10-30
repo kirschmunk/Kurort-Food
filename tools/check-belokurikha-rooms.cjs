@@ -19,7 +19,7 @@ for(const r of data){
   assert.equal(r.images.length,r.photos.length);
   for(const file of r.images){const bytes=fs.readFileSync(path.join(dir,file));assert.equal(bytes[0],255);assert.equal(bytes[1],216);}
 }
-for(const file of ['index.html','block.html']){
+for(const file of ['index.html','block.html','variant-2/index.html','variant-2/block.html']){
   const html=fs.readFileSync(path.join(dir,file),'utf8');
   assert.equal((html.match(/class="br-rooms__card"/g)||[]).length,15);
   assert.equal((html.match(/class="br-rooms__photo-prev"/g)||[]).length,1);
@@ -27,6 +27,8 @@ for(const file of ['index.html','block.html']){
   assert.equal((html.match(/class="br-rooms__parameters"/g)||[]).length,1,`${file}: single characteristics block`);
   assert(!html.includes('br-rooms__modal-facts'),`${file}: no separate stretched metrics`);
   assert(!/br-rooms__amenities|Оснащение номера/.test(html),`${file}: no room amenities section`);
+  assert(!/br-rooms__(navigation|progress|counter)/.test(html),`${file}: no bottom carousel indicators`);
+  if(file.startsWith('variant-2/'))assert(html.includes('br-rooms--photo')&&html.includes('variant.css'),`${file}: photo design is enabled`);
   assert(html.indexOf('class="br-rooms__description"')<html.indexOf('class="br-rooms__parameters"'),`${file}: description comes first`);
   const titles=[...html.matchAll(/<h3>([\s\S]*?)<\/h3>/g)].map(m=>m[1].replace(/<[^>]*>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"'));
   assert.deepEqual(titles,data.map(r=>r.title),`${file}: exact full titles`);
@@ -34,6 +36,7 @@ for(const file of ['index.html','block.html']){
 }
 assert(!fs.readFileSync(path.join(dir,'rooms.js'),'utf8').includes('br-rooms__amenities'),'no amenities rendering');
 assert(!fs.readFileSync(path.join(dir,'rooms.css'),'utf8').includes('br-rooms__amenities'),'no unused amenities styles');
+for(const file of ['rooms.css','rooms.js'])assert(!/br-rooms__(navigation|progress|counter)/.test(fs.readFileSync(path.join(dir,file),'utf8')),`${file}: no obsolete indicators`);
 const css=fs.readFileSync(path.join(dir,'rooms.css'),'utf8');
 assert(css.includes('max-width:1200px'),'matches the official 1200px column');
 assert(css.includes('.wrapper .br-rooms{max-width:100%;padding-left:0;padding-right:0}'),'no double gutters inside the site wrapper');

@@ -1,0 +1,22 @@
+.br-rooms--photo .br-rooms__track{padding-top:8px;padding-bottom:20px}
+.br-rooms--photo .br-rooms__card{background:#fff;border-color:#e2eaf0;border-radius:14px;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s}
+.br-rooms--photo .br-rooms__visual{position:relative;isolation:isolate;aspect-ratio:.9;background:#193341;overflow:hidden}
+.br-rooms--photo .br-rooms__photo{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+.br-rooms--photo .br-rooms__visual::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 28%,rgba(10,34,49,.12) 43%,rgba(10,34,49,.92) 100%);pointer-events:none}
+.br-rooms--photo .br-rooms__caption{position:absolute;z-index:2;left:20px;right:20px;bottom:22px;pointer-events:none}
+.br-rooms--photo .br-rooms__caption h3{margin:0;font:700 19px/1.35 BelokRooms,Arial,sans-serif;color:#fff;text-transform:none;overflow-wrap:break-word;text-shadow:0 1px 8px #0a223130}
+.br-rooms--photo .br-rooms__caption .br-rooms__subtitle{margin:0 0 8px;min-height:0;font:400 12px/1.4 BelokRooms,Arial,sans-serif;color:#d4ecf8}
+.br-rooms--photo .br-rooms__caption .br-rooms__subtitle:empty{display:none}
+.br-rooms--photo .br-rooms__body{padding:20px 18px 0;background:#f7fafc;transition:background .25s}
+.br-rooms--photo .br-rooms__facts{grid-auto-flow:column;grid-auto-columns:1fr;gap:10px;min-height:0;margin:0 0 16px}
+.br-rooms--photo .br-rooms__fact{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0;line-height:1.35}
+.br-rooms--photo .br-rooms__fact svg{display:none}
+.br-rooms--photo .br-rooms__fact dd{order:-1;font-size:17px;color:#265b78;line-height:1.3}
+.br-rooms--photo .br-rooms__fact dt{font-size:11.5px;min-height:31px;color:#647885}
+.br-rooms--photo .br-rooms__details{padding:13px 0 15px;font-size:13px;border-top-color:#dce8ef}
+.br-rooms--photo .br-rooms__details svg{width:22px;height:22px;transition:transform .25s}
+.br-rooms--photo .br-rooms__card:focus-within{border-color:#85c4e3;box-shadow:0 8px 18px #23439312}
+@media(hover:hover){.br-rooms--photo .br-rooms__card:hover{transform:translateY(-4px);border-color:#85c4e3;box-shadow:0 10px 20px #23439316}.br-rooms--photo .br-rooms__card:hover .br-rooms__body{background:#e9f5fc}.br-rooms--photo .br-rooms__card:hover .br-rooms__photo img{transform:scale(1.045)}.br-rooms--photo .br-rooms__card:hover .br-rooms__details svg{transform:translateX(3px)}}
+@media(max-width:1100px){.br-rooms--photo .br-rooms__visual{aspect-ratio:1}.br-rooms--photo .br-rooms__caption h3{font-size:20px}}
+@media(max-width:580px){.br-rooms--photo .br-rooms__visual{aspect-ratio:1}.br-rooms--photo .br-rooms__caption{left:20px;right:20px;bottom:20px}.br-rooms--photo .br-rooms__caption h3{font-size:21px}.br-rooms--photo .br-rooms__body{padding:18px 18px 0}.br-rooms--photo .br-rooms__facts{gap:8px}.br-rooms--photo .br-rooms__details{font-size:13px;min-height:48px}}
+@media(prefers-reduced-motion:reduce){.br-rooms--photo .br-rooms__card:hover,.br-rooms--photo .br-rooms__card:hover .br-rooms__photo img,.br-rooms--photo .br-rooms__card:hover .br-rooms__details svg{transform:none}}
