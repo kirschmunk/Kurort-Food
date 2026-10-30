@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "page": "https://www.belokurikha-san.ru/room/",
   "catalog": "https://belokurikha.ru/nomera-belokuriha/",
-  "selection": "15 records verified visible in the live catalogue",
+  "selection": "18 records visible across 14 vouchers and 5 periods; see catalog-audit.json",
   "rooms": [
     {
       "id": "11978",
@@ -66,6 +66,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/10/10k21-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/komfort-dvuhmestnyj-tvindabl-4-fit-1024x586.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1k24-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1k24-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_11978"
     },
     {
@@ -132,6 +134,8 @@
         "https://belokurikha.ru/wp-content/uploads/2023/01/photo_9_2025-10-10_13-29-05-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/prestizh-dvuhkomnatnyj-dabl-41-fit-1024x807.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2023/01/photo_2_2025-10-10_13-29-05-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2023/01/photo_2_2025-10-10_13-29-05-1024x658.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16577"
     },
     {
@@ -198,6 +202,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/10/photo_7_2025-10-10_13-44-53-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/dzhunior-syuit-odnokomnatnyj-fit-1024x963.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-44-53-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-44-53-1024x682.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16580"
     },
     {
@@ -265,6 +271,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/10/photo_7_2025-10-10_13-52-07-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/lyuks-fit-976x1024.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_9_2025-10-10_13-52-07-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_9_2025-10-10_13-52-07-1024x678.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16602"
     },
     {
@@ -326,6 +334,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/10/9td1-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/standart-dvuhmestnyj-tvindabl-4-fit-1024x509.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1td2-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1td2-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_8321"
     },
     {
@@ -381,6 +391,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/10/5-1-fit-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/standart-odnomestnyj-4-fit-1024x556.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1-1-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1-1-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_12004"
     },
     {
@@ -444,6 +456,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/10/9k-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/komfort-odnomestnyj-fit-1024x554.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1k3-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1k3-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_11980"
     },
     {
@@ -503,6 +517,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/08/7-6-fit-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/prestizh-tvindabldabl-4-fit-1024x654.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-8-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-8-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_8324"
     },
     {
@@ -571,6 +587,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/10/photo_4_2025-10-10_13-47-56-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/dzhunior-syuit-odnokomnatnyj-fit-1024x963.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-47-56-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-47-56-1024x682.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16579"
     },
     {
@@ -638,6 +656,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/10/photo_8_2025-10-10_13-54-42-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/lyuks-fit-976x1024.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_13-54-42-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_13-54-42-1024x682.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16603"
     },
     {
@@ -707,6 +727,8 @@
         "https://belokurikha.ru/wp-content/uploads/2024/08/10-1-fit-1024x682.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/apartamenty-%E2%84%96409-fit-1024x557.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-5-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-5-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16628"
     },
     {
@@ -757,6 +779,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3479-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3513-fit-1024x683.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16629"
     },
     {
@@ -823,6 +847,8 @@
         "https://belokurikha.ru/wp-content/uploads/2026/01/7-2-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2026/01/8-2-fit-1024x683.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2026/01/1-4-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2026/01/1-4-fit-1024x683.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_17785"
     },
     {
@@ -894,6 +920,8 @@
         "https://belokurikha.ru/wp-content/uploads/2025/10/photo_1_2025-10-10_14-00-35-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/apartamenty-fit-1024x745.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_14-00-35-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_14-00-35-1024x682.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_16630"
     },
     {
@@ -962,7 +990,197 @@
         "https://belokurikha.ru/wp-content/uploads/2023/08/novoe-fit-1024x683.jpg",
         "https://belokurikha.ru/wp-content/uploads/2025/06/syuit-dvuhmestnyj-fit-1024x404.jpg"
       ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1024x684.jpg",
       "source": "https://belokurikha.ru/nomera-belokuriha/#room_11828"
+    },
+    {
+      "id": "2273",
+      "title": "Джуниор сюит однокомнатный 4*",
+      "subtitle": "одноместный",
+      "area": "30",
+      "main": 1,
+      "extra": 3,
+      "description": [
+        "Однокомнатный просторный номер-студия с балконом, оснащенный всем необходимым для комфортного отдыха. Подходит для размещения до четырех гостей. Номер располагает двуспальной кроватью (160см), для дополнительных мест предусмотрен раскладной диван."
+      ],
+      "specs": [
+        {
+          "label": "Вид из окна:",
+          "value": "На лес или территорию санатория"
+        },
+        {
+          "label": "Тип кровати:",
+          "value": "Кровать 160 см"
+        },
+        {
+          "label": "Возможность установки детской кроватки:",
+          "value": "Да"
+        },
+        {
+          "label": "Вместимость:",
+          "value": "4"
+        }
+      ],
+      "amenities": [
+        "СВЧ-печь",
+        "Халат и тапочки",
+        "Кондиционер",
+        "Сейф",
+        "Биде",
+        "Набор посуды",
+        "Гладильная доска с утюгом",
+        "Фен",
+        "Бесплатный Wi-Fi",
+        "ЖК-телевизор",
+        "Щетки для одежды и обуви",
+        "Швейный набор",
+        "Холодильник",
+        "Чайная станция",
+        "Телефон",
+        "Гель, мыло, шампунь",
+        "Сушилка для белья на балконе",
+        "Комплект из 3-х полотенец на каждого гостя"
+      ],
+      "notes": [
+        "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+        "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+      ],
+      "photos": [
+        "https://belokurikha.ru/wp-content/uploads/2023/02/1-2-1-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/2-3-1-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/3-3-1-1024x693.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/4-2-1-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/5-3-1-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/6-4-1-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/7-2-1-1024x677.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/8-2-1-1024x679.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2023/02/9-3-1024x681.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/06/dzhunior-syuit-odnokomnatnyj-fit-1024x963.jpg"
+      ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2023/02/1-2-1-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2023/02/1-2-1-1024x683.jpg",
+      "source": "https://belokurikha.ru/nomera-belokuriha/#room_2273"
+    },
+    {
+      "id": "2184",
+      "title": "Апартаменты 4*",
+      "subtitle": "одноместный",
+      "area": "54",
+      "main": 1,
+      "extra": 4,
+      "description": [
+        "Роскошные апартаменты предназначены для отдыха премиального уровня. Элегантный номер предлагает гостям просторную гостиную с кухонной зоной и уютной спальней. Подходит для комфортного размещения до пяти гостей. Номер располагает двуспальной кроватью (160-180 см), для дополнительных мест предусмотрен раскладной диван и еврораскладушка."
+      ],
+      "specs": [
+        {
+          "label": "Вид из окна:",
+          "value": "На территорию санатория"
+        },
+        {
+          "label": "Тип кровати:",
+          "value": "Кровать 160-180 см"
+        },
+        {
+          "label": "Возможность установки детской кроватки:",
+          "value": "Да"
+        },
+        {
+          "label": "Вместимость:",
+          "value": "5"
+        }
+      ],
+      "amenities": [
+        "СВЧ-печь",
+        "Халат и тапочки",
+        "Кондиционер",
+        "Сейф",
+        "Биде",
+        "Набор посуды",
+        "Стиральная машина",
+        "Сушилка для белья комнатная",
+        "Гладильная доска с утюгом",
+        "Фен",
+        "Бесплатный Wi-Fi",
+        "ЖК-телевизор",
+        "Щетки для одежды и обуви",
+        "Швейный набор",
+        "Холодильник",
+        "Чайная станция",
+        "Телефон",
+        "Гель, мыло, шампунь",
+        "Сушилка для белья на балконе",
+        "Комплект из 3-х полотенец на каждого гостя"
+      ],
+      "notes": [
+        "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+        "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+      ],
+      "photos": [
+        "https://belokurikha.ru/wp-content/uploads/2024/08/1-1-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/2-1-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/3-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/4-5-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/5-4-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/6-3-fit-1024x688.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/7-3-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/8-2-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2024/08/9-2-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/06/apartamenty-fit-1024x745.jpg"
+      ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1-fit-1024x683.jpg",
+      "source": "https://belokurikha.ru/nomera-belokuriha/#room_2184"
+    },
+    {
+      "id": "15992",
+      "title": "Апартаменты 344 4*",
+      "subtitle": "",
+      "area": "50,1",
+      "main": 1,
+      "extra": 3,
+      "description": [],
+      "specs": [],
+      "amenities": [
+        "СВЧ-печь",
+        "Халат и тапочки",
+        "Кондиционер",
+        "Сейф",
+        "Кофемашина",
+        "Набор посуды",
+        "Стиральная машина",
+        "Сушилка для белья комнатная",
+        "Гладильная доска с утюгом",
+        "Бесплатная парковка",
+        "Фен",
+        "Бесплатный Wi-Fi",
+        "ЖК-телевизор",
+        "Щетки для одежды и обуви",
+        "Швейный набор",
+        "Холодильник",
+        "Чайная станция",
+        "Телефон",
+        "Гель, мыло, шампунь",
+        "Сушилка для белья на балконе",
+        "Комплект из 3-х полотенец на каждого гостя"
+      ],
+      "notes": [
+        "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+        "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+      ],
+      "photos": [
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3549-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3518-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3532-fit-1024x682.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3552-fit-1024x682.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3559-fit-1024x682.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3479-fit-1024x683.jpg",
+        "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3513-fit-1024x683.jpg"
+      ],
+      "preview": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-523x426.jpg",
+      "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
+      "source": "https://belokurikha.ru/nomera-belokuriha/#room_15992"
     }
   ]
 }

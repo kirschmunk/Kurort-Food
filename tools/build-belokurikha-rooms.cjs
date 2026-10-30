@@ -3,9 +3,9 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'belokurikha-rooms');
-const version = '20261030-display-only';
+const version = '20261030-catalog-audit';
 const source = JSON.parse(fs.readFileSync(path.join(out,'catalog-snapshot.json'),'utf8'));
-const rooms = source.rooms.map(r=>({...r,originalName:r.title,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
+const rooms = source.rooms.map(r=>({...r,originalName:r.title,previewImage:`assets/images/${r.id}-preview.jpg`,photos:r.photos.slice(0,5),images:r.photos.slice(0,5).map((_,i)=>`assets/images/${r.id}-${i+1}.jpg`)}));
 fs.mkdirSync(path.join(out,'assets/images'), {recursive:true});
 fs.mkdirSync(path.join(out,'assets/fonts'), {recursive:true});
 for (const weight of ['Regular','Bold']) fs.copyFileSync(path.join(root,`assets/fonts/Acrom-${weight}.woff`),path.join(out,`assets/fonts/Acrom-${weight}.woff`));
@@ -26,9 +26,9 @@ const section=(variant='classic')=>`<section class="br-rooms${variant==='photo'?
   </div>
   <div class="br-rooms__track" id="br-rooms-track" tabindex="0" aria-label="Номера санатория. Используйте стрелки влево и вправо." aria-roledescription="карусель">
 ${rooms.map((r,i)=>`    <article class="br-rooms__card" data-room="${r.id}" aria-label="${i+1} из ${rooms.length}: ${esc(r.originalName)}">
-${variant==='photo'?`      <div class="br-rooms__visual"><div class="br-rooms__photo"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"></div><div class="br-rooms__caption"><p class="br-rooms__subtitle">${esc(r.subtitle)}</p><h3>${titleHTML(r.title)}</h3></div></div>
+${variant==='photo'?`      <div class="br-rooms__visual"><div class="br-rooms__photo"><img src="${r.previewImage}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="523" height="426" loading="${i<4?'eager':'lazy'}" decoding="async"></div><div class="br-rooms__caption"><p class="br-rooms__subtitle">${esc(r.subtitle)}</p><h3>${titleHTML(r.title)}</h3></div></div>
       <div class="br-rooms__body">${facts(r)}</div>`:`
-      <button class="br-rooms__photo" type="button" data-open-room="${r.id}" aria-label="Фотографии: ${esc(r.originalName)}"><img src="${r.images[0]}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="1024" height="683" loading="${i<4?'eager':'lazy'}" decoding="async"><span class="br-rooms__view">Смотреть номер ${arrow}</span></button>
+      <button class="br-rooms__photo" type="button" data-open-room="${r.id}" aria-label="Фотографии: ${esc(r.originalName)}"><img src="${r.previewImage}" alt="${esc(r.originalName)} — санаторий «Белокуриха»" width="523" height="426" loading="${i<4?'eager':'lazy'}" decoding="async"><span class="br-rooms__view">Смотреть номер ${arrow}</span></button>
       <div class="br-rooms__body"><h3>${titleHTML(r.title)}</h3><p class="br-rooms__subtitle">${esc(r.subtitle)}</p>${facts(r)}<button class="br-rooms__details" type="button" data-open-room="${r.id}">Подробнее о номере ${arrow}</button></div>`}
     </article>`).join('\n')}
   </div>
@@ -61,8 +61,8 @@ for(const variant of ['classic','photo']){
   fs.writeFileSync(path.join(dest,'index.html'),`<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Белокуриха — номера для вашего отдыха${isPhoto?' · вариант 2':''}</title><link rel="stylesheet" href="${prefix}rooms.css?v=${version}">${extraCSS}<style>body{margin:0;background:#fff;padding:64px 0 40px} @media(max-width:680px){body{padding:28px 0}}</style>${isPhoto?'':`<script src="${prefix}rooms-data.js?v=${version}" defer></script>`}<script src="${prefix}rooms.js?v=${version}" defer></script></head><body>${html.replaceAll('src="assets/',`src="${prefix}assets/`)}</body></html>\n`);
 }
 if(process.argv.includes('--download')) {
-  for(const r of rooms) for(const [i,url] of r.photos.entries()) {
-    const dest=path.join(out,r.images[i]);
+  for(const r of rooms) for(const [url,file] of [[r.preview,r.previewImage],...r.photos.map((url,i)=>[url,r.images[i]])]) {
+    const dest=path.join(out,file);
     if(!fs.existsSync(dest)) execFileSync('curl',['-4','-fsSL','--retry','1','--connect-timeout','12','--max-time','30',url.replace('https://belokurikha.ru/','https://www.belokurikha.ru/'),'-o',dest]);
   }
 }

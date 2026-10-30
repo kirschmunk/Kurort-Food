@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const dir = path.resolve(__dirname,'../belokurikha-rooms');
 const rooms = JSON.parse(fs.readFileSync(path.join(dir,'rooms-data.json'),'utf8'));
-const pending = rooms.flatMap(r=>r.photos.map((url,i)=>({url,file:path.join(dir,r.images[i])})));
+const pending = rooms.flatMap(r=>[{url:r.preview,file:path.join(dir,r.previewImage)},...r.photos.map((url,i)=>({url,file:path.join(dir,r.images[i])}))]).filter(item=>!process.argv.includes('--missing-only')||!fs.existsSync(item.file));
 async function download(item) {
   const url = new URL(item.url);
   if(url.hostname!=='belokurikha.ru'||!url.pathname.startsWith('/wp-content/uploads/'))throw Error('Unexpected image source');

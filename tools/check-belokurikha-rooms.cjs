@@ -2,18 +2,30 @@ const fs=require('node:fs');
 const path=require('node:path');
 const assert=require('node:assert/strict');
 const vm=require('node:vm');
+const crypto=require('node:crypto');
 const dir=path.resolve(__dirname,'../belokurikha-rooms');
 const source=JSON.parse(fs.readFileSync(path.join(dir,'catalog-snapshot.json'),'utf8'));
+const audit=JSON.parse(fs.readFileSync(path.join(dir,'catalog-audit.json'),'utf8'));
 const data=JSON.parse(fs.readFileSync(path.join(dir,'rooms-data.json'),'utf8'));
 const runtime={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(dir,'rooms-data.js'),'utf8'),runtime);
 const ui=JSON.parse(JSON.stringify(runtime.window.BelokurikhaRoomsData));
-assert.equal(data.length,15);
-assert.equal(new Set(data.map(r=>r.id)).size,15);
+const auditedIds=[...new Set(audit.states.flatMap(s=>s.ids))].sort();
+assert.deepEqual(data.map(r=>r.id).sort(),auditedIds,'includes every room visible across all audited vouchers and periods, with no hidden-only records');
+assert.equal(new Set(data.map(r=>r.id)).size,auditedIds.length);
+assert.equal(audit.states.length,audit.vouchers.length*audit.periods.length,'every voucher and period combination audited');
+assert.equal(new Set(audit.states.map(s=>s.voucher+'/'+s.period)).size,audit.states.length,'no duplicate audit states replacing missing combinations');
+assert.deepEqual([...new Set(audit.occupancyChecks.flatMap(s=>s.ids))].filter(id=>!auditedIds.includes(id)),[],'adult occupancy checks add no missing room category');
 const exactFields=['title','subtitle','area','main','extra','description','specs','amenities','notes'];
 for(const r of data){
   const s=source.rooms.find(s=>s.id===r.id);
   const u=ui.find(u=>u.id===r.id);
+  const a=audit.rooms.find(a=>a.id===r.id);
+  for(const field of ['title','subtitle','area','main','extra','preview'])assert.deepEqual(r[field],a[field],`${r.id}: matches live catalogue ${field}`);
+  assert.equal(r.previewOriginal,a.previewOriginal,`${r.id}: cover is the first catalogue photo`);
+  assert.equal(r.previewImage,`assets/images/${r.id}-preview.jpg`,`${r.id}: bundled exact catalogue thumbnail`);
+  const cover=fs.readFileSync(path.join(dir,r.previewImage));assert.equal(cover[0],255);assert.equal(cover[1],216);
+  assert.equal(crypto.createHash('sha256').update(cover).digest('hex'),a.previewSha256,`${r.id}: thumbnail bytes match verified official asset`);
   for(const field of exactFields){assert.deepEqual(r[field],s[field],`${r.id}: ${field}`);assert.deepEqual(u[field],s[field],`${r.id}: runtime ${field}`);}
   assert.deepEqual(r.photos,s.photos.slice(0,5),`${r.id}: photo sources`);
   assert.equal(r.images.length,r.photos.length);
@@ -22,12 +34,13 @@ for(const r of data){
 for(const file of ['index.html','block.html','variant-2/index.html','variant-2/block.html']){
   const html=fs.readFileSync(path.join(dir,file),'utf8');
   const displayOnly=file.startsWith('variant-2/');
-  assert.equal((html.match(/class="br-rooms__card"/g)||[]).length,15);
+  assert.equal((html.match(/class="br-rooms__card"/g)||[]).length,auditedIds.length);
   const cards=[...html.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)].map(m=>m[1]);
+  cards.forEach((card,i)=>assert(card.includes(data[i].previewImage),`${file}: ${data[i].id} uses exact catalogue preview`));
   if(displayOnly){
     assert(cards.every(card=>!/<(?:button|a)\b|data-open-room|role=["'](?:button|link)["']|tabindex=["']?[0-9]/i.test(card)),`${file}: cards are display-only, with no interactive controls`);
     assert(!/<dialog\b|rooms-data\.js/.test(html),`${file}: no room dialog or detail data loaded`);
-    assert.equal(cards.reduce((n,c)=>n+(c.match(/<img\b/g)||[]).length,0),15,`${file}: one cover per card`);
+    assert.equal(cards.reduce((n,c)=>n+(c.match(/<img\b/g)||[]).length,0),auditedIds.length,`${file}: one cover per card`);
   }
   assert.equal((html.match(/class="br-rooms__prev"/g)||[]).length,1,`${file}: carousel back control retained`);
   assert.equal((html.match(/class="br-rooms__next"/g)||[]).length,1,`${file}: carousel next control retained`);
@@ -51,4 +64,4 @@ assert(css.includes('max-width:1200px'),'matches the official 1200px column');
 assert(css.includes('.wrapper .br-rooms{max-width:100%;padding-left:0;padding-right:0}'),'no double gutters inside the site wrapper');
 assert(/\.br-rooms \.br-rooms__dialog\{[^}]*margin:auto;/.test(css),'dialog survives the host margin reset');
 assert(/\.br-rooms \.br-rooms__info h3\{[^}]*BelokRooms/.test(css),'modal heading keeps the component font');
-console.log(`PASS: ${data.length} full room descriptions, ${data.reduce((n,r)=>n+r.images.length,0)} original photos, literal titles, no prices or amenities section`);
+console.log(`PASS: ${data.length} rooms from ${audit.states.length} voucher/period checks, exact catalogue previews, ${data.reduce((n,r)=>n+r.images.length,0)} gallery photos, literal titles, no prices or amenities section`);

@@ -48,6 +48,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1k24-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1k24-fit-1024x683.jpg",
+    "previewImage": "assets/images/11978-preview.jpg",
     "images": [
       "assets/images/11978-1.jpg",
       "assets/images/11978-2.jpg",
@@ -105,6 +108,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2023/01/photo_2_2025-10-10_13-29-05-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2023/01/photo_2_2025-10-10_13-29-05-1024x658.jpg",
+    "previewImage": "assets/images/16577-preview.jpg",
     "images": [
       "assets/images/16577-1.jpg",
       "assets/images/16577-2.jpg",
@@ -165,6 +171,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-44-53-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-44-53-1024x682.jpg",
+    "previewImage": "assets/images/16580-preview.jpg",
     "images": [
       "assets/images/16580-1.jpg",
       "assets/images/16580-2.jpg",
@@ -223,6 +232,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_9_2025-10-10_13-52-07-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_9_2025-10-10_13-52-07-1024x678.jpg",
+    "previewImage": "assets/images/16602-preview.jpg",
     "images": [
       "assets/images/16602-1.jpg",
       "assets/images/16602-2.jpg",
@@ -278,6 +290,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1td2-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1td2-fit-1024x683.jpg",
+    "previewImage": "assets/images/8321-preview.jpg",
     "images": [
       "assets/images/8321-1.jpg",
       "assets/images/8321-2.jpg",
@@ -333,6 +348,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1-1-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1-1-fit-1024x683.jpg",
+    "previewImage": "assets/images/12004-preview.jpg",
     "images": [
       "assets/images/12004-1.jpg",
       "assets/images/12004-2.jpg",
@@ -389,6 +407,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/10/1k3-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/10/1k3-fit-1024x683.jpg",
+    "previewImage": "assets/images/11980-preview.jpg",
     "images": [
       "assets/images/11980-1.jpg",
       "assets/images/11980-2.jpg",
@@ -446,6 +467,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-8-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-8-fit-1024x683.jpg",
+    "previewImage": "assets/images/8324-preview.jpg",
     "images": [
       "assets/images/8324-1.jpg",
       "assets/images/8324-2.jpg",
@@ -506,6 +530,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-47-56-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_3_2025-10-10_13-47-56-1024x682.jpg",
+    "previewImage": "assets/images/16579-preview.jpg",
     "images": [
       "assets/images/16579-1.jpg",
       "assets/images/16579-2.jpg",
@@ -564,6 +591,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_13-54-42-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_11_2025-10-10_13-54-42-1024x682.jpg",
+    "previewImage": "assets/images/16603-preview.jpg",
     "images": [
       "assets/images/16603-1.jpg",
       "assets/images/16603-2.jpg",
@@ -626,6 +656,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-5-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-5-fit-1024x683.jpg",
+    "previewImage": "assets/images/16628-preview.jpg",
     "images": [
       "assets/images/16628-1.jpg",
       "assets/images/16628-2.jpg",
@@ -672,6 +705,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
+    "previewImage": "assets/images/16629-preview.jpg",
     "images": [
       "assets/images/16629-1.jpg",
       "assets/images/16629-2.jpg",
@@ -734,6 +770,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2026/01/1-4-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2026/01/1-4-fit-1024x683.jpg",
+    "previewImage": "assets/images/17785-preview.jpg",
     "images": [
       "assets/images/17785-1.jpg",
       "assets/images/17785-2.jpg",
@@ -796,6 +835,9 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_14-00-35-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/10/photo_10_2025-10-10_14-00-35-1024x682.jpg",
+    "previewImage": "assets/images/16630-preview.jpg",
     "images": [
       "assets/images/16630-1.jpg",
       "assets/images/16630-2.jpg",
@@ -857,12 +899,190 @@ window.BelokurikhaRoomsData = [
       "*Дизайн номеров может отличаться от предоставленных на фотографии.",
       "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
     ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1024x684.jpg",
+    "previewImage": "assets/images/11828-preview.jpg",
     "images": [
       "assets/images/11828-1.jpg",
       "assets/images/11828-2.jpg",
       "assets/images/11828-3.jpg",
       "assets/images/11828-4.jpg",
       "assets/images/11828-5.jpg"
+    ]
+  },
+  {
+    "id": "2273",
+    "title": "Джуниор сюит однокомнатный 4*",
+    "subtitle": "одноместный",
+    "area": "30",
+    "main": 1,
+    "extra": 3,
+    "description": [
+      "Однокомнатный просторный номер-студия с балконом, оснащенный всем необходимым для комфортного отдыха. Подходит для размещения до четырех гостей. Номер располагает двуспальной кроватью (160см), для дополнительных мест предусмотрен раскладной диван."
+    ],
+    "specs": [
+      {
+        "label": "Вид из окна:",
+        "value": "На лес или территорию санатория"
+      },
+      {
+        "label": "Тип кровати:",
+        "value": "Кровать 160 см"
+      },
+      {
+        "label": "Возможность установки детской кроватки:",
+        "value": "Да"
+      },
+      {
+        "label": "Вместимость:",
+        "value": "4"
+      }
+    ],
+    "amenities": [
+      "СВЧ-печь",
+      "Халат и тапочки",
+      "Кондиционер",
+      "Сейф",
+      "Биде",
+      "Набор посуды",
+      "Гладильная доска с утюгом",
+      "Фен",
+      "Бесплатный Wi-Fi",
+      "ЖК-телевизор",
+      "Щетки для одежды и обуви",
+      "Швейный набор",
+      "Холодильник",
+      "Чайная станция",
+      "Телефон",
+      "Гель, мыло, шампунь",
+      "Сушилка для белья на балконе",
+      "Комплект из 3-х полотенец на каждого гостя"
+    ],
+    "notes": [
+      "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+      "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+    ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2023/02/1-2-1-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2023/02/1-2-1-1024x683.jpg",
+    "previewImage": "assets/images/2273-preview.jpg",
+    "images": [
+      "assets/images/2273-1.jpg",
+      "assets/images/2273-2.jpg",
+      "assets/images/2273-3.jpg",
+      "assets/images/2273-4.jpg",
+      "assets/images/2273-5.jpg"
+    ]
+  },
+  {
+    "id": "2184",
+    "title": "Апартаменты 4*",
+    "subtitle": "одноместный",
+    "area": "54",
+    "main": 1,
+    "extra": 4,
+    "description": [
+      "Роскошные апартаменты предназначены для отдыха премиального уровня. Элегантный номер предлагает гостям просторную гостиную с кухонной зоной и уютной спальней. Подходит для комфортного размещения до пяти гостей. Номер располагает двуспальной кроватью (160-180 см), для дополнительных мест предусмотрен раскладной диван и еврораскладушка."
+    ],
+    "specs": [
+      {
+        "label": "Вид из окна:",
+        "value": "На территорию санатория"
+      },
+      {
+        "label": "Тип кровати:",
+        "value": "Кровать 160-180 см"
+      },
+      {
+        "label": "Возможность установки детской кроватки:",
+        "value": "Да"
+      },
+      {
+        "label": "Вместимость:",
+        "value": "5"
+      }
+    ],
+    "amenities": [
+      "СВЧ-печь",
+      "Халат и тапочки",
+      "Кондиционер",
+      "Сейф",
+      "Биде",
+      "Набор посуды",
+      "Стиральная машина",
+      "Сушилка для белья комнатная",
+      "Гладильная доска с утюгом",
+      "Фен",
+      "Бесплатный Wi-Fi",
+      "ЖК-телевизор",
+      "Щетки для одежды и обуви",
+      "Швейный набор",
+      "Холодильник",
+      "Чайная станция",
+      "Телефон",
+      "Гель, мыло, шампунь",
+      "Сушилка для белья на балконе",
+      "Комплект из 3-х полотенец на каждого гостя"
+    ],
+    "notes": [
+      "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+      "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+    ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2024/08/1-1-fit-1024x683.jpg",
+    "previewImage": "assets/images/2184-preview.jpg",
+    "images": [
+      "assets/images/2184-1.jpg",
+      "assets/images/2184-2.jpg",
+      "assets/images/2184-3.jpg",
+      "assets/images/2184-4.jpg",
+      "assets/images/2184-5.jpg"
+    ]
+  },
+  {
+    "id": "15992",
+    "title": "Апартаменты 344 4*",
+    "subtitle": "",
+    "area": "50,1",
+    "main": 1,
+    "extra": 3,
+    "description": [],
+    "specs": [],
+    "amenities": [
+      "СВЧ-печь",
+      "Халат и тапочки",
+      "Кондиционер",
+      "Сейф",
+      "Кофемашина",
+      "Набор посуды",
+      "Стиральная машина",
+      "Сушилка для белья комнатная",
+      "Гладильная доска с утюгом",
+      "Бесплатная парковка",
+      "Фен",
+      "Бесплатный Wi-Fi",
+      "ЖК-телевизор",
+      "Щетки для одежды и обуви",
+      "Швейный набор",
+      "Холодильник",
+      "Чайная станция",
+      "Телефон",
+      "Гель, мыло, шампунь",
+      "Сушилка для белья на балконе",
+      "Комплект из 3-х полотенец на каждого гостя"
+    ],
+    "notes": [
+      "*Дизайн номеров может отличаться от предоставленных на фотографии.",
+      "*Детям до 4 лет возможно бесплатное размещение без предоставления отдельного спального места."
+    ],
+    "preview": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-523x426.jpg",
+    "previewOriginal": "https://belokurikha.ru/wp-content/uploads/2025/07/dscf3492-fit-1024x683.jpg",
+    "previewImage": "assets/images/15992-preview.jpg",
+    "images": [
+      "assets/images/15992-1.jpg",
+      "assets/images/15992-2.jpg",
+      "assets/images/15992-3.jpg",
+      "assets/images/15992-4.jpg",
+      "assets/images/15992-5.jpg"
     ]
   }
 ];
