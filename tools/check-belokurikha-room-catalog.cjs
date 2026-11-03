@@ -9,7 +9,8 @@ const rooms = JSON.parse(fs.readFileSync(path.join(sourceDir, 'rooms-data.json')
 const text = file => fs.readFileSync(path.join(dir, file), 'utf8');
 assert(fs.existsSync(path.join(dir, 'index.html')), 'the separate room catalog page has been built');
 const strip = s => s.replace(/<[^>]*>/g, '').replaceAll('&amp;', '&').replaceAll('&quot;', '"');
-for (const file of ['index.html', 'block.html']) {
+for (const file of ['index.html', 'block.html', 'variant-2/index.html', 'variant-2/block.html']) {
+  assert(fs.existsSync(path.join(dir, file)), `the standalone design is built: ${file}`);
   const html = text(file);
   assert(!/<header\b|aria-roledescription="карусель"|br-rooms__track|br-rooms__controls|Все номера|Перейти к каталогу/.test(html), 'no site header, carousel or catalog link');
   assert(!/₽|руб\.|Цена \(|Оснащение номера/.test(html), 'no prices or amenities section');
@@ -30,8 +31,10 @@ for (const file of ['index.html', 'block.html']) {
   assert(html.indexOf('class="br-rooms__description"') < html.indexOf('class="br-rooms__parameters"'), 'description above compact specs');
   for (const [, attribute, url] of html.matchAll(/\b(src|href)="([^"]+)"/g)) {
     if (/^https?:|^#/.test(url)) continue;
-    const local = url.split('?')[0].replace('/upload/belokurikha-room-catalog/', '');
-    assert(fs.existsSync(path.join(dir, local)), `${file}: local ${attribute} dependency ${url} exists`);
+    const local = url.startsWith('/upload/belokurikha-room-catalog/')
+      ? path.join(dir, url.split('?')[0].replace('/upload/belokurikha-room-catalog/', ''))
+      : path.resolve(dir, path.dirname(file), url.split('?')[0]);
+    assert(fs.existsSync(local), `${file}: local ${attribute} dependency ${url} exists`);
   }
 }
 const sameFile = file => {

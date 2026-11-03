@@ -48,4 +48,24 @@ ${styles('')}
 ${scripts('')}
 </head><body><main>${section}</main></body></html>\n`);
 fs.writeFileSync(path.join(target, 'block.html'), `${styles(upload)}\n${section.replaceAll('src="assets/', `src="${upload}assets/`)}\n${scripts(upload)}\n`);
+const refinedDir = path.join(target, 'variant-2');
+fs.mkdirSync(refinedDir, {recursive:true});
+const refinedVersion = '20261103-refined';
+const bookingIcon = '<span class="br-catalog__book-label">Забронировать</span><span class="br-catalog__book-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>';
+const refine = html => html
+  .replace('br-rooms--photo br-catalog"', 'br-rooms--photo br-catalog br-catalog--refined"')
+  .replaceAll('>Забронировать</button>', `>${bookingIcon}</button>`);
+const refinedDemo = refine(fs.readFileSync(path.join(target, 'index.html'), 'utf8'))
+  .replace('<title>Номера — санаторий «Белокуриха»</title>', '<title>Номера — Белокуриха · вариант 2</title>')
+  .replaceAll('href="base.css', 'href="../base.css')
+  .replaceAll('href="photo.css', 'href="../photo.css')
+  .replaceAll('href="catalog.css', 'href="../catalog.css')
+  .replaceAll('src="rooms-data.js', 'src="../rooms-data.js')
+  .replaceAll('src="catalog.js', 'src="../catalog.js')
+  .replaceAll('src="assets/', 'src="../assets/')
+  .replace('<style>body', `<link rel="stylesheet" href="refined.css?v=${refinedVersion}">\n<style>body`);
+fs.writeFileSync(path.join(refinedDir, 'index.html'), refinedDemo);
+const refinedBlock = refine(fs.readFileSync(path.join(target, 'block.html'), 'utf8'))
+  .replace('<section ', `<link rel="stylesheet" href="${upload}variant-2/refined.css?v=${refinedVersion}">\n<section `);
+fs.writeFileSync(path.join(refinedDir, 'block.html'), refinedBlock);
 console.log(`Built standalone catalog: ${rooms.length} rooms, local photos, no changes to the existing carousels`);
