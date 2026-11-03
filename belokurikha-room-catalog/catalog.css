@@ -1,0 +1,24 @@
+.br-catalog .br-catalog__intro{margin:0 0 32px}
+.br-catalog .br-catalog__intro h1{margin:0 0 12px;color:var(--br-ink);font:700 38px/1.2 BelokRooms,Arial,sans-serif;letter-spacing:-1px;text-transform:none}
+.br-catalog .br-catalog__intro p{margin:0;max-width:660px;color:var(--br-muted);font:400 16px/1.65 BelokRooms,Arial,sans-serif}
+.br-catalog__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 24px}
+.br-catalog .br-rooms__card{scroll-snap-align:none;min-width:0}
+.br-catalog .br-rooms__visual{aspect-ratio:.94}
+.br-catalog .br-rooms__photo{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+.br-catalog .br-rooms__photo:focus-visible{outline-offset:-5px;outline-color:#fff}
+.br-catalog .br-rooms__caption{bottom:20px}
+.br-catalog .br-rooms__caption h3{min-height:0}
+.br-catalog .br-catalog__name{display:block;width:100%;margin:0;border:0;border-radius:2px;padding:0;background:transparent;box-shadow:none;color:inherit;font:inherit;line-height:inherit;text-align:left;pointer-events:auto;overflow-wrap:break-word;text-shadow:inherit}
+.br-catalog .br-catalog__name:focus-visible{outline-color:#fff;outline-offset:5px}
+.br-catalog .br-rooms__body{padding:18px;gap:18px}
+.br-catalog .br-rooms__facts{margin:0;min-height:0;grid-auto-flow:column;grid-auto-columns:1fr;gap:10px}
+.br-catalog .br-rooms__fact dt{min-height:31px}
+.br-catalog .br-catalog__book{display:flex;align-items:center;justify-content:center;min-height:46px;width:100%;margin-top:auto;padding:11px 12px;border:1px solid #167bb2;border-radius:7px;background:#167bb2;color:#fff;box-shadow:none;font:700 14px/1.5 BelokRooms,Arial,sans-serif;text-decoration:none;transition:background .2s,border-color .2s}
+.br-catalog .br-catalog__book:hover{background:#234393;border-color:#234393}
+.br-catalog .br-catalog__book:active{background:#1c3676}
+.br-catalog .br-rooms__description:empty{display:none}
+.br-catalog .br-rooms__notes:empty{display:none}
+.br-catalog .br-rooms__info{padding-bottom:0}
+.br-catalog .br-rooms__gallery:focus-visible{outline:3px solid #234393}
+@media(max-width:1100px){.br-catalog__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.br-catalog .br-rooms__visual{aspect-ratio:1.25}.br-catalog .br-rooms__caption h3{font-size:22px}}
+@media(max-width:580px){.br-catalog .br-catalog__intro{margin-bottom:24px}.br-catalog .br-catalog__intro h1{font-size:30px}.br-catalog .br-catalog__intro p{font-size:14px}.br-catalog__grid{grid-template-columns:minmax(0,1fr);gap:22px}.br-catalog .br-rooms__visual{aspect-ratio:1.13}.br-catalog .br-rooms__caption h3{font-size:21px}.br-catalog .br-rooms__body{padding:18px}.br-catalog .br-catalog__book{font-size:15px;min-height:48px}}
