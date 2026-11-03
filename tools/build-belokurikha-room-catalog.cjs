@@ -68,4 +68,10 @@ fs.writeFileSync(path.join(refinedDir, 'index.html'), refinedDemo);
 const refinedBlock = refine(fs.readFileSync(path.join(target, 'block.html'), 'utf8'))
   .replace('<section ', `<link rel="stylesheet" href="${upload}variant-2/refined.css?v=${refinedVersion}">\n<section `);
 fs.writeFileSync(path.join(refinedDir, 'block.html'), refinedBlock);
+// The approved first catalog gets the independent booking module.
+// Keep the alternative design and homepage carousels unchanged.
+const bookingVersion = '20261103-popup1';
+const demoFile = path.join(target, 'index.html');
+fs.writeFileSync(demoFile, fs.readFileSync(demoFile, 'utf8').replace('</body>', `<script src="booking-popup.js?v=${bookingVersion}" defer data-booking-mode="demo"></script></body>`));
+fs.appendFileSync(path.join(target, 'block.html'), `<script src="${upload}booking-popup.js?v=${bookingVersion}" defer data-booking-mode="live"></script>\n`);
 console.log(`Built standalone catalog: ${rooms.length} rooms, local photos, no changes to the existing carousels`);

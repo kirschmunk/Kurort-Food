@@ -26,8 +26,8 @@ for (const file of ['index.html', 'block.html', 'variant-2/index.html', 'variant
     assert(card.includes(room.area + ' м²'), 'area is retained');
     assert.equal((card.match(/<dt>Доп. мест<\/dt>/g) || []).length, room.extra === null ? 0 : 1, 'unknown extra capacity is not invented');
   });
-  assert.equal((html.match(/<dialog\b/g) || []).length, 1, 'only room details dialog, no booking popup');
-  assert(!/<form\b/.test(html), 'no booking submission form');
+  assert.equal((html.match(/<dialog\b/g) || []).length, 1, 'one static details dialog; booking dialog is created independently at runtime');
+  assert(!/<form\b/.test(html), 'booking module owns its form, no duplicate inline form');
   assert(html.indexOf('class="br-rooms__description"') < html.indexOf('class="br-rooms__parameters"'), 'description above compact specs');
   for (const [, attribute, url] of html.matchAll(/\b(src|href)="([^"]+)"/g)) {
     if (/^https?:|^#/.test(url)) continue;
@@ -43,4 +43,4 @@ const sameFile = file => {
 };
 sameFile('rooms-data.js');
 for (const room of rooms) for (const image of [room.previewImage, ...room.images]) sameFile(image);
-console.log(`PASS: independent ${rooms.length}-room catalog; exact images/data; photo/title triggers; booking hooks; no header, prices, carousel or booking popup`);
+console.log(`PASS: independent ${rooms.length}-room catalog; exact images/data; photo/title triggers; booking buttons; no header, prices or carousel`);

@@ -1,0 +1,36 @@
+.br-booking{box-sizing:border-box;width:calc(100% - 32px);max-width:620px;max-height:calc(100dvh - 40px);margin:auto;padding:36px;border:1px solid #e0e9ed;border-radius:22px;background:#fff;color:#293642;box-shadow:0 24px 90px #10202d38;overflow:auto;overscroll-behavior:contain;font:400 15px/1.5 BelokRooms,Arial,sans-serif;text-align:left}
+.br-booking::backdrop{background:rgba(19,29,38,.58);backdrop-filter:blur(4px)}
+.br-booking *{box-sizing:border-box}
+.br-booking [hidden]{display:none!important}
+.br-booking .br-booking__close{position:absolute;right:18px;top:18px;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:10px;border:1px solid #e0e9ed;border-radius:50%;background:#f7fafb;color:#52616e;cursor:pointer;box-shadow:none}
+.br-booking .br-booking__close:hover{background:#eaf4fa;color:#167bb2}
+.br-booking svg{display:block;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.br-booking .br-booking__eyebrow{margin:0 46px 16px 0;color:#667884;font:400 12px/1.5 BelokRooms,Arial,sans-serif;letter-spacing:.035em}
+.br-booking #br-booking-title{margin:0 0 10px;padding:0;color:#293642;font:700 30px/1.2 BelokRooms,Arial,sans-serif;letter-spacing:-.6px;text-transform:none;text-align:left}
+.br-booking .br-booking__intro{margin:0 0 24px;color:#667580;font:400 15px/1.6 BelokRooms,Arial,sans-serif}
+.br-booking .br-booking__room{margin:0 0 26px;padding:14px 16px;border:1px solid #dfebf1;border-radius:12px;background:#f2f8fb;overflow-wrap:anywhere}
+.br-booking .br-booking__room span{display:block;margin:0 0 4px;color:#667580;font-size:11px;line-height:1.5}
+.br-booking .br-booking__room strong{display:block;font-size:14px;line-height:1.5;font-weight:700;color:#33516a}
+.br-booking .br-booking__form{margin:0;padding:0;border:0;background:none;color:inherit}
+.br-booking .br-booking__fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 22px}
+.br-booking .br-booking__field{display:block;margin:0;padding:0;color:#384854;font:700 13px/1.5 BelokRooms,Arial,sans-serif;text-align:left}
+.br-booking .br-booking__field>span{color:#8a9aa5}
+.br-booking .br-booking__field input{display:block;width:100%;min-width:0;height:52px;margin:8px 0 0;padding:13px 14px;border:1px solid #cedbe2;border-radius:10px;background:#fff;color:#293642;box-shadow:none;font:400 16px/1.5 BelokRooms,Arial,sans-serif;letter-spacing:normal}
+.br-booking .br-booking__field input::placeholder{color:#7c8a94;opacity:1;font-size:13px}
+.br-booking .br-booking__field input:focus{border-color:#167bb2;outline:3px solid #167bb21a;outline-offset:1px}
+.br-booking .br-booking__field input[aria-invalid=true]{border-color:#b7403b}
+.br-booking .br-booking__consent{display:flex;align-items:flex-start;gap:10px;margin:0 0 20px;padding:0;color:#63727c;font:400 12px/1.65 BelokRooms,Arial,sans-serif;text-align:left;cursor:pointer}
+.br-booking .br-booking__consent input[type=checkbox]{appearance:auto;position:static;display:block;flex:0 0 18px;width:18px;height:18px;margin:2px 0 0;padding:0;opacity:1;accent-color:#167bb2;cursor:pointer}
+.br-booking .br-booking__consent a,.br-booking .br-booking__contact a{color:#167bb2;text-decoration:underline;text-underline-offset:3px}
+.br-booking .br-booking__submit{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:54px;margin:0;padding:14px 20px;border:1px solid #167bb2;border-radius:10px;background:#167bb2;color:#fff;box-shadow:0 6px 16px #167bb21a;font:700 16px/1.5 BelokRooms,Arial,sans-serif;text-transform:none;letter-spacing:normal;cursor:pointer;transition:background .18s,border-color .18s}
+.br-booking .br-booking__submit:hover{background:#135f90;border-color:#135f90}
+.br-booking button:disabled{cursor:default;opacity:.65}
+.br-booking .br-booking__status{margin:0 0 16px;padding:12px 14px;border-radius:10px;background:#fff2ef;color:#8a3430;font:400 13px/1.6 BelokRooms,Arial,sans-serif}
+.br-booking .br-booking__status[data-kind=info]{background:#edf6fb;color:#235b7b}
+.br-booking .br-booking__status[data-kind=success]{background:#edf7f0;color:#2e6446}
+.br-booking .br-booking__demo{margin:14px 0 0;color:#6c7d88;font:400 11px/1.5 BelokRooms,Arial,sans-serif;text-align:center}
+.br-booking .br-booking__contact{margin:18px 0 0;color:#6c7d88;font:400 12px/1.6 BelokRooms,Arial,sans-serif;text-align:center}
+.br-booking .br-booking__contact a{display:inline-block;margin-left:4px;white-space:nowrap;font-weight:700}
+.br-booking button:focus-visible,.br-booking a:focus-visible,.br-booking input[type=checkbox]:focus-visible{outline:3px solid #234393;outline-offset:3px}
+@media(max-width:580px){.br-booking{width:calc(100% - 24px);max-height:calc(100dvh - 24px);padding:26px 20px;border-radius:18px}.br-booking .br-booking__close{right:12px;top:12px}.br-booking .br-booking__eyebrow{font-size:11px;margin-bottom:18px}.br-booking #br-booking-title{font-size:26px}.br-booking .br-booking__intro{font-size:14px;margin-bottom:18px}.br-booking .br-booking__fields{grid-template-columns:1fr;gap:16px;margin-bottom:18px}.br-booking .br-booking__room{margin-bottom:20px}.br-booking .br-booking__consent{font-size:12px}.br-booking .br-booking__submit{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.br-booking *{transition:none!important;scroll-behavior:auto!important}}
