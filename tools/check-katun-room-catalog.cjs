@@ -1,4 +1,4 @@
-// Catches missing categories, fabricated unknown facts, wrong gallery paths,
+// Catches missing categories, untracked demo values, wrong gallery paths,
 // responsive overflow and regressions in the room-details interactions.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -35,11 +35,15 @@ for (const r of rooms) {
     assert(fs.statSync(path.join(dir, src)).size > 1000);
   }
 }
-for (const n of [6,8,9,10,11]) {
+for (const r of rooms) {
+  assert(Number.isFinite(r.area) && r.area>0,r.id+': every demo card needs an area');
+  assert(Number.isInteger(r.main) && r.main>0,r.id+': main places must be filled');
+  assert(Number.isInteger(r.extra) && r.extra>=0,r.id+': extra places must be filled, including zero');
+}
+for (const n of [2,3,6,8,9,10,11]) {
   const r = rooms.find(r=>r.sourceFolderNumber===n);
-  assert.equal(r.area, null, 'unconfirmed area must not be fabricated');
-  assert.equal(r.main, null, 'unconfirmed capacity must not be fabricated');
-  assert.equal(r.extra, null);
+  assert(r.provisionalFields?.length,r.id+': provisional demo fields must remain identifiable in source');
+  assert(r.provisionalSource,r.id+': an analog/source must be recorded for review');
 }
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.woff':'font/woff'};
 const server=http.createServer((req,res)=>{
@@ -68,7 +72,8 @@ const server=http.createServer((req,res)=>{
      const card=cards.nth(i);await card.scrollIntoViewIfNeeded();const img=card.locator('img');await img.evaluate(i=>i.decode());
      assert.equal(await card.locator('h3').innerText(),rooms[i].title);
      assert(!/null|undefined|NaN|Цена|руб\.|₽/.test(await card.innerText()));
-     assert(await card.locator('.kt-rooms__facts > div').count()>=2,`${rooms[i].id}: card needs useful facts or visual features, not an empty body`);
+     assert.deepEqual(await card.locator('.kt-rooms__facts dt').allTextContents(),['Площадь','Основных мест','Доп. мест'],`${rooms[i].id}: all cards use the same three numerical fields`);
+     assert.deepEqual(await card.locator('.kt-rooms__facts dd').allTextContents(),[`${rooms[i].area} м²`,String(rooms[i].main),String(rooms[i].extra)]);
     }
     await cards.first().locator('[data-open-room]').first().click();
     const dialog=page.locator('dialog');assert(await dialog.isVisible());
@@ -83,6 +88,7 @@ const server=http.createServer((req,res)=>{
     assert(!/null|undefined|NaN|Оснащение номера/.test(await dialog.innerText()));
     assert(await dialog.locator('.kt-rooms__description').isVisible(),room.id+': every room opens with a description');
     assert(await dialog.locator('.kt-rooms__parameters > div').count()>=3,room.id+': compact room features are present');
+    assert.deepEqual((await dialog.locator('.kt-rooms__parameters dd').allTextContents()).slice(0,3),[`${room.area} м²`,String(room.main),String(room.extra)],room.id+': dialog uses the same figures as its card');
     for(let i=0;i<room.images.length;i++){
      const img=dialog.locator('.kt-rooms__large');await img.evaluate(i=>i.decode());
      assert((await img.getAttribute('src')).endsWith(room.images[i]));
