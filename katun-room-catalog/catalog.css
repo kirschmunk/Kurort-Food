@@ -28,6 +28,7 @@
 .kt-rooms__facts>div{display:flex;flex-direction:column;gap:4px;min-width:0}
 .kt-rooms__facts dt{margin:0;font:400 11.5px/1.35 KatunRooms,Arial,sans-serif;color:#64786a;min-height:31px}
 .kt-rooms__facts dd{order:-1;margin:0;color:#315e49;font:700 17px/1.3 KatunRooms,Arial,sans-serif;white-space:nowrap}
+.kt-rooms__fact-text dd{font-size:13px;line-height:1.4;white-space:normal;overflow-wrap:break-word}
 .kt-rooms .kt-catalog__book{display:flex;align-items:center;justify-content:center;min-height:46px;width:100%;margin-top:auto;padding:11px 12px;border:1px solid var(--kt-green);border-radius:7px;background:var(--kt-green);color:#fff;box-shadow:none;font:700 14px/1.5 KatunRooms,Arial,sans-serif;text-decoration:none;transition:background .2s,border-color .2s}
 .kt-rooms .kt-catalog__book:hover{background:var(--kt-dark);border-color:var(--kt-dark);color:#fff;text-decoration:none}
 .kt-rooms .kt-catalog__book:active{background:#005a3e}

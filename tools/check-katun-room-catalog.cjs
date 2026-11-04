@@ -68,6 +68,7 @@ const server=http.createServer((req,res)=>{
      const card=cards.nth(i);await card.scrollIntoViewIfNeeded();const img=card.locator('img');await img.evaluate(i=>i.decode());
      assert.equal(await card.locator('h3').innerText(),rooms[i].title);
      assert(!/null|undefined|NaN|Цена|руб\.|₽/.test(await card.innerText()));
+     assert(await card.locator('.kt-rooms__facts > div').count()>=2,`${rooms[i].id}: card needs useful facts or visual features, not an empty body`);
     }
     await cards.first().locator('[data-open-room]').first().click();
     const dialog=page.locator('dialog');assert(await dialog.isVisible());
@@ -80,6 +81,8 @@ const server=http.createServer((req,res)=>{
     const dialog=page.locator('dialog');assert.equal(await dialog.locator('h3').innerText(),room.title);
     assert.equal(await dialog.locator('.kt-rooms__thumbs button').count(),room.images.length);
     assert(!/null|undefined|NaN|Оснащение номера/.test(await dialog.innerText()));
+    assert(await dialog.locator('.kt-rooms__description').isVisible(),room.id+': every room opens with a description');
+    assert(await dialog.locator('.kt-rooms__parameters > div').count()>=3,room.id+': compact room features are present');
     for(let i=0;i<room.images.length;i++){
      const img=dialog.locator('.kt-rooms__large');await img.evaluate(i=>i.decode());
      assert((await img.getAttribute('src')).endsWith(room.images[i]));
@@ -114,8 +117,8 @@ const server=http.createServer((req,res)=>{
    await page.screenshot({path:'/tmp/katun-catalog-mobile-dialog.png'});
    await page.keyboard.press('Escape');await page.waitForFunction(()=>document.body.style.overflow==='');
    await page.locator('[data-open-room="11-apartment"]').first().click();
-   assert.equal(await page.locator('.kt-rooms__specs').isVisible(),false);
-   assert.equal(await page.locator('.kt-rooms__description').isVisible(),false);
+   assert.equal(await page.locator('.kt-rooms__specs').isVisible(),true);
+   assert.equal(await page.locator('.kt-rooms__description').isVisible(),true);
    await page.locator('.kt-rooms__large').evaluate(i=>i.decode());
    await page.locator('.kt-rooms__thumbs img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
    await page.screenshot({path:'/tmp/katun-catalog-mobile-gallery.png'});
