@@ -40,10 +40,20 @@ for (const r of rooms) {
   assert(Number.isInteger(r.main) && r.main>0,r.id+': main places must be filled');
   assert(Number.isInteger(r.extra) && r.extra>=0,r.id+': extra places must be filled, including zero');
 }
-for (const n of [2,3,6,8,9,10,11]) {
+for (const n of [3,6,8,9,10,11]) {
   const r = rooms.find(r=>r.sourceFolderNumber===n);
   assert(r.provisionalFields?.length,r.id+': provisional demo fields must remain identifiable in source');
   assert(r.provisionalSource,r.id+': an analog/source must be recorded for review');
+}
+assert.equal(rooms[1].extra,0,'Standard single: one guest in supplied workbook');
+assert.equal(rooms[2].extra,0,'Comfort double: two guests in supplied workbook');
+assert(rooms[2].specs.some(s=>s.label==='Тип кровати' && s.value==='Двуспальная кровать 160 см'),'Comfort bed follows description and user clarification');
+assert.equal(rooms[7].main+rooms[7].extra,2,'Junior one-room: two guests, not four');
+for(const r of rooms){
+ assert(r.sourceWorkbook?.description && r.sourceWorkbook?.specs,'Workbook cell references required');
+ assert(!r.editorialDraft,'Photo-based descriptions must be replaced');
+ assert(r.specs.some(s=>s.label==='Вид из окна'));
+ assert(r.specs.some(s=>s.label==='Возможность установки детской кроватки'));
 }
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.woff':'font/woff'};
 const server=http.createServer((req,res)=>{

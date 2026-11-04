@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const rooms = JSON.parse(fs.readFileSync(path.join(__dirname, 'rooms-data.json')));
-const version = '20261104-katun3';
+const version = '20261104-katun4';
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const title = text => escape(text).replace(/4\*$/, '4<sup>*</sup>');
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
@@ -39,7 +39,7 @@ ${rooms.map((room,i)=>{
 </section>`;
 const styles = prefix => `<link rel="stylesheet" href="${prefix}catalog.css?v=${version}">`;
 const scripts = prefix => `<script src="${prefix}rooms-data.js?v=${version}" defer></script>\n<script src="${prefix}catalog.js?v=${version}" data-rooms-base="${prefix||'./'}" defer></script>`;
-const publicRooms=rooms.map(({sourceFolderNumber,sourceFolder,sourcePages,pending,editorialDraft,provisionalFields,provisionalSource,...r})=>r);
+const publicRooms=rooms.map(({sourceFolderNumber,sourceFolder,sourcePages,sourceWorkbook,pending,editorialDraft,provisionalFields,provisionalSource,...r})=>r);
 fs.writeFileSync(path.join(__dirname,'rooms-data.js'),`window.KatunRoomsData = ${JSON.stringify(publicRooms).replaceAll('<','\\u003c')};\n`);
 fs.writeFileSync(path.join(__dirname,'index.html'),`<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Номера — санаторий «Катунь»</title>
