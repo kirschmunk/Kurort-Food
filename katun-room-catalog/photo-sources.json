@@ -1,0 +1,512 @@
+[
+  {
+    "room": "01-standard-twin",
+    "sourceFolder": "1. стандарт твин дабл",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/01-standard-twin/1.webp",
+    "originalSha256": "a9e64966b2ee4cf13e07335d3d0ef590ae0a347367ba6a1f241ec3b9e56c9dec",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "879c934f224f54b437cbd5bb49f513cf34e89d33b3804ed2c96ae40b49013c03"
+  },
+  {
+    "room": "01-standard-twin",
+    "sourceFolder": "1. стандарт твин дабл",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/01-standard-twin/2.webp",
+    "originalSha256": "24cc238d06df7ed33cbc5c6ae9aa1150d0658a545b38ae1d9b11b49791cf5642",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "516edc7d0cc0d8ba3b34ba754a5bfad57efbe7d2d860a30741e23911c193f5b8"
+  },
+  {
+    "room": "01-standard-twin",
+    "sourceFolder": "1. стандарт твин дабл",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/01-standard-twin/3.webp",
+    "originalSha256": "15f6dc4b3f1ba1fc0fd24dd758b3ea695270178df3c9371bc357c5eedcd794a3",
+    "originalWidth": 5864,
+    "originalHeight": 3909,
+    "outputSha256": "31aafe494c4ecba4ee2748637888c0e63ada43f1e7960ec6816d2fd4efae0277"
+  },
+  {
+    "room": "01-standard-twin",
+    "sourceFolder": "1. стандарт твин дабл",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/01-standard-twin/4.webp",
+    "originalSha256": "e3be0645c1867bdabb5af8a64726c1daaed9d79057beaf08ab477ed705cd6e15",
+    "originalWidth": 6130,
+    "originalHeight": 4050,
+    "outputSha256": "10edd8c97ed8159ed216be47d849eca3f973e7781c3a581d65561bcb0dc54222"
+  },
+  {
+    "room": "01-standard-twin",
+    "sourceFolder": "1. стандарт твин дабл",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/01-standard-twin/5.webp",
+    "originalSha256": "d56107dfbbaf5aa2a1f46948fbc08a4f77557c9b18c7e7caa118f68d6310ea03",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "98cc85fd101f92e68af8b6abe25164e70448cfef07aeee22ae50ea8336307f17"
+  },
+  {
+    "room": "02-standard-single",
+    "sourceFolder": "2. стандарт",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/02-standard-single/1.webp",
+    "originalSha256": "b7b527c6bd3fd5fa518178a47962d51ab1e1f0f89efc9310113748d3f7a9cda8",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "81df8bcd1916641ccc794b251b70cd9de49d2c0e4cae0f45511b6d4681005f5a"
+  },
+  {
+    "room": "02-standard-single",
+    "sourceFolder": "2. стандарт",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/02-standard-single/2.webp",
+    "originalSha256": "0f049f21949ae889337c0e99903ff313510fbcf1b433d2fc7f908b7fd1ffd06b",
+    "originalWidth": 6020,
+    "originalHeight": 4013,
+    "outputSha256": "966d94c104e938fc2d3c2dfdb7f7d56ac36cd14364acb43f529b6c25ae679d9f"
+  },
+  {
+    "room": "02-standard-single",
+    "sourceFolder": "2. стандарт",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/02-standard-single/3.webp",
+    "originalSha256": "c2ccf447e57d2f0166336362d5a3c544f1cd1eb96909f16e14f77b1696c05ac2",
+    "originalWidth": 5828,
+    "originalHeight": 3885,
+    "outputSha256": "2a8af1f46cafb835dc4c19b6e5b87cf2f8343dd0661b5efdeafde6cc26ab72b4"
+  },
+  {
+    "room": "03-comfort-double",
+    "sourceFolder": "3. комфорт дабл",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/03-comfort-double/1.webp",
+    "originalSha256": "d2ecb705d8c1d3d7de3c49469fc1c71a2aef1424940a6a2f15256f6dff398617",
+    "originalWidth": 6019,
+    "originalHeight": 4013,
+    "outputSha256": "5445ef16c520376eacf06420ff713173d096e3d610b9e212fd79eb0f01a959c5"
+  },
+  {
+    "room": "03-comfort-double",
+    "sourceFolder": "3. комфорт дабл",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/03-comfort-double/2.webp",
+    "originalSha256": "311fae9e3ea3faac58f3133d58615ad5547895c8761190641af95b3aa6a320ea",
+    "originalWidth": 6182,
+    "originalHeight": 4121,
+    "outputSha256": "37b6740c451032372ebe1c268c80e7dc0446ad8331d60528c495bc56efc14cbd"
+  },
+  {
+    "room": "03-comfort-double",
+    "sourceFolder": "3. комфорт дабл",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/03-comfort-double/3.webp",
+    "originalSha256": "59844de8251a92d5f20fbb3d4140353548c33854e9b5e84b7e7980e9336da05e",
+    "originalWidth": 6052,
+    "originalHeight": 4035,
+    "outputSha256": "d560b67f8406695c8f38a364f02afd208f96a45ba4ed0eb178e72519e2827972"
+  },
+  {
+    "room": "03-comfort-double",
+    "sourceFolder": "3. комфорт дабл",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/03-comfort-double/4.webp",
+    "originalSha256": "077f245c9db215f39b4a945e448ad2603325aceae4e424ecc5d79cf3d98f3fab",
+    "originalWidth": 1200,
+    "originalHeight": 800,
+    "outputSha256": "570ade2c2eac578ff3a273ea038b3c4f5685ad974158a73549b3a077c055b6e6"
+  },
+  {
+    "room": "03-comfort-double",
+    "sourceFolder": "3. комфорт дабл",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/03-comfort-double/5.webp",
+    "originalSha256": "0beec809a3f823bb7138bd051bd7f68c8876bfb6d5416580ab1c050390550b2e",
+    "originalWidth": 1200,
+    "originalHeight": 805,
+    "outputSha256": "80648e6de036c2787dfcd97f47a02c31087037463eb915f0c3a37a4d87988f10"
+  },
+  {
+    "room": "04-comfort-single",
+    "sourceFolder": "4. комфорт",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/04-comfort-single/1.webp",
+    "originalSha256": "1b59dabccd51f310731c5b5865c54ee1a3a8e3d1f29ac51ce1d0bcf0f0dceeac",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "398b282011349e1befa9654685026dd802a428623a22d8681793470380ba5355"
+  },
+  {
+    "room": "04-comfort-single",
+    "sourceFolder": "4. комфорт",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/04-comfort-single/2.webp",
+    "originalSha256": "a536fdb53bcff4f5952602abbf3a75fd6c29c891656d5bf57207d76ec5ad57b7",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "6c4a596b45e9b9a4898376417a462e7472774a0a340a4802ab67d378978c1545"
+  },
+  {
+    "room": "04-comfort-single",
+    "sourceFolder": "4. комфорт",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/04-comfort-single/3.webp",
+    "originalSha256": "534a3aceae2c06ba6d8c4b8b6ede8680e5f3d6558472a9dfc8c6b8c02dd96b29",
+    "originalWidth": 6087,
+    "originalHeight": 4058,
+    "outputSha256": "350723c4f4d9007defdc6764fbae549a683d70a7282ac00109ca1f0f55227c9c"
+  },
+  {
+    "room": "04-comfort-single",
+    "sourceFolder": "4. комфорт",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/04-comfort-single/4.webp",
+    "originalSha256": "b5336b58ae5b6bfdab67601e133cc947fa13bb61c9c325896156372957f60364",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "19985ac9ba086b83a4d57bb79936d3d93ac3f3f031cfdc3e687c175e8caaa414"
+  },
+  {
+    "room": "04-comfort-single",
+    "sourceFolder": "4. комфорт",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/04-comfort-single/5.webp",
+    "originalSha256": "abdfb24c7e095b4c3473531c1ee0fdeecd6cd4c90bda381578f32133e46560a1",
+    "originalWidth": 5931,
+    "originalHeight": 4053,
+    "outputSha256": "b31f380a05c8d9088be13277ee88425b56e1ce1c691a00cf2780f9a446bccb75"
+  },
+  {
+    "room": "05-prestige-twin",
+    "sourceFolder": "5. престиж твин дабл",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/05-prestige-twin/1.webp",
+    "originalSha256": "ecd68ebb5f33ff0279bca24146d8a79cfa085560e70eb64762f8efd8a7e01fa3",
+    "originalWidth": 6169,
+    "originalHeight": 4113,
+    "outputSha256": "d4f6d8f03e3f1b2d2fd5cf0ba41380f95b8a771a1631bac67cdad3e76f748f9c"
+  },
+  {
+    "room": "05-prestige-twin",
+    "sourceFolder": "5. престиж твин дабл",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/05-prestige-twin/2.webp",
+    "originalSha256": "7e10c048a9eab1acb786b8b505b8cce40888a0dde3c75fc43de573881e417be3",
+    "originalWidth": 6110,
+    "originalHeight": 4073,
+    "outputSha256": "5836d534e6339a639dc164e3c8dbcb9553b79ed575e6d436cce63025824a0eac"
+  },
+  {
+    "room": "05-prestige-twin",
+    "sourceFolder": "5. престиж твин дабл",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/05-prestige-twin/3.webp",
+    "originalSha256": "e73e6945e7d0ce7bdb2f147de4f99dfffb515cd9b40d47972f682ea8dab4972f",
+    "originalWidth": 5934,
+    "originalHeight": 3956,
+    "outputSha256": "7bae2b85620e86642e7cd35480c9bed0ea9f90e8c5d77cccf2701abc2d8e8d8c"
+  },
+  {
+    "room": "05-prestige-twin",
+    "sourceFolder": "5. престиж твин дабл",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/05-prestige-twin/4.webp",
+    "originalSha256": "96dce627564ed98a2a9a60d801de1d1232f90833b514bc68be23e6159d5551bb",
+    "originalWidth": 6158,
+    "originalHeight": 4105,
+    "outputSha256": "4b3a8c878a5f7f0d11157c45198c93b4767fd6124d1780e2f2196fcd52e6283b"
+  },
+  {
+    "room": "05-prestige-twin",
+    "sourceFolder": "5. престиж твин дабл",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/05-prestige-twin/5.webp",
+    "originalSha256": "5c78b9246081f52dca3efc30b9f2820ad589de43fb3f799ef30b4c336dfecb20",
+    "originalWidth": 6114,
+    "originalHeight": 4076,
+    "outputSha256": "0f1d4a2911fad2bda7bd188cc792933f6c149f494e0ce2331300fc4c74179ce2"
+  },
+  {
+    "room": "06-prestige-two",
+    "sourceFolder": "6. престиж двухкомнатный",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/06-prestige-two/1.webp",
+    "originalSha256": "2370b2f529efbe14f2c2061772db6381dfe61693da3d14260e5e441fbbc55ae6",
+    "originalWidth": 6053,
+    "originalHeight": 4035,
+    "outputSha256": "4704eb8e31e4c421378f55b2d8097f0487f2c0b4592f9189eb156d8cbda06ace"
+  },
+  {
+    "room": "06-prestige-two",
+    "sourceFolder": "6. престиж двухкомнатный",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/06-prestige-two/2.webp",
+    "originalSha256": "e75c6b0fc273f91eab78d233de49e6c89e3845de8fac6a1345b4d30ea7686516",
+    "originalWidth": 6150,
+    "originalHeight": 4100,
+    "outputSha256": "1c03e62986ae2ace4bad4527a04786fa86abf0aa5388f72e62d7ac2f39ced46c"
+  },
+  {
+    "room": "06-prestige-two",
+    "sourceFolder": "6. престиж двухкомнатный",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/06-prestige-two/3.webp",
+    "originalSha256": "e73e6945e7d0ce7bdb2f147de4f99dfffb515cd9b40d47972f682ea8dab4972f",
+    "originalWidth": 5934,
+    "originalHeight": 3956,
+    "outputSha256": "7bae2b85620e86642e7cd35480c9bed0ea9f90e8c5d77cccf2701abc2d8e8d8c"
+  },
+  {
+    "room": "07-family-two",
+    "sourceFolder": "7. семейный 2-х комнатный",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/07-family-two/1.webp",
+    "originalSha256": "377bb70acea3bf2321ed42150453fe98ef051fd38890d4424552d08867b0c7de",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "cf1f014e8c818ce68edd316519919611d3b6c71c101988f41c42003c660ea460"
+  },
+  {
+    "room": "07-family-two",
+    "sourceFolder": "7. семейный 2-х комнатный",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/07-family-two/2.webp",
+    "originalSha256": "6c372c75cc69aae9d7fe5371a58f66da9589da40fdf4356ba6625e2c369cb523",
+    "originalWidth": 6096,
+    "originalHeight": 4064,
+    "outputSha256": "c8c458fada14fe869abe8e839726d17a28099e9ff3c75b216ec98d3339b38704"
+  },
+  {
+    "room": "07-family-two",
+    "sourceFolder": "7. семейный 2-х комнатный",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/07-family-two/3.webp",
+    "originalSha256": "d009aa0ecdb02c96082e9014d1af77f3dfd05899fad37ef2b0bbe8a4016f924b",
+    "originalWidth": 5963,
+    "originalHeight": 3975,
+    "outputSha256": "8a7241c73f7be4c4fdfda07bd832fe0af99be7991b2226e54615f59a5c84a3c6"
+  },
+  {
+    "room": "07-family-two",
+    "sourceFolder": "7. семейный 2-х комнатный",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/07-family-two/4.webp",
+    "originalSha256": "e95225abb139781c195fa671979ff37e0e1bc8f5e53960975610dc49c5697b48",
+    "originalWidth": 5949,
+    "originalHeight": 3966,
+    "outputSha256": "faae0e39e6c68b75ee8e5c1488608f6b6ab780320afae393295b4bc751b97f89"
+  },
+  {
+    "room": "07-family-two",
+    "sourceFolder": "7. семейный 2-х комнатный",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/07-family-two/5.webp",
+    "originalSha256": "cd2f472c72277e3727104bdc155f0b286a63fad6e72c670bf38b63a5e923047c",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "0cb1e204351f5445fa28a3bac74dd6529c6013da0ce6a8954c448b8eeda8c6f5"
+  },
+  {
+    "room": "08-junior-one",
+    "sourceFolder": "8. джуниор сюит 1-но комнатный",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/08-junior-one/1.webp",
+    "originalSha256": "9e18ecb503b8f76df34b8a7655f6f7cecf7c0fcdcb937f3a8a54e863df89352d",
+    "originalWidth": 5843,
+    "originalHeight": 3895,
+    "outputSha256": "290efdaa9aba9434f3507eed8afc8ade16220731af410716435ecd1b90212c22"
+  },
+  {
+    "room": "08-junior-one",
+    "sourceFolder": "8. джуниор сюит 1-но комнатный",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/08-junior-one/2.webp",
+    "originalSha256": "b9af9cb4e45ef4979750eb674875557f51a7b80853ff6af71a66a631535c80bb",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "658374690fe5c9adc0edc748bddc479360e986a6c35d1fa92c1f83949dfea30e"
+  },
+  {
+    "room": "08-junior-one",
+    "sourceFolder": "8. джуниор сюит 1-но комнатный",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/08-junior-one/3.webp",
+    "originalSha256": "e701da658fbd6b67d239777571c7ff47eda531d6b18a1b2668633bd5da357c77",
+    "originalWidth": 5926,
+    "originalHeight": 3951,
+    "outputSha256": "36f7f67ed754fbcc83a6c59ff6dc1384c7a6de54049ddcf13e46ade52b3bfc00"
+  },
+  {
+    "room": "08-junior-one",
+    "sourceFolder": "8. джуниор сюит 1-но комнатный",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/08-junior-one/4.webp",
+    "originalSha256": "fd850eaaec14bec7b2d0d8da25a4a7f96b5d93c6fd336241e801cec8fbb8773c",
+    "originalWidth": 2880,
+    "originalHeight": 1920,
+    "outputSha256": "7ea221e1b28f5e6f7c20d37ab538af14fb2a65e02779e5ba9e867a9b22f80d49"
+  },
+  {
+    "room": "08-junior-one",
+    "sourceFolder": "8. джуниор сюит 1-но комнатный",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/08-junior-one/5.webp",
+    "originalSha256": "9c832fedf3a847cb64bdda3ff27adadf9be8f0d303e6b0786714ce25d43858e1",
+    "originalWidth": 2880,
+    "originalHeight": 1920,
+    "outputSha256": "a9fbd177f682cc6ff315c1272019c98f5b3b86e2b0e09d735ed4fc4f7ce017c4"
+  },
+  {
+    "room": "09-junior-800",
+    "sourceFolder": "9. джуниор сюит 800",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/09-junior-800/1.webp",
+    "originalSha256": "fc6def8938dc07dfe6fad065c43a6ba330ebdeafd8cb3b41d400d0239f09b1b3",
+    "originalWidth": 6145,
+    "originalHeight": 4160,
+    "outputSha256": "b92796d818ccd626ace56e42049bb68501aaba0fa09ee8048276430d6f589b2b"
+  },
+  {
+    "room": "09-junior-800",
+    "sourceFolder": "9. джуниор сюит 800",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/09-junior-800/2.webp",
+    "originalSha256": "1fe232be9d3dcc91348da90d3745b445b7165567773204731b6f1c4b9b41355f",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "ded46f4172eba35cb76e50daf47e7bc88dabf78e2fca923b488420f96f105bc2"
+  },
+  {
+    "room": "09-junior-800",
+    "sourceFolder": "9. джуниор сюит 800",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/09-junior-800/3.webp",
+    "originalSha256": "a6c05a672fada703544a25782727ee94ba5c3f18d5e21a1f3dff8ff896987aed",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "16ddf142df9db8820d351faa57a6fc64d3173012b3bfcc84cdc54cd6f1a3d85f"
+  },
+  {
+    "room": "09-junior-800",
+    "sourceFolder": "9. джуниор сюит 800",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/09-junior-800/4.webp",
+    "originalSha256": "44c8e937fcca056b897639855c2ceccec2f8ea950706c86cfff657e1c32bf621",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "18e5c713317aa1d51d827bbc9338953c2c622a1ba7e45abcd51645883ecf4e8c"
+  },
+  {
+    "room": "09-junior-800",
+    "sourceFolder": "9. джуниор сюит 800",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/09-junior-800/5.webp",
+    "originalSha256": "e8ebe36f6c5f83203ab17a40aa4fa610d18178037717e4615bb88455a97925bf",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "244f5fdf5f25e6716c8287af46af8fabb9153fa3848f54f94ae313450173481a"
+  },
+  {
+    "room": "10-junior-two",
+    "sourceFolder": "10. джуниор сюит 2х комнатный",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/10-junior-two/1.webp",
+    "originalSha256": "51d77d0ef0a92ef53fca119224091ddadb5a92bd606f7b603b7cda06bc2e10f5",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "082df4847b4062fea0e79c56b60dc1824786e85e5b5c4b23d2238ec702970faf"
+  },
+  {
+    "room": "10-junior-two",
+    "sourceFolder": "10. джуниор сюит 2х комнатный",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/10-junior-two/2.webp",
+    "originalSha256": "a388426731b7fec314bec97871042c3f27bb0ff8b8af9e249072682177198f7c",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "759b2624eba146ef5a92f1c71d943adce53ece0f278ec1ea75d91898847b398d"
+  },
+  {
+    "room": "10-junior-two",
+    "sourceFolder": "10. джуниор сюит 2х комнатный",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/10-junior-two/3.webp",
+    "originalSha256": "22946f03c7852b71ece8a04551b0a9a890bb8a49ba27bbfc0170e63f6ae06d23",
+    "originalWidth": 5789,
+    "originalHeight": 4053,
+    "outputSha256": "c20c2d5cb3789eccac5d7861d767c5bb8a9cb4332df7cb543e7bdd35592607cc"
+  },
+  {
+    "room": "10-junior-two",
+    "sourceFolder": "10. джуниор сюит 2х комнатный",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/10-junior-two/4.webp",
+    "originalSha256": "e9179ac9525fc31ff821176c3005af9cfbe9f656f7e04a2944e4c0ea9e5d3010",
+    "originalWidth": 6145,
+    "originalHeight": 4124,
+    "outputSha256": "94d2070e8051d6bf933278e24377d31e963e5c1d26bc31e8397d4678416cb6ae"
+  },
+  {
+    "room": "10-junior-two",
+    "sourceFolder": "10. джуниор сюит 2х комнатный",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/10-junior-two/5.webp",
+    "originalSha256": "2358f84f0df161dca3580071db8859174047831cebe34a2a2334deffad14d1f9",
+    "originalWidth": 6015,
+    "originalHeight": 4160,
+    "outputSha256": "ecd5890a465a5cdbc1e780d677914d053ec5f12e1117151fc01352ec8d855cbe"
+  },
+  {
+    "room": "11-apartment",
+    "sourceFolder": "11. апартамент",
+    "sourceFile": "1.webp",
+    "asset": "assets/images/11-apartment/1.webp",
+    "originalSha256": "326c4f5c1ae9651e9aee45798a5709100b646af26be500e8c188d2d793d4ba9d",
+    "originalWidth": 6074,
+    "originalHeight": 4049,
+    "outputSha256": "b1415f46dda6acaaa461d18f9bc0a28362dd3faa9f829ec812abd78bc6da037b"
+  },
+  {
+    "room": "11-apartment",
+    "sourceFolder": "11. апартамент",
+    "sourceFile": "2.webp",
+    "asset": "assets/images/11-apartment/2.webp",
+    "originalSha256": "41975ffec80c70e246b768c6d12cc2d4dc5265a42ce5784eeb39946272952a43",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "4b7b7cbadcf59587d47a3bf33aaed4cdb080b856eca92993ff0af3882cb7be30"
+  },
+  {
+    "room": "11-apartment",
+    "sourceFolder": "11. апартамент",
+    "sourceFile": "3.webp",
+    "asset": "assets/images/11-apartment/3.webp",
+    "originalSha256": "fdd6bbbf04ca9791bfa370acefba8f5277c88b706dae45f2f4cb07ddff7a78fe",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "fb3acab3b2ce0726501ecba4faace87bda0eba1b1f0d450cc509aeeaa82ac2ee"
+  },
+  {
+    "room": "11-apartment",
+    "sourceFolder": "11. апартамент",
+    "sourceFile": "4.webp",
+    "asset": "assets/images/11-apartment/4.webp",
+    "originalSha256": "48a3c737dede1ec85b9253e7993e98492f3d6673b0b10e1e98d9edd06f67e11b",
+    "originalWidth": 6015,
+    "originalHeight": 4065,
+    "outputSha256": "f2197294f091d95493dc313ddb07772f40191417d98a2105232ac1f0d1476914"
+  },
+  {
+    "room": "11-apartment",
+    "sourceFolder": "11. апартамент",
+    "sourceFile": "5.webp",
+    "asset": "assets/images/11-apartment/5.webp",
+    "originalSha256": "93ae62a0e3ea5d5c65c242cd844ffb16752e807955257edfdc8cdbab547618a4",
+    "originalWidth": 6240,
+    "originalHeight": 4160,
+    "outputSha256": "62b425ed5d5011d03c0bfdc7b96736653f80fb09cb2b90fb2658c7b491259b8e"
+  }
+]
