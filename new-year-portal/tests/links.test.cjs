@@ -6,11 +6,11 @@ const root = path.resolve(__dirname, '..');
 const script = fs.readFileSync(path.join(root, 'script.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
 
-assert.match(script, /const newYearLinks=\{[\s\S]*menu:'https:\/\//, 'menu has an absolute fallback URL');
-assert.match(script, /poster:'https:\/\//, 'poster has an absolute fallback URL');
-assert.match(script, /booking:'https:\/\/sales\.belokurikha\.ru\//, 'booking uses the official online booking URL');
-assert.match(script, /document\.querySelectorAll\('\.card-actions'\)/, 'menu and poster labels are upgraded to links');
-assert.match(script, /label\.replaceWith\(link\)/, 'plain labels are replaced with real anchors');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const cards=[...html.matchAll(/<article class="banquet-card">([\s\S]*?)<\/article>/g)];
+assert.equal(cards.length,7);
+const files=[['Дереза Пати',3,'belng'],['Козырный Новый год',2,'belng'],['Высота 2027',0,'belng'],['Тысяча масок и одна ночь',1,'sibng'],['Золотое руно',6,'sibng'],['Новогодняя ночь - время быть вместе',4,'katng'],['Музыкальный взрыв',5,'katng']];
+for(const [name,id,menu] of files){const card=cards.find(m=>m[1].includes('Банкет «'+name+'»'))?.[1]||'';assert(card.includes('/ny2027_'+id+'-fit.jpg" target="_blank" rel="noopener noreferrer">Смотреть афишу</a>'));assert(card.includes('/'+menu+'.pdf" target="_blank" rel="noopener noreferrer">Смотреть меню</a>'));}
 assert.match(script, /document\.querySelectorAll\('\[data-booking\]'\)/, 'every booking CTA is upgraded');
 assert.match(script, /button\.replaceWith\(link\)/, 'booking buttons are replaced with real anchors');
 assert.doesNotMatch(script, /Форма заявки будет подключена/, 'the obsolete non-working placeholder is gone');

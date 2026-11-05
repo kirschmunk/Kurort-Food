@@ -1,15 +1,3 @@
 # Ссылки кнопок новогодней страницы
 
-Фикс уже включён в исходники. Менять HTML и CSS не требуется.
-
-Все адреса находятся в `script.js` в объекте `newYearLinks`:
-
-```js
-const newYearLinks={
-  menu:'https://belokurikha.ru/vechernie-restorany-i-banketnoe-menyu-v-sanatoriyah-seti-kurort-belokuriha-otkryli-zakazy-na-izyskannye-blyuda/',
-  poster:'https://belokurikha.ru/category/afisha/',
-  booking:'https://sales.belokurikha.ru/online/online-rules/index.php',
-};
-```
-
-После загрузки PDF на хостинг заменить только значения `menu` и `poster` на полные адреса, начинающиеся с `https://`.
+«Смотреть афишу» и «Смотреть меню» — обычные ссылки в `index.html`, `page-content.html` и `patch-banquets/banquets-section.html`. У каждого банкета своя афиша JPG, у каждого санатория своё меню PDF. Для этих кнопок JavaScript не нужен. Если на портале есть собственные копии, замените `href` в соответствующей карточке. Настройки кнопки заявки остаются в `script.js`.

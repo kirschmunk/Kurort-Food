@@ -24,11 +24,15 @@ for (const text of exactCopy) {
 
 assert.equal(
   html.match(/Гадания, танцы под виртуозную скрипку от ансамбля «Гранат»/g)?.length,
-  2,
-  'the shared Figma wording is present in both relevant banquet cards',
+  1,
+  'Golden Fleece wording must not be repeated in the Katun card',
 );
 
+assert.ok(html.includes('Волк и семеро козлят на новый лад'));
+assert.ok(html.includes('Караоке-батл «Блестящие голоса»'));
+assert.ok(html.includes('Золотой микрофон года'));
 const staleCopy = [
+  'Волк и семеро козлят на Новый год',
   'Крио-шоу: ледяной бар с экстремальными коктейлями',
   'Танцы с шоу-группой «Текила-денс» и скрипка',
   'Заранее пройдут мастер-классы по изготовлению масок и карнавальной атрибутики.',

@@ -264,28 +264,8 @@ for(const carousel of document.querySelectorAll('[data-legacy-carousel]')){
     },5000);
   }
 }
-/*
- * Все внешние адреса страницы собраны здесь.
- * После публикации PDF достаточно заменить menu и poster на прямые ссылки.
- */
-const newYearLinks={
-  menu:'https://belokurikha.ru/vechernie-restorany-i-banketnoe-menyu-v-sanatoriyah-seti-kurort-belokuriha-otkryli-zakazy-na-izyskannye-blyuda/',
-  poster:'https://belokurikha.ru/category/afisha/',
-  booking:'https://sales.belokurikha.ru/online/online-rules/index.php',
-};
-
-for(const actions of document.querySelectorAll('.card-actions')){
-  const labels=[...actions.querySelectorAll('span')];
-  const targets=[newYearLinks.menu,newYearLinks.poster];
-  labels.forEach((label,index)=>{
-    const link=document.createElement('a');
-    link.href=targets[index]||newYearLinks.poster;
-    link.target='_blank';
-    link.rel='noopener noreferrer';
-    link.textContent=label.textContent;
-    label.replaceWith(link);
-  });
-}
+// Меню и афиши — обычные ссылки в разметке каждой карточки.
+const newYearLinks={booking:'https://sales.belokurikha.ru/online/online-rules/index.php'};
 
 for(const button of document.querySelectorAll('[data-booking]')){
   const link=document.createElement('a');
