@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "KT Hotline Acrom";
+  src: url("./assets/fonts/Acrom-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KT Hotline Acrom";
+  src: url("./assets/fonts/Acrom-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Fluid component: insert inside the site's existing content container. */
+.kt-hotline-slot {
+  container: kt-hotline / inline-size;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.kt-hotline-slot .kt-hotline,
+.kt-hotline-slot .kt-hotline * {
+  box-sizing: border-box;
+}
+
+.kt-hotline-slot .kt-hotline {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 500px) auto;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin: 0;
+  padding: 34px 32px;
+  border: 1px solid #d8eade;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 22px #185c4108;
+  color: #2e3038;
+  font: 400 14px/1.5 "KT Hotline Acrom", Arial, sans-serif;
+  text-align: left;
+}
+
+.kt-hotline-slot .kt-hotline__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #eaf7f0;
+  color: #00865a;
+}
+
+.kt-hotline-slot .kt-hotline__icon svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.kt-hotline-slot .kt-hotline__title {
+  margin: 0;
+  padding: 0;
+  color: #2e3038;
+  font: 700 26px/1.25 "KT Hotline Acrom", Arial, sans-serif;
+  letter-spacing: -.6px;
+  text-transform: none;
+  text-align: left;
+}
+
+.kt-hotline-slot .kt-hotline__description {
+  max-width: none;
+  margin: 7px 0 0;
+  padding: 0;
+  color: #677482;
+  font: 400 15px/1.55 "KT Hotline Acrom", Arial, sans-serif;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.kt-hotline-slot .kt-hotline__contact {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 6px 12px;
+  min-width: max-content;
+}
+
+.kt-hotline-slot .kt-hotline__call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 54px;
+  margin: 0;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 9px;
+  background: #00865a;
+  color: #fff;
+  font: 700 20px/1.3 "KT Hotline Acrom", Arial, sans-serif;
+  letter-spacing: -.35px;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .18s ease, box-shadow .18s ease;
+}
+
+.kt-hotline-slot .kt-hotline__call:visited {
+  color: #fff;
+}
+
+.kt-hotline-slot .kt-hotline__call:hover {
+  background: #006f4b;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 14px #00865a24;
+}
+
+.kt-hotline-slot .kt-hotline__call:focus-visible {
+  outline: 3px solid #00865a;
+  outline-offset: 4px;
+}
+
+.kt-hotline-slot .kt-hotline__max {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  margin: 0;
+  padding: 13px 17px;
+  border: 1px solid #ded9f3;
+  border-radius: 9px;
+  background: #f8f7fc;
+  color: #45356d;
+  font: 700 16px/1.3 "KT Hotline Acrom", Arial, sans-serif;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+
+.kt-hotline-slot .kt-hotline__max:visited { color: #45356d; }
+
+.kt-hotline-slot .kt-hotline__max:hover {
+  background: #efebfb;
+  border-color: #c7bce9;
+  color: #45356d;
+  text-decoration: none;
+}
+
+.kt-hotline-slot .kt-hotline__max:focus-visible {
+  outline: 3px solid #6846ca;
+  outline-offset: 4px;
+}
+
+.kt-hotline-slot .kt-hotline__max-icon {
+  display: block;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background: url("./assets/max-logo.svg?v=2") center / contain no-repeat;
+}
+
+.kt-hotline-slot .kt-hotline__call svg {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.kt-hotline-slot .kt-hotline__note {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  color: #6d7884;
+  font: 400 12px/1.4 "KT Hotline Acrom", Arial, sans-serif;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+/* Respond to the available column width, not only the device width. */
+@container kt-hotline (max-width: 1000px) {
+  .kt-hotline-slot .kt-hotline {
+    grid-template-columns: 52px minmax(0, 1fr);
+    row-gap: 22px;
+  }
+  .kt-hotline-slot .kt-hotline__contact {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@container kt-hotline (max-width: 760px) {
+  .kt-hotline-slot .kt-hotline {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    padding: 22px;
+  }
+
+  .kt-hotline-slot .kt-hotline__icon {
+    width: 40px;
+    height: 40px;
+    align-self: start;
+    margin-top: 2px;
+  }
+
+  .kt-hotline-slot .kt-hotline__title { font-size: 20px; }
+  .kt-hotline-slot .kt-hotline__description { font-size: 14px; }
+  .kt-hotline-slot .kt-hotline__call { font-size: 18px; }
+
+  .kt-hotline-slot .kt-hotline__contact {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    justify-self: stretch;
+    min-width: 0;
+    align-items: stretch;
+    margin-top: 4px;
+  }
+}
+
+@container kt-hotline (max-width: 500px) {
+  .kt-hotline-slot .kt-hotline__contact { grid-template-columns: minmax(0, 1fr); }
+  .kt-hotline-slot .kt-hotline__max { grid-column: 1; grid-row: 3; margin-top: 10px; }
+}
+
+/* Fallback for browsers without CSS container queries. */
+@supports not (container-type: inline-size) {
+  @media (max-width: 1100px) {
+    .kt-hotline-slot .kt-hotline { grid-template-columns: 52px minmax(0, 1fr); row-gap: 22px; }
+    .kt-hotline-slot .kt-hotline__contact { grid-column: 2; justify-self: start; }
+  }
+  @media (max-width: 900px) {
+    .kt-hotline-slot .kt-hotline {
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 14px;
+      padding: 22px;
+    }
+    .kt-hotline-slot .kt-hotline__icon { width: 40px; height: 40px; align-self: start; margin-top: 2px; }
+    .kt-hotline-slot .kt-hotline__title { font-size: 20px; }
+    .kt-hotline-slot .kt-hotline__description { font-size: 14px; }
+    .kt-hotline-slot .kt-hotline__call { font-size: 18px; }
+    .kt-hotline-slot .kt-hotline__contact {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      justify-self: stretch;
+      min-width: 0;
+      align-items: stretch;
+      margin-top: 4px;
+    }
+  }
+  @media (max-width: 560px) {
+    .kt-hotline-slot .kt-hotline__contact { grid-template-columns: minmax(0, 1fr); }
+    .kt-hotline-slot .kt-hotline__max { grid-column: 1; grid-row: 3; margin-top: 10px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kt-hotline-slot .kt-hotline__call,
+  .kt-hotline-slot .kt-hotline__max { transition: none; }
+}
