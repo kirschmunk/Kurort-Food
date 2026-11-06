@@ -29,13 +29,13 @@
 
 .bk-hotline-slot .bk-hotline {
   display: grid;
-  grid-template-columns: 52px minmax(0, 500px) auto;
+  grid-template-columns: 52px minmax(0, 600px) auto;
   align-items: center;
   justify-content: center;
   gap: 24px;
   width: 100%;
   margin: 0;
-  padding: 24px 32px;
+  padding: 34px 32px;
   border: 1px solid #d8eaf3;
   border-radius: 16px;
   background: #fff;
