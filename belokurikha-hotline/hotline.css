@@ -166,7 +166,7 @@
   flex: none;
   width: 24px;
   height: 24px;
-  background: url("./assets/max-logo.svg") center / contain no-repeat;
+  background: url("./assets/max-logo.svg?v=2") center / contain no-repeat;
 }
 
 .bk-hotline-slot .bk-hotline__call svg {
