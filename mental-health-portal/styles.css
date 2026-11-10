@@ -161,3 +161,80 @@ dialog h2{font-size:24px}
 .contact-list a{flex-direction:column;gap:5px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Fluid integration layout: the host site's content column is 1200px. */
+.design-page{width:100%;max-width:1200px;zoom:1;overflow:visible;padding:0 10px}
+.reference-header{display:none}
+.hero{height:390px;border-radius:12px;overflow:hidden}
+.hero-underlay{display:none}
+.hero-photo-frame{inset:0;width:100%;height:100%}
+.hero-photo-frame img{inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%}
+.hero h1{left:30px;top:auto;bottom:24px;width:auto;max-width:calc(100% - 60px);min-height:0;padding:16px 24px;font-size:30px;line-height:1.3;white-space:normal}
+.intro,.gifts,.resorts,.offer,.program{width:100%;margin:64px 0 0}
+.intro{min-height:0;padding:48px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.period{font-size:21px;line-height:1.4;white-space:normal}
+.intro h2{font-size:22px;line-height:1.4;margin-bottom:22px}
+.intro-text{font-size:17px;line-height:1.6}
+.intro-text p+p{margin-top:12px}
+.desktop-break{display:none}
+.intro-cta{margin:24px 0 0;width:240px;height:54px;font-size:16px}
+.video-preview{width:100%;height:auto;aspect-ratio:674/379;margin:0;align-self:center}
+.video-cover{width:100%;height:100%}
+.video-play{left:calc(50% - 32.8px);top:calc(50% - 32.8px)}
+.section-title{font-size:28px;line-height:1.4}
+.gifts-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:38px;padding:0;margin-top:24px}
+.gift-photo{width:100%;height:auto;aspect-ratio:757/432}
+.gift-photo>img{position:absolute;inset:0}
+.gift-photo>img.first-slide{width:100%;height:116.79%;top:-6.08%}
+.pagination{margin:18px auto 0}
+.gift-list{margin:8px 0 0}
+.gift-list h3{white-space:normal;font-size:21px;line-height:1.4}
+.gift-list p{font-size:15px;line-height:1.5}
+.gift-list li{margin-bottom:20px}
+.gift-list h3:before{font-size:17px}
+.resorts{gap:40px}
+.resort-card{width:100%;min-height:0;margin:0;padding:55px 60px}
+.resort-copy h2{font-size:28px;line-height:1.4;white-space:normal;margin-bottom:20px}
+.resort-copy .procedures,.resort-copy .extra{width:auto;min-height:0;font-size:20px;line-height:1.6}
+.resort-copy h3{font-size:19px;line-height:1.4;margin:30px 0 12px}
+.deco-shape{scale:.7}
+.offer{height:260px}
+.offer-photo{inset:0;width:100%;height:100%;object-fit:cover}
+.offer-copy{padding:43px 15px 0}
+.offer h2{font-size:36px;line-height:1.3}
+.offer p{font-size:28px;line-height:1.4}
+.offer .blue-button{height:56px;width:260px;font-size:20px;margin-top:16px}
+.program{padding-bottom:64px}
+.program-description{width:auto;font-size:20px;line-height:1.6;margin-top:20px}
+.program-photo{width:100%;height:auto;margin:30px 0 0}
+.program-dots{margin:20px auto 0}
+@media(max-width:900px){
+.intro{padding:32px;gap:26px;grid-template-columns:1fr}
+.video-preview{max-width:674px;justify-self:center}
+.gifts-grid{gap:24px}
+.resort-card{padding:40px}
+.hero{height:340px}
+}
+@media(max-width:700px){
+.design-page{padding:0 16px}
+.hero{height:280px}
+.hero h1{left:12px;bottom:16px;max-width:calc(100% - 24px);padding:12px 16px;font-size:22px}
+.intro,.gifts,.resorts,.offer,.program{margin-top:36px}
+.intro{padding:32px 22px}
+.period{font-size:17px}
+.intro h2{font-size:20px}
+.intro-text{font-size:16px}
+.intro-cta{max-width:100%}
+.section-title{font-size:24px}
+.gift-list h3{font-size:20px}
+.resort-card{padding:35px 24px}
+.resort-copy h2{font-size:23px}
+.resort-copy .procedures,.resort-copy .extra{font-size:17px}
+.resort-copy h3{font-size:17px}
+.deco-shape{scale:.4}
+.offer{height:240px}
+.offer h2{font-size:29px}
+.offer p{font-size:25px}
+.offer .blue-button{max-width:100%}
+.program-description{font-size:17px}
+}

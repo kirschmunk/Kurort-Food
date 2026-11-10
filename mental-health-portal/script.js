@@ -1,7 +1,4 @@
 (() => {
-  const updateScale = () => document.documentElement.style.setProperty('--page-scale', document.documentElement.clientWidth > 700 ? Math.min(document.documentElement.clientWidth / 1907, 1) : 1);
-  updateScale();
-  window.addEventListener('resize', updateScale);
   const contact = document.getElementById('contact-dialog');
   const video = document.getElementById('video-dialog');
   document.querySelectorAll('[data-contact]').forEach(button => button.addEventListener('click', () => contact.showModal()));
