@@ -1,125 +1,80 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Макет страницы сезона ментального здоровья — Курорт Белокуриха.">
-  <title>Сезон ментального здоровья — Курорт Белокуриха</title>
-  <link rel="stylesheet" href="./styles.css?v=1">
-  <script src="./script.js?v=1" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Сезон ментального здоровья — макет портала</title>
+<link rel="stylesheet" href="./styles.css?v=figma-4"><script src="./script.js?v=figma-4" defer></script>
 </head>
 <body>
-  <header class="portal-header">
-    <div class="container header-inner">
-      <a class="brand" href="https://belokurikha.ru/" aria-label="Курорт Белокуриха — главная"><img src="./assets/logo.png" alt="Курорт Белокуриха" width="220" height="55"></a>
-      <nav aria-label="Разделы страницы"><a href="#gifts">Подарки гостям</a><a href="#sanatoriums">Санатории</a><a href="#program">Программа сезона</a></nav>
-      <button class="button button-small" data-contact>Спланировать отдых <span aria-hidden="true">↗</span></button>
-    </div>
-  </header>
-  <main class="mental-page">
-    <section class="hero" aria-labelledby="page-title">
-      <img class="hero-photo" src="./assets/hero.webp" alt="Отдых в акватермальном комплексе курорта" width="2000" height="1334" fetchpriority="high">
-      <div class="hero-shade"></div>
-      <div class="container hero-content">
-        <div class="season-date"><span class="date-mark" aria-hidden="true"></span>4 ноября — 24 декабря 2026</div>
-        <p class="eyebrow">Курорт Белокуриха · Сезон заботы о себе</p>
-        <h1 id="page-title">Ментальное<br>здоровье</h1>
-        <p class="hero-subtitle">Время замедлиться.<br>И снова почувствовать себя.</p>
-        <a class="button hero-button" href="#about">Открыть сезон <span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="hero-bottom container"><span>Белокуриха · Сибирь · Катунь</span><span>Ваша пауза начинается здесь</span></div>
-    </section>
-
-    <div class="container">
-      <section class="intro section-space" id="about" aria-labelledby="intro-title">
-        <div class="intro-copy">
-          <p class="eyebrow">Немного тишины. Больше себя.</p>
-          <h2 id="intro-title">Иногда лучший способ<br>двигаться дальше —<br><em>сделать паузу.</em></h2>
-          <p>Осень — это время, когда особенно хочется замедлиться, восстановить силы и побыть наедине с собой.</p>
-          <p>Именно поэтому мы запускаем сезон ментального здоровья: особые условия на санаторно-курортный отдых и всё, что помогает переключиться с повседневной суеты на себя.</p>
-          <button class="text-button" data-contact>Выбрать время для себя <span aria-hidden="true">↗</span></button>
-        </div>
-        <div class="intro-visual">
-          <img class="intro-decoration" src="./assets/figma/imgVector.svg" alt="" aria-hidden="true">
-          <button class="video-preview" data-video aria-label="Открыть превью видеопрезентации сезона">
-            <img src="./assets/video.webp" alt="Практики, творчество и встречи сезона ментального здоровья" width="1100" height="619" loading="lazy">
-            <span class="play" aria-hidden="true">▶</span>
-            <span class="video-label">Знакомство с сезоном <span aria-hidden="true">↗</span></span>
-          </button>
-          <div class="intro-caption"><span class="caption-line"></span><p>Забота, которую можно<br>почувствовать.</p></div>
-        </div>
-      </section>
-
-      <section class="gifts section-space" id="gifts" aria-labelledby="gifts-title">
-        <div class="section-heading"><div><p class="eyebrow">Особые моменты вашего отдыха</p><h2 id="gifts-title">Вас ждут<br><em>специальные подарки</em></h2></div><p class="section-note">Маленькие привилегии,<br>из которых складывается забота.</p></div>
-        <div class="gifts-grid">
-          <div class="photo-gallery" aria-roledescription="карусель" aria-label="Фотографии отдыха и процедур">
-            <div class="gallery-images">
-              <img src="./assets/gift-procedure.webp" alt="Гостья санатория на аппаратной процедуре" width="757" height="432" data-slide>
-              <img src="./assets/iv-therapy.webp" alt="Медицинская процедура в санатории" width="757" height="505" data-slide hidden loading="lazy">
-              <img src="./assets/chef.webp" alt="Блюдо в ресторане санатория" width="757" height="505" data-slide hidden loading="lazy">
-              <img src="./assets/relax.webp" alt="Гости отдыхают во время процедуры" width="757" height="488" data-slide hidden loading="lazy">
-              <img src="./assets/dining.webp" alt="Гости выбирают блюда на шведском столе" width="757" height="504" data-slide hidden loading="lazy">
-              <img src="./assets/pressotherapy.webp" alt="Сеанс прессотерапии" width="757" height="505" data-slide hidden loading="lazy">
-              <img src="./assets/restaurant.webp" alt="Ресторан санатория" width="757" height="505" data-slide hidden loading="lazy">
-            </div>
-            <div class="gallery-footer"><span>Забота в каждом дне</span><div class="gallery-controls"><button data-prev aria-label="Предыдущее фото">←</button><span data-counter aria-live="polite">1 / 7</span><button data-next aria-label="Следующее фото">→</button></div></div>
-          </div>
-          <ol class="gift-list">
-            <li><span class="gift-number">01</span><div><h3>Процедура в подарок</h3><p>Одна высокотехнологичная процедура на выбор при бронировании путёвки от 7 дней.</p></div></li>
-            <li><span class="gift-number">02</span><div><h3>Акватермальный комплекс</h3><p>Ежедневное посещение для гостей по всем путёвкам.</p></div></li>
-            <li><span class="gift-number">03</span><div><h3>А-ля карт внутри санатория</h3><p>Один день питайтесь в ресторане уровнем выше: шведский стол → люкс, люкс → премиум.</p></div></li>
-            <li><span class="gift-number">04</span><div><h3>Особенное блюдо от шефа</h3><p>Каждую пятницу на обед в зале «Шведский стол».</p></div></li>
-          </ol>
-        </div>
-      </section>
-    </div>
-
-    <section class="resorts-section" id="sanatoriums" aria-labelledby="resorts-title">
-      <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">Три санатория — один сезон заботы</p><h2 id="resorts-title">Подарки и привилегии<br><em>в вашем санатории</em></h2></div><a class="text-button" href="#contacts">Помочь с выбором <span aria-hidden="true">↗</span></a></div>
-        <div class="resort-jumps" aria-label="Перейти к санаторию"><a href="#belokurikha">Белокуриха <span>01</span></a><a href="#sibir">Сибирь <span>02</span></a><a href="#katun">Катунь <span>03</span></a></div>
-
-        <article class="resort-card" id="belokurikha">
-          <div class="resort-decoration"><img src="./assets/figma/imgVector8.svg" alt=""><img src="./assets/figma/imgVector12.svg" alt=""></div>
-          <div class="resort-title"><span class="resort-index">01</span><div><p class="eyebrow">Санаторий</p><h3>Белокуриха</h3></div><span class="resort-tag">Процедура в подарок</span></div>
-          <div class="resort-content"><div><h4>Выберите свою процедуру</h4><p>Криотерапия, ударно-волновая терапия, общая магнитотерапия на аппарате «Мультимаг», озонотерапия, ингаляции водородом, HIL-терапия, карбокситерапия, фитобочка, обёртывание «Времена года» без пилинга.</p></div><div class="privilege"><p class="privilege-label">Дополнительная привилегия</p><h4>Скидка 10% на процедуры</h4><p>Микротоковая терапия, антиоксидантный пилинг, аппаратный массаж «Старвак», косметические процедуры, ингаляции водородом, криотерапия.</p></div></div>
-        </article>
-
-        <article class="resort-card" id="sibir">
-          <div class="resort-decoration"><img src="./assets/figma/imgVector13.svg" alt=""><img src="./assets/figma/imgVector16.svg" alt=""></div>
-          <div class="resort-title"><span class="resort-index">02</span><div><p class="eyebrow">Санаторий</p><h3>Сибирь</h3></div><span class="resort-tag">Процедура в подарок</span></div>
-          <div class="resort-content"><div><h4>Выберите свою процедуру</h4><p>Криотерапия, ударно-волновая терапия, ВЛОК, озонотерапия, комбинированная уретральная и ректальная терапия на аппарате ЯРОВИТ, карбокситерапия, воздействие высокоинтенсивным импульсным магнитным полем на аппарате EMSELLA, вакуумно-баночный массаж, спа-ритуал для тела.</p><p>Косметическая процедура на выбор: альгинатная маска, массаж лица, чистка лица.</p></div><div class="privilege"><p class="privilege-label">Дополнительная привилегия</p><h4>Больше заботы о теле</h4><p>5 процедур криотерапии со скидкой 10%.</p><p>При покупке СПА-программы «Магия Алтая» или «Винное обёртывание» — скидка 30% на одну процедуру «Очищение и лимфодренаж с солью РАПА»: 1 000 ₽ вместо 1 450 ₽.</p></div></div>
-        </article>
-
-        <article class="resort-card" id="katun">
-          <div class="resort-decoration"><img src="./assets/figma/imgVector20.svg" alt=""><img src="./assets/figma/imgGroup2.svg" alt=""></div>
-          <div class="resort-title"><span class="resort-index">03</span><div><p class="eyebrow">Санаторий</p><h3>Катунь</h3></div><span class="resort-tag">Процедура в подарок</span></div>
-          <div class="resort-content"><div><h4>Выберите свою процедуру</h4><p>Криотерапия, ударно-волновая терапия, общая магнитотерапия на аппарате «Мультимаг», озонотерапия, прессотерапия, RSL-скульптурирование, эстетическая карбокситерапия на лицо, спа-ритуал в фитобочке, массаж гуаша.</p></div><div class="privilege"><p class="privilege-label">Дополнительная привилегия</p><h4>Продолжение заботы — в подарок</h4><p>При покупке криотерапии, фитобочки, массажа гуаша головы или прессотерапии от 5 процедур — каждая следующая чётная процедура без оплаты.</p><p>При покупке от 2 процедур IV-терапии («Детокс», «Золотая сила», «Антиэйдж») — прессотерапия в подарок.</p></div></div>
-        </article>
-        <p class="medical-note">Процедуры назначаются специалистом с учётом показаний и противопоказаний.</p>
-      </div>
-    </section>
-
-    <div class="container">
-      <section class="offer" aria-labelledby="offer-title">
-        <img src="./assets/offer.webp" alt="Чемодан и уютная зона отдыха" width="1600" height="301" loading="lazy">
-        <div class="offer-copy"><p class="eyebrow">Ещё один повод приехать</p><h2 id="offer-title">Горящие путёвки</h2><p>Скидка до <strong>25%</strong></p><button class="button" data-contact>Оставить заявку <span aria-hidden="true">↗</span></button></div>
-      </section>
-
-      <section class="program section-space" id="program" aria-labelledby="program-title">
-        <div class="section-heading"><div><p class="eyebrow">Больше 20 форматов</p><h2 id="program-title">Выберите<br><em>свою перезагрузку</em></h2></div><p class="program-intro">Встречи со специалистами, психологические и телесные практики, творчество, йога, медитации и танцы. Найдите свой способ восстановить внутренний баланс.</p></div>
-        <div class="program-photo"><img src="./assets/practices.webp" alt="Звуковые практики с поющими чашами и бубном" width="1600" height="1067" loading="lazy"><div class="program-photo-caption"><span>Быть здесь.<br>Слышать себя.</span><span class="program-seal">Сезон<br>ментального<br>здоровья</span></div></div>
-        <div class="program-tags" aria-label="Форматы программы"><span>Психологические практики</span><span>Творчество</span><span>Йога</span><span>Медитации</span><span>Танцы</span><span>Встречи со специалистами</span></div>
-      </section>
-
-      <section class="closing" id="contacts" aria-labelledby="closing-title"><img class="closing-decoration" src="./assets/figma/imgGroup3.svg" alt=""><p class="eyebrow">4 ноября — 24 декабря 2026</p><h2 id="closing-title">Подарите себе<br><em>время на восстановление.</em></h2><p>Поможем выбрать санаторий и спланировать отдых.</p><button class="button" data-contact>Обсудить поездку <span aria-hidden="true">↗</span></button></section>
-      <footer class="page-footer"><span>Курорт Белокуриха</span><p>Имеются противопоказания. Необходима консультация специалиста.</p><a href="#page-title" aria-label="В начало страницы">↑</a></footer>
-    </div>
-  </main>
-
-  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><p class="eyebrow">Планируем ваш отдых</p><h2 id="contact-title">С чего начинается<br>ваша перезагрузка?</h2><p>Позвоните в выбранный санаторий — поможем с путёвкой и ответим на вопросы о сезоне.</p><div class="contact-list"><a href="tel:+78007075183"><span>Белокуриха</span><strong>8 800 707 51 83 ↗</strong></a><a href="tel:+78007075184"><span>Сибирь</span><strong>8 800 707 51 84 ↗</strong></a><a href="tel:+78007075186"><span>Катунь</span><strong>8 800 707 51 86 ↗</strong></a></div><p class="dialog-note">Звонок по России бесплатный.</p></dialog>
-  <dialog class="video-dialog" id="video-dialog" aria-labelledby="video-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><img src="./assets/video.webp" alt="Превью видеопрезентации сезона"><h2 id="video-title">Знакомство с сезоном</h2><p>В макете показана обложка. Видеоролик подключим после получения ссылки.</p></dialog>
-</body>
-</html>
+<div class="design-page">
+<header class="reference-header" aria-label="Шапка портала — как в макете Figma" data-node-id="3:5">
+<img class="header-image" src="./assets/figma/imgImage261.png" alt="Курорт Белокуриха. Телефон 8 800 707 51 82. Навигация портала." width="1905" height="803">
+<div class="header-booking-cover"></div><button class="blue-button header-booking" data-contact>БРОНИРОВАНИЕ</button>
+</header>
+<main>
+<section class="hero" aria-labelledby="page-title">
+<div class="hero-underlay" aria-hidden="true"><img src="./assets/figma/imgImage288.png" alt="" width="1911" height="637"></div>
+<div class="hero-photo-frame" data-node-id="3:99"><img src="./assets/figma/img5Y3A19801.png" alt="Отдых в акватермальном комплексе" width="4096" height="2731" fetchpriority="high"></div>
+<h1 id="page-title" data-node-id="3:103">Сезон ментального здоровья</h1>
+</section>
+<section class="intro decorative-card" aria-labelledby="intro-title" data-node-id="3:13">
+<div class="artwork" aria-hidden="true"><span class="deco-slot" style="inset:-17.82% 81.17% 67.39% -2.55%"><span class="deco-shape" style="transform:rotate(15.34deg) skewX(2.33deg)"><img src="./assets/figma/imgVector.svg" alt=""></span></span><span class="deco-slot" style="inset:-7.68% -7.95% 86.06% 81.34%"><span class="deco-shape" style="transform:rotate(2.45deg) skewX(1.37deg)"><img src="./assets/figma/imgVector1.svg" alt=""></span></span><span class="deco-slot" style="inset:62.79% 70.48% -18.93% -6.6%"><span class="deco-shape" style="transform:rotate(14.82deg) skewX(1.86deg)"><img src="./assets/figma/imgVector2.svg" alt=""></span></span><span class="deco-slot" style="inset:86.51% 81.24% 4.84% 15.73%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector3.svg" alt=""></span></span><span class="deco-slot" style="inset:87.72% 85.37% 10.38% 13.96%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector4.svg" alt=""></span></span><span class="deco-slot" style="inset:2.6% 3.58% 95.5% 95.75%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector4.svg" alt=""></span></span><span class="deco-slot" style="inset:75.94% -1.99% -4.63% 92.03%"><span class="deco-shape" style="transform:rotate(-72.26deg) skewX(-4.37deg)"><img src="./assets/figma/imgGroup.svg" alt=""></span></span><span class="deco-slot" style="inset:82.23% 89.19% -15.88% -2.55%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector5.svg" alt=""></span></span><span class="deco-slot" style="inset:-5.34% 92.09% 85.69% .39%"><span class="deco-shape" style="transform:rotate(88.85deg) skewX(1.74deg)"><img src="./assets/figma/imgGroup1.svg" alt=""></span></span><span class="deco-slot" style="inset:4.67% 1.52% 87.54% 95.75%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector6.svg" alt=""></span></span><span class="deco-slot" style="inset:3.11% -6.73% 49.7% 93.32%"><span class="deco-shape" style="transform:rotate(-27.14deg)"><img src="./assets/figma/imgVector7.svg" alt=""></span></span></div>
+<div class="intro-copy">
+<p class="period">Период проведения: 04.11. - 24.12.2026г.</p>
+<h2 id="intro-title">Иногда лучший способ двигаться дальше - сделать паузу!</h2>
+<div class="intro-text"><p>Осень - это время, когда особенно хочется замедлиться, восстановить силы и побыть наедине с собой.</p><p>Именно поэтому мы запускаем сезон ментального здоровья, где вас ждут особые условия на санаторно-курортный отдых и все, что помогает переключиться<br class="desktop-break"> с повседневной суеты на себя.</p></div>
+<button class="blue-button intro-cta" data-contact>ОСТАВИТЬ ЗАЯВКУ</button>
+</div>
+<button class="video-preview" data-video aria-label="Открыть превью видеопрезентации сезона" data-node-id="3:16"><img class="video-cover" src="./assets/figma/img1.png" alt="Сезон ментального здоровья: практики, творчество, встречи" width="4096" height="2304"><span class="video-play"><img src="./assets/figma/imgGroup20.svg" alt=""></span></button>
+</section>
+<section class="gifts" aria-labelledby="gifts-title">
+<h2 class="section-title" id="gifts-title" data-node-id="3:10">ВАС ЖДУТ СПЕЦИАЛЬНЫЕ ПОДАРКИ</h2>
+<div class="gifts-grid">
+<div class="gift-gallery" aria-label="Фотографии отдыха и процедур" aria-roledescription="карусель">
+<div class="gift-photo" data-node-id="3:100">
+<img class="first-slide" src="./assets/figma/img5Y3A09781.png" alt="Гостья санатория на аппаратной процедуре" width="4096" height="2730" data-slide>
+<img src="./assets/iv-therapy.webp" alt="Медицинская процедура в санатории" data-slide hidden>
+<img src="./assets/dining.webp" alt="Гости выбирают блюда на шведском столе" data-slide hidden>
+<img src="./assets/pressotherapy.webp" alt="Сеанс прессотерапии" data-slide hidden>
+<img src="./assets/chef.webp" alt="Блюдо в ресторане санатория" data-slide hidden>
+<button class="gallery-arrow gallery-prev" data-prev aria-label="Предыдущее фото">‹</button><button class="gallery-arrow gallery-next" data-next aria-label="Следующее фото">›</button>
+</div>
+<div class="pagination" aria-label="Выбрать фотографию"><img src="./assets/figma/imgImage289.png" alt="" class="reference-dots" width="123" height="19"><div class="dot-buttons"><button aria-label="Фото 1" data-dot="0" aria-pressed="true"></button><button aria-label="Фото 2" data-dot="1" aria-pressed="false"></button><button aria-label="Фото 3" data-dot="2" aria-pressed="false"></button><button aria-label="Фото 4" data-dot="3" aria-pressed="false"></button><button aria-label="Фото 5" data-dot="4" aria-pressed="false"></button></div></div>
+<span class="visually-hidden" data-counter aria-live="polite">Фото 1 из 5</span>
+</div>
+<ul class="gift-list" data-node-id="3:87">
+<li><h3>Высокотехнологичная процедура - бесплатно</h3><p>(при бронировании путевки от 7 дней - одна процедура на выбор)</p></li>
+<li><h3>Акватермальный комплекс - каждый день</h3><p>(ежедневное посещение для гостей по всем путевкам)</p></li>
+<li><h3>А-ля карт внутри санатория</h3><p>(один день питайтесь в ресторане уровнем выше:<br>шведский стол <img class="inline-arrow" src="./assets/figma/imgArrow16.svg" alt="→"> люкс, люкс <img class="inline-arrow" src="./assets/figma/imgArrow16.svg" alt="→"> премиум)</p></li>
+<li><h3>Специальное блюдо от шеф-повара</h3><p>(каждую пятницу на обед в зале «Шведский стол»)</p></li>
+</ul>
+</div>
+</section>
+<section class="resorts" aria-label="Подарочные процедуры в санаториях">
+<article class="resort-card decorative-card belokurikha" data-node-id="3:45"><div class="artwork" aria-hidden="true"><span class="deco-slot" style="inset:-18.25% -3.62% 64.45% 67.46%"><span class="deco-shape" style="transform:rotate(-163.59deg) skewX(-.88deg)"><img src="./assets/figma/imgVector8.svg" alt=""></span></span><span class="deco-slot" style="inset:2.09% 14.15% 88.31% 82.05%"><span class="deco-shape" style="transform:rotate(-164.11deg) skewX(-2.81deg)"><img src="./assets/figma/imgVector9.svg" alt=""></span></span><span class="deco-slot" style="inset:9.87% 13.04% 88.02% 86.12%"><span class="deco-shape" style="transform:rotate(-164.11deg) skewX(-2.81deg)"><img src="./assets/figma/imgVector10.svg" alt=""></span></span><span class="deco-slot" style="inset:-13.96% -3.63% 75.46% 87.37%"><span class="deco-shape" style="transform:rotate(-164.11deg) skewX(-2.81deg)"><img src="./assets/figma/imgVector11.svg" alt=""></span></span><span class="deco-slot" style="inset:70.4% -8.56% -17.48% 83.97%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector12.svg" alt=""></span></span></div>
+<div class="resort-copy"><h2>ПОДАРОЧНАЯ ПРОЦЕДУРА В САНАТОРИИ «БЕЛОКУРИХА»:</h2>
+<p class="procedures">криотерапия, ударно-волновая терапия, общая магнитотерапия на аппарате «Мультимаг», озонотерапия, ингаляции водородом, HIL-терапия, карбокситерапия, фитобочка, обёртывание «Времена года» без пилинга.</p>
+<h3>ДОПОЛНИТЕЛЬНАЯ СКИДКА 10% НА ПРОЦЕДУРЫ:</h3>
+<p class="extra">микротоковая терапия, антиоксидантный пилинг, аппаратный массаж «Старвак», косметические процедуры, ингаляции водородом, криотерапия.</p></div></article>
+<article class="resort-card decorative-card sibir" data-node-id="3:55"><div class="artwork" aria-hidden="true"><span class="deco-slot" style="inset:52.01% 77.02% -31.84% -9.17%"><span class="deco-shape" style="transform:rotate(39.96deg) skewX(-3.05deg)"><img src="./assets/figma/imgVector13.svg" alt=""></span></span><span class="deco-slot" style="inset:76.38% 97.3% 18.02% .49%"><span class="deco-shape" style="transform:rotate(-164.11deg) skewX(-2.81deg)"><img src="./assets/figma/imgVector14.svg" alt=""></span></span><span class="deco-slot" style="inset:86.2% 94.98% 2.34% .49%"><span class="deco-shape" style="transform:rotate(-164.11deg) skewX(-2.81deg)"><img src="./assets/figma/imgVector15.svg" alt=""></span></span><span class="deco-slot" style="inset:-41.41% -10.35% 70.38% 79.84%"><span class="deco-shape" style="transform:rotate(-153.51deg) skewX(-4.15deg)"><img src="./assets/figma/imgVector16.svg" alt=""></span></span></div>
+<div class="resort-copy"><h2>ПОДАРОЧНАЯ ПРОЦЕДУРА В САНАТОРИИ «СИБИРЬ»:</h2>
+<p class="procedures">криотерапия, ударно-волновая терапия, ВЛОК, озонотерапия, комбинированная уретральная и ректальная терапия на аппарате ЯРОВИТ, карбокситерапия, воздействие высокоинтенсивным импульсным магнитным полем на аппарате EMSELLA,<br class="desktop-break"> вакуумно-баночный массаж, спа-ритуал для тела, косметическая процедура на выбор: альгинантная маска, массаж лица, чистка лица.</p>
+<h3>ДОПОЛНИТЕЛЬНАЯ СКИДКА НА ПРОЦЕДУРЫ:</h3>
+<p class="extra">5 процедур криотерапии со скидкой 10%, при покупке одной СПА-программы<br class="desktop-break"> (“Магия Алтая” или “Винное обертывание”) - 30% скидка на одну процедуру “Очищение и Лимфодренаж с солью РАПА” по выгодной стоимости (1000 руб. вместо 1450 руб).</p></div></article>
+<article class="resort-card decorative-card katun" data-node-id="3:64"><div class="artwork" aria-hidden="true"><span class="deco-slot" style="inset:65.07% -7.63% -15.58% 89.4%"><span class="deco-shape" style="transform:rotate(130.33deg) skewX(6.13deg)"><img src="./assets/figma/imgVector17.svg" alt=""></span></span><span class="deco-slot" style="inset:72.24% 1.37% 21.7% 96.24%"><span class="deco-shape" style="transform:rotate(-3.75deg) skewX(.7deg)"><img src="./assets/figma/imgVector18.svg" alt=""></span></span><span class="deco-slot" style="inset:80.36% 1.07% 1.97% 92.49%"><span class="deco-shape" style="transform:rotate(77.58deg) skewX(-1.92deg)"><img src="./assets/figma/imgVector19.svg" alt=""></span></span><span class="deco-slot" style="inset:-.46% 90.29% 87.58% -1.28%"><span class="deco-shape" style="transform:none"><img src="./assets/figma/imgVector20.svg" alt=""></span></span><span class="deco-slot" style="inset:79.81% .64% -.67% 90.49%"><span class="deco-shape" style="transform:rotate(.36deg) skewX(.07deg) scaleX(-1)"><img src="./assets/figma/imgGroup2.svg" alt=""></span></span><span class="deco-slot" style="inset:-2.9% 91.03% 75.81% -1.7%"><span class="deco-shape" style="transform:rotate(-134.02deg) skewX(4.91deg) scaleX(-1)"><img src="./assets/figma/imgGroup3.svg" alt=""></span></span></div>
+<div class="resort-copy"><h2>ПОДАРОЧНАЯ ПРОЦЕДУРА В САНАТОРИИ «КАТУНЬ»:</h2>
+<p class="procedures">криотерапия, ударно-волновая терапия, общая магнитотерапия на аппарате «Мультимаг», озонотерапия, прессотерапия, RSL-скульптурирование, эстетическая карбокситерапия на лицо, спа-ритуал в фитобочке, массаж гуаша.</p>
+<h3>ДОПОЛНИТЕЛЬНАЯ СКИДКА НА ПРОЦЕДУРЫ:</h3>
+<p class="extra">При покупке криотерапии/фитобочки /массажа гуаша головы/прессотерапии<br class="desktop-break"> от 5 процедур - каждая следующая четная процедура без оплаты,<br class="desktop-break"> от 2 процедур IV-терапии (капельницы Детокс/Золотая сила/Антиэйдж) - прессотерапия в подарок.</p></div></article>
+</section>
+<section class="offer" aria-labelledby="offer-title" data-node-id="3:91"><img class="offer-photo" src="./assets/figma/imgImg910211.png" alt="Чемодан и зона отдыха" width="1024" height="193"><div class="offer-shade"></div><div class="offer-copy"><h2 id="offer-title">ГОРЯЩИЕ ПУТЕВКИ</h2><p>Скидка до 25%</p><button class="blue-button" data-contact>оставить заявку</button></div></section>
+<section class="program" aria-labelledby="program-title">
+<h2 class="section-title" id="program-title" data-node-id="3:11">ВЫБЕРИТЕ СВОЮ ПЕРЕЗАГРУЗКУ</h2>
+<p class="program-description" data-node-id="3:90">Мы собрали <span>насыщенную программу</span> для восстановления внутреннего баланса: встречи<br class="desktop-break"> со специалистами, психологические и телесные практики, творчество, йога, медитации, танцы<br class="desktop-break"> и многое другое.<br>Более 20 форматов, чтобы найти свой способ перезагрузиться!</p>
+<img class="program-photo" src="./assets/figma/img.png" alt="Звуковые практики с поющими чашами и бубном" width="1024" height="683" data-node-id="3:102"><img class="program-dots" src="./assets/figma/imgImage289.png" alt="" width="123" height="19" aria-hidden="true">
+</section>
+</main>
+</div>
+<dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><h2 id="contact-title">Спланируйте отдых</h2><p>Позвоните в выбранный санаторий — поможем с путёвкой и ответим на вопросы.</p><div class="contact-list"><a href="tel:+78007075183"><span>Белокуриха</span><strong>8 800 707 51 83</strong></a><a href="tel:+78007075184"><span>Сибирь</span><strong>8 800 707 51 84</strong></a><a href="tel:+78007075186"><span>Катунь</span><strong>8 800 707 51 86</strong></a></div><p class="dialog-note">Макет. Заявки не отправляются.</p></dialog>
+<dialog class="video-dialog" id="video-dialog" aria-labelledby="video-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><img src="./assets/figma/img1.png" alt="Превью видеопрезентации сезона"><h2 id="video-title">Сезон ментального здоровья</h2><p>Пока доступна только обложка. Для подключения видео нужна ссылка на ролик.</p></dialog>
+</body></html>
