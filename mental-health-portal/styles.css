@@ -206,7 +206,7 @@ dialog h2{font-size:24px}
 .offer .blue-button{height:56px;width:260px;font-size:20px;margin-top:16px}
 .program{padding-bottom:64px}
 .program-description{width:auto;font-size:20px;line-height:1.6;margin-top:20px}
-.program-photo{width:100%;height:auto;margin:30px 0 0}
+.program-photo{width:100%;height:auto;margin:30px 0 0;border-radius:16px}
 .program-dots{margin:20px auto 0}
 @media(max-width:900px){
 .intro{padding:32px;gap:26px;grid-template-columns:1fr}
